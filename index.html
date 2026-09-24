@@ -1228,6 +1228,102 @@
             </div>
           </div>
 
+          <!-- Emergency Dispatch & Assurance Bar (Unique Engineered Value Bar with Theme Colors) -->
+          <div class="brand-emergency-bar" id="emergencyCalloutBar">
+            
+            <!-- Left Urgent Dispatch Callout Card with Forward Chevron Shape -->
+            <a href="tel:+971567991964" class="emergency-call-card" aria-label="Call ApexFix Emergency Dispatch at +971 56 799 1964">
+              <!-- Pulsing Radar Phone Icon Badge -->
+              <div class="emergency-phone-badge">
+                <span class="emergency-pulse-ring"></span>
+                <span class="emergency-pulse-ring-outer"></span>
+                <div class="emergency-phone-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Phone & Availability Info -->
+              <div class="emergency-call-info">
+                <div class="emergency-eyebrow-row">
+                  <span class="emergency-status-dot"></span>
+                  <span class="emergency-eyebrow">Need Help Right Now?</span>
+                </div>
+                <div class="emergency-number">+971 56 799 1964</div>
+                <div class="emergency-subtext">Available 24/7 for Emergency Repairs</div>
+              </div>
+            </a>
+
+            <!-- Right Assurance / Value Pillars Grid -->
+            <div class="emergency-pillars-grid">
+              
+              <!-- 01. Fast Response -->
+              <div class="emergency-pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 8v4l3 3"/>
+                  </svg>
+                </div>
+                <div class="pillar-text-group">
+                  <span class="pillar-title">Fast Response</span>
+                  <span class="pillar-desc">On-site in 2 Hours</span>
+                </div>
+              </div>
+
+              <div class="pillar-divider" aria-hidden="true"></div>
+
+              <!-- 02. Affordable Pricing -->
+              <div class="emergency-pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+                    <rect x="7" y="7" width="10" height="10" rx="1.5"/>
+                  </svg>
+                </div>
+                <div class="pillar-text-group">
+                  <span class="pillar-title">Affordable Pricing</span>
+                  <span class="pillar-desc">Transparent &amp; Honest</span>
+                </div>
+              </div>
+
+              <div class="pillar-divider" aria-hidden="true"></div>
+
+              <!-- 03. All Dubai Areas -->
+              <div class="emergency-pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <line x1="4.5" y1="4.5" x2="19.5" y2="19.5"/>
+                  </svg>
+                </div>
+                <div class="pillar-text-group">
+                  <span class="pillar-title">All Dubai Areas</span>
+                  <span class="pillar-desc">We Come to You</span>
+                </div>
+              </div>
+
+              <div class="pillar-divider" aria-hidden="true"></div>
+
+              <!-- 04. 100% Satisfaction -->
+              <div class="emergency-pillar-item">
+                <div class="pillar-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <polyline points="9 11.5 11.5 14 15.5 9.5"/>
+                  </svg>
+                </div>
+                <div class="pillar-text-group">
+                  <span class="pillar-title">100% Satisfaction</span>
+                  <span class="pillar-desc">Quality Guaranteed</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -1391,54 +1487,99 @@
             <div class="areas-map-stage">
               <img src="assets/world-map-navy.png" alt="Dubai Dispatch Hub World Coverage" class="areas-map-img" loading="lazy">
               
-              <!-- Animated Curved Dotted Lines Pointing into Dubai from Top / Global Regions -->
+              <!-- Animated Curved Trajectory Routes & White Location Pins matching user reference and theme -->
               <svg class="map-routes-svg" viewBox="0 0 920 598" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Origin Pulsing Nodes with Target Rings at Top -->
-                <g class="route-origin-group">
-                  <circle cx="390" cy="50" r="4.5" class="route-origin-dot" />
-                  <circle cx="390" cy="50" r="9" class="route-origin-ring" />
+                <defs>
+                  <filter id="map-pin-shadow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feDropShadow dx="0" dy="3.5" stdDeviation="3" flood-color="#0f2b5c" flood-opacity="0.28" />
+                  </filter>
+                  <filter id="hub-pin-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#2563eb" flood-opacity="0.4" />
+                  </filter>
 
-                  <circle cx="580" cy="25" r="4.5" class="route-origin-dot" />
-                  <circle cx="580" cy="25" r="9" class="route-origin-ring" />
+                  <!-- Reusable White Theme-Matching Location Pin (Teardrop with inner cutout) -->
+                  <g id="white-location-pin" class="svg-map-pin">
+                    <ellipse cx="0" cy="0" rx="7" ry="2.6" fill="rgba(15, 43, 92, 0.28)" />
+                    <path d="M 0 0 C -3 -5 -11 -13 -11 -21 C -11 -27.075 -6.075 -32 0 -32 C 6.075 -32 11 -27.075 11 -21 C 11 -13 3 -5 0 0 Z"
+                          fill="#ffffff" stroke="rgba(15, 43, 92, 0.22)" stroke-width="1.6" filter="url(#map-pin-shadow)" />
+                    <circle cx="0" cy="-21" r="4.2" fill="#0f2b5c" />
+                  </g>
+                </defs>
 
-                  <circle cx="770" cy="55" r="4.5" class="route-origin-dot" />
-                  <circle cx="770" cy="55" r="9" class="route-origin-ring" />
-
-                  <circle cx="860" cy="140" r="4.5" class="route-origin-dot" />
-                  <circle cx="860" cy="140" r="9" class="route-origin-ring" />
+                <!-- Dotted Curved Trajectory Paths connecting Network to Dubai Central Hub (625, 281) -->
+                <g class="map-network-routes">
+                  <path d="M 490,175 Q 550,200 625,281" class="route-line route-line-1" />
+                  <path d="M 780,210 Q 710,225 625,281" class="route-line route-line-2" />
+                  <path d="M 500,360 Q 560,335 625,281" class="route-line route-line-3" />
+                  <path d="M 185,230 Q 330,160 490,175" class="route-line route-line-4" />
+                  <path d="M 801,480 Q 740,380 625,281" class="route-line route-line-1" />
+                  <path d="M 257,115 Q 370,110 490,175" class="route-line route-line-2" />
+                  <path d="M 290,420 Q 390,400 500,360" class="route-line route-line-3" />
                 </g>
 
-                <!-- Dotted Curved Trajectory Paths pointing down to Dubai Hub (625, 281) -->
-                <path d="M 390,50 Q 480,120 625,281" class="route-line route-line-1" />
-                <path d="M 580,25 Q 615,140 625,281" class="route-line route-line-2" />
-                <path d="M 770,55 Q 720,150 625,281" class="route-line route-line-3" />
-                <path d="M 860,140 Q 750,210 625,281" class="route-line route-line-4" />
+                <!-- Signal Beacons travelling toward Dubai Central Hub -->
+                <circle r="4" class="route-beacon">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" path="M 490,175 Q 550,200 625,281" />
+                </circle>
+                <circle r="4" class="route-beacon">
+                  <animateMotion dur="2.0s" repeatCount="indefinite" path="M 780,210 Q 710,225 625,281" />
+                </circle>
+                <circle r="4" class="route-beacon">
+                  <animateMotion dur="2.7s" repeatCount="indefinite" path="M 500,360 Q 560,335 625,281" />
+                </circle>
+                <circle r="4" class="route-beacon">
+                  <animateMotion dur="2.2s" repeatCount="indefinite" path="M 801,480 Q 740,380 625,281" />
+                </circle>
 
-                <!-- Moving Signal Beacons travelling along curves toward Dubai -->
-                <circle r="4.5" class="route-beacon">
-                  <animateMotion dur="2.4s" repeatCount="indefinite" path="M 390,50 Q 480,120 625,281" />
-                </circle>
-                <circle r="4.5" class="route-beacon">
-                  <animateMotion dur="2.0s" repeatCount="indefinite" path="M 580,25 Q 615,140 625,281" />
-                </circle>
-                <circle r="4.5" class="route-beacon">
-                  <animateMotion dur="2.7s" repeatCount="indefinite" path="M 770,55 Q 720,150 625,281" />
-                </circle>
-                <circle r="4.5" class="route-beacon">
-                  <animateMotion dur="2.3s" repeatCount="indefinite" path="M 860,140 Q 750,210 625,281" />
-                </circle>
+                <!-- Network White Location Pins on Continents matching user layout -->
+                <g class="network-pins-layer">
+                  <!-- Canada -->
+                  <g class="pin-wrapper" transform="translate(257, 115)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- North America (US) -->
+                  <g class="pin-wrapper" transform="translate(185, 230)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- South America -->
+                  <g class="pin-wrapper" transform="translate(290, 420)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Europe Hub -->
+                  <g class="pin-wrapper" transform="translate(490, 175)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Africa Hub -->
+                  <g class="pin-wrapper" transform="translate(500, 360)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- East Asia Hub -->
+                  <g class="pin-wrapper" transform="translate(780, 210)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Australia Hub -->
+                  <g class="pin-wrapper" transform="translate(801, 480)">
+                    <use href="#white-location-pin" />
+                  </g>
+
+                  <!-- Dubai Central Hero Pin (Highlighted Theme Accent & Live Emerald Status) -->
+                  <g class="pin-wrapper pin-hero-dubai" transform="translate(625, 281)">
+                    <circle cx="0" cy="0" r="14" class="hub-pulse-wave ring-1" />
+                    <circle cx="0" cy="0" r="26" class="hub-pulse-wave ring-2" />
+                    <ellipse cx="0" cy="0" rx="9" ry="3.5" fill="rgba(37, 99, 235, 0.4)" />
+                    <!-- Hero White Pin with Electric Blue Border -->
+                    <path d="M 0 0 C -4 -6 -13 -15 -13 -25 C -13 -32.2 -7.2 -38 0 -38 C 7.2 -38 13 -32.2 13 -25 C 13 -15 4 -6 0 0 Z"
+                          fill="#ffffff" stroke="#2563eb" stroke-width="2.4" filter="url(#hub-pin-shadow)" />
+                    <circle cx="0" cy="-25" r="5" fill="#10b981" />
+                  </g>
+                </g>
               </svg>
 
-              <!-- Hotspot Radar & Dispatch Hub Pin on Dubai Coordinates -->
+              <!-- Floating Dispatch Badge directly anchored above Dubai Pin -->
               <div class="dubai-map-hub">
-                <div class="hub-pulse-wave ring-1"></div>
-                <div class="hub-pulse-wave ring-2"></div>
-                <div class="hub-pin-dot"></div>
-
-                <!-- Floating Dispatch Badge -->
                 <div class="hub-dispatch-pill">
                   <span class="hub-badge-dot"></span>
-                  <span class="hub-badge-text">Dubai Dispatch Hub</span>
+                  <span class="hub-badge-text">Dubai Central Dispatch</span>
                 </div>
               </div>
             </div>
