@@ -1,0 +1,4 @@
+# Root level temporary screenshots and development captures
+/*.png
+take_screenshot.py
+.vscode/

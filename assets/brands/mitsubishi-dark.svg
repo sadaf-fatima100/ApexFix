@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 40" width="190" height="40">
+  <g fill="#e64a50">
+    <polygon points="18,7 24,17 18,27 12,17"/>
+    <polygon points="25,21 34,21 29,29 20,29"/>
+    <polygon points="11,21 16,29 7,29 2,21"/>
+  </g>
+  <text x="42" y="26" font-family="'Outfit', 'Arial Black', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">MITSUBISHI</text>
+</svg>

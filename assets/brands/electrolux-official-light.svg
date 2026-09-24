@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50">
+  <g transform="translate(10, 5)">
+    <!-- Iconic Electrolux Logo Icon -->
+    <g fill="#011E41">
+      <path d="M19.5 0C8.73 0 0 8.73 0 19.5S8.73 39 19.5 39 39 30.27 39 19.5 30.27 0 19.5 0zm0 5.85c7.54 0 13.65 6.11 13.65 13.65S27.04 33.15 19.5 33.15 5.85 27.04 5.85 19.5 11.96 5.85 19.5 5.85z"/>
+      <path d="M11 12h17v4.5H16.5v3h10v4H16.5v3.5H28v4.5H11V12z"/>
+    </g>
+    <text x="48" y="28" font-family="'Helvetica Neue', Arial, 'Segoe UI', sans-serif" font-size="25" font-weight="700" letter-spacing="-0.3" fill="#011E41">Electrolux</text>
+  </g>
+</svg>

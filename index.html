@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexFix | #1 Choice in Appliance Repair & Service</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans for exact typography match -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG Clip Paths for Exact Geometric Shapes -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true">
+    <defs>
+      <!-- Main Hero Image Symmetrical Asymmetric Cut (Identical Top-Left and Bottom-Right Chamfers) -->
+      <clipPath id="main-hero-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.36,0.00 
+                 H 0.88 Q 1.00,0.00 1.00,0.12 
+                 V 0.64 Q 1.00,0.68 0.96,0.72 
+                 L 0.72,0.96 Q 0.68,1.00 0.64,1.00 
+                 H 0.12 Q 0.00,1.00 0.00,0.88 
+                 V 0.36 Q 0.00,0.32 0.04,0.28 
+                 L 0.28,0.04 Q 0.32,0.00 0.36,0.00 Z" />
+      </clipPath>
+
+      <!-- Secondary Sub Card Symmetrical ClipPath (Exact matching geometry as the Right Image) -->
+      <clipPath id="sub-card-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.36,0.00 
+                 H 0.88 Q 1.00,0.00 1.00,0.12 
+                 V 0.64 Q 1.00,0.68 0.96,0.72 
+                 L 0.72,0.96 Q 0.68,1.00 0.64,1.00 
+                 H 0.12 Q 0.00,1.00 0.00,0.88 
+                 V 0.36 Q 0.00,0.32 0.04,0.28 
+                 L 0.28,0.04 Q 0.32,0.00 0.36,0.00 Z" />
+      </clipPath>
+
+      <!-- Service Card Image ClipPath (Matching Hero Diagonal Chamfer Cut) -->
+      <clipPath id="service-img-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.20,0.00 
+                 H 0.90 Q 1.00,0.00 1.00,0.08 
+                 V 0.80 Q 1.00,0.85 0.95,0.90 
+                 L 0.88,0.95 Q 0.82,1.00 0.76,1.00 
+                 H 0.08 Q 0.00,1.00 0.00,0.92 
+                 V 0.20 Q 0.00,0.15 0.05,0.10 
+                 L 0.12,0.05 Q 0.16,0.00 0.20,0.00 Z" />
+      </clipPath>
+
+      <!-- Service Content Card ClipPath (Matching Diagonal Chamfer Cut) -->
+      <clipPath id="service-text-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.16,0.00 
+                 H 0.92 Q 1.00,0.00 1.00,0.06 
+                 V 0.82 Q 1.00,0.86 0.96,0.90 
+                 L 0.90,0.96 Q 0.86,1.00 0.82,1.00 
+                 H 0.06 Q 0.00,1.00 0.00,0.94 
+                 V 0.16 Q 0.00,0.12 0.04,0.08 
+                 L 0.10,0.04 Q 0.13,0.00 0.16,0.00 Z" />
+      <!-- Why Section Chamfer Sub-Card (Angled Top-Left with Smooth Corners) -->
+      <clipPath id="why-subcard-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.28,0.00 
+                 H 0.88 Q 1.00,0.00 1.00,0.12 
+                 V 0.88 Q 1.00,1.00 0.88,1.00 
+                 H 0.12 Q 0.00,1.00 0.00,0.88 
+                 V 0.28 Q 0.00,0.24 0.03,0.21 
+                 L 0.21,0.03 Q 0.24,0.00 0.28,0.00 Z" />
+      </clipPath>
+      <!-- Why Choose Us Organic Cutout Shape (Matching Reference Exact Curves) -->
+      <clipPath id="why-choose-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.04,0.00 
+                 H 0.96 Q 1.00,0.00 1.00,0.08 
+                 V 0.92 Q 1.00,1.00 0.96,1.00 
+                 H 0.32 Q 0.26,1.00 0.26,0.92 
+                 V 0.76 Q 0.26,0.67 0.30,0.67 
+                 H 0.34 Q 0.40,0.67 0.40,0.52 
+                 Q 0.40,0.38 0.34,0.38 
+                 H 0.20 Q 0.18,0.38 0.18,0.34 
+                 Q 0.18,0.30 0.14,0.30 
+                 H 0.04 Q 0.00,0.30 0.00,0.24 
+                 V 0.08 Q 0.00,0.00 0.04,0.00 Z" />
+      </clipPath>
+
+      <!-- Dubai Trust Card Notched Cutout (Matching Reference Shape with Chamfers & Curves) -->
+      <clipPath id="dubai-trust-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.025,0.00 
+                 H 0.975 Q 1.00,0.00 1.00,0.035 
+                 V 0.105 Q 1.00,0.122 0.995,0.132 
+                 L 0.988,0.148 Q 0.984,0.155 0.984,0.165 
+                 V 0.835 Q 0.984,0.845 0.988,0.852 
+                 L 0.995,0.868 Q 1.00,0.878 1.00,0.895 
+                 V 0.965 Q 1.00,1.00 0.975,1.00 
+                 H 0.025 Q 0.00,1.00 0.00,0.965 
+                 V 0.895 Q 0.00,0.878 0.005,0.868 
+                 L 0.012,0.852 Q 0.016,0.845 0.016,0.835 
+                 V 0.165 Q 0.016,0.155 0.012,0.148 
+                 L 0.005,0.132 Q 0.00,0.122 0.00,0.105 
+                 V 0.035 Q 0.00,0.00 0.025,0.00 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <!-- Outer Viewport Wrapper (matching reference frame background) -->
+  <div class="site-frame">
+    <div class="site-canvas">
+      
+      <!-- Top Navigation Bar (Replicating Reference Design with ApexFix Brand & Palette) -->
+      <header class="navbar">
+        <!-- Logo: Gear & Wrench Silhouette + Speed Lines + APEXFIX / REPAIR Typography -->
+        <a href="#" class="nav-logo" aria-label="ApexFix Home">
+          <div class="logo-mark-wrap">
+            <svg class="logo-icon-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dynamic speed trails / motion lines -->
+              <path d="M4 48L19 36M6 54L23 41M11 58L27 47" class="logo-motion-path" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+              <!-- Gear body with outer teeth in brand accent navy blue -->
+              <path d="
+                M37 7.5L39.2 7.5L39.8 11.2C41.2 11.7 42.6 12.4 43.8 13.3L47.2 11.8L49 13.6L47.5 17C48.4 18.2 49.1 19.6 49.6 21.1L53.3 21.7L53.3 24.3L49.6 24.9C49.1 26.4 48.4 27.8 47.5 29L49 32.4L47.2 34.2L43.8 32.7C42.6 33.6 41.2 34.3 39.8 34.8L39.2 38.5L37 38.5L36.4 34.8C35 34.3 33.6 33.6 32.4 32.7L29 34.2L27.2 32.4L28.7 29C27.8 27.8 27.1 26.4 26.6 24.9L22.9 24.3L22.9 21.7L26.6 21.1C27.1 19.6 27.8 18.2 28.7 17L27.2 13.6L29 11.8L32.4 13.3C33.6 12.4 35 11.7 36.4 11.2L37 7.5Z
+              " class="logo-gear-path" fill="var(--brand-accent)"/>
+              <!-- Inner circle cutout -->
+              <circle cx="38.1" cy="23" r="8" class="logo-gear-cutout" fill="var(--bg-canvas)"/>
+              <!-- Angled Wrench head inside gear -->
+              <path d="
+                M41.8 19.3L39.8 17.3C39.1 17.5 38.4 18 38 18.4C37.2 19.2 37 20.3 37.3 21.2L34 24.5C33.5 25 33.5 25.8 34 26.3C34.5 26.8 35.3 26.8 35.8 26.3L39.1 23C40 23.3 41.1 23.1 41.9 22.3C42.3 21.9 42.8 21.2 43 20.5L41 18.5
+              " class="logo-wrench-path" fill="var(--brand-accent)"/>
+            </svg>
+          </div>
+          <div class="logo-text-col">
+            <div class="logo-brand-row">
+              <span class="brand-accent-text">APEX</span><span class="brand-main-text">FIX</span>
+            </div>
+            <div class="logo-sub-row">
+              <span class="logo-sub-line"></span>
+              <span class="logo-sub-tag">REPAIR</span>
+              <span class="logo-sub-line"></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Centered Nav Links (Home active pill, About, Services dropdown, Process, Contact) -->
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active-pill">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          
+          <div class="nav-dropdown" id="servicesDropdown">
+            <a href="#services" class="nav-link nav-dropdown-toggle" id="servicesDropdownBtn" aria-haspopup="true" aria-expanded="false">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-content">
+              <a href="#services" class="dropdown-link book-trigger" data-service="Refrigerator & Freezer">
+                <span class="dropdown-icon">❄️</span>
+                <span>Refrigerator &amp; Freezer</span>
+              </a>
+              <a href="#services" class="dropdown-link book-trigger" data-service="Washing Machine">
+                <span class="dropdown-icon">🌀</span>
+                <span>Washing Machine &amp; Dryer</span>
+              </a>
+              <a href="#services" class="dropdown-link book-trigger" data-service="Oven & Stove">
+                <span class="dropdown-icon">🔥</span>
+                <span>Oven, Range &amp; Cooktop</span>
+              </a>
+              <a href="#services" class="dropdown-link book-trigger" data-service="Dishwasher">
+                <span class="dropdown-icon">🍽️</span>
+                <span>Dishwasher Systems</span>
+              </a>
+              <a href="#services" class="dropdown-link book-trigger" data-service="HVAC & AC">
+                <span class="dropdown-icon">❄️</span>
+                <span>HVAC &amp; Air Conditioner</span>
+              </a>
+              <a href="#services" class="dropdown-link book-trigger" data-service="Washing Machine">
+                <span class="dropdown-icon">⚡</span>
+                <span>Electrical &amp; Diagnostics</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="#brands" class="nav-link">Brands</a>
+          <a href="#service-areas" class="nav-link">Areas</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link" id="navContactLink">Contact</a>
+        </nav>
+
+        <!-- Right Action Buttons: Theme Toggle (Moon) + Schedule Service Pill -->
+        <div class="nav-actions">
+          <!-- Circular Dark Mode Toggle Button -->
+          <button class="btn-theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark Mode" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Primary Pill Button: SCHEDULE SERVICE -->
+          <button class="btn-schedule" id="scheduleServiceBtn">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <span>SCHEDULE SERVICE</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <main class="hero-section" id="home">
+        
+        <!-- Left Hero Content Column -->
+        <div class="hero-left">
+          <div class="hero-content">
+            <!-- Exact 3-Line Heading with Asymmetric Stepped Alignment -->
+            <h1 class="hero-headline">
+              <span class="hl-line line-1">Fast &amp; Reliable</span>
+              <span class="hl-line line-2">Certified Appliance</span>
+              <span class="hl-line line-3">Repair &amp; Service</span>
+            </h1>
+
+            <!-- Professional 3-Line Subtitle with Full-Width Coverage -->
+            <p class="hero-description">
+              <span class="desc-line">Same-day diagnostic and repair solutions across Greater Dubai.</span>
+              <span class="desc-line">Expert service for refrigerators, washing machines, ovens &amp; AC.</span>
+              <span class="desc-line">Certified master technicians, genuine OEM parts &amp; guaranteed work.</span>
+            </p>
+
+            <!-- Hero CTA Button Group: 2 Dedicated Action Buttons -->
+            <div class="hero-cta-group">
+              <button class="btn-hero-primary" id="heroBookBtn">
+                <span>Book a Repair</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="tel:+971508867234" class="btn-hero-secondary" id="heroCallBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>Emergency Call 24/7</span>
+              </a>
+            </div>
+
+
+            <!-- Ultra-Refined Live Dubai Dispatch & Trust Assurance Console -->
+            <div class="hero-trust-assurance-card">
+              <!-- Top Row: Live Dispatch Beacon & Google Rating -->
+              <div class="trust-card-header">
+                <div class="live-dispatch-badge">
+                  <span class="live-beacon">
+                    <span class="beacon-core"></span>
+                    <span class="beacon-ping"></span>
+                  </span>
+                  <span class="beacon-label">
+                    <span class="beacon-count">18 Technicians Active</span> in Dubai
+                  </span>
+                </div>
+
+                <div class="google-trust-badge">
+                  <div class="google-icon-svg" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                      <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z"/>
+                      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.29 21.36 7.35 24 12 24z"/>
+                      <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2.01 10.04.01 12s.45 3.8 1.26 5.42l4.01-3.15z"/>
+                      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.29 2.64 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                    </svg>
+                  </div>
+                  <div class="google-stars-group">
+                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </div>
+                  <span class="rating-number"><strong>4.9</strong> / 5.0</span>
+                  <span class="rating-sub">(Google Verified)</span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: 3 Micro-Feature Guarantee Chips -->
+              <div class="trust-card-guarantees">
+                <!-- 1. 30-Min Arrival -->
+                <div class="guarantee-chip">
+                  <div class="chip-icon-box chip-speed">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </div>
+                  <span class="chip-title">30-Min Fast Arrival</span>
+                </div>
+
+                <!-- 2. Genuine OEM Parts -->
+                <div class="guarantee-chip">
+                  <div class="chip-icon-box chip-oem">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                  </div>
+                  <span class="chip-title">Genuine OEM Parts</span>
+                </div>
+
+                <!-- 3. 1-Year Warranty -->
+                <div class="guarantee-chip">
+                  <div class="chip-icon-box chip-warranty">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="8" r="6"></circle>
+                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                    </svg>
+                  </div>
+                  <span class="chip-title">1-Year Warranty</span>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Column (Exact geometric composition) -->
+        <div class="hero-right">
+          <div class="visual-stage">
+            
+            <!-- Secondary Diagonal Chamfer Sub Card (Bottom-Left) -->
+            <div class="sub-image-card">
+              <div class="sub-image-clip">
+                <img src="assets/hero-sub-technician.jpg" alt="Master Appliance Repair Technician on duty" class="sub-img" loading="eager">
+              </div>
+            </div>
+
+            <!-- Main Asymmetric Image Container -->
+            <div class="main-image-card">
+              <div class="main-image-clip">
+                <img src="assets/hero-technician-washer.jpg" alt="Master Appliance Repair Technician" class="main-img">
+              </div>
+            </div>
+
+            <!-- Social Proof Stat Element (Repositioned to Bottom-Right Corner) -->
+            <div class="social-proof-card">
+              <div class="avatars-row">
+                <img src="assets/avatar1.jpg" alt="Happy Customer" class="avatar-thumb" loading="lazy">
+                <img src="assets/avatar2.jpg" alt="Happy Customer" class="avatar-thumb" loading="lazy">
+                <img src="assets/avatar3.jpg" alt="Happy Customer" class="avatar-thumb" loading="lazy">
+                <img src="assets/avatar4.jpg" alt="Happy Customer" class="avatar-thumb" loading="lazy">
+              </div>
+              <div class="stats-row">
+                <div class="stats-icon-circle">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+                <div class="stats-number">1.5K+</div>
+                <div class="stats-label">
+                  Happy clients<br>and businesses
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal Core Services Pills Card at Bottom of Hero Section -->
+        <div class="hero-trust-card">
+          <!-- Left Header Block -->
+          <div class="trust-header-block">
+            <span class="trust-badge-label">Certified Care</span>
+            <h3 class="trust-headline">Major Services</h3>
+            <span class="trust-sub-label">Across Your City</span>
+          </div>
+
+          <div class="trust-divider" aria-hidden="true"></div>
+
+          <!-- 6 Core Services Pills Grid (Exact Design Replicated from media_1790245395291.png) -->
+          <div class="hero-services-pills-wrap">
+            
+            <!-- 1. Washing Machine -->
+            <button class="hero-service-pill book-trigger" data-service="Washing Machine" type="button" aria-label="Book Washing Machine Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                  <circle cx="12" cy="13" r="5"></circle>
+                  <path d="M12 10a3 3 0 0 1 3 3"></path>
+                  <line x1="7" y1="6" x2="8" y2="6"></line>
+                  <line x1="11" y1="6" x2="13" y2="6"></line>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">Washing Machine</span>
+            </button>
+
+            <!-- 2. Refrigerator Repair -->
+            <button class="hero-service-pill book-trigger" data-service="Refrigerator & Freezer" type="button" aria-label="Book Refrigerator Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+                  <line x1="5" y1="9" x2="19" y2="9"></line>
+                  <line x1="8" y1="5" x2="8" y2="7"></line>
+                  <line x1="8" y1="12" x2="8" y2="15"></line>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">Refrigerator Repair</span>
+            </button>
+
+            <!-- 3. Dishwasher Repair -->
+            <button class="hero-service-pill book-trigger" data-service="Dishwasher" type="button" aria-label="Book Dishwasher Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                  <line x1="4" y1="8" x2="20" y2="8"></line>
+                  <circle cx="8" cy="5.5" r="1" fill="#ffffff"></circle>
+                  <circle cx="12" cy="5.5" r="1" fill="#ffffff"></circle>
+                  <line x1="8" y1="13" x2="16" y2="13"></line>
+                  <line x1="8" y1="17" x2="16" y2="17"></line>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">Dishwasher Repair</span>
+            </button>
+
+            <!-- 4. Cooker Repair -->
+            <button class="hero-service-pill book-trigger" data-service="Oven & Stove" type="button" aria-label="Book Cooker & Oven Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                  <circle cx="8" cy="6.5" r="1.5"></circle>
+                  <circle cx="16" cy="6.5" r="1.5"></circle>
+                  <rect x="7" y="11" width="10" height="7" rx="1"></rect>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">Cooker Repair</span>
+            </button>
+
+            <!-- 5. Dryer Repair -->
+            <button class="hero-service-pill book-trigger" data-service="Dryer (Gas/Electric)" type="button" aria-label="Book Clothes Dryer Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                  <circle cx="12" cy="13" r="5"></circle>
+                  <path d="M10 11.5c1-1 3-1 4 0s-3 3-2 4"></path>
+                  <circle cx="8" cy="6" r="1" fill="#ffffff"></circle>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">Dryer Repair</span>
+            </button>
+
+            <!-- 6. AC & HVAC Repair -->
+            <button class="hero-service-pill book-trigger" data-service="HVAC & AC" type="button" aria-label="Book Central AC & HVAC Repair">
+              <span class="hero-service-pill-icon" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="9" rx="2"></rect>
+                  <line x1="6" y1="10" x2="18" y2="10"></line>
+                  <path d="M7 16c1 2 2 3 5 3s4-1 5-3"></path>
+                  <circle cx="17.5" cy="7" r="0.8" fill="#ffffff"></circle>
+                </svg>
+              </span>
+              <span class="hero-service-pill-text">AC &amp; HVAC Repair</span>
+            </button>
+
+          </div>
+        </div>
+
+      </main>
+
+      <!-- About Us Section (Matching Reference media_1790150007841.png with Hero-Consistent Clip-Path & Navy Blue Theme) -->
+      <section class="about-section" id="about">
+        <div class="about-layout">
+          
+          <!-- Left Visual Group (Metrics Column + Technician Image as one cohesive unit) -->
+          <div class="about-visual-group">
+            
+            <!-- Metrics Column on the Left of Image -->
+            <div class="about-stats-column">
+              
+              <!-- Metric 1: Appliances Fixed -->
+              <div class="about-stat-card">
+                <div class="stat-card-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-card-info">
+                  <span class="stat-card-number">15,000+</span>
+                  <span class="stat-card-label">Appliances Fixed</span>
+                </div>
+              </div>
+
+              <!-- Metric 2: Rapid Dispatch -->
+              <div class="about-stat-card">
+                <div class="stat-card-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-card-info">
+                  <span class="stat-card-number">1-Hour</span>
+                  <span class="stat-card-label">Rapid Dispatch</span>
+                </div>
+              </div>
+
+              <!-- Metric 3: Genuine OEM Parts -->
+              <div class="about-stat-card">
+                <div class="stat-card-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-card-info">
+                  <span class="stat-card-number">100%</span>
+                  <span class="stat-card-label">Genuine OEM Parts</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Image Visual Stage on the Right of Left Group -->
+            <div class="about-visual-stage">
+              <!-- Main Image Container with Clean Background -->
+              <div class="about-image-card">
+                <div class="about-image-clip">
+                  <img src="assets/about-technician.jpg" alt="Master Appliance Repair Technicians" class="about-img">
+                </div>
+
+                <!-- Floating Live Status Badge (Hero-Consistent) -->
+                <div class="about-status-badge">
+                  <span class="pulse-online-dot"></span>
+                  <div class="about-badge-text">
+                    <span class="badge-title">Active Dispatch</span>
+                    <span class="badge-desc">Sharjah Mobile Units</span>
+                  </div>
+                </div>
+
+                <!-- Floating Experience / Rating Pill -->
+                <div class="about-rating-badge">
+                  <div class="rating-stars">★★★★★</div>
+                  <span class="rating-text">15K+ Repairs Completed</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Content Column -->
+          <div class="about-content-col">
+            <!-- Eyebrow Tag -->
+            <div class="badge-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>ABOUT US</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="about-headline">
+              Built on Precision, <span class="highlight-navy">Dedicated to Your Home Appliances</span>
+            </h2>
+
+            <!-- Lead Subtitle -->
+            <p class="about-lead">
+              Sharjah’s dedicated mobile repair fleet brings laboratory-grade diagnostics, certified technician expertise, and 100% genuine parts directly to your doorstep.
+            </p>
+
+            <!-- Connected Timeline Features (Matching User Reference media_1790242748413.png) -->
+            <div class="about-timeline-features">
+              
+              <!-- Timeline Item 1: Certified Multi-Brand Specialists -->
+              <div class="timeline-feat-item">
+                <div class="timeline-marker">
+                  <div class="timeline-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                  </div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-text">
+                  <h3 class="timeline-title">Certified Multi-Brand Specialists</h3>
+                  <p class="timeline-desc">
+                    Expertly trained technicians with hands-on mastery of Samsung, Bosch, Siemens, LG, Daikin, and all major brands.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline Item 2: 100% Genuine OEM Replacement Parts -->
+              <div class="timeline-feat-item">
+                <div class="timeline-marker">
+                  <div class="timeline-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                  <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-text">
+                  <h3 class="timeline-title">100% Genuine OEM Replacement Parts</h3>
+                  <p class="timeline-desc">
+                    We source factory-direct authentic parts with zero counterfeit tolerance to guarantee long-lasting performance.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Timeline Item 3: Quality Guaranteed -->
+              <div class="timeline-feat-item">
+                <div class="timeline-marker">
+                  <div class="timeline-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="timeline-text">
+                  <h3 class="timeline-title">Quality Guaranteed</h3>
+                  <p class="timeline-desc">
+                    Structured performance and service guarantees issued with every completed repair invoice for absolute peace of mind.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom CTA Group (Dual Action Buttons matching reference) -->
+            <div class="about-cta-group">
+              <button class="btn-about-primary book-trigger" data-service="General Repair">
+                <span>Book Technician</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <a href="tel:+97160000000" class="btn-about-secondary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>Call Support</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Services Section (Exact Layout Matching Reference: 3 Cards per Row, 6 Total) -->
+      <section class="services-preview-section" id="services">
+        <div class="section-header">
+          <div class="watermark-bg-text" aria-hidden="true">SERVICES</div>
+          <div class="badge-tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            <span>WHAT WE DO</span>
+          </div>
+          <h2 class="section-title">Exceptional products and services we provide</h2>
+          <p class="section-desc">Certified same-day diagnostics, genuine manufacturer parts, and guaranteed workmanship on all major household appliances.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- ================= ROW 1: 3 Core Services ================= -->
+
+          <!-- Service Card 1: Refrigerator & Freezer -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-fridge-technician.png" alt="Refrigerator & Freezer Repair" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                      <line x1="4" y1="10" x2="20" y2="10"></line>
+                      <line x1="15" y1="6" x2="15.01" y2="6"></line>
+                      <line x1="15" y1="15" x2="15.01" y2="15"></line>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">Refrigerator &amp; Freezer</h3>
+                </div>
+                <p class="service-card-desc">Cooling restoration, compressor diagnostics, refrigerant leak repair, and automated ice maker restoration.</p>
+                <button class="service-arrow-btn book-trigger" data-service="Refrigerator & Freezer" aria-label="Book Refrigerator & Freezer Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2: Washing Machine Repair -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-washing-machine.jpg" alt="Washing Machine Repair" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="2" width="18" height="20" rx="2"></rect>
+                      <circle cx="12" cy="13" r="5"></circle>
+                      <line x1="12" y1="6" x2="12.01" y2="6"></line>
+                      <line x1="16" y1="6" x2="16.01" y2="6"></line>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">Washing Machine Repair</h3>
+                </div>
+                <p class="service-card-desc">Drainage pump fixes, drum bearing replacements, heating element repairs, and high-spin balancing.</p>
+                <button class="service-arrow-btn book-trigger" data-service="Washing Machine" aria-label="Book Washing Machine Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3: Clothes Dryer Repair -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-dryer-washer.png" alt="Clothes Dryer Repair" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="2" width="18" height="20" rx="2"></rect>
+                      <circle cx="12" cy="13" r="5"></circle>
+                      <path d="M12 10a3 3 0 0 1 3 3"></path>
+                      <line x1="7" y1="6" x2="7.01" y2="6"></line>
+                      <line x1="11" y1="6" x2="11.01" y2="6"></line>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">Clothes Dryer Repair</h3>
+                </div>
+                <p class="service-card-desc">Thermal fuse testing, heating element repair, drum belt replacement, and high-heat sensor restoration.</p>
+                <button class="service-arrow-btn book-trigger" data-service="Dryer Repair" aria-label="Book Clothes Dryer Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= ROW 2: 3 Core Services ================= -->
+
+          <!-- Service Card 4: Dishwasher Systems -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-dishwasher.jpg" alt="Dishwasher Systems Repair" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <circle cx="8" cy="6" r="1.2" fill="currentColor"></circle>
+                      <circle cx="12" cy="6" r="1.2" fill="currentColor"></circle>
+                      <path d="M7 14c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0"></path>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">Dishwasher Systems</h3>
+                </div>
+                <p class="service-card-desc">Spray arm unclogging, water leaks, motor pump diagnostics, and sanitizing heat cycle restoration.</p>
+                <button class="service-arrow-btn book-trigger" data-service="Dishwasher" aria-label="Book Dishwasher Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= ROW 2: Services 5 & 6 ================= -->
+
+          <!-- Service Card 5: HVAC & Central AC -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-ac-outdoor.png" alt="HVAC & Central AC Repair" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="2" x2="12" y2="22"></line>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                      <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"></line>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">HVAC &amp; Central AC</h3>
+                </div>
+                <p class="service-card-desc">AC compressor servicing, refrigerant freon recharge, duct airflow balancing, and condenser tuning.</p>
+                <button class="service-arrow-btn book-trigger" data-service="HVAC & AC" aria-label="Book HVAC & AC Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 6: Split AC & Diagnostics -->
+          <div class="service-card-item">
+            <div class="service-img-wrap">
+              <img src="assets/service-ac-indoor.png" alt="Split AC & Indoor Air Systems" class="service-img" loading="lazy">
+            </div>
+            <div class="service-content-wrap">
+              <div class="service-content-card">
+                <div class="service-card-header">
+                  <div class="service-icon-box" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="5" width="20" height="9" rx="1.5"></rect>
+                      <line x1="6" y1="9" x2="6.01" y2="9"></line>
+                      <line x1="18" y1="9" x2="18.01" y2="9"></line>
+                      <path d="M5 18c1.5 2 3.5 2 5 0"></path>
+                      <path d="M14 18c1.5 2 3.5 2 5 0"></path>
+                    </svg>
+                  </div>
+                  <h3 class="service-card-title">Split AC &amp; Diagnostics</h3>
+                </div>
+                <p class="service-card-desc">Indoor split servicing, PCB control board diagnostics, filter sanitation, and airflow sensor calibration.</p>
+                <button class="service-arrow-btn book-trigger" data-service="Split AC & Diagnostics" aria-label="Book Split AC Service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <polyline points="13 5 20 12 13 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Major Brands We Service & Repair Section (Replicating media_1790161239392.png) -->
+      <section class="brands-section" id="brands">
+        <div class="brands-container">
+          
+          <!-- Section Header: Eyebrow + Main Title + Subtitle -->
+          <div class="brands-header">
+            <div class="brands-eyebrow">
+              <span class="eyebrow-dash">—</span>
+              <span class="eyebrow-dot">•</span>
+              <span>BRANDS WE REPAIR</span>
+            </div>
+            <h2 class="brands-main-title">Major Brands We Service &amp; Repair</h2>
+            <p class="brands-subtitle">
+              ApexFix provides certified diagnostics and genuine OEM replacement parts for major international brands. Filter by your appliance category below.
+            </p>
+          </div>
+
+          <!-- Interactive Category Filter Navigation Bar -->
+          <div class="brands-category-filter" role="tablist" aria-label="Brand appliance categories">
+            <button class="brand-filter-pill active" data-filter="all" role="tab" aria-selected="true">
+              <span class="pill-icon">✨</span>
+              <span>All Brands</span>
+              <span class="pill-count">20</span>
+            </button>
+            <button class="brand-filter-pill" data-filter="kitchen" role="tab" aria-selected="false">
+              <span class="pill-icon">🍳</span>
+              <span>Kitchen &amp; Cooking</span>
+              <span class="pill-count">10</span>
+            </button>
+            <button class="brand-filter-pill" data-filter="laundry" role="tab" aria-selected="false">
+              <span class="pill-icon">🧺</span>
+              <span>Laundry &amp; Washers</span>
+              <span class="pill-count">9</span>
+            </button>
+            <button class="brand-filter-pill" data-filter="cooling" role="tab" aria-selected="false">
+              <span class="pill-icon">❄️</span>
+              <span>Fridges &amp; Freezers</span>
+              <span class="pill-count">9</span>
+            </button>
+            <button class="brand-filter-pill" data-filter="ac" role="tab" aria-selected="false">
+              <span class="pill-icon">💨</span>
+              <span>AC &amp; Climate</span>
+              <span class="pill-count">7</span>
+            </button>
+          </div>
+
+          <!-- Category Context Hint Banner -->
+          <div class="brands-category-hint" id="brandsCategoryHint">
+            Showing all <strong>20 certified brands</strong> with same-day technician dispatch across Dubai.
+          </div>
+
+          <!-- Brand Logos Showcase Container with Moving Border Animation -->
+          <div class="brands-logos-container">
+            <div class="brands-logos-inner">
+              <!-- 20 Brands Curved Grid -->
+              <div class="brands-curved-grid" id="brandsGrid">
+
+            <!-- 01. Bosch -->
+            <div class="brand-curved-card book-trigger" data-service="Bosch Appliance Repair" data-categories="kitchen laundry cooling">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/bosch-clean.webp" alt="Bosch" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/bosch-clean-dark.webp" alt="Bosch" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Advanced Technology</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 02. Siemens -->
+            <div class="brand-curved-card book-trigger" data-service="Siemens Appliance Repair" data-categories="kitchen laundry cooling">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/siemens.svg" alt="Siemens" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/siemens-dark.svg" alt="Siemens" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Siemens Technology</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 03. Miele -->
+            <div class="brand-curved-card book-trigger" data-service="Miele Appliance Repair" data-categories="kitchen laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/wm-miele-light.svg" alt="Miele" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/wm-miele-dark.svg" alt="Miele" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Miele Appliance</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 04. Samsung -->
+            <div class="brand-curved-card book-trigger" data-service="Samsung Appliance Repair" data-categories="cooling laundry kitchen">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/samsung.svg" alt="Samsung" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/samsung-dark.svg" alt="Samsung" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Samsung Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 05. LG -->
+            <div class="brand-curved-card book-trigger" data-service="LG Appliance Repair" data-categories="cooling laundry kitchen">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/lg.svg" alt="LG" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/lg-dark.svg" alt="LG" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">LG Appliances Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                <span>Guaranteed Parts</span>
+              </div>
+            </div>
+
+            <!-- 06. Whirlpool -->
+            <div class="brand-curved-card book-trigger" data-service="Whirlpool Appliance Repair" data-categories="kitchen laundry cooling">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/wm-whirlpool-light.svg" alt="Whirlpool" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/wm-whirlpool-dark.svg" alt="Whirlpool" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Advanced Technology</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 07. Haier -->
+            <div class="brand-curved-card book-trigger" data-service="Haier Appliance Repair" data-categories="cooling laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/haier.svg" alt="Haier" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/haier-dark.svg" alt="Haier" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Haier Appliance Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 08. Panasonic -->
+            <div class="brand-curved-card book-trigger" data-service="Panasonic Appliance Repair" data-categories="cooling kitchen laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/panasonic.svg" alt="Panasonic" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/panasonic-dark.svg" alt="Panasonic" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Panasonic Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 09. Mitsubishi -->
+            <div class="brand-curved-card book-trigger" data-service="Mitsubishi System Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/mitsubishi.svg" alt="Mitsubishi" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/mitsubishi-dark.svg" alt="Mitsubishi" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Mitsubishi Systems Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 10. Gree -->
+            <div class="brand-curved-card book-trigger" data-service="Gree Appliance Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/gree-clean.webp" alt="Gree" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/gree-clean-dark.webp" alt="Gree" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Gree Appliances Repair</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                <span>Guaranteed Parts</span>
+              </div>
+            </div>
+
+            <!-- 11. Hitachi -->
+            <div class="brand-curved-card book-trigger" data-service="Hitachi Appliance Repair" data-categories="cooling laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/hitachi.svg" alt="Hitachi" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/hitachi-dark.svg" alt="Hitachi" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Hitachi Inverter Care</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 12. Electrolux -->
+            <div class="brand-curved-card book-trigger" data-service="Electrolux Appliance Repair" data-categories="kitchen laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/electrolux-official-light.svg" alt="Electrolux" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/electrolux-official-dark.svg" alt="Electrolux" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Electrolux Service</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 13. Hisense -->
+            <div class="brand-curved-card book-trigger" data-service="Hisense Appliance Repair" data-categories="cooling laundry kitchen">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/hisense.svg" alt="Hisense" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/hisense.svg" alt="Hisense" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Hisense Appliance Care</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 14. Daikin -->
+            <div class="brand-curved-card book-trigger" data-service="Daikin System Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/daikin-clean.webp" alt="Daikin" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/daikin-clean-dark.webp" alt="Daikin" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Daikin VRV & AC</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                <span>Climate Control</span>
+              </div>
+            </div>
+
+            <!-- 15. Midea -->
+            <div class="brand-curved-card book-trigger" data-service="Midea Appliance Repair" data-categories="ac cooling kitchen">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/hyhover-midea.webp" alt="Midea" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/hyhover-midea-dark.webp" alt="Midea" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Midea Appliances</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v4M15 2v4M7 6h10a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5V7a1 1 0 0 1 1-1zM12 15v7"/></svg>
+                <span>Certified Electric</span>
+              </div>
+            </div>
+
+            <!-- 16. Carrier -->
+            <div class="brand-curved-card book-trigger" data-service="Carrier System Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/carrier.svg" alt="Carrier" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/carrier-dark.svg" alt="Carrier" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Carrier Chillers & AC</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                <span>Climate Control</span>
+              </div>
+            </div>
+
+            <!-- 17. Westpoint -->
+            <div class="brand-curved-card book-trigger" data-service="Westpoint Appliance Repair" data-categories="kitchen cooling laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/westpoint.svg" alt="Westpoint" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/westpoint-dark.svg" alt="Westpoint" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Westpoint Service</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 18. York -->
+            <div class="brand-curved-card book-trigger" data-service="York System Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/york.svg" alt="York" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/york-dark.svg" alt="York" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">York Central Chillers</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                <span>Climate Control</span>
+              </div>
+            </div>
+
+            <!-- 19. Nikai -->
+            <div class="brand-curved-card book-trigger" data-service="Nikai Appliance Repair" data-categories="kitchen cooling laundry">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/nikai.svg" alt="Nikai" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/nikai-dark.svg" alt="Nikai" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">Nikai Electronics</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <span>Full Maintenance</span>
+              </div>
+            </div>
+
+            <!-- 20. SKM -->
+            <div class="brand-curved-card book-trigger" data-service="SKM System Repair" data-categories="ac">
+              <div class="brand-card-body">
+                <div class="brand-logo-stage">
+                  <img src="assets/brands/hyhover-skm.webp" alt="SKM" class="brand-logo-light" loading="lazy">
+                  <img src="assets/brands/hyhover-skm-dark.webp" alt="SKM" class="brand-logo-dark" loading="lazy">
+                </div>
+                <span class="brand-sub-tag">SKM HVAC Systems</span>
+              </div>
+              <div class="brand-card-footer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+                <span>Climate Control</span>
+              </div>
+            </div>
+
+          </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section (Exact Design Replicated from media_1790252135064.png) -->
+      <section class="why-choose-section" id="whyChooseSection">
+        
+        <!-- Section Header -->
+        <div class="section-header why-header">
+          <div class="watermark-bg-text" aria-hidden="true">WHY US</div>
+          <div class="badge-tag">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>WHY CHOOSE US</span>
+          </div>
+          <h2 class="section-title">Engineered for Speed, Precision &amp; Trust</h2>
+          <p class="section-desc">We eliminate the frustration of broken household appliances. Our certified technicians arrive fully equipped to diagnose, repair, and test your appliances on-site with 100% genuine OEM factory parts and 100% quality assurance.</p>
+        </div>
+
+        <!-- 4 Staggered Feature Cards (Exact Replica of Reference Design) -->
+        <div class="why-cards-grid">
+          
+          <!-- Card 1: Same-Day Repairs (Normal Position) -->
+          <div class="why-card-item book-trigger" data-service="Same-Day General Repair">
+            <img src="assets/service-washer-repair.jpg" alt="Same-Day Repairs" class="why-card-bg-img" loading="lazy">
+            <div class="why-card-scrim"></div>
+            <div class="why-card-content">
+              <div class="why-card-icon-badge" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Same-Day Repairs</h3>
+              <p class="why-card-desc">Fully equipped mobile repair vans carrying authentic spare parts to resolve 95% of appliance faults in a single visit.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: 2-Hour Dispatch (Stepped Offset) -->
+          <div class="why-card-item why-card-offset book-trigger" data-service="Emergency 2-Hour Dispatch">
+            <img src="assets/service-washing-machine.jpg" alt="2-Hour Emergency Dispatch" class="why-card-bg-img" loading="lazy">
+            <div class="why-card-scrim"></div>
+            <div class="why-card-content">
+              <div class="why-card-icon-badge" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="why-card-title">2-Hour Dispatch</h3>
+              <p class="why-card-desc">Rapid emergency dispatch across all Dubai residential communities for urgent refrigerator breakdowns and oven failures.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Genuine OEM Parts (Normal Position) -->
+          <div class="why-card-item book-trigger" data-service="Genuine OEM Parts Repair">
+            <img src="assets/service-fridge-technician.png" alt="Genuine OEM Parts" class="why-card-bg-img" loading="lazy">
+            <div class="why-card-scrim"></div>
+            <div class="why-card-content">
+              <div class="why-card-icon-badge" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Genuine OEM Parts</h3>
+              <p class="why-card-desc">Direct supply chain from certified manufacturers ensuring authentic motors, pumps, control boards, and valves.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Trusted Quality (Stepped Offset) -->
+          <div class="why-card-item why-card-offset book-trigger" data-service="Trusted Quality Guarantee">
+            <img src="assets/service-dishwasher.jpg" alt="Trusted Quality Assurance" class="why-card-bg-img" loading="lazy">
+            <div class="why-card-scrim"></div>
+            <div class="why-card-content">
+              <div class="why-card-icon-badge" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Trusted Quality</h3>
+              <p class="why-card-desc">Every replacement component and repair service is backed by our comprehensive written parts and labor guarantee.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4 Stats / Metrics Strip (User's Exact Copy) -->
+        <div class="why-stats-strip">
+          <div class="why-stat-item">
+            <div class="why-stat-number">15,000+</div>
+            <div class="why-stat-label">REPAIRS COMPLETED</div>
+          </div>
+          <div class="why-stat-divider" aria-hidden="true"></div>
+          <div class="why-stat-item">
+            <div class="why-stat-number">98.7%</div>
+            <div class="why-stat-label">CLIENT SATISFACTION</div>
+          </div>
+          <div class="why-stat-divider" aria-hidden="true"></div>
+          <div class="why-stat-item">
+            <div class="why-stat-number">15,000+</div>
+            <div class="why-stat-label">SATISFIED HOMES</div>
+          </div>
+          <div class="why-stat-divider" aria-hidden="true"></div>
+          <div class="why-stat-item">
+            <div class="why-stat-number">12+ Yrs</div>
+            <div class="why-stat-label">DUBAI OPERATIONS</div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Areas We Proudly Serve Across Dubai Section (Enclosed in Elegant Boxed Container) -->
+      <section class="areas-serve-section" id="service-areas">
+        <div class="areas-boxed-container">
+        
+        <!-- Top Section Header: 2 Columns (Typography & Status Pills on Left, Styled Map with Hub Pin on Right) -->
+        <div class="areas-header-row">
+          
+          <!-- Left Column: Eyebrow, Main Title, Description & Status Badges -->
+          <div class="areas-header-left">
+            <div class="badge-tag">
+              <span class="badge-dash" aria-hidden="true">—</span>
+              <span>DUBAI SERVICE AREAS</span>
+            </div>
+
+            <h2 class="areas-main-title">
+              Areas We Proudly Serve<br><span class="highlight-navy">Across Dubai</span>
+            </h2>
+
+            <p class="areas-main-desc">
+              No matter where you are in Dubai, our technicians are ready to reach you. We cover all major communities and luxury towers for expert appliance repair services.
+            </p>
+
+            <!-- Status Pill Strip (Active Vans, Response Time, 24/7 Coverage) -->
+            <div class="areas-status-strip">
+              <div class="status-pill-item">
+                <span class="status-pulse-dot"></span>
+                <span class="status-pill-text"><strong>14+</strong> Mobile Vans Active</span>
+              </div>
+              <div class="status-pill-sep" aria-hidden="true"></div>
+              <div class="status-pill-item">
+                <svg class="status-icon icon-lightning" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 2L3 14h8v8l10-12h-8l0-8z"/>
+                </svg>
+                <span class="status-pill-text"><strong>1-Hr</strong> Avg Response</span>
+              </div>
+              <div class="status-pill-sep" aria-hidden="true"></div>
+              <div class="status-pill-item">
+                <svg class="status-icon icon-clock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span class="status-pill-text"><strong>24/7</strong> All Dubai</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Dispatch Map Stage -->
+          <div class="areas-header-map">
+            <div class="areas-map-stage">
+              <img src="assets/world-map-navy.png" alt="Dubai Dispatch Hub World Coverage" class="areas-map-img" loading="lazy">
+              
+              <!-- Animated Curved Dotted Lines Pointing into Dubai from Top / Global Regions -->
+              <svg class="map-routes-svg" viewBox="0 0 920 598" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Origin Pulsing Nodes with Target Rings at Top -->
+                <g class="route-origin-group">
+                  <circle cx="390" cy="50" r="4.5" class="route-origin-dot" />
+                  <circle cx="390" cy="50" r="9" class="route-origin-ring" />
+
+                  <circle cx="580" cy="25" r="4.5" class="route-origin-dot" />
+                  <circle cx="580" cy="25" r="9" class="route-origin-ring" />
+
+                  <circle cx="770" cy="55" r="4.5" class="route-origin-dot" />
+                  <circle cx="770" cy="55" r="9" class="route-origin-ring" />
+
+                  <circle cx="860" cy="140" r="4.5" class="route-origin-dot" />
+                  <circle cx="860" cy="140" r="9" class="route-origin-ring" />
+                </g>
+
+                <!-- Dotted Curved Trajectory Paths pointing down to Dubai Hub (625, 281) -->
+                <path d="M 390,50 Q 480,120 625,281" class="route-line route-line-1" />
+                <path d="M 580,25 Q 615,140 625,281" class="route-line route-line-2" />
+                <path d="M 770,55 Q 720,150 625,281" class="route-line route-line-3" />
+                <path d="M 860,140 Q 750,210 625,281" class="route-line route-line-4" />
+
+                <!-- Moving Signal Beacons travelling along curves toward Dubai -->
+                <circle r="4.5" class="route-beacon">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" path="M 390,50 Q 480,120 625,281" />
+                </circle>
+                <circle r="4.5" class="route-beacon">
+                  <animateMotion dur="2.0s" repeatCount="indefinite" path="M 580,25 Q 615,140 625,281" />
+                </circle>
+                <circle r="4.5" class="route-beacon">
+                  <animateMotion dur="2.7s" repeatCount="indefinite" path="M 770,55 Q 720,150 625,281" />
+                </circle>
+                <circle r="4.5" class="route-beacon">
+                  <animateMotion dur="2.3s" repeatCount="indefinite" path="M 860,140 Q 750,210 625,281" />
+                </circle>
+              </svg>
+
+              <!-- Hotspot Radar & Dispatch Hub Pin on Dubai Coordinates -->
+              <div class="dubai-map-hub">
+                <div class="hub-pulse-wave ring-1"></div>
+                <div class="hub-pulse-wave ring-2"></div>
+                <div class="hub-pin-dot"></div>
+
+                <!-- Floating Dispatch Badge -->
+                <div class="hub-dispatch-pill">
+                  <span class="hub-badge-dot"></span>
+                  <span class="hub-badge-text">Dubai Dispatch Hub</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Search Bar & Dynamic Counter Filter Strip -->
+        <div class="areas-search-wrapper">
+          <div class="areas-search-box">
+            <svg class="areas-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="areaSearchInput" class="area-search-input" placeholder="Quick search your neighborhood (e.g. Marina, Palm, Jumeirah, Downtown...)" aria-label="Search serviced neighborhood in Dubai" autocomplete="off">
+            <button class="areas-clear-btn" id="searchClearBtn" aria-label="Clear search input" style="display: none;">&times;</button>
+          </div>
+          <div class="areas-counter-badge" id="areasCountBadge">
+            <span id="areasCountText">24 Key Districts</span>
+          </div>
+        </div>
+
+        <!-- 24 Districts Grid -->
+        <div class="areas-districts-grid" id="areasDistrictsGrid">
+          
+          <div class="area-card" data-district="Dubai Water Front" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Water Front</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="DIFC" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">DIFC</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Downtown Dubai" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Downtown Dubai</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Business Bay" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Business Bay</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Al Safa" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Al Safa</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Mirdif" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Mirdif</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Beach" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Beach</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Island" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Island</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Lakes Towers" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Lakes Towers</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Umm Suqeim" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Umm Suqeim</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Sheikh Zayed Road" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Sheikh Zayed Road</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Production City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Production City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Sports City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Sports City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Golf Estates" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Golf Estates</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Discovery Gardens" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Discovery Gardens</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Marina" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Marina</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Silicon Oasis" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Silicon Oasis</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Media City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Media City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Barsha Heights" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Barsha Heights</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Internet City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Internet City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="The Greens" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">The Greens</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Arabian Ranches" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Arabian Ranches</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="The Palm Jumeirah" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">The Palm Jumeirah</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+        </div>
+
+        <!-- No Results Fallback (Shown via JS when search yields 0 matches) -->
+        <div class="areas-empty-state" id="areasEmptyState" style="display: none;">
+          <div class="empty-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h4 class="empty-title">Community not found in quick list?</h4>
+          <p class="empty-desc">We dispatch across 100% of Dubai! Call our central dispatch line for instant technician assignment to your location.</p>
+          <button class="empty-cta-btn book-trigger" data-service="General Repair">Book Immediate Dispatch</button>
+        </div>
+
+        <!-- Bottom CTA Banner (ApexFix High-Contrast Dispatch Callout) -->
+        <div class="areas-cta-banner">
+          <div class="cta-banner-text">
+            <span class="cta-banner-eyebrow">Don't see your community listed above?</span>
+            <h4 class="cta-banner-heading">ApexFix covers 100% of Greater Dubai &amp; Free Zones</h4>
+          </div>
+          <div class="cta-banner-action">
+            <a href="tel:+971508867234" class="btn-dispatch-call" id="dispatchCallBtn">
+              <svg class="phone-vibe-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <span>Call Central Dispatch: +971 50 886 7234</span>
+            </a>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Process Steps Section -->
+      <section class="process-section" id="process">
+        <div class="process-layout">
+          
+          <!-- Left Prominent Featured Card -->
+          <div class="process-featured-card">
+            <div class="process-featured-inner">
+              <div class="process-featured-top">
+                <div class="process-badge-tag">
+                  <span class="badge-dot"></span>
+                  <span>HOW IT WORKS</span>
+                </div>
+                <h2 class="process-main-title">How Our Appliance Repair Process Works</h2>
+                <p class="process-main-desc">
+                  Our appliance repair process is designed to be quick, simple, and hassle-free. From booking to repair completion, we ensure smooth service at every step.
+                </p>
+              </div>
+              
+              <div class="process-featured-bottom">
+                <div class="process-action-row">
+                  <button class="btn-process-action book-trigger" data-service="General Repair">
+                    <span>Book Your Service</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Abu Dhabi Coverage Note -->
+                <div class="process-coverage-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>ApexFix Covers All Areas Across Greater Dubai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Header & 2x2 Steps Grid -->
+          <div class="process-right-col">
+            <div class="process-grid-header">
+              <div class="process-eyebrow-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>WORK PROCESS</span>
+              </div>
+              <h3 class="process-grid-title">Quick, Simple &amp; Hassle-Free Steps</h3>
+            </div>
+
+            <div class="process-steps-grid">
+              
+              <!-- Step 1: Book Your Service -->
+              <div class="process-step-item">
+                <div class="step-icon-col">
+                  <div class="step-icon-circle">
+                    <span class="step-num">01</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                      <path d="M9 16l2 2 4-4"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="step-text-col">
+                  <h4 class="step-title">Book Your Service</h4>
+                  <p class="step-desc">Choose your appliance issue and schedule your repair via call or online in seconds.</p>
+                </div>
+              </div>
+
+              <!-- Step 2: Technician Arrives -->
+              <div class="process-step-item">
+                <div class="step-icon-col">
+                  <div class="step-icon-circle">
+                    <span class="step-num">02</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="8.5" cy="7" r="4"></circle>
+                      <polyline points="17 11 19 13 23 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="step-text-col">
+                  <h4 class="step-title">Technician Arrives</h4>
+                  <p class="step-desc">A certified technician visits your location on time for quick inspection.</p>
+                </div>
+              </div>
+
+              <!-- Step 3: Diagnose & Repair -->
+              <div class="process-step-item">
+                <div class="step-icon-col">
+                  <div class="step-icon-circle">
+                    <span class="step-num">03</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="step-text-col">
+                  <h4 class="step-title">Diagnose &amp; Repair</h4>
+                  <p class="step-desc">We identify the problem and fix it using quality tools and reliable solutions.</p>
+                </div>
+              </div>
+
+              <!-- Step 4: Job Done & Guaranteed -->
+              <div class="process-step-item">
+                <div class="step-icon-col">
+                  <div class="step-icon-circle">
+                    <span class="step-num">04</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="step-text-col">
+                  <h4 class="step-title">Job Done &amp; Guaranteed</h4>
+                  <p class="step-desc">Your appliance is restored to perfect working condition with a service warranty.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Client Stories Carousel Section (Replicating Arched Deck Design) -->
+      <section class="stories-section" id="stories">
+        <div class="stories-container">
+          
+          <!-- Section Header: Centered Title + Right Navigation Buttons -->
+          <div class="stories-header">
+            <h2 class="stories-title">Our clients share their stories</h2>
+            <div class="stories-nav-controls">
+              <button class="stories-nav-btn btn-prev" id="storiesPrevBtn" aria-label="Previous stories">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button class="stories-nav-btn btn-next" id="storiesNextBtn" aria-label="Next stories">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Container & Fanned Track -->
+          <div class="stories-deck-wrapper" id="storiesDeckWrapper">
+            <div class="stories-track" id="storiesTrack">
+              
+              <!-- Slide 1 (Page 0) -->
+              <div class="stories-slide" data-page="0">
+                
+                <!-- Card 1: Esther Howard -->
+                <div class="story-card card-arc-1" data-index="0">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "When our Sub-Zero refrigerator cooling failed right before a catering weekend, ApexFix arrived in 35 minutes. They diagnosed the compressor relay and had it cooling within an hour. Saved thousands in inventory!"
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar1.jpg" alt="Esther Howard" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Esther Howard</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Leslie Alexander -->
+                <div class="story-card card-arc-2" data-index="1">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "When disaster struck my Brooklyn apartment, ApexFix Appliance was my lifeline. Their team was swift, efficient, and so caring. They diagnosed our flooded washer pump and transformed a nightmare back into calm."
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar2.jpg" alt="Leslie Alexander" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Leslie Alexander</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Albert Flores -->
+                <div class="story-card card-arc-3" data-index="2">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "I never thought our high-end convection oven would recover from an igniter burnout on Thanksgiving Eve. ApexFix responded immediately, gave an upfront estimate, and had everything baking to perfection."
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar3.jpg" alt="Albert Flores" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Albert Flores</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 4: Leonardo Kiwi -->
+                <div class="story-card card-arc-4" data-index="3">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "ApexFix Appliance is the gold standard! They handled our built-in dishwasher wash pump leak with absolute professionalism. Upfront digital diagnostic quote, no hidden travel fees, and left the area spotless."
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar4.jpg" alt="Leonardo Kiwi" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Leonardo Kiwi</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Slide 2 (Page 1) -->
+              <div class="stories-slide" data-page="1">
+                
+                <!-- Card 5: Sarah Jenkins -->
+                <div class="story-card card-arc-1" data-index="4">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "During the 98-degree heatwave our central AC unit tripped completely. ApexFix dispatched technician Mike who quickly found a blown capacitor and restored ice-cold air. Honest, fast, and transparent!"
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar1.jpg" alt="Sarah Jenkins" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Sarah Jenkins</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 6: Marcus Vance -->
+                <div class="story-card card-arc-2" data-index="5">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "Our smart cooktop motherboard had stopped responding. Two companies told us to buy a new one, but ApexFix ordered the authentic OEM board and repaired it like brand new. Outstanding craft and warranty!"
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar2.jpg" alt="Marcus Vance" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Marcus Vance</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 7: Rachel Green -->
+                <div class="story-card card-arc-3" data-index="6">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "Our dual-zone wine cooler temperature spiked unexpectedly. ApexFix diagnosed the digital thermistor sensor on the spot and recalibrated the cooling cycles perfectly. Truly master-level service!"
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar3.jpg" alt="Rachel Green" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">Rachel Green</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+                <!-- Card 8: David Miller -->
+                <div class="story-card card-arc-4" data-index="7">
+                  <div class="story-card-top">
+                    <span class="story-badge">STORIES</span>
+                  </div>
+                  <p class="story-quote">
+                    "Our commercial laundry dryer was taking three full cycles to dry. ApexFix replaced the worn thermal fuse and cleared the obstructed blower conduit in one quick visit. Highest recommendation!"
+                  </p>
+                  <div class="story-card-footer">
+                    <div class="story-author-info">
+                      <img src="assets/avatar4.jpg" alt="David Miller" class="story-avatar" loading="lazy">
+                      <div class="story-author-meta">
+                        <h4 class="story-author-name">David Miller</h4>
+                        <span class="story-author-role">Customer</span>
+                      </div>
+                    </div>
+                    <div class="story-quote-mark" aria-hidden="true">”</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Segmented Pagination Indicator -->
+          <div class="stories-pagination" id="storiesPagination">
+            <button class="pagination-bar active" data-page="0" aria-label="Page 1"></button>
+            <button class="pagination-bar" data-page="1" aria-label="Page 2"></button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ Section (Inspired by reference media_1790252329392.png with ApexFix Luxury Engineering) -->
+      <section class="faq-section" id="faq" aria-labelledby="faqHeading">
+        <div class="faq-container">
+          <div class="faq-grid">
+            
+            <!-- Left Column: Accordion Cards Stack -->
+            <div class="faq-accordion-col" id="faqAccordion">
+              
+              <!-- Card 1 (Active by default matching reference image) -->
+              <div class="faq-card active">
+                <button class="faq-card-header" aria-expanded="true" aria-controls="faq-ans-1">
+                  <span class="faq-question">What makes ApexFix different from other repair services?</span>
+                  <span class="faq-toggle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-card-content" id="faq-ans-1">
+                  <div class="faq-card-inner">
+                    <div class="faq-card-body">
+                      We provide expert, respectful, and pristine appliance repair service, treating your home with care and professionalism. All repairs are executed by factory-certified master technicians using 100% genuine OEM components, backed by our rock-solid 90-day guarantee.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="faq-card">
+                <button class="faq-card-header" aria-expanded="false" aria-controls="faq-ans-2">
+                  <span class="faq-question">What types of appliances do you repair and maintain?</span>
+                  <span class="faq-toggle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-card-content" id="faq-ans-2">
+                  <div class="faq-card-inner">
+                    <div class="faq-card-body">
+                      We service the full spectrum of high-end home and commercial appliances: refrigerators, side-by-side freezers, washing machines, tumble dryers, dishwashers, gas/induction cooktops, built-in ovens, range hoods, and central HVAC air conditioners across 20+ top international brands.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="faq-card">
+                <button class="faq-card-header" aria-expanded="false" aria-controls="faq-ans-3">
+                  <span class="faq-question">Why is dryer vent cleaning and coil maintenance important?</span>
+                  <span class="faq-toggle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-card-content" id="faq-ans-3">
+                  <div class="faq-card-inner">
+                    <div class="faq-card-body">
+                      Accumulated lint and dust restrict essential airflow, posing high fire hazards and forcing motors and compressors to overheat. Periodic professional cleaning preserves machine longevity, prevents unexpected breakdowns, and cuts electricity consumption by up to 30%.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="faq-card">
+                <button class="faq-card-header" aria-expanded="false" aria-controls="faq-ans-4">
+                  <span class="faq-question">How fast can an ApexFix technician arrive at my home?</span>
+                  <span class="faq-toggle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-card-content" id="faq-ans-4">
+                  <div class="faq-card-inner">
+                    <div class="faq-card-body">
+                      With 14+ dedicated mobile response vans strategically staged across Dubai, our dispatch center guarantees same-day appointments, with priority emergency arrival typically within 60 to 90 minutes anywhere in Downtown, Dubai Marina, Palm Jumeirah, Arabian Ranches, and beyond.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="faq-card">
+                <button class="faq-card-header" aria-expanded="false" aria-controls="faq-ans-5">
+                  <span class="faq-question">Why does my gas oven glow like it is hot even when it is not heating?</span>
+                  <span class="faq-toggle-btn" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-card-content" id="faq-ans-5">
+                  <div class="faq-card-inner">
+                    <div class="faq-card-body">
+                      A glowing igniter that fails to light the burner indicates resistance decay. It draws electrical current without reaching the specific amperage threshold required to trigger the bi-metal safety valve. Our mobile units carry OEM igniters for quick, same-day resolution.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Heading, Lead Text, Pill CTA & Support Card -->
+            <div class="faq-info-col">
+              <div class="faq-sticky-wrap">
+                
+                <div class="faq-info-header">
+                  <!-- Eyebrow Badge -->
+                  <div class="faq-eyebrow-badge">
+                    <span class="faq-badge-dot"></span>
+                    <span>Clear Answers &amp; Guidance</span>
+                  </div>
+
+                  <!-- Main Section Title matching image: Questions / Answered FAQ -->
+                  <h2 class="faq-title" id="faqHeading">
+                    Questions<br>
+                    <span class="faq-title-accent">Answered FAQ</span>
+                  </h2>
+
+                  <p class="faq-lead-text">
+                    Our expert technicians provide professional, and caring appliance repair service you can always trust.
+                  </p>
+
+                  <!-- Primary Pill CTA -->
+                  <div class="faq-cta-row">
+                    <button type="button" class="btn-faq-view-all" id="faqExpandAllBtn">
+                      <span>View All FAQ</span>
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Bottom Support Callout Card matching image -->
+                <div class="faq-support-card">
+                  <div class="faq-support-meta">
+                    <div class="faq-avatar-wrap">
+                      <img src="assets/avatar1.jpg" alt="ApexFix Support Specialist" class="faq-avatar-img">
+                      <span class="faq-status-indicator" title="Live Specialist Online"></span>
+                    </div>
+                    <div class="faq-support-text">
+                      <span class="faq-support-prompt">Have more questions?</span>
+                      <strong class="faq-support-action">Book a free discovery call</strong>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/971508867234?text=Hello%20ApexFix,%20I%20have%20a%20question%20regarding%20appliance%20repair" target="_blank" rel="noopener noreferrer" class="btn-faq-talk">
+                    <span>Let's Talk ApexFix</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Master Brand Footer (Inspired by reference media_1790231422435.png with ApexFix Luxury Engineering) -->
+      <footer class="site-footer-master" id="contact">
+        
+        <!-- Top Identity & Social Channels -->
+        <div class="footer-top-brand">
+          <!-- Official ApexFix Logo -->
+          <a href="#" class="footer-logo" aria-label="ApexFix Home">
+            <div class="logo-mark-wrap">
+              <svg class="logo-icon-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 48L19 36M6 54L23 41M11 58L27 47" class="logo-motion-path" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M37 7.5L39.2 7.5L39.8 11.2C41.2 11.7 42.6 12.4 43.8 13.3L47.2 11.8L49 13.6L47.5 17C48.4 18.2 49.1 19.6 49.6 21.1L53.3 21.7L53.3 24.3L49.6 24.9C49.1 26.4 48.4 27.8 47.5 29L49 32.4L47.2 34.2L43.8 32.7C42.6 33.6 41.2 34.3 39.8 34.8L39.2 38.5L37 38.5L36.4 34.8C35 34.3 33.6 33.6 32.4 32.7L29 34.2L27.2 32.4L28.7 29C27.8 27.8 27.1 26.4 26.6 24.9L22.9 24.3L22.9 21.7L26.6 21.1C27.1 19.6 27.8 18.2 28.7 17L27.2 13.6L29 11.8L32.4 13.3C33.6 12.4 35 11.7 36.4 11.2L37 7.5Z" class="logo-gear-path" fill="var(--brand-accent)"/>
+                <circle cx="38.1" cy="23" r="8" class="logo-gear-cutout" fill="var(--bg-canvas)"/>
+                <path d="M41.8 19.3L39.8 17.3C39.1 17.5 38.4 18 38 18.4C37.2 19.2 37 20.3 37.3 21.2L34 24.5C33.5 25 33.5 25.8 34 26.3C34.5 26.8 35.3 26.8 35.8 26.3L39.1 23C40 23.3 41.1 23.1 41.9 22.3C42.3 21.9 42.8 21.2 43 20.5L41 18.5" class="logo-wrench-path" fill="var(--brand-accent)"/>
+              </svg>
+            </div>
+            <div class="logo-text-col">
+              <div class="logo-brand-row">
+                <span class="brand-accent-text">APEX</span><span class="brand-main-text">FIX</span>
+              </div>
+              <div class="logo-sub-row">
+                <span class="logo-sub-line"></span>
+                <span class="logo-sub-tag">APPLIANCE REPAIR</span>
+                <span class="logo-sub-line"></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Brand Statement -->
+          <p class="footer-brand-desc">
+            ApexFix Appliance Repair offers certified same-day home appliance repair across Dubai &amp; the UAE. Fast diagnostics, genuine OEM factory parts, and guaranteed satisfaction.
+          </p>
+
+          <!-- Social Channels Row -->
+          <div class="footer-social-row">
+            <a href="https://wa.me/971508867234" target="_blank" rel="noopener" class="footer-social-btn btn-whatsapp" aria-label="WhatsApp Dispatch" title="WhatsApp 24/7">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+            <a href="tel:+971508867234" class="footer-social-btn btn-phone" aria-label="Call Dispatch Hub" title="Call +971 50 886 7234">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn btn-facebook" aria-label="Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn btn-instagram" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Card Container (Exact Reference Structure Elevated with Brand Palette) -->
+        <div class="footer-card-container">
+          <div class="footer-card-grid">
+
+            <!-- Column 1: Quick Links -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Quick Links</h3>
+              <div class="footer-col-accent-bar" aria-hidden="true"></div>
+              <ul class="footer-links-list">
+                <li><a href="#home" class="footer-link-active"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Home</a></li>
+                <li><a href="#services"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Services</a></li>
+                <li><a href="#about"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> About Us</a></li>
+                <li><a href="#service-areas"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Service Areas</a></li>
+                <li><a href="#process"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> How It Works</a></li>
+                <li><a href="#stories"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Customer Reviews</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Our Services -->
+            <div class="footer-col">
+              <h3 class="footer-col-title">Our Services</h3>
+              <div class="footer-col-accent-bar" aria-hidden="true"></div>
+              <ul class="footer-links-list">
+                <li><a href="#bookingModal" class="book-trigger" data-service="Washing Machine"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Washing Machine Repair</a></li>
+                <li><a href="#bookingModal" class="book-trigger" data-service="Dishwasher"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Dishwasher Repair</a></li>
+                <li><a href="#bookingModal" class="book-trigger" data-service="Refrigerator & Freezer"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Refrigerator Repair</a></li>
+                <li><a href="#bookingModal" class="book-trigger" data-service="Oven & Stove"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Cooker &amp; Oven Repair</a></li>
+                <li><a href="#bookingModal" class="book-trigger" data-service="Dryer (Gas/Electric)"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Clothes Dryer Repair</a></li>
+                <li><a href="#bookingModal" class="book-trigger" data-service="HVAC & AC"><span class="footer-link-chevron" aria-hidden="true">&rsaquo;</span> Central AC &amp; HVAC</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Us -->
+            <div class="footer-col footer-col-contact">
+              <h3 class="footer-col-title">Contact Us</h3>
+              <div class="footer-col-accent-bar" aria-hidden="true"></div>
+              
+              <ul class="footer-contact-list">
+                <li class="footer-contact-item">
+                  <div class="footer-contact-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="footer-contact-info">
+                    <span class="contact-label">Location</span>
+                    <span class="contact-value">United Arab Emirates</span>
+                  </div>
+                </li>
+
+                <li class="footer-contact-item">
+                  <div class="footer-contact-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="footer-contact-info">
+                    <span class="contact-label">Direct Phone</span>
+                    <a href="tel:+971508867234" class="contact-link">+971 50 886 7234</a>
+                  </div>
+                </li>
+
+                <li class="footer-contact-item">
+                  <div class="footer-contact-icon icon-whatsapp-wrap" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                  </div>
+                  <div class="footer-contact-info">
+                    <span class="contact-label">Live Chat</span>
+                    <a href="https://wa.me/971508867234" target="_blank" rel="noopener" class="contact-link live-chat-link">
+                      <span>WhatsApp Chat (24/7)</span>
+                      <span class="chat-status-pill"><span class="dot-online"></span></span>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="footer-contact-item">
+                  <div class="footer-contact-icon" aria-hidden="true">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="footer-contact-info">
+                    <span class="contact-label">Availability</span>
+                    <span class="contact-value">24/7 Support | 365 Days Available</span>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Fast Booking Action -->
+              <div class="footer-cta-box">
+                <button class="footer-book-btn book-trigger" data-service="General Repair">
+                  <span>Book Appointment Online</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Copyright & Credits Bar (Preserving reference format & Hywiz Technologies credit) -->
+        <div class="footer-bottom-bar">
+          <p class="footer-bottom-copy">
+            &copy; 2026 ApexFix Appliance Co. All Rights Reserved. Designed &amp; Developed with <span class="heart-pulse" aria-label="love">❤️</span> by <a href="https://hywiz.com" target="_blank" rel="noopener" class="hywiz-credit">Hywiz Technologies</a>.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#privacy">Privacy Policy</a>
+            <span class="legal-dot">&bull;</span>
+            <a href="#terms">Terms of Service</a>
+            <span class="legal-dot">&bull;</span>
+            <a href="#warranty">Warranty Guarantee</a>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Interactive Booking & Contact Modal -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-window">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-pill-tag">Quick Dispatch 24/7</div>
+        <h3 class="modal-title">Book Master Appliance Repair</h3>
+        <p class="modal-subtitle">Direct dispatch in under 60 minutes across all serviced locations.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="applianceType">Select Appliance</label>
+          <select id="applianceType" required>
+            <option value="" disabled selected>Select your appliance...</option>
+            <option value="Refrigerator & Freezer">Refrigerator / Freezer</option>
+            <option value="Washing Machine">Washing Machine</option>
+            <option value="Dryer (Gas/Electric)">Clothes Dryer</option>
+            <option value="Oven & Stove">Oven, Range &amp; Cooktop</option>
+            <option value="Dishwasher">Dishwasher</option>
+            <option value="HVAC & AC">Central AC / HVAC</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Sarah Jenkins" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder="(555) 382-9901" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="repairDate">Preferred Date</label>
+            <input type="date" id="repairDate" required>
+          </div>
+          <div class="form-group">
+            <label for="urgency">Service Urgency</label>
+            <select id="urgency">
+              <option value="Emergency Same-Day (Under 2 hrs)">Emergency Same-Day (Under 2 hrs)</option>
+              <option value="Today Standard" selected>Today Standard Dispatch</option>
+              <option value="Tomorrow Flexible">Tomorrow Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="modal-submit-btn">
+          <span>Confirm Repair Booking</span>
+          <span class="btn-arrow">&rarr;</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Confirmation Toast -->
+  <div class="toast" id="toastMessage">
+    <div class="toast-icon">✓</div>
+    <div class="toast-content">
+      <div class="toast-title">Booking Request Received!</div>
+      <div class="toast-desc">Our master technician dispatch has been alerted. Calling you shortly.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

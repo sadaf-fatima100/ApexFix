@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 54" width="200" height="54">
+  <rect x="0" y="0" width="200" height="54" rx="2" fill="#C8102E"/>
+  <!-- (W) Circle Icon -->
+  <circle cx="28" cy="27" r="14" fill="none" stroke="#FFFFFF" stroke-width="2.6"/>
+  <text x="28" y="33" font-family="'Arial Black', 'Arial', sans-serif" font-size="16" font-weight="900" text-anchor="middle" fill="#FFFFFF">W</text>
+  <!-- WESTPOINT Wordmark -->
+  <text x="50" y="34.5" font-family="'Arial Black', 'Arial', sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="0.4">WESTPOINT</text>
+</svg>

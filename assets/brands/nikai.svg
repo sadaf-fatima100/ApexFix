@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226 56" width="226" height="56">
+  <g fill="#ED1C24">
+    <!-- n -->
+    <path d="M 10,14 H 42 L 52,24 V 46 H 38 V 28 H 24 V 46 H 10 Z"/>
+    <!-- I -->
+    <path d="M 62,14 H 75 V 46 H 62 Z"/>
+    <!-- K -->
+    <path d="M 85,14 H 98 V 46 H 85 Z"/>
+    <path d="M 98,24 L 118,14 H 134 L 110,29 Z"/>
+    <path d="M 108,26 L 134,46 H 117 L 98,32 Z"/>
+    <!-- A -->
+    <path fill-rule="evenodd" d="M 144,14 H 182 V 46 H 168 V 34 H 158 V 46 H 144 Z M 158,23 H 168 V 28 H 158 Z"/>
+    <!-- I -->
+    <path d="M 192,14 H 205 V 46 H 192 Z"/>
+  </g>
+  <!-- Registered mark -->
+  <circle cx="215" cy="18" r="4.2" fill="none" stroke="#ED1C24" stroke-width="1"/>
+  <text x="215" y="20.8" font-family="'Arial', sans-serif" font-size="5.5" font-weight="bold" text-anchor="middle" fill="#ED1C24">R</text>
+</svg>
