@@ -1439,76 +1439,154 @@ button[id*="phone"] svg {
 
 .service-card-item {
   position: relative;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-}
-
-/* Background Image Container (Consistent Rounded Rectangle) */
-.service-img-wrap {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  border-radius: 20px;
+  height: 450px;
+  border-radius: 22px;
   overflow: hidden;
-  background-color: #f1eff8;
-  box-shadow: 0 10px 28px rgba(15, 43, 92, 0.08);
+  box-shadow: 0 16px 36px rgba(10, 16, 28, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  background-color: #0c1424;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.service-img {
+.service-card-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(10, 16, 28, 0.22);
+}
+
+.service-card-bg-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
 }
 
-.service-card-item:hover .service-img {
-  transform: scale(1.05);
+.service-card-item:hover .service-card-bg-img {
+  transform: scale(1.07);
+  filter: brightness(1.08) contrast(1.04);
 }
 
-/* Floating Overlaid Content Card with Smooth Synchronized Crisp Luminous Glow */
-.service-content-wrap {
+.service-card-scrim {
   position: absolute;
-  left: -10px;
-  right: 22px;
-  bottom: 20px;
-  z-index: 10;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 16, 28, 0.02) 0%,
+    rgba(10, 16, 28, 0.12) 35%,
+    rgba(10, 16, 28, 0.45) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Translucent Navy Blue Overlay Text Card (Exact match to Why Choose Us) */
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  margin: 14px;
+  padding: 18px 18px 18px 18px;
+  background: rgba(11, 28, 62, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 18px;
-  background-color: var(--brand-accent);
-  box-shadow: 0 12px 30px rgba(15, 43, 92, 0.32), 0 2px 6px rgba(0, 0, 0, 0.08);
-  border: 1.5px solid rgba(255, 255, 255, 0.22);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-  animation: smoothSynchronizedCardGlow 3.6s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 32px rgba(5, 14, 32, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Crisp High-Contrast Luminous Breathing Animation - Smooth, Synchronized, Zero Greyness */
-@keyframes smoothSynchronizedCardGlow {
-  0%, 100% {
-    box-shadow: 
-      0 12px 30px rgba(15, 43, 92, 0.32),
-      0 0 0 1px rgba(255, 255, 255, 0.18),
-      0 0 0 rgba(255, 255, 255, 0);
-    border-color: rgba(255, 255, 255, 0.22);
-  }
-  50% {
-    box-shadow: 
-      0 16px 36px rgba(15, 43, 92, 0.40),
-      0 0 0 1.5px rgba(255, 255, 255, 0.90),
-      0 0 18px rgba(255, 255, 255, 0.50);
-    border-color: #ffffff;
-  }
+.service-card-item:hover .service-card-content {
+  background: rgba(11, 28, 62, 0.92);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 16px 40px rgba(5, 14, 32, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
 }
 
-.service-card-item:hover .service-content-wrap {
-  transform: translateY(-5px);
-  box-shadow: 
-    0 0 0 2px #ffffff,
-    0 0 24px rgba(255, 255, 255, 0.55),
-    0 22px 46px rgba(15, 43, 92, 0.55);
+/* Icon Badge inside Translucent Navy Card */
+.service-card-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card-item:hover .service-card-icon-badge {
+  background: #ffffff;
   border-color: #ffffff;
+  color: var(--brand-accent, #0f2b5c);
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.service-card-title {
+  color: #ffffff;
+  font-size: 17.5px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-bottom: 7px;
+}
+
+.service-card-desc {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12.5px;
+  line-height: 1.52;
+  font-weight: 400;
+  margin: 0 0 14px 0;
+}
+
+/* Navbar-Shaped Pill Action Button */
+.service-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  color: var(--brand-accent, #0f2b5c);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.service-card-btn:hover {
+  background: var(--brand-accent-light, #edf3fc);
+  color: var(--brand-accent-hover, #0a1f44);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.4);
+}
+
+.service-card-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.service-card-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
@@ -1681,120 +1759,7 @@ button[id*="phone"] svg {
   box-shadow: 0 8px 22px rgba(16, 185, 129, 0.55);
 }
 
-.service-content-card {
-  position: relative;
-  background-color: var(--brand-accent);
-  border-radius: 16px;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-height: 168px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
-/* Header Row: Flush Top-Left Square Badge and Bold Title */
-.service-card-header {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  width: 100%;
-  margin-bottom: 0;
-  background: transparent;
-}
-
-/* Top-Left Accent Icon Badge with Matching Card Corner Radius */
-.service-icon-box {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-  background-color: #ffffff;
-  color: #0f2b5c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.25s ease;
-}
-
-.service-card-item:hover .service-icon-box {
-  background-color: #ffffff;
-  transform: none;
-}
-
-.service-icon-box svg {
-  color: #0f2b5c;
-  stroke: #0f2b5c;
-  width: 23px;
-  height: 23px;
-}
-
-/* Bold Service Title */
-.service-card-title {
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  line-height: 1.25;
-  margin: 0;
-  padding-right: 10px;
-}
-
-/* Description Text (Indented Left, Generous Right Space for Corner Button) */
-.service-card-desc {
-  font-size: 12.5px;
-  font-weight: 500;
-  color: #cbd5e1;
-  line-height: 1.5;
-  padding: 13px 48px 18px 16px;
-  margin: 0;
-  flex-grow: 1;
-}
-
-/* Bottom-Right Corner Docked Action Button with Matching Card Radius */
-.service-arrow-btn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 44px;
-  height: 38px;
-  background-color: #ffffff;
-  color: #0f2b5c;
-  border: none;
-  border-bottom-right-radius: 16px;
-  border-top-left-radius: 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-  z-index: 5;
-}
-
-.service-arrow-btn:hover,
-.service-card-item:hover .service-arrow-btn {
-  background-color: #edf3fc;
-  color: var(--brand-accent-hover);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.service-arrow-btn svg {
-  transition: transform 0.22s ease, color 0.22s ease, stroke 0.22s ease;
-  color: var(--brand-accent);
-  stroke: var(--brand-accent);
-}
-
-.service-card-item:hover .service-arrow-btn svg,
-.service-arrow-btn:hover svg {
-  transform: translateX(4px);
-  color: var(--brand-accent-hover);
-  stroke: var(--brand-accent-hover);
-}
 
 /* --- Services 24/7 Rapid Emergency Dispatch Action Bar --- */
 .services-dispatch-bar {
@@ -3062,8 +3027,8 @@ button[id*="phone"] svg {
 
 .process-layout {
   display: grid;
-  grid-template-columns: 390px 1fr;
-  gap: 28px;
+  grid-template-columns: 350px 1fr;
+  gap: 26px;
   align-items: stretch;
   width: 100%;
   position: relative;
@@ -3071,8 +3036,8 @@ button[id*="phone"] svg {
 
 @media (min-width: 1280px) {
   .process-layout {
-    grid-template-columns: 410px 1fr;
-    gap: 32px;
+    grid-template-columns: 370px 1fr;
+    gap: 28px;
   }
 }
 
@@ -3270,24 +3235,108 @@ button[id*="phone"] svg {
   }
 }
 
-/* 2x2 Steps Grid */
+/* 2x2 Steps Grid with Center Technician Showcase */
 .process-steps-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px 16px;
+  gap: 16px 130px;
+  align-items: stretch;
   flex: 1;
 }
 
 .process-step-item {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 15px;
   background-color: #ffffff;
-  padding: 18px 18px;
+  padding: 16px 18px;
   border-radius: 18px;
   border: 1.5px solid #e2e8f0;
-  box-shadow: 0 3px 12px rgba(15, 43, 92, 0.04);
+  box-shadow: 0 4px 16px rgba(15, 43, 92, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Center Technician Showcase Figure */
+.tech-center-showcase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.tech-glow-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(237, 243, 252, 0.98) 0%, rgba(219, 234, 254, 0.65) 50%, rgba(237, 243, 252, 0) 72%);
+  z-index: 1;
+}
+
+.tech-radar-ring {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(15, 43, 92, 0.2);
+  z-index: 2;
+  animation: rotateRadarRing 30s linear infinite;
+}
+
+@keyframes rotateRadarRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tech-showcase-img {
+  height: 280px;
+  width: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 14px 28px rgba(15, 43, 92, 0.22));
+}
+
+.tech-floating-status {
+  position: absolute;
+  bottom: 6px;
+  z-index: 4;
+  background: #0f2b5c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 5px 13px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(15, 43, 92, 0.36);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+}
+
+.status-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+  animation: pulseStatus 2s infinite;
+}
+
+@keyframes pulseStatus {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
 }
 
 .process-step-item:hover {
@@ -4017,23 +4066,25 @@ button[id*="phone"] svg {
   font-family: var(--font-family);
 }
 
-/* Content Grid: Text on Left, Technician Visual on Right */
+/* Content Grid: Text Centered with Equal Top & Bottom Space, Technician Anchored to Bottom */
 .prefooter-cta-content-grid {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  align-items: flex-end;
-  padding: 34px 44px 0 44px;
+  align-items: stretch;
+  padding: 0 44px;
   gap: 22px;
   min-height: 350px;
 }
 
-/* Left Column */
+/* Left Column: Vertically Centered for Equal Top & Bottom Space */
 .prefooter-cta-text-col {
-  padding-bottom: 34px;
+  padding: 38px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
   gap: 12px;
   max-width: 630px;
 }
@@ -4146,20 +4197,23 @@ button[id*="phone"] svg {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-.btn-prefooter-primary:hover {
-  background: #edf3fc;
-  color: #0a1f44;
-  border-color: #edf3fc;
+.btn-prefooter-primary:hover,
+.btn-prefooter-primary:focus-visible {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
 }
 
 .btn-prefooter-primary svg {
   transition: transform 0.22s ease;
 }
 
-.btn-prefooter-primary:hover svg {
+.btn-prefooter-primary:hover svg,
+.btn-prefooter-primary:focus-visible svg {
   transform: translateX(3px);
+  color: #ffffff;
 }
 
 /* Secondary Direct Call Button */
@@ -4185,17 +4239,24 @@ button[id*="phone"] svg {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-prefooter-call:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: #ffffff;
+.btn-prefooter-call:hover,
+.btn-prefooter-call:focus-visible {
+  background: #10b981;
+  border-color: #10b981;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.4);
 }
 
 .btn-prefooter-call svg {
   color: #38bdf8;
   flex-shrink: 0;
+  transition: color 0.25s ease;
+}
+
+.btn-prefooter-call:hover svg,
+.btn-prefooter-call:focus-visible svg {
+  color: #ffffff;
 }
 
 /* Right Visual Column */
@@ -4205,6 +4266,7 @@ button[id*="phone"] svg {
   align-items: flex-end;
   position: relative;
   height: 100%;
+  align-self: flex-end;
 }
 
 .cta-technician-wrap {
@@ -4272,12 +4334,8 @@ button[id*="phone"] svg {
 
 .guarantee-sub {
   font-size: 10px;
-  color: #93c5fd;
-  line-height: 1.2;
-  white-space: nowrap;
-}
   font-weight: 600;
-  color: #60a5fa;
+  color: #93c5fd;
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -4290,8 +4348,8 @@ body.dark-theme .prefooter-cta-card {
 
 body.dark-theme .prefooter-cta-overlay {
   background: 
-    radial-gradient(circle at 24% 48%, rgba(29, 78, 216, 0.3) 0%, transparent 62%),
-    linear-gradient(108deg, rgba(5, 12, 26, 0.97) 0%, rgba(10, 28, 62, 0.92) 50%, rgba(6, 16, 34, 0.88) 100%);
+    radial-gradient(circle at 14% 48%, rgba(29, 78, 216, 0.28) 0%, transparent 55%),
+    linear-gradient(90deg, rgba(4, 10, 22, 0.96) 0%, rgba(6, 16, 36, 0.88) 36%, rgba(8, 22, 48, 0.52) 56%, rgba(8, 22, 48, 0.16) 78%, transparent 100%);
 }
 
 /* Responsive Queries */
@@ -5661,37 +5719,33 @@ body.dark-theme .watermark-bg-text {
   color: rgba(255, 255, 255, 0.03);
 }
 
-body.dark-theme .service-content-wrap {
-  background-color: var(--brand-accent);
-  animation-name: smoothSynchronizedCardGlowDark;
+body.dark-theme .service-card-item {
+  background-color: #0b1320;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
-@keyframes smoothSynchronizedCardGlowDark {
-  0%, 100% {
-    box-shadow: 
-      0 14px 34px rgba(0, 0, 0, 0.60),
-      0 0 0 1px rgba(255, 255, 255, 0.16),
-      0 0 0 rgba(255, 255, 255, 0);
-    border-color: rgba(255, 255, 255, 0.20);
-  }
-  50% {
-    box-shadow: 
-      0 18px 40px rgba(0, 0, 0, 0.75),
-      0 0 0 1.5px rgba(255, 255, 255, 0.90),
-      0 0 18px rgba(255, 255, 255, 0.45);
-    border-color: #ffffff;
-  }
+body.dark-theme .service-card-content {
+  background: rgba(10, 22, 48, 0.88);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
-body.dark-theme .service-card-item:hover .service-content-wrap {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 24px rgba(255, 255, 255, 0.55), 0 24px 50px rgba(0, 0, 0, 0.85);
-  border-color: #ffffff;
+body.dark-theme .service-card-item:hover .service-card-content {
+  background: rgba(10, 22, 48, 0.96);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.25);
 }
 
-body.dark-theme .service-content-card {
-  background-color: var(--brand-accent);
-  border: none;
-  box-shadow: none;
+body.dark-theme .service-card-icon-badge {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #60a5fa;
+}
+
+body.dark-theme .service-card-item:hover .service-card-icon-badge {
+  background: #0f2b5c;
+  border-color: #60a5fa;
+  color: #ffffff;
 }
 
 body.dark-theme .service-card-title {
@@ -5702,44 +5756,16 @@ body.dark-theme .service-card-desc {
   color: #cbd5e1;
 }
 
-body.dark-theme .service-img-wrap {
-  background-color: #121217;
-}
-
-body.dark-theme .service-icon-box {
-  background-color: #ffffff;
+body.dark-theme .service-card-btn {
+  background: #ffffff;
   color: #0f2b5c;
+  border-color: rgba(255, 255, 255, 0.95);
 }
 
-body.dark-theme .service-icon-box svg {
-  color: #0f2b5c;
-  stroke: #0f2b5c;
-}
-
-body.dark-theme .service-card-item:hover .service-icon-box {
-  background-color: #ffffff;
-}
-
-body.dark-theme .service-arrow-btn {
-  background-color: #ffffff;
-  color: #0f2b5c;
-}
-
-body.dark-theme .service-arrow-btn svg {
-  color: #0f2b5c;
-  stroke: #0f2b5c;
-}
-
-body.dark-theme .service-arrow-btn:hover,
-body.dark-theme .service-card-item:hover .service-arrow-btn {
-  background-color: #10b981;
-  color: #ffffff;
-}
-
-body.dark-theme .service-arrow-btn:hover svg,
-body.dark-theme .service-card-item:hover .service-arrow-btn svg {
-  color: #ffffff;
-  stroke: #ffffff;
+body.dark-theme .service-card-btn:hover {
+  background: #edf3fc;
+  color: #0a1f44;
+  box-shadow: 0 8px 22px rgba(255, 255, 255, 0.45);
 }
 
 body.dark-theme .services-dispatch-bar {
@@ -6884,7 +6910,7 @@ body.dark-theme .btn-dispatch-call:hover {
 }
 
 .brands-container {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -7045,8 +7071,8 @@ body.dark-theme .btn-dispatch-call:hover {
 .brands-curved-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-  max-width: 980px;
+  gap: 16px;
+  max-width: 1140px;
   margin: 0 auto;
   transition: all 0.3s ease;
 }
@@ -7054,7 +7080,7 @@ body.dark-theme .btn-dispatch-call:hover {
 /* Individual Brand Card with Smooth Curves & Docked Full-Width Footer */
 .brand-curved-card {
   background-color: #ffffff;
-  border: 1.5px solid #e1e9f4;
+  border: 1.5px solid #0f2b5c; /* Navy Blue Border */
   border-radius: 18px;
   padding: 0;
   display: flex;
@@ -7066,7 +7092,7 @@ body.dark-theme .btn-dispatch-call:hover {
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+  box-shadow: 0 2px 8px rgba(15, 43, 92, 0.05);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s ease,
               border-color 0.25s ease,
@@ -7076,7 +7102,7 @@ body.dark-theme .btn-dispatch-call:hover {
 .brand-curved-card:hover {
   transform: translateY(-5px);
   border-color: #0f2b5c;
-  box-shadow: 0 14px 30px rgba(15, 43, 92, 0.1);
+  box-shadow: 0 12px 28px rgba(15, 43, 92, 0.16);
 }
 
 /* Card Body (Logo + Sub-tag) */
@@ -7241,7 +7267,7 @@ body.dark-theme .brands-logos-inner {
 
 body.dark-theme .brand-curved-card {
   background-color: #151a24;
-  border-color: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid #1e3a8a;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -9818,19 +9844,7 @@ body.dark-theme .service-hero-shelf-text {
   max-width: 520px;
 }
 
-.services-eyebrow-pill {
-  display: inline-block;
-  background: #f59e0b; /* Golden Yellow like reference image */
-  color: #0f172a;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 5px 14px;
-  border-radius: 6px;
-  letter-spacing: 0.04em;
-  text-transform: capitalize;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
-}
+
 
 .services-main-heading {
   font-family: var(--font-family);
@@ -9859,11 +9873,11 @@ body.dark-theme .service-hero-shelf-text {
 /* Common Card Shell */
 .service-curved-card {
   position: relative;
-  height: 440px;
+  height: 375px;
   background: #ffffff;
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(15, 43, 92, 0.06);
+  box-shadow: 0 14px 36px rgba(15, 43, 92, 0.06);
   border: 1px solid rgba(15, 43, 92, 0.08);
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -9872,16 +9886,16 @@ body.dark-theme .service-hero-shelf-text {
 }
 
 .service-curved-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 54px rgba(15, 43, 92, 0.14);
-  border-color: rgba(15, 43, 92, 0.2);
+  transform: translateY(-7px);
+  box-shadow: 0 22px 50px rgba(15, 43, 92, 0.13);
+  border-color: rgba(15, 43, 92, 0.18);
 }
 
 /* Card Content Area */
 .card-content-area {
   position: absolute;
   inset: 0;
-  padding: 30px 26px;
+  padding: 24px 22px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -9890,26 +9904,40 @@ body.dark-theme .service-hero-shelf-text {
 
 /* Cards where text is at the TOP (Cards 1, 3, 5) */
 .card-variant-1 .card-content-area,
-.card-variant-3 .card-content-area,
+.card-variant-3 .card-content-area {
+  justify-content: flex-start;
+  max-width: 82%;
+}
+
 .card-variant-5 .card-content-area {
   justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 24px;
 }
 
 /* Cards where text is at the BOTTOM (Cards 2, 4, 6) */
-.card-variant-2 .card-content-area,
+.card-variant-2 .card-content-area {
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
 .card-variant-4 .card-content-area,
 .card-variant-6 .card-content-area {
   justify-content: flex-end;
+  max-width: 85%;
 }
 
 /* Card Title & Description */
 .card-title {
   font-family: var(--font-family);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-dark);
   line-height: 1.25;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: -0.02em;
   transition: color 0.25s ease;
 }
@@ -9919,9 +9947,9 @@ body.dark-theme .service-hero-shelf-text {
 }
 
 .card-description {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-sub);
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -9929,9 +9957,9 @@ body.dark-theme .service-hero-shelf-text {
 .card-watermark-num {
   position: absolute;
   font-family: var(--font-family);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  color: rgba(15, 43, 92, 0.1);
+  color: rgba(15, 43, 92, 0.08);
   letter-spacing: -0.02em;
   line-height: 1;
   pointer-events: none;
@@ -9939,40 +9967,25 @@ body.dark-theme .service-hero-shelf-text {
 }
 
 .num-left {
-  bottom: 46px;
-  left: 26px;
+  bottom: 18px;
+  left: 20px;
 }
 
 .num-center {
-  bottom: 18px;
+  bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .num-right {
-  bottom: 46px;
-  right: 26px;
-}
-
-.num-left-top {
-  top: 150px;
-  left: 26px;
+  bottom: 18px;
+  right: 20px;
 }
 
 .num-center-top {
-  top: 22px;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.num-right-top {
-  top: 150px;
-  right: 26px;
-}
-
-.num-top-right {
-  top: 22px;
-  right: 26px;
 }
 
 /* Image Wrapper with Precise Clip Paths */
@@ -10028,87 +10041,66 @@ body.dark-theme .service-hero-shelf-text {
   -webkit-clip-path: url(#card-cut-6);
 }
 
-/* Dashed Seam Divider & Badge */
-.card-seam-divider {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.seam-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.seam-path-line {
-  fill: none;
-  stroke: rgba(15, 43, 92, 0.32);
-  stroke-width: 1.8;
-  stroke-dasharray: 5 4;
-}
-
-/* Floating Circular Badge on the Seam */
+/* Floating Circular Badge on the Boundary (Website Theme Navy Blue) */
 .card-seam-badge {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: #fab700; /* Warm Golden Amber matching reference */
+  background: var(--brand-accent); /* Website Theme Rich Navy Blue #0f2b5c */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f172a;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(15, 43, 92, 0.28);
   border: 3.5px solid #ffffff;
   transform: translate(-50%, -50%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.35s ease;
+  z-index: 5;
   pointer-events: auto;
 }
 
 .service-curved-card:hover .card-seam-badge {
   transform: translate(-50%, -50%) scale(1.12);
-  box-shadow: 0 10px 24px rgba(250, 183, 0, 0.4);
+  background: var(--brand-accent-hover);
+  box-shadow: 0 10px 22px rgba(15, 43, 92, 0.38);
 }
 
 .seam-badge-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
 
-/* Seam Badge Placement Coordinates */
+/* Seam Badge Audited Placement Coordinates */
 .card-variant-1 .card-seam-badge {
-  top: 52.5%;
-  left: 50%;
+  top: 63%;
+  left: 60%;
 }
 
 .card-variant-2 .card-seam-badge {
-  top: 55%;
+  top: 28%;
   left: 50%;
 }
 
 .card-variant-3 .card-seam-badge {
-  top: 52.5%;
-  left: 50%;
+  top: 63%;
+  left: 40%;
 }
 
 .card-variant-4 .card-seam-badge {
-  top: 47.5%;
-  left: 50%;
+  top: 37%;
+  left: 60%;
 }
 
 .card-variant-5 .card-seam-badge {
-  top: 45%;
+  top: 72%;
   left: 50%;
 }
 
 .card-variant-6 .card-seam-badge {
-  top: 47.5%;
-  left: 50%;
+  top: 37%;
+  left: 40%;
 }
 
 /* ========================================================
@@ -10137,13 +10129,17 @@ body.dark-theme .card-watermark-num {
 }
 
 body.dark-theme .card-seam-badge {
+  background: #2563eb;
   border-color: #17223b;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-theme .seam-path-line {
-  stroke: rgba(255, 255, 255, 0.28);
+body.dark-theme .service-curved-card:hover .card-seam-badge {
+  background: #3b82f6;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.5);
 }
+
 
 body.dark-theme .services-main-heading {
   color: #ffffff;
