@@ -8700,11 +8700,10 @@ body.dark-theme .emergency-pillar-item:hover {
 
 .cta-showcase-section {
   position: relative;
-  background: #ffffff;
+  background: transparent;
   padding: var(--section-py) 0 0 0;
   margin: 0;
   overflow: hidden;
-  border-top: 1px solid rgba(15, 43, 92, 0.06);
   border-bottom: 1px solid rgba(15, 43, 92, 0.06);
 }
 
@@ -8917,8 +8916,8 @@ body.dark-theme .emergency-pillar-item:hover {
    ========================================================================== */
 
 body.dark-theme .cta-showcase-section {
-  background: #0f172a;
-  border-top-color: rgba(255, 255, 255, 0.06);
+  background: transparent;
+  border-top-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
