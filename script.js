@@ -190,15 +190,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile Navigation Toggle
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('open');
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Close mobile menu on link click
+    // Close mobile menu on regular link click (exclude dropdown toggle)
     navMenu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!link.classList.contains('nav-dropdown-toggle')) {
+          navMenu.classList.remove('open');
+          mobileToggle.classList.remove('active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Close mobile menu when clicking any dropdown item
+    navMenu.querySelectorAll('.dropdown-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        if (servicesDropdown) {
+          servicesDropdown.classList.remove('open');
+        }
       });
+    });
+
+    // Close mobile menu when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Reset mobile menu on screen resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        mobileToggle.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        if (servicesDropdown) {
+          servicesDropdown.classList.remove('open');
+        }
+      }
     });
   }
 
