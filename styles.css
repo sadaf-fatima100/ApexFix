@@ -1461,16 +1461,17 @@ button[id*="phone"] svg {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 100%);
+  background: #0f2b5c;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 2px 7px rgba(15, 43, 92, 0.28);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: all 0.22s ease;
 }
 
 .hero-service-pill:hover .hero-service-pill-icon {
+  background: #173e82;
   transform: scale(1.08);
   box-shadow: 0 4px 12px rgba(15, 43, 92, 0.45);
 }
@@ -5861,12 +5862,13 @@ body.dark-theme .hero-service-pill:hover .hero-service-pill-text {
 }
 
 body.dark-theme .hero-service-pill-icon {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+  background: #0f2b5c;
+  box-shadow: 0 2px 10px rgba(15, 43, 92, 0.4);
 }
 
 body.dark-theme .hero-service-pill:hover .hero-service-pill-icon {
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.6);
+  background: #173e82;
+  box-shadow: 0 4px 14px rgba(15, 43, 92, 0.6);
 }
 
 body.dark-theme .badge-tag {
