@@ -1357,19 +1357,7 @@ button[id*="phone"] svg {
 }
 
 .watermark-bg-text {
-  position: absolute;
-  top: -26px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  color: rgba(18, 18, 23, 0.038);
-  text-transform: uppercase;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  white-space: nowrap;
+  display: none;
 }
 
 .badge-tag {
@@ -5729,7 +5717,7 @@ body.dark-theme .section-desc {
 }
 
 body.dark-theme .watermark-bg-text {
-  color: rgba(255, 255, 255, 0.03);
+  display: none;
 }
 
 body.dark-theme .service-card-item {
