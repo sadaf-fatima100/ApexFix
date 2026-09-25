@@ -2888,8 +2888,8 @@ button[id*="phone"] svg {
 
 .process-layout {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: 28px;
+  grid-template-columns: 380px 1fr;
+  gap: 26px;
   align-items: stretch;
   width: 100%;
   position: relative;
@@ -2897,8 +2897,8 @@ button[id*="phone"] svg {
 
 @media (min-width: 1280px) {
   .process-layout {
-    grid-template-columns: 350px 1fr;
-    gap: 30px;
+    grid-template-columns: 400px 1fr;
+    gap: 28px;
   }
 }
 
@@ -2977,10 +2977,10 @@ button[id*="phone"] svg {
 
 .process-main-title {
   font-family: var(--font-heading);
-  font-size: var(--text-h2);
+  font-size: clamp(1.65rem, 2.1vw, 2.05rem);
   font-weight: 700;
-  letter-spacing: var(--ls-h2);
-  line-height: var(--lh-h2);
+  letter-spacing: -0.025em;
+  line-height: 1.24;
   color: #ffffff;
   margin-bottom: 12px;
 }
@@ -4948,6 +4948,7 @@ body.dark-theme .prefooter-cta-overlay {
   }
 
   .desc-line {
+    display: inline;
     white-space: normal;
   }
 
@@ -5237,11 +5238,25 @@ body.dark-theme .prefooter-cta-overlay {
     padding: 0;
   }
 
+  .desc-line {
+    display: inline !important;
+    white-space: normal !important;
+  }
+
+  .hero-description {
+    max-width: 480px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
   .hero-cta-group {
     flex-direction: column;
     width: 100%;
+    max-width: 380px;
+    margin: 0 auto 22px auto;
     gap: 10px;
-    margin-left: 0;
   }
 
   .btn-hero-primary,
@@ -5250,11 +5265,93 @@ body.dark-theme .prefooter-cta-overlay {
     justify-content: center;
     text-align: center;
     white-space: normal;
-    padding: 12px 18px;
+    padding: 12.5px 18px;
+    font-size: 14.5px;
   }
 
-  .desc-line {
+  /* Hero Trust Google Rating + 3 Badges Box */
+  .hero-trust-proof-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 24px auto;
+    padding: 14px 16px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid rgba(15, 43, 92, 0.08);
+    box-shadow: 0 4px 16px rgba(15, 43, 92, 0.04);
+  }
+
+  .hero-trust-divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(15, 43, 92, 0.12);
+    margin: 0 auto;
+  }
+
+  .hero-trust-bullets {
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .trust-bullet-item {
+    font-size: 13.5px;
     white-space: normal;
+    justify-content: center;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  /* Hero Visual Stage */
+  .visual-stage {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .main-image-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 82%;
+    height: 350px;
+    border-radius: 28px;
+  }
+
+  .sub-image-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 42%;
+    height: 170px;
+    border-radius: 20px;
+    z-index: 15;
+  }
+
+  .social-proof-card {
+    position: absolute;
+    bottom: -10px;
+    right: 8px;
+    left: auto;
+    width: auto;
+    max-width: calc(100% - 16px);
+    margin-top: 0;
+    padding: 10px 14px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(15, 43, 92, 0.14);
+    z-index: 25;
+  }
+
+  .stats-label {
+    white-space: normal;
+    font-size: 10.5px;
+    line-height: 1.25;
   }
 
   .hero-trust-card {
@@ -5281,13 +5378,6 @@ body.dark-theme .prefooter-cta-overlay {
   .hero-service-pill {
     padding: 4px 11px 4px 4px;
     gap: 7px;
-  }
-
-  .social-proof-card {
-    position: static;
-    width: 100%;
-    margin-top: 14px;
-    border-radius: 14px;
   }
 
   /* Services Grid */
@@ -6432,6 +6522,21 @@ body.dark-theme .btn-dispatch-whatsapp:hover {
   border-color: #059669 !important;
   color: #ffffff !important;
   box-shadow: 0 8px 26px rgba(16, 185, 129, 0.45) !important;
+}
+
+body.dark-theme .hero-trust-proof-row {
+  background-color: #0c1424;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .google-brand-title,
+body.dark-theme .rating-score,
+body.dark-theme .trust-bullet-item {
+  color: #ffffff;
+}
+
+body.dark-theme .hero-trust-divider {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 body.dark-theme .social-proof-card {
