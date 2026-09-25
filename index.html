@@ -17,6 +17,17 @@
   <!-- SVG Clip Paths for Exact Geometric Shapes -->
   <svg class="svg-defs" width="0" height="0" aria-hidden="true">
     <defs>
+      <!-- Service Hero Stepped Diagonal Cut (Reference Media Exact Shape with Bottom-Left Shelf) -->
+      <clipPath id="service-hero-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.025,0.00 
+                 H 0.975 Q 1.00,0.00 1.00,0.035 
+                 V 0.965 Q 1.00,1.00 0.975,1.00 
+                 H 0.54 Q 0.51,1.00 0.48,0.96 
+                 L 0.43,0.86 Q 0.40,0.82 0.36,0.82 
+                 H 0.025 Q 0.00,0.82 0.00,0.785 
+                 V 0.035 Q 0.00,0.00 0.025,0.00 Z" />
+      </clipPath>
+
       <!-- Main Hero Image Symmetrical Asymmetric Cut (Identical Top-Left and Bottom-Right Chamfers) -->
       <clipPath id="main-hero-cut" clipPathUnits="objectBoundingBox">
         <path d="M 0.36,0.00 
@@ -144,7 +155,7 @@
           <a href="#about" class="nav-link">About</a>
           
           <div class="nav-dropdown" id="servicesDropdown">
-            <a href="#services" class="nav-link nav-dropdown-toggle" id="servicesDropdownBtn" aria-haspopup="true" aria-expanded="false">
+            <a href="services.html" class="nav-link nav-dropdown-toggle" id="servicesDropdownBtn" aria-haspopup="true" aria-expanded="false">
               <span>Services</span>
               <svg class="dropdown-chevron" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
@@ -259,75 +270,64 @@
             </div>
 
 
-            <!-- Ultra-Refined Live Dubai Dispatch & Trust Assurance Console -->
-            <div class="hero-trust-assurance-card">
-              <!-- Top Row: Live Dispatch Beacon & Google Rating -->
-              <div class="trust-card-header">
-                <div class="live-dispatch-badge">
-                  <span class="live-beacon">
-                    <span class="beacon-core"></span>
-                    <span class="beacon-ping"></span>
-                  </span>
-                  <span class="beacon-label">
-                    <span class="beacon-count">18 Technicians Active</span> in Dubai
-                  </span>
+            <!-- Hero Trust & Social Proof Row (Google Rating + 3 Tick Bullets) -->
+            <div class="hero-trust-proof-row">
+              <!-- Left: Google Rating Badge (Matches media_1790320678242.png) -->
+              <div class="hero-google-badge">
+                <div class="google-g-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="46" height="46">
+                    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.29 21.36 7.35 24 12 24z"/>
+                    <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2.01 10.04.01 12s.45 3.8 1.26 5.42l4.01-3.15z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.29 2.64 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                  </svg>
                 </div>
-
-                <div class="google-trust-badge">
-                  <div class="google-icon-svg" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="16" height="16">
-                      <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z"/>
-                      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.27v3.15C3.29 21.36 7.35 24 12 24z"/>
-                      <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.27C.46 8.2.01 10.04.01 12s.45 3.8 1.26 5.42l4.01-3.15z"/>
-                      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.35 0 3.29 2.64 1.27 6.58l4.01 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
-                    </svg>
+                <div class="google-badge-info">
+                  <div class="google-brand-title">Google</div>
+                  <div class="google-rating-line">
+                    <span class="rating-score">4.9/5.0</span>
+                    <div class="google-stars-row" aria-label="5 out of 5 stars">
+                      <svg width="15" height="15" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg width="15" height="15" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg width="15" height="15" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg width="15" height="15" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      <svg width="15" height="15" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
                   </div>
-                  <div class="google-stars-group">
-                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="12" height="12" fill="#f59e0b" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <span class="rating-number"><strong>4.9</strong> / 5.0</span>
-                  <span class="rating-sub">(Google Verified)</span>
+                  <div class="google-verified-label">(Google Verified)</div>
                 </div>
               </div>
 
-              <!-- Bottom Row: 3 Micro-Feature Guarantee Chips -->
-              <div class="trust-card-guarantees">
-                <!-- 1. 30-Min Arrival -->
-                <div class="guarantee-chip">
-                  <div class="chip-icon-box chip-speed">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                    </svg>
-                  </div>
-                  <span class="chip-title">30-Min Fast Arrival</span>
-                </div>
+              <!-- Subtle Vertical Divider -->
+              <div class="hero-trust-divider" aria-hidden="true"></div>
 
-                <!-- 2. Genuine OEM Parts -->
-                <div class="guarantee-chip">
-                  <div class="chip-icon-box chip-oem">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      <polyline points="9 12 11 14 15 10"></polyline>
+              <!-- Right: 3 Bullet Points with Tick Icons -->
+              <ul class="hero-trust-bullets">
+                <li class="trust-bullet-item">
+                  <span class="bullet-tick-box" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                  </div>
-                  <span class="chip-title">Genuine OEM Parts</span>
-                </div>
-
-                <!-- 3. 1-Year Warranty -->
-                <div class="guarantee-chip">
-                  <div class="chip-icon-box chip-warranty">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="8" r="6"></circle>
-                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                  </span>
+                  <span>30-Min Fast Arrival</span>
+                </li>
+                <li class="trust-bullet-item">
+                  <span class="bullet-tick-box" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                  </div>
-                  <span class="chip-title">1-Year Warranty</span>
-                </div>
-              </div>
+                  </span>
+                  <span>Genuine OEM Parts</span>
+                </li>
+                <li class="trust-bullet-item">
+                  <span class="bullet-tick-box" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>1-Year Service Warranty</span>
+                </li>
+              </ul>
             </div>
 
 
@@ -571,7 +571,7 @@
 
             <!-- Headline -->
             <h2 class="about-headline">
-              Built on Precision, <span class="highlight-navy">Dedicated to Your Home Appliances</span>
+              Professional Home Appliance <br class="about-headline-br"><span class="highlight-navy">Repair in Dubai</span>
             </h2>
 
             <!-- Lead Subtitle -->
@@ -1440,24 +1440,46 @@
 
         </div>
 
-        <!-- 4 Stats / Metrics Strip (User's Exact Copy) -->
+        <!-- 4 Stats / Metrics Strip (User's Exact Copy with Icons) -->
         <div class="why-stats-strip">
           <div class="why-stat-item">
+            <div class="why-stat-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
             <div class="why-stat-number">15,000+</div>
             <div class="why-stat-label">REPAIRS COMPLETED</div>
           </div>
           <div class="why-stat-divider" aria-hidden="true"></div>
           <div class="why-stat-item">
+            <div class="why-stat-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
             <div class="why-stat-number">98.7%</div>
             <div class="why-stat-label">CLIENT SATISFACTION</div>
           </div>
           <div class="why-stat-divider" aria-hidden="true"></div>
           <div class="why-stat-item">
+            <div class="why-stat-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9.5L12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
             <div class="why-stat-number">15,000+</div>
             <div class="why-stat-label">SATISFIED HOMES</div>
           </div>
           <div class="why-stat-divider" aria-hidden="true"></div>
           <div class="why-stat-item">
+            <div class="why-stat-icon-wrap" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
             <div class="why-stat-number">12+ Yrs</div>
             <div class="why-stat-label">DUBAI OPERATIONS</div>
           </div>
@@ -2545,7 +2567,7 @@
       <section class="prefooter-cta-section" id="prefooterCta" aria-label="Book Emergency Appliance Repair">
         <div class="prefooter-cta-container">
           <div class="prefooter-cta-card">
-            <img src="assets/why-choose-us.jpg" alt="ApexFix Certified Appliance Repair in Dubai" class="prefooter-cta-bg-img" loading="lazy">
+            <img src="assets/cta-bg-dubai-kitchen.jpg" alt="ApexFix Certified Appliance Repair in Dubai" class="prefooter-cta-bg-img" loading="lazy">
             <div class="prefooter-cta-overlay" aria-hidden="true"></div>
             <div class="prefooter-cta-watermark" aria-hidden="true">APEXFIX 24/7</div>
             <div class="prefooter-cta-content-grid">
@@ -2554,27 +2576,22 @@
                   <span class="cta-pulse-beacon"><span class="cta-beacon-core"></span><span class="cta-beacon-ring"></span></span>
                   <span>RAPID APPLIANCE DISPATCH • DUBAI WIDE</span>
                 </div>
-                <h2 class="prefooter-cta-heading">Broken Appliance?<br><span class="cta-heading-highlight">Get It Fixed Today</span> in Under 2 Hours</h2>
+                <h2 class="prefooter-cta-heading">Broken Appliance?<br><span class="cta-heading-highlight">Get It Fixed Today in Under 2 Hours</span></h2>
                 <p class="prefooter-cta-desc">Don't let a malfunctioning refrigerator, washing machine, or oven disrupt your comfort. Our licensed master technicians arrive on-site with authentic OEM factory parts and an official written warranty.</p>
-                <div class="prefooter-trust-chips">
-                  <div class="prefooter-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Zero Call-Out Fee With Repair</span></div>
-                  <div class="prefooter-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>1-Year Official Warranty</span></div>
-                  <div class="prefooter-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>95% Repaired On 1st Visit</span></div>
-                </div>
                 <div class="prefooter-cta-btn-group">
                   <button class="btn-prefooter-primary book-trigger" data-service="Emergency Appliance Repair" aria-label="Book Emergency Repair Online">
                     <span>Book Repair Online</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </button>
                   <a href="tel:+971567991964" class="btn-prefooter-call" aria-label="Call Dispatch Now at +971 56 799 1964">
-                    <div class="call-btn-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-                    <div class="call-btn-text"><span class="call-label">Direct Hotline (24/7)</span><span class="call-number">+971 56 799 1964</span></div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>Call 24/7: +971 56 799 1964</span>
                   </a>
                 </div>
               </div>
               <div class="prefooter-cta-visual-col" aria-hidden="true">
                 <div class="cta-technician-wrap">
-                  <img src="assets/cta-technician.png" alt="ApexFix Certified Technician" class="cta-technician-cutout" loading="lazy">
+                  <img src="assets/cta-team-cutout.png" alt="ApexFix Certified Appliance Repair Team" class="cta-technician-cutout" loading="lazy">
                   <div class="cta-floating-guarantee">
                     <div class="guarantee-icon-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
                     <div class="guarantee-text-group"><div class="guarantee-title">Certified OEM Techs</div><div class="guarantee-sub">Active On Dubai Roads</div></div>
