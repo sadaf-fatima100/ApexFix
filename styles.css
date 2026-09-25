@@ -1374,78 +1374,6 @@ button[id*="phone"] svg {
   border-color: rgba(15, 43, 92, 0.25);
 }
 
-/* Animated Smooth Flowing Bottom Color Line (Moving Right to Left) */
-.hero-trust-card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(
-    -90deg,
-    var(--brand-accent, #0f2b5c) 0%,
-    #1d4ed8 20%,
-    #00d4ff 40%,
-    #10b981 60%,
-    #00d4ff 80%,
-    var(--brand-accent, #0f2b5c) 100%
-  );
-  background-size: 200% 100%;
-  animation: trustLineFlowRightToLeft 3.5s linear infinite;
-  z-index: 2;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-}
-
-/* Luminous Traveling Beam / Laser Sweep Moving Smoothly Right to Left */
-.hero-trust-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40%;
-  height: 3px;
-  background: linear-gradient(
-    -90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.35) 25%,
-    #ffffff 50%,
-    rgba(0, 212, 255, 0.85) 75%,
-    transparent 100%
-  );
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.85), 0 0 18px rgba(16, 185, 129, 0.65);
-  animation: trustBeamRightToLeft 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  z-index: 3;
-  pointer-events: none;
-}
-
-@keyframes trustLineFlowRightToLeft {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: -200% 0%;
-  }
-}
-
-@keyframes trustBeamRightToLeft {
-  0% {
-    transform: translateX(260%);
-  }
-  65%, 100% {
-    transform: translateX(-120%);
-  }
-}
-
-.hero-trust-card:hover::before {
-  animation-duration: 2s;
-}
-
-.hero-trust-card:hover::after {
-  box-shadow: 0 0 16px rgba(0, 212, 255, 1), 0 0 24px rgba(16, 185, 129, 0.85);
-}
-
 .trust-header-block {
   display: flex;
   flex-direction: column;
@@ -2107,6 +2035,58 @@ button[id*="phone"] svg {
   transform: translateY(26px);
 }
 
+/* Shiny Gloss Sheen Sweep Animation on Card Images */
+.why-card-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.04) 80%,
+    transparent 100%
+  );
+  transform: skewX(-24deg);
+  pointer-events: none;
+  z-index: 3;
+  animation: cardAmbientShine 6s infinite ease-in-out;
+}
+
+.why-card-item:nth-child(1)::after { animation-delay: 0s; }
+.why-card-item:nth-child(2)::after { animation-delay: 1.5s; }
+.why-card-item:nth-child(3)::after { animation-delay: 3s; }
+.why-card-item:nth-child(4)::after { animation-delay: 4.5s; }
+
+.why-card-item:hover::after {
+  animation: cardHoverShine 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cardAmbientShine {
+  0%, 75% {
+    left: -120%;
+  }
+  88% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes cardHoverShine {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
 .why-card-bg-img {
   position: absolute;
   inset: 0;
@@ -2114,12 +2094,13 @@ button[id*="phone"] svg {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
   display: block;
 }
 
 .why-card-item:hover .why-card-bg-img {
-  transform: scale(1.06);
+  transform: scale(1.07);
+  filter: brightness(1.08) contrast(1.04);
 }
 
 /* Dark Rich Navy Gradient Scrim Overlay for Crystal-Clear Legibility */
@@ -2147,26 +2128,29 @@ button[id*="phone"] svg {
   flex-direction: column;
 }
 
-/* Icon Badge (Translucent Rounded Square with Electric Blue Icon) */
+/* Icon Badge (Default: Rich Navy Blue with White Icon; Hover: White with Navy Icon) */
 .why-card-icon-badge {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: rgba(14, 165, 233, 0.16);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  color: #38bdf8;
+  background: var(--brand-accent);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(15, 43, 92, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .why-card-item:hover .why-card-icon-badge {
-  background: rgba(14, 165, 233, 0.3);
-  border-color: rgba(56, 189, 248, 0.7);
-  transform: scale(1.08);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--brand-accent);
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .why-card-title {
@@ -3522,6 +3506,7 @@ button[id*="phone"] svg {
 .about-content-col {
   flex: 1;
   min-width: 0;
+  max-width: 550px;
 }
 
 .about-headline {
@@ -3905,7 +3890,7 @@ button[id*="phone"] svg {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto 34px auto;
-  background-color: #142259;
+  background-color: var(--brand-accent);
   clip-path: url(#dubai-trust-cut);
   filter: drop-shadow(0 25px 60px rgba(15, 34, 89, 0.28));
   padding: 56px 65px 54px 65px;
@@ -3943,10 +3928,11 @@ button[id*="phone"] svg {
 .footer-col-accent-bar {
   width: 34px;
   height: 3px;
-  background-color: #38bdf8;
+  background-color: #ffffff;
   border-radius: 2px;
   margin-top: 8px;
   margin-bottom: 22px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
 }
 
@@ -3979,12 +3965,12 @@ button[id*="phone"] svg {
 .footer-link-chevron {
   font-size: 15px;
   font-weight: 800;
-  color: #60a5fa;
+  color: rgba(255, 255, 255, 0.65);
   transition: transform 0.22s ease, color 0.22s ease;
 }
 
 .footer-links-list li a:hover {
-  color: #38bdf8;
+  color: #ffffff;
   transform: translateX(4px);
 }
 
@@ -3994,12 +3980,12 @@ button[id*="phone"] svg {
 }
 
 .footer-link-active {
-  color: #38bdf8 !important;
+  color: #ffffff !important;
   font-weight: 700 !important;
 }
 
 .footer-link-active .footer-link-chevron {
-  color: #38bdf8 !important;
+  color: #ffffff !important;
 }
 
 /* Contact Column */
@@ -4022,9 +4008,9 @@ button[id*="phone"] svg {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #38bdf8;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4033,10 +4019,10 @@ button[id*="phone"] svg {
 }
 
 .footer-contact-item:hover .footer-contact-icon {
-  background-color: #2563eb;
-  border-color: #2563eb;
-  color: #ffffff;
-  transform: scale(1.05);
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--brand-accent);
+  transform: scale(1.08);
 }
 
 .icon-whatsapp-wrap {
@@ -4076,7 +4062,8 @@ button[id*="phone"] svg {
 }
 
 .contact-link:hover {
-  color: #38bdf8;
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .live-chat-link {
@@ -4102,23 +4089,24 @@ button[id*="phone"] svg {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #ffffff;
-  font-size: 13px;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: var(--brand-accent);
+  font-size: 13.5px;
   font-weight: 700;
-  padding: 11px 18px;
+  padding: 12px 18px;
   border-radius: var(--radius-pill);
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .footer-book-btn:hover {
-  background: #1d4ed8;
+  background: #edf3fc;
+  color: var(--brand-accent-hover);
   transform: translateY(-1.5px);
-  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.65);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .footer-book-btn svg {
@@ -5065,23 +5053,6 @@ body.dark-theme .hero-trust-card {
   background: #1a1a22;
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-body.dark-theme .hero-trust-card::before {
-  background: linear-gradient(
-    -90deg,
-    #1d4ed8 0%,
-    #3b82f6 20%,
-    #00d4ff 40%,
-    #10b981 60%,
-    #00d4ff 80%,
-    #1d4ed8 100%
-  );
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.45);
-}
-
-body.dark-theme .hero-trust-card::after {
-  box-shadow: 0 0 14px rgba(0, 212, 255, 0.95), 0 0 22px rgba(16, 185, 129, 0.75);
 }
 
 body.dark-theme .trust-badge-label {
@@ -6742,207 +6713,66 @@ body.dark-theme .brand-curved-card:hover .brand-card-footer svg {
 }
 
 /* ==========================================================================
-   EMERGENCY DISPATCH & VALUE ASSURANCE BAR (Under Brand Logos)
-   Unique Engineered Design with Website Theme Palette & Asymmetric Cut
+   UNIQUE EMERGENCY DISPATCH & ASSURANCE COMMAND HUB (Under Brand Logos)
+   Continuous Moving Border & Shiny Sweep Animation with Strict Navy Blue Theme
    ========================================================================== */
 
-.brand-emergency-bar {
-  max-width: 1020px;
-  margin: 36px auto 0 auto;
-  background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(15, 43, 92, 0.09);
-  box-shadow: 0 16px 36px -10px rgba(15, 43, 92, 0.08), 0 4px 14px rgba(0, 0, 0, 0.03);
-  display: flex;
-  align-items: stretch;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.brand-emergency-bar:hover {
-  box-shadow: 0 22px 48px -12px rgba(15, 43, 92, 0.14), 0 6px 18px rgba(0, 0, 0, 0.04);
-}
-
-/* --- Left Urgent Callout Card with Forward Chevron Polygon --- */
-.emergency-call-card {
-  text-decoration: none;
-  background-color: #0b1a36;
-  background-image: 
-    radial-gradient(circle at 18% 50%, rgba(2, 132, 199, 0.28) 0%, transparent 60%),
-    linear-gradient(135deg, #07152b 0%, #0f2b5c 100%);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 18px 42px 18px 24px;
-  position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%);
-  transition: background 0.35s ease;
-  cursor: pointer;
-}
-
-.emergency-call-card:hover {
-  background-image: 
-    radial-gradient(circle at 22% 50%, rgba(2, 132, 199, 0.42) 0%, transparent 65%),
-    linear-gradient(135deg, #0a1e3f 0%, #153c7a 100%);
-}
-
-/* Pulsing Radar Phone Icon Badge */
-.emergency-phone-badge {
-  width: 50px;
-  height: 50px;
-  position: relative;
+.brand-emergency-hub {
+  max-width: 1040px;
+  margin: 14px auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-}
-
-.emergency-phone-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #0284c7 0%, #0f2b5c 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  box-shadow: 0 0 18px rgba(2, 132, 199, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.35);
   position: relative;
-  z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 10px 0;
 }
 
-.emergency-call-card:hover .emergency-phone-icon {
-  transform: scale(1.08) rotate(-6deg);
-  box-shadow: 0 0 24px rgba(56, 189, 248, 0.75), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-/* Pulse radar rings */
-.emergency-pulse-ring,
-.emergency-pulse-ring-outer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  pointer-events: none;
-  border: 1.5px solid rgba(56, 189, 248, 0.6);
-  animation: emergency-ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-.emergency-pulse-ring-outer {
-  animation-delay: 1.2s;
-}
-
-@keyframes emergency-ping {
-  0% {
-    width: 44px;
-    height: 44px;
-    opacity: 0.85;
-    border-color: rgba(56, 189, 248, 0.7);
-  }
-  100% {
-    width: 68px;
-    height: 68px;
-    opacity: 0;
-    border-color: rgba(56, 189, 248, 0);
-  }
-}
-
-/* Info typography inside call card */
-.emergency-call-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.emergency-eyebrow-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.emergency-status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 8px #10b981;
-  display: inline-block;
-  animation: status-blink 2s ease-in-out infinite;
-}
-
-@keyframes status-blink {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.45; transform: scale(0.85); }
-}
-
-.emergency-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #bae6fd;
-  text-transform: uppercase;
-}
-
-.emergency-number {
-  font-size: 19.5px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  white-space: nowrap;
-  line-height: 1.2;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-.emergency-call-card:hover .emergency-number {
-  color: #e0f2fe;
-  text-shadow: 0 0 12px rgba(224, 242, 254, 0.4);
-}
-
-.emergency-subtext {
-  font-size: 11px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.72);
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-}
-
-/* --- Right Assurance / Value Pillars Grid --- */
-.emergency-pillars-grid {
+/* --- Hub Wings (Left & Right Stacked Capsules) --- */
+.hub-wing {
   flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 14px 20px 14px 12px;
-  gap: 8px;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1;
 }
 
-.emergency-pillar-item {
+/* Individual Pill Capsule */
+.hub-pill {
+  height: 58px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1.5px solid rgba(15, 43, 92, 0.08);
+  box-shadow: 0 8px 22px -4px rgba(15, 43, 92, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 8px 10px;
-  border-radius: 12px;
-  transition: all 0.25s ease;
+  gap: 13px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  position: relative;
   cursor: default;
 }
 
-.emergency-pillar-item:hover {
-  background: rgba(15, 43, 92, 0.035);
-  transform: translateY(-1px);
+.hub-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -6px rgba(15, 43, 92, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+  border-color: rgba(15, 43, 92, 0.22);
 }
 
-.pillar-icon-box {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+/* Overlap tucking behind central hub circle */
+.hub-wing-left .hub-pill {
+  margin-right: -36px;
+  padding: 0 46px 0 18px;
+}
+
+.hub-wing-right .hub-pill {
+  margin-left: -36px;
+  padding: 0 18px 0 46px;
+}
+
+/* Pill Icon Box */
+.hub-pill-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   background: #edf3fc;
   border: 1px solid rgba(15, 43, 92, 0.08);
   display: flex;
@@ -6953,22 +6783,23 @@ body.dark-theme .brand-curved-card:hover .brand-card-footer svg {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.emergency-pillar-item:hover .pillar-icon-box {
+.hub-pill:hover .hub-pill-icon {
   background: #0f2b5c;
   color: #ffffff;
   border-color: #0f2b5c;
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(15, 43, 92, 0.18);
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(15, 43, 92, 0.22);
 }
 
-.pillar-text-group {
+/* Pill Typography */
+.hub-pill-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
-.pillar-title {
-  font-size: 13.5px;
+.hub-pill-title {
+  font-size: 13px;
   font-weight: 700;
   color: #121217;
   line-height: 1.25;
@@ -6976,180 +6807,337 @@ body.dark-theme .brand-curved-card:hover .brand-card-footer svg {
   transition: color 0.2s ease;
 }
 
-.emergency-pillar-item:hover .pillar-title {
+.hub-pill:hover .hub-pill-title {
   color: #0f2b5c;
 }
 
-.pillar-desc {
+.hub-pill-sub {
   font-size: 11.5px;
   font-weight: 500;
   color: #64748b;
-  line-height: 1.3;
+  line-height: 1.25;
   white-space: nowrap;
 }
 
-/* Hairline dividers */
-.pillar-divider {
-  width: 1px;
-  height: 38px;
-  background: linear-gradient(to bottom, transparent, rgba(15, 43, 92, 0.12), transparent);
+/* --- Center Core Call Hub Orb (Circular Disc) --- */
+.hub-center-core {
+  width: 226px;
+  height: 226px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   flex-shrink: 0;
+  padding: 4px;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hub-center-core:hover {
+  transform: scale(1.04);
+}
+
+/* Continuously Moving Border Beam Ring */
+.hub-core-moving-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 14px 36px -6px rgba(15, 43, 92, 0.32);
+}
+
+.hub-core-moving-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 110deg,
+    rgba(15, 43, 92, 0.4) 180deg,
+    #1d4ed8 230deg,
+    #ffffff 280deg,
+    #1d4ed8 330deg,
+    transparent 360deg
+  );
+  animation: hubBorderRotate 3.5s linear infinite;
+}
+
+@keyframes hubBorderRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Inner Core Body (Solid Classic Navy Blue Background, NO Frozi) */
+.hub-core-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #0f2b5c;
+  background-image: 
+    radial-gradient(circle at 50% 30%, #163b78 0%, #0f2b5c 60%, #081a38 100%);
+  border: 4px solid #ffffff;
+  box-shadow: 
+    0 12px 28px -6px rgba(15, 43, 92, 0.4), 
+    inset 0 2px 6px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hub-center-core:hover .hub-core-body {
+  background-image: 
+    radial-gradient(circle at 50% 30%, #1a448c 0%, #0f2b5c 60%, #081a38 100%);
+  box-shadow: 
+    0 18px 40px -6px rgba(15, 43, 92, 0.5), 
+    inset 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Shiny Sweep Glint Animation */
+.hub-core-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hub-core-shine::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -120%;
+  width: 70px;
+  height: 140%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.08) 75%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  animation: hubShineSweep 4s ease-in-out infinite;
+}
+
+@keyframes hubShineSweep {
+  0% { left: -120%; opacity: 0; }
+  15% { opacity: 0.8; }
+  40% { left: 160%; opacity: 0; }
+  100% { left: 160%; opacity: 0; }
+}
+
+/* Phone Icon Circle (Pure White on Navy, High Contrast) */
+.hub-phone-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f2b5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 6;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.hub-center-core:hover .hub-phone-circle {
+  transform: scale(1.1) rotate(-8deg);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Phone Number in ONE SINGLE ROW */
+.hub-single-number {
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  font-family: var(--font-family);
+  white-space: nowrap;
+  line-height: 1;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hub-center-core:hover .hub-single-number {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+  transform: scale(1.02);
+}
+
+/* Dispatch Live Status Badge (Navy/White theme, No Frozi) */
+.hub-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  position: relative;
+  z-index: 6;
+}
+
+.hub-live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  display: inline-block;
+  animation: hub-dot-blink 1.8s ease-in-out infinite;
+}
+
+@keyframes hub-dot-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 /* --- Dark Theme Styling --- */
-body.dark-theme .brand-emergency-bar {
+body.dark-theme .hub-pill {
   background: #141721;
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-body.dark-theme .emergency-call-card {
-  background-image: 
-    radial-gradient(circle at 18% 50%, rgba(2, 132, 199, 0.35) 0%, transparent 65%),
-    linear-gradient(135deg, #09172e 0%, #060e1c 100%);
+body.dark-theme .hub-pill:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
 }
 
-body.dark-theme .emergency-call-card:hover {
-  background-image: 
-    radial-gradient(circle at 22% 50%, rgba(2, 132, 199, 0.5) 0%, transparent 70%),
-    linear-gradient(135deg, #0c2040 0%, #08152b 100%);
+body.dark-theme .hub-pill-icon {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
-body.dark-theme .pillar-icon-box {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.09);
-  color: #38bdf8;
+body.dark-theme .hub-pill:hover .hub-pill-icon {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-color: #1d4ed8;
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.4);
 }
 
-body.dark-theme .emergency-pillar-item:hover .pillar-icon-box {
-  background: #38bdf8;
-  color: #07152b;
-  border-color: #38bdf8;
-  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
-}
-
-body.dark-theme .pillar-title {
+body.dark-theme .hub-pill-title {
   color: #f1f5f9;
 }
 
-body.dark-theme .emergency-pillar-item:hover .pillar-title {
-  color: #38bdf8;
+body.dark-theme .hub-pill:hover .hub-pill-title {
+  color: #60a5fa;
 }
 
-body.dark-theme .pillar-desc {
+body.dark-theme .hub-pill-sub {
   color: #94a3b8;
 }
 
-body.dark-theme .pillar-divider {
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
-}
-
-body.dark-theme .emergency-pillar-item:hover {
-  background: rgba(255, 255, 255, 0.03);
+body.dark-theme .hub-core-body {
+  border-color: #141721;
+  background-color: #0c1e3f;
+  background-image: 
+    radial-gradient(circle at 50% 30%, #163b78 0%, #0c1e3f 60%, #071328 100%);
+  box-shadow: 
+    0 18px 45px rgba(0, 0, 0, 0.7), 
+    inset 0 1px 3px rgba(255, 255, 255, 0.25);
 }
 
 /* --- Responsive Media Queries --- */
-@media (max-width: 1040px) {
-  .emergency-call-card {
-    padding: 16px 32px 16px 20px;
-    gap: 12px;
+@media (max-width: 900px) {
+  .brand-emergency-hub {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
   }
-  
-  .emergency-number {
-    font-size: 17.5px;
+
+  .hub-center-core {
+    order: 1;
   }
-  
-  .emergency-pillars-grid {
-    padding: 12px 14px 12px 8px;
-    gap: 4px;
+
+  .hub-wing-left {
+    order: 2;
+    width: 100%;
+    max-width: 520px;
   }
-  
-  .emergency-pillar-item {
-    gap: 9px;
-    padding: 6px 8px;
+
+  .hub-wing-right {
+    order: 3;
+    width: 100%;
+    max-width: 520px;
   }
-  
-  .pillar-icon-box {
-    width: 38px;
-    height: 38px;
+
+  .hub-wing-left .hub-pill,
+  .hub-wing-right .hub-pill {
+    margin: 0;
+    padding: 0 20px;
   }
-  
-  .pillar-title {
+}
+
+@media (max-width: 600px) {
+  .brand-emergency-hub {
+    gap: 16px;
+  }
+
+  .hub-center-core {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hub-phone-circle {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 6px;
+  }
+
+  .hub-single-number {
+    font-size: 14.5px;
+    margin-bottom: 6px;
+  }
+
+  .hub-pill {
+    height: 54px;
+    padding: 0 16px !important;
+  }
+
+  .hub-pill-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hub-pill-title {
     font-size: 12.5px;
   }
-  
-  .pillar-desc {
+
+  .hub-pill-sub {
     font-size: 11px;
-  }
-}
-
-@media (max-width: 900px) {
-  .brand-emergency-bar {
-    flex-direction: column;
-    border-radius: 18px;
-  }
-
-  .emergency-call-card {
-    clip-path: none;
-    padding: 18px 20px;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .emergency-pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    padding: 20px 18px;
-  }
-
-  .pillar-divider {
-    display: none;
-  }
-
-  .emergency-pillar-item {
-    padding: 8px 10px;
-    background: rgba(15, 43, 92, 0.02);
-  }
-  
-  body.dark-theme .emergency-pillar-item {
-    background: rgba(255, 255, 255, 0.02);
-  }
-}
-
-@media (max-width: 580px) {
-  .emergency-call-card {
-    flex-direction: row;
-    gap: 14px;
-    padding: 16px 14px;
-  }
-
-  .emergency-phone-badge {
-    width: 44px;
-    height: 44px;
-  }
-
-  .emergency-phone-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .emergency-number {
-    font-size: 16.5px;
-  }
-
-  .emergency-subtext {
-    font-size: 10.5px;
-  }
-
-  .emergency-pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 16px 14px;
-  }
-
-  .emergency-pillar-item {
-    padding: 10px 12px;
   }
 }
 
