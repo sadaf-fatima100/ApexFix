@@ -15,169 +15,9 @@
     ============================================================ */
 
 
-    /* ═══════════════════════════════════════════════════════
-       SECTION 1: HERO (Architectural Stage & Dubai Penthouse Team)
-       ═══════════════════════════════════════════════════════ */
-    .about-hero {
-      padding: clamp(40px, 4.5vw, 64px) 0 clamp(44px, 4.8vw, 68px);
-      position: relative;
-      overflow: visible;
-      background: radial-gradient(ellipse at 85% 30%, rgba(15, 43, 92, 0.045) 0%, transparent 60%), var(--bg-canvas, #fbfbfe);
-    }
-    body.dark-theme .about-hero {
-      background: radial-gradient(ellipse at 85% 30%, rgba(96, 165, 250, 0.05) 0%, transparent 60%), var(--bg-canvas, #0c1017);
-    }
+    /* Section 1 Hero styles are powered globally by styles.css (.service-hero-split-row, .service-hero-copy-card, .service-hero-media-wrap, .hero-horizontal-service-marquee) */
 
-    .about-hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: clamp(40px, 4.8vw, 68px);
-      align-items: center;
-    }
-
-    /* Left Column */
-    .about-hero-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Active Beacon Live Badge */
-    .about-live-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 6px 16px;
-      background: rgba(5, 150, 105, 0.08);
-      border: 1.5px solid rgba(5, 150, 105, 0.22);
-      border-radius: 9999px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #059669;
-      margin-bottom: 16px;
-      font-family: var(--font-family);
-    }
-    .about-live-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 8px rgba(16, 185, 129, 0.65);
-      animation: beaconPulse 2s infinite ease-in-out;
-      flex-shrink: 0;
-    }
-    @keyframes beaconPulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 6px rgba(16, 185, 129, 0.65); }
-      50% { transform: scale(1.25); box-shadow: 0 0 14px rgba(16, 185, 129, 0.95); }
-    }
-    body.dark-theme .about-live-badge {
-      background: rgba(5, 150, 105, 0.14);
-      border-color: rgba(5, 150, 105, 0.35);
-      color: #34d399;
-    }
-
-    /* Eyebrow Pill */
-    .about-hero-left .badge-tag {
-      margin-bottom: 16px;
-    }
-
-    /* H1 Headline */
-    .about-h1 {
-      font-size: clamp(2.4rem, 3.7vw, 3.65rem);
-      font-weight: 800;
-      line-height: 1.14;
-      letter-spacing: -0.025em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 18px;
-    }
-    .about-h1 .highlight-navy {
-      color: var(--brand-accent, #0f2b5c);
-    }
-    body.dark-theme .about-h1 {
-      color: #ffffff;
-    }
-    body.dark-theme .about-h1 .highlight-navy {
-      color: #60a5fa;
-    }
-
-    /* Lead Paragraph */
-    .about-lead {
-      font-size: 1.05rem;
-      font-weight: 500;
-      line-height: 1.65;
-      color: var(--text-sub, #5a5f70);
-      margin: 0 0 28px;
-      max-width: 530px;
-    }
-    body.dark-theme .about-lead {
-      color: #94a3b8;
-    }
-
-    /* 3-Stat Deck */
-    .about-hero-stats-deck {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 30px;
-      width: 100%;
-      max-width: 540px;
-    }
-    .hero-mini-stat {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 16px;
-      padding: 13px 15px;
-      box-shadow: 0 4px 18px rgba(15, 43, 92, 0.04);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
-    }
-    .hero-mini-stat:hover {
-      transform: translateY(-2px);
-      border-color: rgba(15, 43, 92, 0.2);
-      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.09);
-    }
-    body.dark-theme .hero-mini-stat {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
-    }
-    body.dark-theme .hero-mini-stat:hover {
-      border-color: rgba(96, 165, 250, 0.35);
-    }
-    .mini-stat-num {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--brand-accent, #0f2b5c);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-    body.dark-theme .mini-stat-num {
-      color: #60a5fa;
-    }
-    .mini-stat-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-sub, #5a5f70);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      line-height: 1.25;
-    }
-    body.dark-theme .mini-stat-label {
-      color: #94a3b8;
-    }
-
-    /* CTA Button Group */
-    .about-hero-cta-row {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
+    /* Dedicated Hero / Process Button Styles */
     .btn-cta-green {
       display: inline-flex;
       align-items: center;
@@ -222,298 +62,16 @@
       box-shadow: 0 10px 28px rgba(15, 43, 92, 0.38);
     }
 
-    /* Trust Proof Strip Under CTAs */
-    .about-hero-proof-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .about-google-score {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--text-dark, #121217);
-    }
-    body.dark-theme .about-google-score {
-      color: #ffffff;
-    }
-    .about-stars {
-      color: #f59e0b;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-    .about-proof-divider {
-      width: 1px;
-      height: 16px;
-      background: rgba(15, 43, 92, 0.15);
-    }
-    body.dark-theme .about-proof-divider {
-      background: rgba(255, 255, 255, 0.15);
-    }
-    .about-proof-chips {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-sub, #5a5f70);
-    }
-    body.dark-theme .about-proof-chips {
-      color: #94a3b8;
-    }
-    .about-proof-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .about-proof-check {
-      color: #059669;
-      font-weight: 800;
-      font-size: 13px;
-    }
-
-    /* Right Column: Visual Stage */
-    .about-hero-right {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-
-    /* Ambient Glow Behind Stage */
-    .about-hero-aura {
-      position: absolute;
-      width: 110%;
-      height: 110%;
-      top: -5%;
-      left: -5%;
-      background: radial-gradient(circle at 60% 40%, rgba(15, 43, 92, 0.08) 0%, rgba(16, 185, 129, 0.06) 45%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
-      filter: blur(24px);
-    }
-
-    /* Image Stage Card */
-    .about-hero-stage {
-      position: relative;
-      width: 100%;
-      z-index: 1;
-    }
-    .about-hero-frame {
-      width: 100%;
-      aspect-ratio: 4 / 3.35;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 28px 75px -15px rgba(15, 43, 92, 0.22), 0 6px 20px rgba(0, 0, 0, 0.04);
-      border: 3px solid #ffffff;
-      position: relative;
-      background: #e2e8f0;
-    }
-    body.dark-theme .about-hero-frame {
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 28px 75px -15px rgba(0, 0, 0, 0.6);
-      background: #181924;
-    }
-    .about-hero-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .about-hero-stage:hover .about-hero-frame img {
-      transform: scale(1.035);
-    }
-
-    /* Top-Right Floating Chip */
-    .about-float-chip-top {
-      position: absolute;
-      top: -14px;
-      right: 18px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1.5px solid rgba(15, 43, 92, 0.1);
-      border-radius: 9999px;
-      padding: 8px 18px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-dark, #121217);
-      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.14);
-      z-index: 10;
-      transition: transform 0.25s ease;
-    }
-    .about-float-chip-top:hover {
-      transform: translateY(-2px);
-    }
-    body.dark-theme .about-float-chip-top {
-      background: rgba(24, 25, 36, 0.94);
-      border-color: rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Bottom-Left Floating Hero Badge (Elevated Dark Navy Glass) */
-    .about-float-card-bottom {
-      position: absolute;
-      bottom: -18px;
-      left: -16px;
-      background: linear-gradient(135deg, #091a38 0%, #0f2b5c 100%);
-      color: #ffffff;
-      border-radius: 20px;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 20px 48px rgba(15, 43, 92, 0.32);
-      border: 1.5px solid rgba(96, 165, 250, 0.3);
-      z-index: 10;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .about-float-card-bottom:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 26px 56px rgba(15, 43, 92, 0.42);
-    }
-    .float-card-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #059669, #10b981);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      flex-shrink: 0;
-      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
-    }
-    .float-card-content {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .float-card-title {
-      font-size: 14px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-    .float-card-sub {
-      font-size: 11px;
-      font-weight: 700;
-      color: #93c5fd;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      white-space: nowrap;
-    }
-
-    /* Bottom-Right Sub Chip */
-    .about-float-chip-sub {
-      position: absolute;
-      bottom: 22px;
-      right: -12px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1.5px solid rgba(5, 150, 105, 0.25);
-      border-radius: 9999px;
-      padding: 7px 15px;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: #059669;
-      box-shadow: 0 10px 26px rgba(5, 150, 105, 0.14);
-      z-index: 10;
-    }
-    body.dark-theme .about-float-chip-sub {
-      background: rgba(24, 25, 36, 0.94);
-      border-color: rgba(52, 211, 153, 0.35);
-      color: #34d399;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Trust Badges Bar */
-    .about-trust-bar {
-      background: #fff;
-      border-radius: 22px;
-      margin: 0 clamp(14px, 3vw, 48px);
-      border: 1.5px solid rgba(15,43,92,0.08);
-      box-shadow: 0 6px 28px rgba(15,43,92,0.07);
-      padding: 6px 0;
-    }
-    body.dark-theme .about-trust-bar {
-      background: #181924;
-      border-color: rgba(255,255,255,0.08);
-      box-shadow: 0 6px 28px rgba(0,0,0,0.2);
-    }
-    .about-trust-bar-inner {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-    .about-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      border-right: 1px solid rgba(15,43,92,0.08);
-      transition: background 0.2s ease, transform 0.2s ease;
-      cursor: default;
-    }
-    .about-trust-item:last-child { border-right: none; }
-    .about-trust-item:hover {
-      background: rgba(15,43,92,0.025);
-      border-radius: 14px;
-      transform: translateY(-2px);
-    }
-    body.dark-theme .about-trust-item:hover { background: rgba(255,255,255,0.04); }
-    .about-trust-icon {
-      flex-shrink: 0;
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #e8edfa, #d1daf5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0f2b5c;
-      transition: transform 0.2s ease;
-    }
-    .about-trust-item:hover .about-trust-icon { transform: scale(1.08); }
-    body.dark-theme .about-trust-icon {
-      background: rgba(96,165,250,0.15);
-      color: #60a5fa;
-    }
-    .about-trust-text {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-dark, #121217);
-      line-height: 1.35;
-    }
-    body.dark-theme .about-trust-text { color: #e2e8f0; }
-
     /* ═══════════════════════════════════════════════════════
        SECTION 3: COMMITTED TO RELIABLE APPLIANCE REPAIR
        3-Card Grid Matching Reference media_1790523667595.png
        ═══════════════════════════════════════════════════════ */
     .about-mission {
       padding: clamp(48px, 5vw, 72px) 0;
-      background: var(--bg-surface, #f3f4f8);
+      background: transparent;
       position: relative;
     }
-    body.dark-theme .about-mission { background: rgba(255, 255, 255, 0.02); }
+    body.dark-theme .about-mission { background: transparent; }
 
     .about-mission-header {
       text-align: center;
@@ -2313,12 +1871,6 @@
 
     /* Responsive */
     @media (max-width: 992px) {
-      .about-hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-hero-right { order: -1; max-width: 580px; margin: 0 auto; width: 100%; }
-      .about-hero-frame { aspect-ratio: 16/10; }
-      .about-float-card-bottom { left: 10px; bottom: -14px; padding: 10px 16px; }
-      .about-float-chip-top { right: 10px; top: -12px; }
-      .about-float-chip-sub { right: 10px; bottom: 14px; }
       .mission-cards-grid {
         grid-template-columns: 1fr;
         max-width: 580px;
@@ -2345,17 +1897,8 @@
       .about-compare-grid { grid-template-columns: 1fr; gap: 24px; }
       .about-bento-grid { grid-template-columns: 1fr; gap: 20px; }
       .bento-card-tall { min-height: auto; }
-      .about-trust-bar { margin: 0 clamp(10px, 2vw, 20px); }
-      .about-trust-bar-inner { grid-template-columns: 1fr 1fr; }
-      .about-trust-item:nth-child(2) { border-right: none; }
-      .about-trust-item:nth-child(1), .about-trust-item:nth-child(2) { border-bottom: 1px solid rgba(15,43,92,0.08); }
-    }
+      }
     @media (max-width: 768px) {
-      .about-h1 { font-size: clamp(1.85rem, 6.2vw, 2.5rem); }
-      .about-hero-grid { gap: 24px; }
-      .about-hero-stats-deck { gap: 10px; }
-      .hero-mini-stat { padding: 10px 12px; }
-      .mini-stat-num { font-size: 1.25rem; }
       .pillar-grid { grid-template-columns: 1fr; }
       .process-steps-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
       .about-standards-section { margin-left: -14px; margin-right: -14px; width: calc(100% + 28px); }
@@ -2367,23 +1910,12 @@
       .bento-card-wide { height: 230px; }
       .bento-card-square { height: 210px; }
       .bento-card-trust { height: auto; min-height: 220px; }
-      .about-trust-bar { border-radius: 16px; margin: 0 10px; }
-      .about-trust-bar-inner { grid-template-columns: 1fr; }
-      .about-trust-item { border-right: none; border-bottom: 1px solid rgba(15,43,92,0.08); }
-      .about-trust-item:last-child { border-bottom: none; }
       .mcard-cutout-container { height: 220px; }
       .mcard-bottom-img-wrap { height: 200px; }
     }
     @media (max-width: 480px) {
-      .about-hero-cta-row { flex-direction: column; gap: 10px; }
       .btn-cta-green, .btn-cta-navy { justify-content: center; }
-      .about-hero-stats-deck { grid-template-columns: 1fr; gap: 8px; }
-      .hero-mini-stat { flex-direction: row; justify-content: space-between; align-items: center; padding: 10px 16px; }
-      .about-float-card-bottom { position: static; margin-top: 14px; width: 100%; box-sizing: border-box; }
-      .about-float-chip-top, .about-float-chip-sub { display: none; }
-      .about-hero-proof-row { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .about-proof-divider { display: none; }
-      .pillar-card { padding: 20px 16px; }
+      .about-float-chip-top, .pillar-card { padding: 20px 16px; }
       .compare-card-pro, .compare-card-risk { padding: 22px 18px; }
       .process-steps-grid { grid-template-columns: 1fr; gap: 12px; }
       .process-step-item { padding: 18px 16px; }
@@ -2413,17 +1945,11 @@
       .standards-stats-row { grid-template-columns: 1fr; gap: 12px; }
       .about-stats-strip { grid-template-columns: 1fr; }
       .about-stats-strip-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.1) !important; }
-      .about-trust-bar-inner { grid-template-columns: 1fr; }
-      .about-hero-stats { flex-direction: column; gap: 8px; }
-    }
+      }
 
     /* Dark theme fine-tuning */
-    body.dark-theme .about-trust-item { border-right-color: rgba(255,255,255,0.08); border-bottom-color: rgba(255,255,255,0.08); }
-    body.dark-theme .about-trust-item:nth-child(2) { border-right: none; }
-    body.dark-theme .compare-card-pro { background: #0c2550; }
-    body.dark-theme .about-live-badge { background: rgba(5,150,105,0.12); border-color: rgba(5,150,105,0.25); }
-
-  </style>
+    body.dark-theme body.dark-theme body.dark-theme .compare-card-pro { background: #0c2550; }
+    </style>
 </head>
 <body>
 
@@ -2447,6 +1973,16 @@
                  H 0.88 Q 1.00,0.00 1.00,0.12 
                  V 0.64 Q 1.00,0.68 0.96,0.72 
                  L 0.72,0.96 Q 0.68,1.00 0.64,1.00 
+                 H 0.12 Q 0.00,1.00 0.00,0.88 
+                 V 0.36 Q 0.00,0.32 0.04,0.28 
+                 L 0.28,0.04 Q 0.32,0.00 0.36,0.00 Z" />
+      </clipPath>
+
+      <!-- Top-Left Only Asymmetric Chamfer Cut (Matching Services Hero) -->
+      <clipPath id="top-left-hero-cut" clipPathUnits="objectBoundingBox">
+        <path d="M 0.36,0.00 
+                 H 0.88 Q 1.00,0.00 1.00,0.12 
+                 V 0.88 Q 1.00,1.00 0.88,1.00 
                  H 0.12 Q 0.00,1.00 0.00,0.88 
                  V 0.36 Q 0.00,0.32 0.04,0.28 
                  L 0.28,0.04 Q 0.32,0.00 0.36,0.00 Z" />
@@ -2664,178 +2200,103 @@
         </div>
       </header>
 
-      <!-- ═══════════════════════════════════════════════════════
-           SECTION 1: HERO
-      ═══════════════════════════════════════════════════════════ -->
-      <section class="about-hero" id="home">
-        <div class="section-container-inner">
-          <div class="about-hero-grid">
+      <!-- ========================================================
+           TIER 1: Top Hero Split Row (Matching Services Master Layout)
+           ======================================================== -->
+      <section class="service-hero-split-row" id="home">
+        
+        <!-- Left Hero Copy & Stats Card -->
+        <div class="service-hero-copy-card">
+          <div class="hero-copy-main">
+            <h1 class="hero-headline">
+              <span class="hl-line line-1">Engineering Trust</span>
+              <span class="hl-line line-2">In Greater Dubai</span>
+              <span class="hl-line line-3">Appliance Repair</span>
+            </h1>
 
-            <!-- Left: Copy & Metrics Column -->
-            <div class="about-hero-left">
-              <!-- Active Availability Beacon -->
-              <div class="about-live-badge">
-                <span class="about-live-dot"></span>
-                <span>Certified Techs Available Now · Dubai Wide</span>
-              </div>
+            <p class="hero-description">
+              Precision diagnostic and doorstep repair solutions across Greater Dubai. Specialized care for washing machines, refrigerators, dishwashers, dryers, stoves &amp; microwaves with certified master technicians, genuine OEM parts &amp; guaranteed warranty.
+            </p>
 
-              <!-- Eyebrow Pill -->
-              <div class="badge-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <polyline points="9 12 11 14 15 10"></polyline>
+            <!-- Hero CTA Button Group: 2 Dedicated Action Buttons -->
+            <div class="hero-cta-group">
+              <button class="btn-hero-primary book-trigger" id="aboutHeroBookBtn" data-service="General Repair">
+                <span>Book a Repair</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-                <span>CERTIFIED DUBAI APPLIANCE ENGINEERS</span>
-              </div>
+              </button>
+              <a href="tel:+971508867234" class="btn-hero-secondary" id="aboutHeroCallBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>Emergency Call 24/7</span>
+              </a>
+            </div>
+          </div>
 
-              <!-- H1 Headline with Dual Color Accent -->
-              <h1 class="about-h1">
-                Engineering Trust In <span class="highlight-navy">Dubai Homes</span>
-              </h1>
+          <!-- Bottom Key Metrics Row -->
+          <div class="hero-split-stats">
+            <div class="hero-split-stat-item">
+              <span class="stat-number-brand">15k+</span>
+              <span class="stat-caption-sub">Appliances<br>Restored</span>
+            </div>
+            <div class="hero-split-stat-item">
+              <span class="stat-number-brand">1-Hr</span>
+              <span class="stat-caption-sub">Average Rapid<br>Dubai Dispatch</span>
+            </div>
+          </div>
+        </div>
 
-              <!-- Lead Description -->
-              <p class="about-lead">
-                ApexFix was established with one uncompromising mission: delivering precision appliance diagnostics, 1-hour rapid response times, and 100% genuine OEM components across all 27+ Dubai communities.
-              </p>
-
-              <!-- 3-Item Elevated Stat Deck -->
-              <div class="about-hero-stats-deck">
-                <div class="hero-mini-stat">
-                  <span class="mini-stat-num">15,000+</span>
-                  <span class="mini-stat-label">Repairs Completed</span>
-                </div>
-                <div class="hero-mini-stat">
-                  <span class="mini-stat-num">1 Hour</span>
-                  <span class="mini-stat-label">Avg. Arrival Time</span>
-                </div>
-                <div class="hero-mini-stat">
-                  <span class="mini-stat-num">98%</span>
-                  <span class="mini-stat-label">First-Visit Fix Rate</span>
-                </div>
-              </div>
-
-              <!-- CTA Buttons -->
-              <div class="about-hero-cta-row">
-                <a href="tel:+971508867234" class="btn-cta-green">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
-                  </svg>
-                  <span>Emergency Call 24/7</span>
-                </a>
-                <button class="btn-cta-navy book-trigger" type="button">
-                  <span>Book a Repair</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </button>
-              </div>
-
-              <!-- Trust & Social Proof Row Under CTAs -->
-              <div class="about-hero-proof-row">
-                <div class="about-google-score">
-                  <span class="about-stars">★★★★★</span>
-                  <span><strong>4.9/5.0</strong> (2,400+ Verified Reviews)</span>
-                </div>
-                <div class="about-proof-divider" aria-hidden="true"></div>
-                <div class="about-proof-chips">
-                  <span class="about-proof-item"><span class="about-proof-check">✓</span> 100% Genuine OEM</span>
-                  <span class="about-proof-item"><span class="about-proof-check">✓</span> 1-Year Warranty</span>
-                </div>
-              </div>
+        <!-- Right Hero Media Stage (Clean Architectural 1-to-1 Frame) -->
+        <div class="service-hero-media-wrap">
+          <!-- Main Asymmetric Image Card (Exact #top-left-hero-cut) -->
+          <div class="service-hero-media-card">
+            <img src="assets/about-hero-team.jpg" alt="ApexFix Certified Dubai Appliance Repair Specialists" class="hero-media-img">
+            
+            <!-- Subtle Top-Right Live Dispatch Floating Chip -->
+            <div class="hero-media-live-chip">
+              <span class="pulse-dot-green"></span>
+              <span>Certified Techs Available Now · Dubai Wide</span>
             </div>
 
-            <!-- Right: Architectural Visual Stage -->
-            <div class="about-hero-right">
-              <!-- Ambient Aura Glow -->
-              <div class="about-hero-aura" aria-hidden="true"></div>
-
-              <!-- Stage Container -->
-              <div class="about-hero-stage">
-                <!-- Top-Right Live Dispatch Chip -->
-                <div class="about-float-chip-top">
-                  <span class="about-live-dot"></span>
-                  <span>24/7 Priority Doorstep Dispatch</span>
-                </div>
-
-                <!-- Main High-Res Image Frame -->
-                <div class="about-hero-frame">
-                  <img src="assets/about-hero-team.jpg" alt="ApexFix Certified Dubai Appliance Repair Specialists" loading="eager">
-                </div>
-
-                <!-- Bottom-Left Floating OEM Spares Card -->
-                <div class="about-float-card-bottom">
-                  <div class="float-card-icon" aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      <polyline points="9 12 11 14 15 10"></polyline>
-                    </svg>
-                  </div>
-                  <div class="float-card-content">
-                    <span class="float-card-title">100% Genuine OEM</span>
-                    <span class="float-card-sub">Factory-Sealed Spares</span>
-                  </div>
-                </div>
-
-                <!-- Bottom-Right Floating Chip -->
-                <div class="about-float-chip-sub">
-                  <span>✓ Certified Brand Engineers</span>
-                </div>
-              </div>
+            <!-- Subtle Bottom-Left Rating Glass Badge -->
+            <div class="hero-media-rating-chip">
+              <span class="star-gold">★ 4.9</span>
+              <span>Google Verified Service (2,400+ Reviews)</span>
             </div>
 
-          </div><!-- /.about-hero-grid -->
-        </div><!-- /.section-container-inner -->
+            <!-- Subtle Brand Gradient Scrim -->
+            <div class="hero-media-gradient"></div>
+          </div>
+        </div>
+
       </section>
 
-      <!-- ═══════════════════════════════════════════════════════
-           SECTION 2: TRUST BADGES BAR
-      ═══════════════════════════════════════════════════════════ -->
-      <div class="about-trust-bar">
-        <div class="section-container-inner">
-          <div class="about-trust-bar-inner">
-
-            <div class="about-trust-item">
-              <div class="about-trust-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <polyline points="9 12 11 14 15 10"></polyline>
-                </svg>
-              </div>
-              <span class="about-trust-text">100% Genuine OEM · Factory Tested Spares</span>
-            </div>
-
-            <div class="about-trust-item">
-              <div class="about-trust-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <span class="about-trust-text">27+ Active Hubs · Rapid Dispatch Across Dubai</span>
-            </div>
-
-            <div class="about-trust-item">
-              <div class="about-trust-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="8" r="4"></circle>
-                  <path d="M20 21a8 8 0 1 0-16 0"></path>
-                </svg>
-              </div>
-              <span class="about-trust-text">Certified Master Techs</span>
-            </div>
-
-            <div class="about-trust-item">
-              <div class="about-trust-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <span class="about-trust-text">100% Quality Assured</span>
-            </div>
-
-          </div>
+      <!-- Sleek Horizontal Service Marquee Ribbon (Infinite Smooth Motion) -->
+      <div class="hero-horizontal-service-marquee">
+        <div class="marquee-track">
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Bosch Expert</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Spin Noise Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drum Bearing Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drain Pump Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Compressor Repair</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Siemens Specialist</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Freezer Cooling Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> PCB Board Repair</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Miele Service Care</span>
+          
+          <!-- Duplicate Set for Seamless Loop -->
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Bosch Expert</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Spin Noise Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drum Bearing Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drain Pump Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Compressor Repair</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Siemens Specialist</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Freezer Cooling Fix</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> PCB Board Repair</span>
+          <span class="marquee-pill"><span class="pill-dot-navy"></span> Miele Service Care</span>
         </div>
       </div>
 
