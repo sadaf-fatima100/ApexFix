@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile / Touch Services Dropdown Toggle
   if (servicesDropdownBtn && servicesDropdown) {
     servicesDropdownBtn.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1080) {
         e.preventDefault();
         servicesDropdown.classList.toggle('open');
       }
@@ -107,6 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (navContactLink) {
     navContactLink.addEventListener('click', (e) => {
+      const href = navContactLink.getAttribute('href');
+      // If pointing to contact.html page, allow normal navigation
+      if (href && (href === 'contact.html' || href.endsWith('/contact.html'))) {
+        return; // let browser navigate normally
+      }
+      // Legacy: same-page anchor — open modal
       e.preventDefault();
       openModal();
     });
@@ -231,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset mobile menu on screen resize to desktop
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && navMenu.classList.contains('open')) {
+      if (window.innerWidth > 1080 && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
         mobileToggle.classList.remove('active');
         mobileToggle.setAttribute('aria-expanded', 'false');
@@ -265,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentStoryPage = Math.max(0, Math.min(pageIndex, maxStoryPages - 1));
 
     if (storiesTrack) {
-      if (window.innerWidth > 992) {
+      if (window.innerWidth > 1080) {
         storiesTrack.style.transform = `translateX(-${currentStoryPage * 50}%)`;
       } else {
         storiesTrack.style.transform = 'none';
@@ -277,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile / Tablet smooth scroll support
-    if (storiesDeckWrapper && window.innerWidth <= 992) {
+    if (storiesDeckWrapper && window.innerWidth <= 1080) {
       const targetCard = storiesTrack ? storiesTrack.querySelector(`.story-card[data-index="${currentStoryPage * 4}"]`) : null;
       if (targetCard) {
         storiesDeckWrapper.scrollTo({
@@ -321,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (storiesDeckWrapper) {
     let scrollTimeout;
     storiesDeckWrapper.addEventListener('scroll', () => {
-      if (window.innerWidth > 992) return;
+      if (window.innerWidth > 1080) return;
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         const scrollLeft = storiesDeckWrapper.scrollLeft;
