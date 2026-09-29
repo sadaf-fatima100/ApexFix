@@ -4152,11 +4152,11 @@ body.dark-theme .prefooter-cta-section {
 .prefooter-simple-card {
   position: relative;
   background: #ffffff;
-  border: 2.5px solid var(--brand-accent, #0f2b5c);
-  border-radius: 28px;
-  padding: clamp(44px, 5vw, 64px) clamp(24px, 4vw, 56px) clamp(40px, 4.5vw, 56px) clamp(24px, 4vw, 56px);
+  border: 2.5px solid #0f2b5c;
+  border-radius: 30px;
+  padding: clamp(52px, 5.5vw, 68px) clamp(24px, 4vw, 56px) clamp(44px, 5vw, 60px) clamp(24px, 4vw, 56px);
   text-align: center;
-  box-shadow: 0 16px 45px -10px rgba(15, 43, 92, 0.08), 0 4px 16px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 20px 50px -12px rgba(15, 43, 92, 0.1), 0 4px 16px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
@@ -4169,26 +4169,32 @@ body.dark-theme .prefooter-simple-card {
 /* Top-Right Overlapping Rosette Ribbon Seal Badge */
 .prefooter-seal-badge {
   position: absolute;
-  top: -30px;
-  right: 36px;
+  top: -36px;
+  right: 42px;
   z-index: 10;
   pointer-events: none;
-  filter: drop-shadow(0 8px 18px rgba(15, 43, 92, 0.28));
+  filter: drop-shadow(0 8px 20px rgba(15, 43, 92, 0.32));
   transition: transform 0.3s ease;
 }
 
 body.dark-theme .prefooter-seal-badge {
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.65));
 }
 
 .prefooter-simple-card:hover .prefooter-seal-badge {
   transform: translateY(-2px) scale(1.03);
 }
 
+.prefooter-seal-badge .seal-svg {
+  display: block;
+  width: 105px;
+  height: 120px;
+}
+
 /* Heading H2 */
 .prefooter-simple-heading {
   font-family: var(--font-family);
-  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.025em;
@@ -4211,7 +4217,7 @@ body.dark-theme .prefooter-simple-heading .highlight-navy {
 /* Description */
 .prefooter-simple-desc {
   font-family: var(--font-family);
-  font-size: clamp(14.5px, 1.35vw, 16px);
+  font-size: clamp(14.5px, 1.3vw, 16px);
   font-weight: 500;
   color: var(--text-sub, #5a5f70);
   line-height: 1.6;
@@ -4232,100 +4238,96 @@ body.dark-theme .prefooter-simple-desc {
   flex-wrap: wrap;
 }
 
-/* Primary Button: Vibrant Brand Blue Pill */
-.btn-prefooter-call {
+/* Primary Button: Vibrant Royal Blue Pill matching reference Call Now */
+.btn-simple-cta-call {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-family) !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  padding: 14px 34px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(15, 43, 92, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  white-space: nowrap !important;
+}
+
+.btn-simple-cta-call:hover {
+  transform: translateY(-2px) !important;
+  background: linear-gradient(135deg, #2563eb 0%, #183f80 50%, #1d4ed8 100%) !important;
+  box-shadow: 0 10px 28px rgba(29, 78, 216, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.btn-simple-cta-call:hover .btn-simple-icon svg {
+  animation: phoneRingVibrantLoop 1.2s infinite ease-in-out;
+}
+
+/* Secondary Button: Dark Metallic / Slate Pill matching reference Live WhatsApp Chat */
+.btn-simple-cta-whatsapp {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(145deg, #222533 0%, #161822 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-family) !important;
+  font-size: 15.5px !important;
+  font-weight: 700 !important;
+  padding: 14px 34px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.16) !important;
+  white-space: nowrap !important;
+}
+
+body.dark-theme .btn-simple-cta-whatsapp {
+  background: #1e2230 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-simple-cta-whatsapp:hover {
+  transform: translateY(-2px) !important;
+  background: linear-gradient(145deg, #0f2b5c 0%, #183f80 100%) !important;
+  border-color: rgba(96, 165, 250, 0.4) !important;
+  box-shadow: 0 10px 28px rgba(15, 43, 92, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.btn-simple-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #0f2b5c 0%, #1e40af 100%);
-  color: #ffffff !important;
-  font-family: var(--font-family);
-  font-size: 15px;
-  font-weight: 700;
-  padding: 13.5px 32px;
-  border-radius: var(--radius-pill, 9999px);
-  text-decoration: none !important;
-  box-shadow: 0 6px 20px rgba(15, 43, 92, 0.35);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  white-space: nowrap;
 }
 
-.btn-prefooter-call:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #183f80 0%, #2563eb 100%);
-  box-shadow: 0 10px 28px rgba(15, 43, 92, 0.48);
-  color: #ffffff !important;
-}
-
-.btn-call-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-call-icon svg {
-  animation: phoneRingVibrantLoop 3.2s infinite ease-in-out;
-  transform-origin: center center;
-}
-
-/* Secondary Button: Dark Metallic / Slate Pill */
-.btn-prefooter-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #181924;
-  color: #ffffff !important;
-  font-family: var(--font-family);
-  font-size: 15px;
-  font-weight: 700;
-  padding: 13.5px 32px;
-  border-radius: var(--radius-pill, 9999px);
-  text-decoration: none !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  white-space: nowrap;
-}
-
-body.dark-theme .btn-prefooter-whatsapp {
-  background: #1e2230;
-  border-color: rgba(255, 255, 255, 0.16);
-}
-
-.btn-prefooter-whatsapp:hover {
-  transform: translateY(-2px);
-  background: var(--brand-accent, #0f2b5c);
-  border-color: var(--brand-accent, #0f2b5c);
-  box-shadow: 0 10px 28px rgba(15, 43, 92, 0.35);
-  color: #ffffff !important;
-}
-
-.btn-whatsapp-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-wa-icon {
   color: #25d366;
   transition: transform 0.25s ease;
 }
 
-.btn-prefooter-whatsapp:hover .btn-whatsapp-icon {
+.btn-simple-cta-whatsapp:hover .btn-wa-icon {
   transform: scale(1.1);
 }
 
 /* Responsive Breakdown */
 @media (max-width: 768px) {
   .prefooter-simple-card {
-    padding: 42px 20px 36px 20px;
+    padding: 46px 20px 38px 20px;
     border-radius: 24px;
   }
   .prefooter-seal-badge {
-    top: -24px;
-    right: 18px;
+    top: -28px;
+    right: 20px;
     transform: scale(0.85);
     transform-origin: top right;
   }
@@ -4337,21 +4339,21 @@ body.dark-theme .btn-prefooter-whatsapp {
     width: 100%;
     gap: 12px;
   }
-  .btn-prefooter-call,
-  .btn-prefooter-whatsapp {
-    width: 100%;
-    justify-content: center;
+  .btn-simple-cta-call,
+  .btn-simple-cta-whatsapp {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
 
 @media (max-width: 480px) {
   .prefooter-simple-card {
-    padding: 38px 16px 30px 16px;
+    padding: 42px 16px 32px 16px;
     border-radius: 20px;
   }
   .prefooter-seal-badge {
-    top: -20px;
-    right: 12px;
+    top: -24px;
+    right: 14px;
     transform: scale(0.72);
   }
   .prefooter-simple-card:hover .prefooter-seal-badge {
@@ -10462,6 +10464,7 @@ body.dark-theme .pill-dot-navy {
   line-height: 1.15;
   letter-spacing: -0.02em;
   display: block;
+}
 /* --- Streamlined Repair Protocol: How Our Doorstep Service Works --- */
 .service-expertise-section {
   background: transparent;
@@ -10643,7 +10646,7 @@ body.dark-theme .expertise-card-title {
 body.dark-theme .expertise-card-desc {
   color: rgba(255, 255, 255, 0.72);
 }
-} /* ==========================================================================   DARK THEME COMPATIBILITY FOR 3-TIER SERVICE PAGE LAYOUT   ========================================================================== */
+/* ==========================================================================   DARK THEME COMPATIBILITY FOR 3-TIER SERVICE PAGE LAYOUT   ========================================================================== */
 body.dark-theme .service-hero-copy-card {
   background: #17223b;
   border-color: rgba(255, 255, 255, 0.1);
@@ -10700,16 +10703,13 @@ body.dark-theme .btn-filter-browse:hover {
   background: #173b75;
 }
 body.dark-theme .service-expertise-section {
-  background: #0b1a36;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 body.dark-theme .expertise-card {
-  background: #071224;
-  border-color: rgba(255, 255, 255, 0.08);
-}
-body.dark-theme .expertise-circle-arrow-btn {
-  background: #ffffff;
-  color: #0f2b5c;
+  background: #181924;
+  border-color: rgba(255, 255, 255, 0.09);
 } /* ==========================================================================   RESPONSIVE DESIGN FOR 3-TIER SERVICE PAGE LAYOUT (Exact Match to Homepage)   Full Breakpoint Hierarchy: 992px -> 768px -> 576px -> 480px -> 360px -> 300px/250px   ========================================================================== */ /* --- Tablet Breakpoint (1080px & Below) --- */
 @media (max-width: 1080px) {
   .service-hero-split-row {
@@ -10801,14 +10801,15 @@ body.dark-theme .expertise-circle-arrow-btn {
     margin-top: 16px;
     justify-content: center;
     width: 100%;
-  } /* Streamlined Repair Protocol on Tablet */
+  }  /* Streamlined Repair Protocol on Tablet */
   .service-expertise-section {
-    padding: 36px 30px 40px 30px;
-    border-radius: 24px;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    padding: 36px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: clamp(1.85rem, 3vw, 2.4rem);
   }
   .expertise-grid {
@@ -10868,15 +10869,13 @@ body.dark-theme .expertise-circle-arrow-btn {
     font-size: 11.5px;
   } /* Streamlined Repair Protocol on Mobile */
   .service-expertise-section {
-    padding: 28px 20px 32px 20px;
-    border-radius: 22px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding: 30px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  .expertise-header-top {
-    margin-bottom: 12px;
-  }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: clamp(1.65rem, 5.5vw, 2.1rem);
     margin-bottom: 8px;
   }
@@ -10965,12 +10964,13 @@ body.dark-theme .expertise-circle-arrow-btn {
     font-size: 12px;
   }
   .service-expertise-section {
-    padding: 24px 16px 28px 16px;
-    border-radius: 20px;
-    margin-top: 28px;
-    margin-bottom: 28px;
+    padding: 26px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 18px;
+    margin-bottom: 18px;
   }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: clamp(1.5rem, 6vw, 1.85rem);
   }
   .expertise-subtitle {
@@ -11033,12 +11033,13 @@ body.dark-theme .expertise-circle-arrow-btn {
     line-height: 1.3;
   }
   .service-expertise-section {
-    padding: 20px 14px 24px 14px;
-    border-radius: 18px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding: 22px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: clamp(1.35rem, 6.5vw, 1.7rem);
   }
   .expertise-subtitle {
@@ -11050,10 +11051,10 @@ body.dark-theme .expertise-circle-arrow-btn {
     gap: 12px;
   }
   .expertise-card-title {
-    font-size: 16px;
+    font-size: 16.5px;
   }
   .expertise-card-desc {
-    font-size: 12px;
+    font-size: 12.5px;
   }
   .services-dispatch-bar {
     padding: 14px 14px;
@@ -11125,46 +11126,37 @@ body.dark-theme .expertise-circle-arrow-btn {
     gap: 5px;
   }
   .service-expertise-section {
-    padding: 16px 10px 20px 10px;
-    border-radius: 14px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 18px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 14px;
+    margin-bottom: 14px;
   }
-  .expertise-header-top {
-    margin-bottom: 8px;
-  }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: clamp(1.2rem, 6vw, 1.42rem);
   }
   .expertise-subtitle {
     font-size: 12px;
   }
-  .expertise-circle-arrow-btn {
-    width: 36px;
-    height: 36px;
-  }
-  .expertise-circle-arrow-btn svg {
-    width: 14px;
-    height: 14px;
-  }
   .expertise-card {
-    padding: 14px 10px 16px 10px;
-    border-radius: 12px;
+    padding: 16px 12px 18px 12px;
+    border-radius: 14px;
     gap: 10px;
   }
   .expertise-card-icon-stage {
-    height: 34px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
   }
   .expertise-card-icon-stage svg {
-    width: 26px;
-    height: 26px;
+    width: 20px;
+    height: 20px;
   }
-  .step-number-pill {
-    padding: 2px 7px;
-    font-size: 10px;
+  .step-number-watermark {
+    font-size: 22px;
   }
   .expertise-card-title {
-    font-size: 14.5px;
+    font-size: 15px;
   }
   .expertise-card-desc {
     font-size: 11.5px;
@@ -11254,40 +11246,34 @@ body.dark-theme .expertise-circle-arrow-btn {
     gap: 3px;
   }
   .service-expertise-section {
-    padding: 10px 5px 14px 5px;
-    border-radius: 10px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding: 14px 0;
+    border-radius: 0;
+    background: transparent;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
-  .expertise-titles-col .expertise-main-title {
+  .expertise-header-wrap .expertise-main-title {
     font-size: 1.1rem;
   }
   .expertise-subtitle {
     font-size: 10.5px;
   }
-  .expertise-circle-arrow-btn {
-    width: 28px;
-    height: 28px;
-  }
-  .expertise-circle-arrow-btn svg {
-    width: 12px;
-    height: 12px;
-  }
   .expertise-card {
-    padding: 8px 6px;
-    border-radius: 8px;
-    gap: 6px;
+    padding: 12px 10px;
+    border-radius: 12px;
+    gap: 8px;
   }
   .expertise-card-icon-stage {
-    height: 26px;
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
   }
   .expertise-card-icon-stage svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
-  .step-number-pill {
-    padding: 2px 5px;
-    font-size: 9px;
+  .step-number-watermark {
+    font-size: 18px;
   }
   .expertise-card-title {
     font-size: 13px;

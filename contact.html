@@ -169,322 +169,269 @@
       box-shadow: 0 8px 24px rgba(5, 150, 105, 0.45);
     }
 
-    /* 4 Channels Grid — Elevated Interactive Command Tiles */
+    /* ── Action Hub & Direct Contact Channels ── */
+    .contact-hero-actions {
+      display: none !important;
+    }
     .contact-channels-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-bottom: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
     }
-    .contact-channel-card {
+    .contact-action-card-prominent {
       background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 18px;
-      padding: 16px 18px;
+      border: 1.5px solid rgba(15, 43, 92, 0.1);
+      border-radius: 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
       text-decoration: none;
       color: inherit;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 3px 14px rgba(15, 43, 92, 0.03);
+      box-shadow: 0 4px 20px rgba(15, 43, 92, 0.04);
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
     }
-    .contact-channel-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: transparent;
-      transition: background 0.25s ease;
-    }
-    .contact-channel-card:hover {
+    .contact-action-card-prominent:hover {
       transform: translateY(-3px);
-      border-color: rgba(15, 43, 92, 0.22);
-      box-shadow: 0 10px 24px rgba(15, 43, 92, 0.08);
+      box-shadow: 0 14px 30px rgba(15, 43, 92, 0.10);
     }
-    .contact-channel-card.card-phone:hover::before {
-      background: var(--brand-accent, #0f2b5c);
+    .contact-action-card-prominent.card-phone-pro:hover {
+      border-color: var(--brand-accent, #0f2b5c);
     }
-    .contact-channel-card.card-whatsapp:hover {
-      border-color: rgba(16, 185, 129, 0.35);
-      box-shadow: 0 10px 24px rgba(16, 185, 129, 0.12);
+    .contact-action-card-prominent.card-wa-pro {
+      border-color: rgba(16, 185, 129, 0.25);
     }
-    .contact-channel-card.card-whatsapp:hover::before {
-      background: #10b981;
+    .contact-action-card-prominent.card-wa-pro:hover {
+      border-color: #10b981;
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.15);
     }
-    .contact-channel-card.card-email:hover::before {
-      background: #2563eb;
-    }
-    .contact-channel-card.card-office:hover::before {
-      background: #f59e0b;
-    }
-
-    body.dark-theme .contact-channel-card {
+    body.dark-theme .contact-action-card-prominent {
       background: #181924;
       border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
-    body.dark-theme .contact-channel-card:hover {
+    body.dark-theme .contact-action-card-prominent:hover {
       border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
     }
-    body.dark-theme .contact-channel-card.card-whatsapp:hover {
-      border-color: rgba(16, 185, 129, 0.45);
-      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.18);
+    body.dark-theme .contact-action-card-prominent.card-wa-pro:hover {
+      border-color: #34d399;
+      box-shadow: 0 14px 32px rgba(16, 185, 129, 0.2);
     }
 
-    /* Card Top: Medallion & Action Arrow Chip */
-    .channel-card-top {
+    .action-card-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
     }
-    .channel-icon-medallion {
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
+    .action-card-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: transform 0.25s ease;
     }
-    .contact-channel-card:hover .channel-icon-medallion {
-      transform: scale(1.06);
-    }
-    .medallion-navy {
+    .icon-wrap-navy {
       background: rgba(15, 43, 92, 0.08);
       color: var(--brand-accent, #0f2b5c);
     }
-    body.dark-theme .medallion-navy {
-      background: rgba(96, 165, 250, 0.14);
+    body.dark-theme .icon-wrap-navy {
+      background: rgba(96, 165, 250, 0.15);
       color: #60a5fa;
     }
-    .medallion-emerald {
+    .icon-wrap-emerald {
       background: rgba(16, 185, 129, 0.12);
       color: #059669;
     }
-    body.dark-theme .medallion-emerald {
+    body.dark-theme .icon-wrap-emerald {
       background: rgba(16, 185, 129, 0.2);
       color: #34d399;
     }
-    .medallion-blue {
-      background: rgba(37, 99, 235, 0.1);
-      color: #2563eb;
-    }
-    body.dark-theme .medallion-blue {
-      background: rgba(96, 165, 250, 0.15);
-      color: #93c5fd;
-    }
-    .medallion-amber {
-      background: rgba(245, 158, 11, 0.12);
-      color: #d97706;
-    }
-    body.dark-theme .medallion-amber {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-    }
-
-    /* Action Chip */
-    .channel-action-chip {
+    .action-card-live-tag {
       display: inline-flex;
       align-items: center;
       gap: 5px;
       font-size: 11px;
       font-weight: 700;
-      color: var(--text-sub, #64748b);
-      background: rgba(15, 43, 92, 0.04);
-      border: 1px solid rgba(15, 43, 92, 0.08);
-      border-radius: 9999px;
-      padding: 4px 10px;
-      transition: all 0.25s ease;
-    }
-    .channel-action-chip svg {
-      transition: transform 0.25s ease;
-    }
-    .contact-channel-card:hover .channel-action-chip {
-      background: var(--brand-accent, #0f2b5c);
-      color: #ffffff;
-      border-color: var(--brand-accent, #0f2b5c);
-    }
-    .contact-channel-card:hover .channel-action-chip svg {
-      transform: translate(2px, -2px);
-    }
-    .contact-channel-card.card-whatsapp:hover .channel-action-chip {
-      background: #059669;
-      color: #ffffff;
-      border-color: #059669;
-    }
-    .chip-emerald {
       color: #059669;
-      background: rgba(16, 185, 129, 0.08);
-      border-color: rgba(16, 185, 129, 0.2);
-    }
-    .chip-live-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10b981;
-      animation: pulse-green 1.6s infinite;
-    }
-    body.dark-theme .channel-action-chip {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.7);
-    }
-    body.dark-theme .chip-emerald {
-      background: rgba(16, 185, 129, 0.15);
-      border-color: rgba(16, 185, 129, 0.3);
-      color: #34d399;
-    }
-    body.dark-theme .contact-channel-card:hover .channel-action-chip {
-      background: #60a5fa;
-      color: #0f172a;
-      border-color: #60a5fa;
-    }
-    body.dark-theme .contact-channel-card.card-whatsapp:hover .channel-action-chip {
-      background: #10b981;
-      color: #064e3b;
-      border-color: #10b981;
-    }
-
-    /* Card Bottom: Body */
-    .channel-card-body {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .channel-card-eyebrow {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-sub, #64748b);
-    }
-    body.dark-theme .channel-card-eyebrow {
-      color: #94a3b8;
-    }
-    .channel-card-val {
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--text-dark, #121217);
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      transition: color 0.2s ease;
-    }
-    .contact-channel-card:hover .channel-card-val {
-      color: var(--brand-accent, #0f2b5c);
-    }
-    .contact-channel-card.card-whatsapp:hover .channel-card-val {
-      color: #059669;
-    }
-    body.dark-theme .channel-card-val {
-      color: #ffffff;
-    }
-    body.dark-theme .contact-channel-card:hover .channel-card-val {
-      color: #60a5fa;
-    }
-    body.dark-theme .contact-channel-card.card-whatsapp:hover .channel-card-val {
-      color: #34d399;
-    }
-    .channel-card-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      font-weight: 600;
-      color: #059669;
-      margin-top: 2px;
-    }
-    .channel-card-status.status-neutral {
-      color: var(--text-sub, #717686);
-      font-weight: 500;
-    }
-    body.dark-theme .channel-card-status.status-neutral {
-      color: rgba(255, 255, 255, 0.65);
-    }
-    body.dark-theme .channel-card-status:not(.status-neutral) {
-      color: #34d399;
-    }
-
-    /* Proof Bar — Redesigned as a Sleek Pill Ribbon */
-    .contact-proof-bar {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 9999px;
-      padding: 9px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      box-shadow: 0 3px 14px rgba(15, 43, 92, 0.03);
-    }
-    body.dark-theme .contact-proof-bar {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    .proof-rating-badge {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .proof-star-cluster {
-      display: inline-flex;
-      align-items: center;
-      gap: 2px;
-      color: #f59e0b;
-    }
-    .proof-score-tag {
-      font-size: 12px;
-      font-weight: 800;
-      color: var(--text-dark, #121217);
-    }
-    body.dark-theme .proof-score-tag {
-      color: #ffffff;
-    }
-    .proof-divider {
-      color: rgba(15, 43, 92, 0.2);
-      font-size: 11px;
-    }
-    body.dark-theme .proof-divider {
-      color: rgba(255, 255, 255, 0.2);
-    }
-    .proof-count-text {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: var(--text-sub, #64748b);
-    }
-    body.dark-theme .proof-count-text {
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .proof-dispatch-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #059669;
-      background: rgba(16, 185, 129, 0.08);
-      padding: 3px 10px;
+      background: rgba(16, 185, 129, 0.09);
+      padding: 3px 9px;
       border-radius: 9999px;
     }
-    body.dark-theme .proof-dispatch-pill {
-      background: rgba(16, 185, 129, 0.15);
+    body.dark-theme .action-card-live-tag {
+      background: rgba(16, 185, 129, 0.18);
       color: #34d399;
     }
-    .proof-pulse-beacon {
+    .action-live-dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background: #10b981;
       animation: pulse-green 1.8s infinite;
+    }
+
+    .action-card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .action-card-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-sub, #64748b);
+    }
+    body.dark-theme .action-card-title {
+      color: #94a3b8;
+    }
+    .action-card-number {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-dark, #121217);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    body.dark-theme .action-card-number {
+      color: #ffffff;
+    }
+    .action-card-meta {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-sub, #64748b);
+    }
+    body.dark-theme .action-card-meta {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .btn-action-trigger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 18px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .btn-trigger-navy {
+      background: var(--brand-accent, #0f2b5c);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(15, 43, 92, 0.22);
+    }
+    .contact-action-card-prominent.card-phone-pro:hover .btn-trigger-navy {
+      background: var(--brand-accent-hover, #183f80);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(15, 43, 92, 0.32);
+    }
+    .btn-trigger-wa {
+      background: #059669;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+    }
+    .contact-action-card-prominent.card-wa-pro:hover .btn-trigger-wa {
+      background: #047857;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
+    }
+    body.dark-theme .btn-trigger-navy {
+      background: #2563eb;
+    }
+    body.dark-theme .contact-action-card-prominent.card-phone-pro:hover .btn-trigger-navy {
+      background: #1d4ed8;
+    }
+
+    /* Secondary Trust & Channels Dock below */
+    .contact-channels-dock {
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
+      border-radius: 18px;
+      padding: 13px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 3px 14px rgba(15, 43, 92, 0.03);
+    }
+    body.dark-theme .contact-channels-dock {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .dock-col-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dock-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      color: #f59e0b;
+    }
+    .dock-score {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text-dark, #121217);
+    }
+    body.dark-theme .dock-score {
+      color: #ffffff;
+    }
+    .dock-col-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-sub, #64748b);
+      border-left: 1px solid rgba(15, 43, 92, 0.08);
+      border-right: 1px solid rgba(15, 43, 92, 0.08);
+      padding: 0 16px;
+    }
+    body.dark-theme .dock-col-center {
+      border-color: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .dock-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .dock-link:hover {
+      color: var(--brand-accent, #0f2b5c);
+    }
+    body.dark-theme .dock-link:hover {
+      color: #60a5fa;
+    }
+    .dock-col-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #059669;
+      background: rgba(16, 185, 129, 0.08);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+    body.dark-theme .dock-col-right {
+      background: rgba(16, 185, 129, 0.16);
+      color: #34d399;
     }
 
     /* Right Column: Form Card */
@@ -1305,15 +1252,23 @@
       .contact-main-hero {
         padding: 28px 0 36px;
       }
-      .contact-hero-actions {
-        flex-direction: column;
-        align-items: stretch;
+      .contact-channels-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
-      .btn-hero-primary,
-      .btn-hero-secondary {
-        justify-content: center;
-        width: 100%;
-        text-align: center;
+      .contact-channels-dock {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 13px 16px;
+        border-radius: 16px;
+      }
+      .dock-col-center {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
       }
       .contact-consult-banner {
         margin: 36px 0;
@@ -1340,12 +1295,8 @@
         grid-template-columns: 1fr;
         gap: 12px;
       }
-      .contact-proof-bar {
-        border-radius: 18px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 12px 16px;
+      .contact-channels-dock {
+        padding: 12px 14px;
       }
       .form-grid-2 {
         grid-template-columns: 1fr;
@@ -1631,124 +1582,81 @@
                 Connect with certified Dubai repair specialists for fast on-site diagnostics, 100% genuine OEM factory parts, and transparent upfront pricing at your doorstep.
               </p>
               
-              <div class="contact-hero-actions">
-                <a href="#bookingCard" class="btn-hero-primary">
-                  <span>Book Doorstep Repair</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="tel:+971567991964" class="btn-hero-secondary">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-                  <span>Call +971 56 799 1964</span>
-                </a>
-              </div>
-
-              <!-- 4 Interactive Direct-Contact Channels (Elevated Command Tiles) -->
+              <!-- Direct Primary Action Cards (Emergency Call & WhatsApp Diagnostics) -->
               <div class="contact-channels-grid">
                 
-                <!-- Tile 1: Phone Hotline -->
-                <a href="tel:+971567991964" class="contact-channel-card card-phone" aria-label="Call Dispatch Hotline">
-                  <div class="channel-card-top">
-                    <div class="channel-icon-medallion medallion-navy">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <!-- Card 1: Emergency Hotline -->
+                <div class="contact-action-card-prominent card-phone-pro">
+                  <div class="action-card-head">
+                    <div class="action-card-icon-wrap icon-wrap-navy">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
-                    <span class="channel-action-chip">
-                      <span>Call Now</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    <span class="action-card-live-tag">
+                      <span class="action-live-dot"></span>
+                      <span>24/7 On-Call</span>
                     </span>
                   </div>
-                  <div class="channel-card-body">
-                    <span class="channel-card-eyebrow">24/7 Dispatch Hotline</span>
-                    <span class="channel-card-val">+971 56 799 1964</span>
-                    <span class="channel-card-status">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                      <span>~15-Min Rapid Response</span>
-                    </span>
+                  <div class="action-card-info">
+                    <span class="action-card-title">Emergency Hotline</span>
+                    <span class="action-card-number">+971 56 799 1964</span>
+                    <span class="action-card-meta">⚡ Direct line to Dubai dispatch team</span>
                   </div>
-                </a>
+                  <a href="tel:+971567991964" class="btn-action-trigger btn-trigger-navy" aria-label="Call Hotline Now">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>Call Hotline Now</span>
+                  </a>
+                </div>
 
-                <!-- Tile 2: WhatsApp Quick Chat -->
-                <a href="https://wa.me/971567991964?text=Hello%20ApexFix%2C%20I%20would%20like%20to%20book%20a%20technician%20for%20my%20home%20appliance." target="_blank" rel="noopener" class="contact-channel-card card-whatsapp" aria-label="Chat on WhatsApp">
-                  <div class="channel-card-top">
-                    <div class="channel-icon-medallion medallion-emerald">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <!-- Card 2: WhatsApp Diagnostics -->
+                <div class="contact-action-card-prominent card-wa-pro">
+                  <div class="action-card-head">
+                    <div class="action-card-icon-wrap icon-wrap-emerald">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                     </div>
-                    <span class="channel-action-chip chip-emerald">
-                      <span class="chip-live-dot"></span>
-                      <span>Chat Live</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    <span class="action-card-live-tag">
+                      <span class="action-live-dot"></span>
+                      <span>Instant Chat</span>
                     </span>
                   </div>
-                  <div class="channel-card-body">
-                    <span class="channel-card-eyebrow">WhatsApp Quick Chat</span>
-                    <span class="channel-card-val">+971 56 799 1964</span>
-                    <span class="channel-card-status">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                      <span>Photo &amp; Video Diagnostics</span>
-                    </span>
+                  <div class="action-card-info">
+                    <span class="action-card-title">WhatsApp Diagnostics</span>
+                    <span class="action-card-number">+971 56 799 1964</span>
+                    <span class="action-card-meta">💬 Send photos or video of the fault</span>
                   </div>
-                </a>
-
-                <!-- Tile 3: Official Support Email -->
-                <a href="mailto:info@aerepair.ae" class="contact-channel-card card-email" aria-label="Send Support Email">
-                  <div class="channel-card-top">
-                    <div class="channel-icon-medallion medallion-blue">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <span class="channel-action-chip">
-                      <span>Send Mail</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                    </span>
-                  </div>
-                  <div class="channel-card-body">
-                    <span class="channel-card-eyebrow">Official Support Email</span>
-                    <span class="channel-card-val">info@aerepair.ae</span>
-                    <span class="channel-card-status status-neutral">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
-                      <span>Written Quotes &amp; Inquiries</span>
-                    </span>
-                  </div>
-                </a>
-
-                <!-- Tile 4: Dubai Dispatch Coverage -->
-                <a href="#hubLocation" class="contact-channel-card card-office" aria-label="View Central Operations Hub">
-                  <div class="channel-card-top">
-                    <div class="channel-icon-medallion medallion-amber">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <span class="channel-action-chip">
-                      <span>View Hub</span>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                    </span>
-                  </div>
-                  <div class="channel-card-body">
-                    <span class="channel-card-eyebrow">Mobile Dispatch Fleet</span>
-                    <span class="channel-card-val">All Dubai Areas</span>
-                    <span class="channel-card-status status-neutral">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
-                      <span>Direct On-Site Van Service</span>
-                    </span>
-                  </div>
-                </a>
+                  <a href="https://wa.me/971567991964?text=Hello%20ApexFix%2C%20I%20would%20like%20to%20book%20a%20technician%20for%20my%20home%20appliance." target="_blank" rel="noopener" class="btn-action-trigger btn-trigger-wa" aria-label="Chat on WhatsApp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Chat on WhatsApp</span>
+                  </a>
+                </div>
 
               </div>
 
-              <!-- Rating & Trust Proof Ribbon below -->
-              <div class="contact-proof-bar">
-                <div class="proof-rating-badge">
-                  <div class="proof-star-cluster">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <!-- Secondary Trust & Quick Channels Dock -->
+              <div class="contact-channels-dock">
+                <div class="dock-col-left">
+                  <div class="dock-stars">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                   </div>
-                  <span class="proof-score-tag">4.9 / 5.0</span>
-                  <span class="proof-divider">•</span>
-                  <span class="proof-count-text">1,200+ Verified Dubai Homeowners</span>
+                  <span class="dock-score">4.9/5</span>
                 </div>
-                <div class="proof-dispatch-pill">
-                  <span class="proof-pulse-beacon"></span>
-                  <span>Live Dispatch On-Call</span>
+                <div class="dock-col-center">
+                  <a href="mailto:info@aerepair.ae" class="dock-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>info@aerepair.ae</span>
+                  </a>
+                  <span>•</span>
+                  <a href="#hubLocation" class="dock-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>All Dubai Communities</span>
+                  </a>
+                </div>
+                <div class="dock-col-right">
+                  <span class="action-live-dot"></span>
+                  <span>Same-Day Dispatch</span>
                 </div>
               </div>
 

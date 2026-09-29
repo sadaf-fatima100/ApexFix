@@ -2560,64 +2560,81 @@
         <div class="prefooter-cta-container">
           <div class="prefooter-simple-card">
 
-            <!-- 100% Satisfaction Guaranteed Rosette Ribbon Badge (Top-Right Overlap) -->
+            <!-- 100% Satisfaction Guaranteed Rosette Ribbon Badge (Top-Right Overlap matching reference) -->
             <div class="prefooter-seal-badge" aria-label="100% Satisfaction Guaranteed">
-              <svg class="seal-svg" width="92" height="104" viewBox="0 0 92 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Ribbon Tails -->
-                <path d="M26 62L16 98L32 88L42 98L38 62H26Z" fill="#0f2b5c"/>
-                <path d="M16 98L32 88L42 98L38 62L26 62L16 98Z" fill="url(#tailGradLeft)"/>
-                <path d="M66 62L76 98L60 88L50 98L54 62H66Z" fill="#0f2b5c"/>
-                <path d="M76 98L60 88L50 98L54 62L66 62L76 98Z" fill="url(#tailGradRight)"/>
-                
-                <!-- Outer Circular Seal Background -->
-                <circle cx="46" cy="42" r="38" fill="url(#sealOuterGrad)" stroke="#ffffff" stroke-width="2.5" filter="url(#sealShadow)"/>
-                
-                <!-- Inner Dotted Ring -->
-                <circle cx="46" cy="42" r="33" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-dasharray="2.5 2.5"/>
-                
-                <!-- Inner Circle -->
-                <circle cx="46" cy="42" r="29" fill="url(#sealInnerGrad)"/>
-                
-                <!-- Top Arc Micro Text: SATISFACTION -->
-                <path id="sealTextPath" d="M25 42 A21 21 0 0 1 67 42" fill="none"/>
-                <text font-family="'Plus Jakarta Sans', sans-serif" font-size="6.2" font-weight="800" fill="#ffffff" letter-spacing="1.5">
-                  <textPath href="#sealTextPath" startOffset="50%" text-anchor="middle">SATISFACTION</textPath>
+              <svg class="seal-svg" width="105" height="120" viewBox="0 0 105 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Ribbon Tails with 3D Fold & Gradients -->
+                <g filter="url(#tailsShadow)">
+                  <path d="M28 70 L14 112 L34 100 L44 112 L40 70 Z" fill="url(#tailGradLeft)"/>
+                  <path d="M77 70 L91 112 L71 100 L61 112 L65 70 Z" fill="url(#tailGradRight)"/>
+                </g>
+
+                <!-- Outer Scalloped / Beveled Ring -->
+                <circle cx="52.5" cy="48" r="44" fill="url(#silverBevelGrad)" filter="url(#sealDropShadow)"/>
+                <circle cx="52.5" cy="48" r="40" fill="url(#outerBlueRing)" stroke="#ffffff" stroke-width="2"/>
+
+                <!-- Inner Dotted Decorative Ring -->
+                <circle cx="52.5" cy="48" r="34" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.5" stroke-dasharray="2.5 2.5"/>
+
+                <!-- Deep Navy Center Circle -->
+                <circle cx="52.5" cy="48" r="30" fill="url(#centerNavyGrad)"/>
+
+                <!-- Top Curved Arc for SATISFACTION text -->
+                <path id="curveSatisfaction" d="M 28 48 A 24.5 24.5 0 0 1 77 48" fill="none"/>
+                <text font-family="'Plus Jakarta Sans', sans-serif" font-size="6.8" font-weight="800" fill="#ffffff" letter-spacing="1.8">
+                  <textPath href="#curveSatisfaction" startOffset="50%" text-anchor="middle">SATISFACTION</textPath>
                 </text>
-                
-                <!-- Big 100% Value -->
-                <text x="46" y="44.5" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">100%</text>
-                
-                <!-- Ribbon Banner draping across bottom of circular seal -->
-                <path d="M10 50 H82 Q85 50 85 53 L81 63 Q80 65 77 65 H15 Q12 65 11 63 L7 53 Q7 50 10 50 Z" fill="url(#bannerGrad)" stroke="#ffffff" stroke-width="1.5"/>
-                <text x="46" y="60.5" font-family="'Plus Jakarta Sans', sans-serif" font-size="5.6" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.8">SATISFACTION GUARANTEED</text>
-                
-                <!-- Gradients & Defs -->
+
+                <!-- Center 100% Bold Headline -->
+                <text x="52.5" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">100%</text>
+
+                <!-- Draped Ribbon Banner Across Bottom of Circle -->
+                <g filter="url(#bannerDropShadow)">
+                  <path d="M 12 56 Q 52.5 61 93 56 L 89 72 Q 52.5 77 16 72 Z" fill="url(#bannerBlueGrad)" stroke="#ffffff" stroke-width="1.8"/>
+                  <path d="M 12 56 L 6 62 L 16 72 Z" fill="#081836"/>
+                  <path d="M 93 56 L 99 62 L 89 72 Z" fill="#081836"/>
+                  <text x="52.5" y="67.5" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.2" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.9">SATISFACTION GUARANTEED</text>
+                </g>
+
+                <!-- Gradients & Filter Definitions -->
                 <defs>
-                  <filter id="sealShadow" x="-10%" y="-10%" width="130%" height="130%">
-                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(15,43,92,0.3)"/>
+                  <filter id="sealDropShadow" x="-15%" y="-15%" width="130%" height="130%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="rgba(15, 43, 92, 0.3)"/>
                   </filter>
-                  <linearGradient id="sealOuterGrad" x1="12" y1="8" x2="80" y2="76" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1e40af"/>
-                    <stop offset="0.5" stop-color="#0f2b5c"/>
-                    <stop offset="1" stop-color="#081730"/>
+                  <filter id="tailsShadow" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="rgba(15, 43, 92, 0.25)"/>
+                  </filter>
+                  <filter id="bannerDropShadow" x="-10%" y="-10%" width="120%" height="130%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.35)"/>
+                  </filter>
+                  <linearGradient id="silverBevelGrad" x1="10" y1="10" x2="95" y2="86" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff"/>
+                    <stop offset="0.3" stop-color="#93c5fd"/>
+                    <stop offset="0.7" stop-color="#1e40af"/>
+                    <stop offset="1" stop-color="#0f2b5c"/>
                   </linearGradient>
-                  <radialGradient id="sealInnerGrad" cx="46" cy="38" r="30" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="outerBlueRing" x1="12" y1="8" x2="93" y2="88" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#2563eb"/>
+                    <stop offset="0.5" stop-color="#0f2b5c"/>
+                    <stop offset="1" stop-color="#091b38"/>
+                  </linearGradient>
+                  <radialGradient id="centerNavyGrad" cx="52.5" cy="44" r="30" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#1d4ed8"/>
-                    <stop offset="0.7" stop-color="#0f2b5c"/>
-                    <stop offset="1" stop-color="#081730"/>
+                    <stop offset="0.65" stop-color="#0f2b5c"/>
+                    <stop offset="1" stop-color="#081836"/>
                   </radialGradient>
-                  <linearGradient id="bannerGrad" x1="7" y1="50" x2="85" y2="65" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="bannerBlueGrad" x1="12" y1="56" x2="93" y2="72" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#2563eb"/>
                     <stop offset="0.5" stop-color="#0f2b5c"/>
                     <stop offset="1" stop-color="#1e40af"/>
                   </linearGradient>
-                  <linearGradient id="tailGradLeft" x1="16" y1="62" x2="42" y2="98" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="tailGradLeft" x1="14" y1="70" x2="44" y2="112" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#1d4ed8"/>
-                    <stop offset="1" stop-color="#091833"/>
+                    <stop offset="1" stop-color="#091936"/>
                   </linearGradient>
-                  <linearGradient id="tailGradRight" x1="50" y1="62" x2="76" y2="98" gradientUnits="userSpaceOnUse">
+                  <linearGradient id="tailGradRight" x1="61" y1="70" x2="91" y2="112" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#1d4ed8"/>
-                    <stop offset="1" stop-color="#091833"/>
+                    <stop offset="1" stop-color="#091936"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -2635,18 +2652,18 @@
 
             <!-- Centered 2 Action Buttons -->
             <div class="prefooter-simple-actions">
-              <a href="tel:+971508867234" class="btn-prefooter-call" aria-label="Call Now: 050 886 7234">
-                <span class="btn-call-icon" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <a href="tel:+971508867234" class="btn-simple-cta-call" aria-label="Call Now: 050 886 7234">
+                <span class="btn-simple-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
                   </svg>
                 </span>
                 <span>Call Now: 050 886 7234</span>
               </a>
 
-              <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20fast%20appliance%20repair" target="_blank" rel="noopener noreferrer" class="btn-prefooter-whatsapp" aria-label="Live WhatsApp Chat">
-                <span class="btn-whatsapp-icon" aria-hidden="true">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20fast%20appliance%20repair" target="_blank" rel="noopener noreferrer" class="btn-simple-cta-whatsapp" aria-label="Live WhatsApp Chat">
+                <span class="btn-simple-icon btn-wa-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
                   </svg>
                 </span>
