@@ -1546,16 +1546,51 @@ a.service-card-item *,
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(15, 43, 92, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-} /* Hover State: Vibrant Emerald Green (#10b981) with Luminous Glow */
+} /* Anti-Gravity Floating Keyframes for Service Action Buttons */
+@keyframes float-loop {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 22px rgba(0, 0, 0, 0.32), 0 0 14px rgba(255, 255, 255, 0.22);
+  }
+}
+
+.antigravity-btn {
+  animation: float-loop 3s ease-in-out infinite;
+}
+
+/* Staggered Floating Delays across Service Grid */
+.service-card-btn {
+  animation: float-loop 3s ease-in-out infinite;
+}
+.services-grid .service-card-item:nth-child(2) .service-card-btn {
+  animation-delay: 0.5s;
+}
+.services-grid .service-card-item:nth-child(3) .service-card-btn {
+  animation-delay: 1s;
+}
+.services-grid .service-card-item:nth-child(4) .service-card-btn {
+  animation-delay: 1.5s;
+}
+.services-grid .service-card-item:nth-child(5) .service-card-btn {
+  animation-delay: 2s;
+}
+.services-grid .service-card-item:nth-child(6) .service-card-btn {
+  animation-delay: 2.5s;
+}
+
+/* Hover State: Premium Brand Navy (#0f2b5c -> #183f80) - NO CHEAP GREEN */
 .service-card-btn:hover,
 .service-card-item:hover .service-card-btn {
-  background: #10b981;
+  background: linear-gradient(135deg, #0f2b5c 0%, #183f80 100%) !important;
   color: #ffffff !important;
-  border-color: #10b981;
-  box-shadow:
-    0 8px 24px rgba(16, 185, 129, 0.5),
-    0 0 16px rgba(16, 185, 129, 0.35);
-  transform: translateY(-2px);
+  border-color: #0f2b5c !important;
+  box-shadow: 0 16px 32px rgba(15, 43, 92, 0.48), 0 0 20px rgba(24, 63, 128, 0.3) !important;
+  transform: translateY(-10px) !important;
+  animation-play-state: paused;
 }
 .service-card-btn:hover span,
 .service-card-item:hover .service-card-btn span {
@@ -1563,11 +1598,11 @@ a.service-card-item *,
 }
 .service-card-btn:hover svg,
 .service-card-item:hover .service-card-btn svg {
-  background: #ffffff;
-  color: #059669;
-  stroke: #059669;
-  transform: translateX(3px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: #ffffff !important;
+  color: #0f2b5c !important;
+  stroke: #0f2b5c !important;
+  transform: translateX(4px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 } /* ==========================================================================
    Globally Synchronized Shimmer Beam Calibrated for All White Action Buttons
    Pearlescent ice-navy specular shimmer on crisp white surfaces
@@ -2336,25 +2371,55 @@ body.dark-theme .why-card-content .why-card-desc {
   color: var(--color-subtitle);
   max-width: 530px;
   margin-bottom: 24px;
-} /* Status Pill Strip */
+} /* Status Pill Badges (Points Styling) */
 .areas-status-strip {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  background: #ffffff;
-  border: 1.5px solid rgba(15, 43, 92, 0.09);
-  border-radius: var(--radius-pill);
-  padding: 8px 20px;
-  box-shadow: 0 4px 18px rgba(15, 43, 92, 0.04);
-  gap: 16px;
+  gap: 10px;
+  margin-bottom: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 .status-pill-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
+  background: #ffffff;
+  border: 1.5px solid rgba(15, 43, 92, 0.08);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px 6px 7px;
+  box-shadow: 0 2px 10px rgba(15, 43, 92, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+.status-pill-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 43, 92, 0.2);
+  box-shadow: 0 6px 18px rgba(15, 43, 92, 0.08);
+}
+.status-icon-chip {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.status-icon-chip.chip-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+.status-icon-chip.chip-navy {
+  background: rgba(15, 43, 92, 0.07);
+  color: var(--brand-accent, #0f2b5c);
 }
 .status-pulse-dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #10b981;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
@@ -2365,27 +2430,25 @@ body.dark-theme .why-card-content .why-card-desc {
   flex-shrink: 0;
 }
 .status-icon.icon-lightning {
-  color: var(--brand-accent);
+  color: var(--brand-accent, #0f2b5c);
 }
 .status-icon.icon-clock {
-  color: var(--brand-accent);
+  color: var(--brand-accent, #0f2b5c);
 }
 .status-pill-text {
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--text-dark, #121217);
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 .status-pill-text strong {
   font-weight: 800;
-  color: var(--text-dark);
+  color: var(--brand-accent, #0f2b5c);
+  margin-right: 2px;
 }
 .status-pill-sep {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #cbd5e1;
+  display: none;
 } /* Right Column: Map Stage */
 .areas-header-map {
   display: flex;
@@ -2868,14 +2931,15 @@ body.dark-theme .why-card-content .why-card-desc {
   fill: currentColor !important;
 }
 .areas-cta-banner .btn-dispatch-call:hover {
-  background: #f8fafc !important;
-  color: var(--brand-accent-hover, #183f80) !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  color: #ffffff !important;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45) !important;
+  border-color: transparent !important;
 }
 .areas-cta-banner .btn-dispatch-call:hover .phone-vibe-icon,
 .areas-cta-banner .btn-dispatch-call:hover svg {
-  color: var(--brand-accent-hover, #183f80) !important;
+  color: #ffffff !important;
   fill: currentColor !important;
 }
 .areas-cta-banner .btn-dispatch-call:hover .phone-vibe-icon {
@@ -3838,7 +3902,7 @@ body.dark-theme .prefooter-cta-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(115deg, #07152d 0%, #0f2b5c 52%, #163e7a 100%);
+  background: var(--brand-accent, #0f2b5c);
   border-radius: 28px;
   overflow: hidden;
   min-height: 290px;
@@ -3847,29 +3911,10 @@ body.dark-theme .prefooter-cta-section {
   box-shadow: 0 24px 64px rgba(9, 26, 56, 0.35), 0 4px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Atmospheric Glow & Watermark */
-.cta-banner-glow {
-  position: absolute;
-  top: -40%;
-  right: 15%;
-  width: 440px;
-  height: 440px;
-  background: radial-gradient(ellipse, rgba(96, 165, 250, 0.14) 0%, transparent 68%);
-  pointer-events: none;
-  z-index: 0;
-}
+/* Atmospheric Glow & Watermark (Hidden per user specification) */
+.cta-banner-glow,
 .cta-banner-watermark {
-  position: absolute;
-  right: -20px;
-  bottom: -35px;
-  font-size: 150px;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.03);
-  letter-spacing: -0.05em;
-  pointer-events: none;
-  z-index: 0;
-  user-select: none;
-  font-family: var(--font-family);
+  display: none !important;
 }
 
 /* ── Left Visual Box (Framed photo with circular floating icon) ── */
@@ -4177,19 +4222,9 @@ body.dark-theme .prefooter-cta-section {
       rgba(7, 18, 38, 0.12) 100%
     );
   pointer-events: none;
-} /* Watermark */
+} /* Watermark (Hidden per brand guidelines) */
 .prefooter-cta-watermark {
-  position: absolute;
-  right: -10px;
-  bottom: -35px;
-  font-size: 130px;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.035);
-  letter-spacing: -0.04em;
-  pointer-events: none;
-  z-index: 1;
-  user-select: none;
-  font-family: var(--font-family);
+  display: none !important;
 } /* Content Grid: Text on Left, Technician Visual on Right */
 .prefooter-cta-content-grid {
   position: relative;
@@ -7029,16 +7064,18 @@ body.dark-theme .service-card-btn svg {
 }
 body.dark-theme .service-card-btn:hover,
 body.dark-theme .service-card-item:hover .service-card-btn {
-  background: #10b981;
+  background: linear-gradient(135deg, #183f80 0%, #0f2b5c 100%) !important;
   color: #ffffff !important;
-  border-color: #10b981;
-  box-shadow: 0 8px 26px rgba(16, 185, 129, 0.55);
+  border-color: #3b82f6 !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(96, 165, 250, 0.35) !important;
+  transform: translateY(-10px) !important;
+  animation-play-state: paused;
 }
 body.dark-theme .service-card-btn:hover svg,
 body.dark-theme .service-card-item:hover .service-card-btn svg {
-  background: #ffffff;
-  color: #059669;
-  stroke: #059669;
+  background: #ffffff !important;
+  color: #0f2b5c !important;
+  stroke: #0f2b5c !important;
 }
 body.dark-theme .services-dispatch-bar {
   background-color: #121824;
@@ -7548,6 +7585,21 @@ body.dark-theme .feature-description {
   align-items: center;
   margin-bottom: 12px;
 }
+.story-rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3.5px;
+}
+.story-rating-stars svg {
+  width: 15px;
+  height: 15px;
+  fill: #f59e0b;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.story-card:hover .story-rating-stars svg {
+  transform: scale(1.08);
+}
 .story-badge {
   font-size: 11px;
   font-weight: 700;
@@ -7824,9 +7876,26 @@ body.dark-theme .areas-main-desc {
   color: #94a3b8;
 }
 body.dark-theme .areas-status-strip {
-  background: #111a2e;
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+body.dark-theme .status-pill-item {
+  background: #181924;
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+body.dark-theme .status-pill-item:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+body.dark-theme .status-icon-chip.chip-emerald {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+body.dark-theme .status-icon-chip.chip-navy {
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
 }
 body.dark-theme .status-pill-text {
   color: #f1f5f9;
@@ -7837,9 +7906,6 @@ body.dark-theme .status-pill-text strong {
 body.dark-theme .status-icon.icon-lightning,
 body.dark-theme .status-icon.icon-clock {
   color: #60a5fa;
-}
-body.dark-theme .status-pill-sep {
-  background-color: #334155;
 }
 body.dark-theme .areas-map-img {
   filter: brightness(0) saturate(100%) invert(45%) sepia(85%) saturate(1200%)
@@ -7935,9 +8001,14 @@ body.dark-theme .areas-cta-banner .btn-dispatch-call {
   color: var(--brand-accent, #0f2b5c) !important;
 }
 body.dark-theme .areas-cta-banner .btn-dispatch-call:hover {
-  background: #f8fafc !important;
-  color: var(--brand-accent-hover, #183f80) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5) !important;
+}
+body.dark-theme .areas-cta-banner .btn-dispatch-call:hover .phone-vibe-icon,
+body.dark-theme .areas-cta-banner .btn-dispatch-call:hover svg {
+  color: #ffffff !important;
+  fill: currentColor !important;
 } /* ==========================================================================   MAJOR BRANDS WE SERVICE & REPAIR (Replicating media_1790161239392.png)   ========================================================================== */
 .brands-section {
   padding-top: var(--section-py);
