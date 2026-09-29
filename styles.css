@@ -11317,13 +11317,16 @@ body.dark-theme .hero-flank-card {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 40px;
-  align-items: flex-end;
+  align-items: start;
   margin-bottom: 36px;
 }
 .service-why-header-left {
   display: flex;
   flex-direction: column;
-  gap: var(--eyebrow-gap, 14px);
+  gap: 12px;
+}
+.service-why-header-left .badge-tag {
+  margin-bottom: 0 !important;
 }
 .service-why-header-left .section-title {
   margin: 0;
@@ -11334,6 +11337,7 @@ body.dark-theme .hero-flank-card {
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
+  padding-top: 36px;
 }
 .service-why-lead {
   font-size: 15px;
@@ -11433,9 +11437,9 @@ body.dark-theme .hero-flank-card {
   border-radius: 22px;
   padding: 30px 20px 24px 32px;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.35fr 0.65fr;
   align-items: flex-end;
-  gap: 12px;
+  gap: 8px;
   position: relative;
   overflow: visible;
   z-index: 4;
@@ -11447,8 +11451,10 @@ body.dark-theme .hero-flank-card {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  z-index: 2;
+  z-index: 10;
+  position: relative;
   padding-bottom: 8px;
+  max-width: 90%;
 }
 .why-feature-title {
   font-family: var(--font-heading);
@@ -11502,8 +11508,8 @@ body.dark-theme .hero-flank-card {
 .why-feature-tech-img {
   position: absolute;
   bottom: 0;
-  right: 12px;
-  height: 330px;
+  right: -10px;
+  height: 285px;
   width: auto;
   max-width: none;
   object-fit: contain;
@@ -11511,7 +11517,7 @@ body.dark-theme .hero-flank-card {
   pointer-events: none;
   filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
   transition: transform 0.4s ease;
-  z-index: 10;
+  z-index: 8;
   border-bottom-right-radius: 22px;
 }
 .service-why-feature-card:hover .why-feature-tech-img {
@@ -11614,7 +11620,10 @@ body.dark-theme .stat-sep-divider {
 @media (max-width: 860px) {
   .service-why-header {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+  }
+  .service-why-header-right {
+    padding-top: 0 !important;
   }
   .service-why-stats-bar {
     display: grid;
@@ -15662,3 +15671,7 @@ body.dark-theme .wm-feature-desc {
   }
 }
 
+
+.wm-perf-content-col .badge-tag {
+  margin-bottom: 12px !important;
+}
