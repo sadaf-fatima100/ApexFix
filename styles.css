@@ -11400,7 +11400,7 @@ body.dark-theme .expertise-card {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-bottom: 16px;
+  margin-bottom: 9px;
 }
 .hero-center-headline {
   font-family: var(--font-family);
@@ -11409,7 +11409,7 @@ body.dark-theme .expertise-card {
   line-height: 1.15;
   letter-spacing: -0.025em;
   color: #121217;
-  margin: 0 0 16px 0;
+  margin: 0 0 11px 0;
   text-align: center;
 }
 .center-hl-line {
@@ -11421,32 +11421,34 @@ body.dark-theme .expertise-card {
   line-height: 1.6;
   color: #474b5c;
   max-width: 580px;
-  margin: 0 auto 22px auto;
+  margin: 0 auto 13px auto;
   text-align: center;
 }
 .hero-center-cta-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 22px;
+  gap: 12px;
+  margin-bottom: 20px;
   flex-wrap: nowrap;
   width: 100%;
+  max-width: 470px;
 }
-.hero-center-cta-group .btn-hero-primary {
-  padding: 11px 18px;
-  font-size: 13.5px;
+.hero-center-cta-group .btn-hero-primary,
+.hero-center-cta-group .btn-hero-secondary {
+  flex: 1 1 0;
+  width: 50%;
+  min-width: 0;
+  padding: 11.5px 14px;
+  font-size: 12.8px;
   font-weight: 700;
   gap: 7px;
+  justify-content: center;
+  text-align: center;
   white-space: nowrap;
-  flex-shrink: 0;
 }
-.hero-center-cta-group .btn-hero-secondary {
-  padding: 10.5px 16px;
-  font-size: 13px;
-  font-weight: 700;
-  gap: 6px;
-  white-space: nowrap;
+.hero-center-cta-group .btn-hero-primary svg,
+.hero-center-cta-group .btn-hero-secondary svg {
   flex-shrink: 0;
 } /* Trust Proof Row */
 .hero-center-trust-row {
