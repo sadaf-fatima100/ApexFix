@@ -2164,20 +2164,28 @@ a.service-card-item *,
   transform: scale(1.08);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
+.why-card-content .why-card-title,
 .why-card-title {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 17.5px;
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 1.25;
   margin-bottom: 7px;
 }
+.why-card-content .why-card-desc,
 .why-card-desc {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92) !important;
   font-size: 12.5px;
   line-height: 1.52;
   font-weight: 400;
   margin: 0;
+}
+body.dark-theme .why-card-content .why-card-title {
+  color: #ffffff !important;
+}
+body.dark-theme .why-card-content .why-card-desc {
+  color: rgba(255, 255, 255, 0.92) !important;
 } /* 4 Stats / Metrics Strip (User's Exact Copy) */
 .why-stats-strip {
   display: flex;
@@ -11593,7 +11601,7 @@ body.dark-theme .hero-flank-card {
   color: #ffffff;
   transform: scale(1.06);
 }
-.why-card-title {
+.service-why-card .why-card-title {
   font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 800;
@@ -11602,7 +11610,7 @@ body.dark-theme .hero-flank-card {
   line-height: 1.25;
   letter-spacing: -0.015em;
 }
-.why-card-desc {
+.service-why-card .why-card-desc {
   font-size: 13.5px;
   font-weight: 500;
   color: var(--text-sub);
@@ -11765,10 +11773,10 @@ body.dark-theme .service-why-card:hover .why-card-icon-box {
   background: #2563eb;
   color: #ffffff;
 }
-body.dark-theme .why-card-title {
+body.dark-theme .service-why-card .why-card-title {
   color: #ffffff;
 }
-body.dark-theme .why-card-desc {
+body.dark-theme .service-why-card .why-card-desc {
   color: #94a3b8;
 }
 body.dark-theme .service-why-stats-bar {

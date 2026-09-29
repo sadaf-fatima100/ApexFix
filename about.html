@@ -408,22 +408,22 @@
       z-index: 1;
     }
 
-    /* Master Banner Outer Container */
+    /* Master Banner Outer Container (Matching Reference media_1790594315860.png) */
     .pillars-banner-card {
-      background: #f4f8fc;
-      border: 1px solid rgba(15, 43, 92, 0.09);
+      background: #f8fbfe;
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
       border-radius: 28px;
-      padding: clamp(28px, 3.2vw, 42px) clamp(22px, 3.2vw, 40px);
+      padding: 0;
       display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: clamp(24px, 3.5vw, 40px);
+      grid-template-columns: 1.62fr 1fr;
+      gap: 0;
       align-items: stretch;
-      box-shadow: 0 10px 32px -4px rgba(15, 43, 92, 0.05);
+      box-shadow: 0 10px 32px -4px rgba(15, 43, 92, 0.04);
       position: relative;
       overflow: hidden;
     }
     body.dark-theme .pillars-banner-card {
-      background: #121824;
+      background: #141923;
       border-color: rgba(255, 255, 255, 0.08);
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
     }
@@ -433,18 +433,21 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 24px;
+      padding: clamp(28px, 3.2vw, 42px) clamp(22px, 2.6vw, 38px);
     }
 
     /* Header Row */
     .pillars-header-row {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 28px;
+      gap: 28px;
+      margin-bottom: 6px;
     }
     .pillars-title-group {
-      max-width: 440px;
+      flex: 1;
+      min-width: 0;
     }
     .pillars-eyebrow {
       display: inline-flex;
@@ -454,18 +457,18 @@
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #0284c7;
-      margin-bottom: 10px;
+      color: var(--brand-accent, #0f2b5c);
+      margin-bottom: 8px;
     }
     body.dark-theme .pillars-eyebrow {
-      color: #38bdf8;
+      color: #60a5fa;
     }
     .pillars-h2 {
-      font-size: clamp(1.85rem, 2.7vw, 2.45rem);
+      font-size: clamp(1.5rem, 2vw, 1.95rem);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.18;
       letter-spacing: -0.025em;
-      color: #121217;
+      color: var(--text-dark, #121217);
       margin: 0;
     }
     body.dark-theme .pillars-h2 {
@@ -481,27 +484,27 @@
     /* Quote Desc with Accent Bar */
     .pillars-quote-desc {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
       gap: 14px;
-      max-width: 360px;
+      max-width: 290px;
       flex-shrink: 0;
+      padding-top: 4px;
     }
     .pillars-accent-bar {
-      width: 3px;
-      min-height: 48px;
-      background: #00d4ff;
-      border-radius: 2px;
+      width: 3.5px;
+      background: var(--brand-accent, #0f2b5c);
+      border-radius: 4px;
       flex-shrink: 0;
-      margin-top: 3px;
+      min-height: 52px;
     }
     body.dark-theme .pillars-accent-bar {
-      background: #38bdf8;
+      background: #60a5fa;
     }
     .pillars-quote-desc p {
       font-size: 13.5px;
       font-weight: 500;
-      color: #475569;
-      line-height: 1.55;
+      color: #4b5563;
+      line-height: 1.58;
       margin: 0;
     }
     body.dark-theme .pillars-quote-desc p {
@@ -512,20 +515,20 @@
     .pillars-cards-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
     .pillar-box-card {
       background: #ffffff;
       border: 1px solid rgba(15, 43, 92, 0.08);
       border-radius: 18px;
-      padding: 20px 16px;
+      padding: 18px 15px 16px 15px;
       box-shadow: 0 4px 14px rgba(15, 43, 92, 0.03);
       display: flex;
       flex-direction: column;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
     body.dark-theme .pillar-box-card {
-      background: #182030;
+      background: #1a2233;
       border-color: rgba(255, 255, 255, 0.08);
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
     }
@@ -539,89 +542,82 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
     }
 
-    /* Icon Wraps */
+    /* Unified Icon Wrap Matching Brand Theme */
     .pillar-icon-wrap {
       width: 42px;
       height: 42px;
       border-radius: 12px;
+      background: rgba(15, 43, 92, 0.06);
+      color: var(--brand-accent, #0f2b5c);
+      border: 1px solid rgba(15, 43, 92, 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 14px;
       flex-shrink: 0;
+      transition: all 0.25s ease;
     }
-    .pillar-icon-wrap.icon-blue {
-      background: #eff6ff;
-      color: #1d4ed8;
+    .pillar-box-card:hover .pillar-icon-wrap {
+      background: var(--brand-accent, #0f2b5c);
+      color: #ffffff;
+      border-color: var(--brand-accent, #0f2b5c);
+      transform: scale(1.05);
     }
-    .pillar-icon-wrap.icon-cyan {
-      background: #ecfeff;
-      color: #0891b2;
-    }
-    .pillar-icon-wrap.icon-green {
-      background: #ecfdf5;
-      color: #059669;
-    }
-    .pillar-icon-wrap.icon-gold {
-      background: #fef3c7;
-      color: #d97706;
-    }
-    body.dark-theme .pillar-icon-wrap.icon-blue {
-      background: rgba(59, 130, 246, 0.15);
+    body.dark-theme .pillar-icon-wrap {
+      background: rgba(96, 165, 250, 0.12);
       color: #60a5fa;
+      border-color: rgba(96, 165, 250, 0.2);
     }
-    body.dark-theme .pillar-icon-wrap.icon-cyan {
-      background: rgba(6, 182, 212, 0.15);
-      color: #38bdf8;
-    }
-    body.dark-theme .pillar-icon-wrap.icon-green {
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-    }
-    body.dark-theme .pillar-icon-wrap.icon-gold {
-      background: rgba(16, 185, 129, 0.15);
-      color: #fbbf24;
+    body.dark-theme .pillar-box-card:hover .pillar-icon-wrap {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
     }
 
     .pillar-box-title {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 700;
-      color: #0f172a;
+      color: var(--text-dark, #121217);
       line-height: 1.25;
       margin: 0 0 6px 0;
+      letter-spacing: -0.01em;
     }
     body.dark-theme .pillar-box-title {
       color: #ffffff;
     }
     .pillar-box-desc {
-      font-size: 12.5px;
+      font-size: 11.8px;
       font-weight: 500;
       color: #64748b;
-      line-height: 1.5;
+      line-height: 1.48;
       margin: 0;
     }
     body.dark-theme .pillar-box-desc {
       color: #94a3b8;
     }
 
-    /* Right Column: Visual Stage */
+    /* Right Column: Visual Stage (Full-Height Framed Image) */
     .pillars-visual-col {
       display: flex;
+      padding: 14px 14px 14px 0;
+      width: 100%;
+      height: 100%;
     }
     .pillars-image-container {
       width: 100%;
       height: 100%;
-      min-height: 360px;
+      min-height: 380px;
       position: relative;
       border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.08);
+      box-shadow: 0 12px 30px rgba(15, 43, 92, 0.1);
+      background: #e2e8f0;
     }
     .pillars-tech-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 20%;
+      object-position: center 25%;
       display: block;
       transition: transform 0.4s ease;
     }
@@ -629,22 +625,22 @@
       transform: scale(1.03);
     }
 
-    /* Floating Badge */
+    /* Floating Circular Badge */
     .pillars-floating-badge {
       position: absolute;
       top: 18px;
       left: 18px;
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background: #ffffff;
-      color: #0284c7;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      color: var(--brand-accent, #0f2b5c);
+      box-shadow: 0 10px 28px rgba(15, 43, 92, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 2;
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      z-index: 5;
+      border: 2px solid #ffffff;
       transition: transform 0.25s ease;
     }
     .pillars-banner-card:hover .pillars-floating-badge {
@@ -652,9 +648,9 @@
     }
     body.dark-theme .pillars-floating-badge {
       background: #1a2233;
-      color: #38bdf8;
+      color: #60a5fa;
       border-color: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
     }
 
     /* ═══════════════════════════════════════════════════════
@@ -663,21 +659,25 @@
        ═══════════════════════════════════════════════════════ */
     .about-process {
       padding: clamp(48px, 5vw, 76px) 0 clamp(44px, 4.5vw, 68px);
-      background: var(--bg-surface, #f8f9fc);
+      background: transparent;
       position: relative;
-      overflow: hidden;
-      border-top: 1px solid rgba(15, 43, 92, 0.06);
-      border-bottom: 1px solid rgba(15, 43, 92, 0.06);
+      border: none;
     }
     body.dark-theme .about-process {
-      background: #11141d;
-      border-color: rgba(255, 255, 255, 0.06);
+      background: transparent;
+      border: none;
+    }
+
+    .about-process .section-container-inner {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     .about-process-layout {
       display: grid;
-      grid-template-columns: 1fr 1.05fr;
-      gap: clamp(28px, 4vw, 56px);
+      grid-template-columns: clamp(380px, 34vw, 480px) 1fr;
+      gap: clamp(24px, 3vw, 48px);
       align-items: center;
     }
 
@@ -686,52 +686,42 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-end;
       width: 100%;
+      overflow: visible;
     }
 
     /* Ambient lighting aura behind technicians */
     .process-visual-glow {
-      position: absolute;
-      width: 110%;
-      height: 95%;
-      bottom: -10px;
-      left: -5%;
-      background: radial-gradient(ellipse at 50% 65%, rgba(15, 43, 92, 0.075) 0%, transparent 68%);
-      border-radius: 50%;
-      z-index: 0;
-      pointer-events: none;
-    }
-    body.dark-theme .process-visual-glow {
-      background: radial-gradient(ellipse at 50% 65%, rgba(96, 165, 250, 0.12) 0%, transparent 68%);
+      display: none;
     }
 
     .process-technicians-img {
       width: 100%;
-      max-width: 520px;
+      max-width: 500px;
       height: auto;
       display: block;
       position: relative;
       z-index: 1;
-      filter: drop-shadow(0 16px 28px rgba(15, 43, 92, 0.12));
-      -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+      margin-left: -6px; /* Exactly aligns leftmost technician pixel with navbar left curve at x=69 */
+      filter: none !important; /* Zero background shadow on image as requested */
+      /* mask removed */
+      /* mask removed */
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .about-process-visual:hover .process-technicians-img {
       transform: translateY(-3px) scale(1.01);
     }
     body.dark-theme .process-technicians-img {
-      filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.45));
+      filter: none !important;
     }
 
     /* Floating Trust Badge on Image */
     .process-float-badge {
       position: absolute;
       bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 4px;
       background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(12px);
       border: 1.5px solid rgba(15, 43, 92, 0.1);
@@ -791,7 +781,7 @@
       color: var(--text-sub, #5a5f70);
       line-height: 1.6;
       margin: 0 0 20px;
-      max-width: 560px;
+      max-width: 600px;
     }
     body.dark-theme .about-process-lead {
       color: #94a3b8;
@@ -801,54 +791,41 @@
     .process-steps-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-bottom: 22px;
+      gap: 18px;
+      margin-bottom: 24px;
     }
 
     .process-step-item {
       background: #ffffff;
       border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 16px;
-      padding: 16px 16px;
+      border-radius: 20px;
+      padding: 24px 24px;
       position: relative;
       overflow: hidden;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      align-items: stretch;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(15, 43, 92, 0.04);
     }
     .process-step-item:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       border-color: rgba(15, 43, 92, 0.25);
-      box-shadow: 0 12px 28px -4px rgba(15, 43, 92, 0.09);
+      box-shadow: 0 16px 36px rgba(15, 43, 92, 0.08);
     }
     body.dark-theme .process-step-item {
       background: #181924;
       border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
     body.dark-theme .process-step-item:hover {
       border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
     }
 
-    /* Watermark number */
     .process-step-watermark {
-      position: absolute;
-      top: -6px;
-      right: 12px;
-      font-size: 3.6rem;
-      font-weight: 900;
-      color: #0f2b5c;
-      opacity: 0.04;
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-      font-family: var(--font-family);
-    }
-    body.dark-theme .process-step-watermark {
-      color: #ffffff;
-      opacity: 0.04;
+      display: none !important;
     }
 
     /* Top row of card */
@@ -856,33 +833,56 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 2px;
-    }
-
-    .process-step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(15, 43, 92, 0.09) 0%, rgba(15, 43, 92, 0.04) 100%);
-      color: var(--brand-accent, #0f2b5c);
-      font-size: 13.5px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    body.dark-theme .process-step-num {
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.18) 0%, rgba(96, 165, 250, 0.08) 100%);
-      color: #93c5fd;
+      width: 100%;
+      margin-bottom: 16px;
     }
 
     .process-step-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(15, 43, 92, 0.06);
       color: var(--brand-accent, #0f2b5c);
-      opacity: 0.75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+    .process-step-item:hover .process-step-icon {
+      background: var(--brand-accent, #0f2b5c);
+      color: #ffffff;
+      transform: scale(1.05);
     }
     body.dark-theme .process-step-icon {
+      background: rgba(255, 255, 255, 0.08);
       color: #60a5fa;
+    }
+    body.dark-theme .process-step-item:hover .process-step-icon {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* Clean bold step numeral on top-right (Matching User Annotation) */
+    .process-step-count {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      color: var(--brand-accent, #0f2b5c);
+      opacity: 0.45;
+      font-feature-settings: "tnum";
+      line-height: 1;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .process-step-item:hover .process-step-count {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+    body.dark-theme .process-step-count {
+      color: #60a5fa;
+      opacity: 0.55;
+    }
+    body.dark-theme .process-step-item:hover .process-step-count {
+      opacity: 1;
     }
 
     .process-step-title {
@@ -945,162 +945,43 @@
     }
 
     /* ═══════════════════════════════════════════════════════
-       EFFICIENCY & STANDARDS SPLIT SECTION
-       Matching User Reference media_1790571449059.png
+       SECTION: WHY CHOOSE APEXFIX (QUALITY & STANDARDS)
+       Exact Match of User Reference media_1790595189211.png
+       (Full-Width Overlapping Stage with Smooth Rounded Geometry - Zero White Border)
        ═══════════════════════════════════════════════════════ */
     .about-standards-section {
-      padding: 0;
-      margin-top: clamp(48px, 5vw, 68px);
-      margin-bottom: clamp(48px, 5vw, 68px);
+      padding: clamp(36px, 4vw, 56px) 0;
       margin-left: -48px;
       margin-right: -48px;
       width: calc(100% + 96px);
       position: relative;
-      overflow: hidden;
     }
 
-    .standards-split-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: none;
-      background: #0f2b5c;
-      min-height: 560px;
-    }
-    body.dark-theme .standards-split-card {
-      box-shadow: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: #0a1324;
-    }
-
-    /* Left Column: Image & Floating Testimonial Overlay */
-    .standards-media-col {
+    /* Full-Width Overlapping Stage Container (Spans full canvas width) */
+    .standards-stage {
       position: relative;
-      overflow: hidden;
-      min-height: 520px;
-      background: #181924;
-    }
-
-    .standards-photo {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .standards-split-card:hover .standards-photo {
-      transform: scale(1.025);
-    }
-
-    .standards-media-scrim {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15, 43, 92, 0.5) 0%, rgba(15, 43, 92, 0.12) 40%, transparent 70%);
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .standards-quote-card {
-      position: absolute;
-      bottom: 28px;
-      left: 28px;
-      right: 28px;
-      max-width: 460px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      padding: 22px 24px;
-      box-shadow: 0 16px 40px rgba(15, 43, 92, 0.22);
-      z-index: 2;
-      transition: transform 0.25s ease;
-    }
-    .standards-quote-card:hover {
-      transform: translateY(-2px);
-    }
-    body.dark-theme .standards-quote-card {
-      background: rgba(20, 22, 34, 0.93);
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
-    }
-
-    .standards-quote-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
-
-    .standards-quote-stars {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      color: #f59e0b;
-      font-size: 13px;
-    }
-
-    .standards-quote-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 10.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #059669;
-      background: rgba(5, 150, 105, 0.1);
-      padding: 3px 9px;
-      border-radius: 9999px;
-    }
-    body.dark-theme .standards-quote-badge {
-      color: #34d399;
-      background: rgba(5, 150, 105, 0.2);
-    }
-
-    .standards-quote-text {
-      font-size: 13.5px;
-      font-weight: 600;
-      line-height: 1.55;
-      color: var(--text-dark, #121217);
-      margin: 0 0 10px;
-      font-style: italic;
-    }
-    body.dark-theme .standards-quote-text {
-      color: #e2e8f0;
-    }
-
-    .standards-quote-author {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--brand-accent, #0f2b5c);
       margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    body.dark-theme .standards-quote-author {
-      color: #93c5fd;
+      padding-bottom: 56px; /* Offset for photo extending downwards */
     }
 
-    /* Right Column: Deep Navy Standards Content */
-    .standards-content-col {
-      background: #0f2b5c;
-      padding: clamp(40px, 4.5vw, 64px) clamp(32px, 4vw, 56px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    /* Left Navy Card (Covers ~58% width on desktop) */
+    .standards-card {
+      width: 56%;
+      background: linear-gradient(145deg, #08192e 0%, #0f2b5c 55%, #153b75 100%);
+      border-radius: 0 28px 28px 0;
+      padding: clamp(48px, 5vw, 64px) clamp(36px, 4vw, 54px) clamp(48px, 5vw, 64px) clamp(48px, 5vw, 72px);
       position: relative;
+      z-index: 1;
+      box-shadow: 0 16px 45px rgba(15, 43, 92, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
-    body.dark-theme .standards-content-col {
-      background: #0a1324;
+    body.dark-theme .standards-card {
+      background: linear-gradient(145deg, #071224 0%, #0d1e3a 55%, #132a4e 100%);
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
     }
-
-    .standards-content-col::before {
+    .standards-card::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -1109,209 +990,268 @@
       pointer-events: none;
     }
 
-    /* Eyebrow Pill - 100% Brand Compliant Ice Blue Badge (Zero Yellow) */
-    .standards-eyebrow {
+    /* Eyebrow Row with horizontal accent line */
+    .standards-eyebrow-row {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .standards-eyebrow-text {
       font-size: 11.5px;
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #60a5fa;
-      background: rgba(96, 165, 250, 0.12);
-      border: 1px solid rgba(96, 165, 250, 0.28);
-      padding: 6px 15px;
-      border-radius: 9999px;
-      margin-bottom: 18px;
-      position: relative;
-      z-index: 1;
-      width: fit-content;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
     }
-    body.dark-theme .standards-eyebrow {
-      background: rgba(96, 165, 250, 0.18);
-      border-color: rgba(96, 165, 250, 0.35);
-      color: #93c5fd;
+    .standards-eyebrow-line {
+      width: 38px;
+      height: 2.5px;
+      background: #60a5fa;
+      border-radius: 2px;
     }
 
+    /* Heading H2 */
     .standards-h2 {
       font-size: clamp(1.85rem, 2.7vw, 2.45rem);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.22;
       letter-spacing: -0.025em;
       color: #ffffff;
-      margin: 0 0 18px;
+      margin: 0 0 28px 0;
       position: relative;
       z-index: 1;
+      max-width: 520px;
     }
     .standards-h2 .highlight-blue {
       color: #60a5fa;
     }
 
-    .standards-lead {
-      font-size: 14.5px;
-      font-weight: 500;
-      line-height: 1.68;
-      color: rgba(255, 255, 255, 0.82);
-      margin: 0 0 32px;
-      max-width: 560px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* 4 Stats Bar - Pure Crisp White Numbers (Zero Yellow) */
-    .standards-stats-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: clamp(12px, 1.8vw, 24px);
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
-      margin-bottom: 32px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .standards-stat-item {
+    /* 2 Numbered Feature Items */
+    .standards-items-list {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 20px;
+      max-width: 500px;
+      position: relative;
+      z-index: 1;
     }
-
-    .standards-stat-num {
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    .standards-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
     }
-
-    .standards-stat-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.72);
-      text-transform: capitalize;
-    }
-
-    .standards-action-row {
+    .standards-item-num {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
       display: flex;
       align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
+      justify-content: center;
+      font-size: 15px;
+      font-weight: 800;
+      color: #93c5fd;
+      line-height: 1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .standards-item-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .standards-item-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      line-height: 1.3;
+    }
+    .standards-item-desc {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.76);
+      line-height: 1.55;
+      margin: 0;
     }
 
-    /* Brand Theme White Pill CTA Button (Zero Yellow, Emerald Hover, Synchronized Shimmer) */
-    .btn-standards-primary,
-    .btn-standards-gold {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #ffffff;
-      color: #0f2b5c !important;
-      padding: 13px 28px;
-      border-radius: 9999px;
-      font-size: 14.5px;
-      font-weight: 800;
-      text-decoration: none;
-      border: 1.5px solid #ffffff;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
+    /* Right Overlapping Photo Card - ZERO WHITE BORDER, Full-width right extension */
+    .standards-photo-card {
+      position: absolute;
+      top: 32px;
+      left: 44%;
+      right: 48px;
+      bottom: 0;
+      border-radius: 28px;
       overflow: hidden;
+      z-index: 2;
+      box-shadow: 0 24px 60px -12px rgba(15, 43, 92, 0.32);
+      border: none !important;
+      background: #181924;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-    .btn-standards-primary:hover,
-    .btn-standards-gold:hover {
-      background: #10b981;
-      color: #ffffff !important;
-      border-color: #10b981;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(16, 185, 129, 0.45);
+    body.dark-theme .standards-photo-card {
+      border: none !important;
+      box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.75);
     }
-    .btn-standards-primary svg,
-    .btn-standards-gold svg {
+    .standards-photo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 30px 70px -12px rgba(15, 43, 92, 0.4);
+    }
+    .standards-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border: none !important;
+      border-radius: 26px;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .standards-photo-card:hover .standards-photo-img {
+      transform: scale(1.025);
+    }
+
+    /* Floating Badge on Top-Right of Photo (Matching Reference) */
+    .standards-float-topright {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 5;
+      display: flex;
+      align-items: stretch;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(15, 43, 92, 0.08);
       transition: transform 0.25s ease;
     }
-    .btn-standards-primary:hover svg,
-    .btn-standards-gold:hover svg {
-      transform: translateX(3px);
-    }
-
-    /* Shimmer effect for standards action button */
-    .btn-standards-primary::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(15, 43, 92, 0.04) 20%,
-        rgba(255, 255, 255, 0.95) 45%,
-        rgba(147, 197, 253, 0.28) 55%,
-        rgba(15, 43, 92, 0.04) 80%,
-        transparent 100%
-      );
-      filter: drop-shadow(0 0 6px rgba(15, 43, 92, 0.12));
-      pointer-events: none;
-      z-index: 1;
-      animation: synchronizedButtonShine 3s ease-in-out infinite;
-      animation-delay: 0s !important;
-    }
-    .btn-standards-gold::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        45deg,
-        transparent 0%,
-        rgba(251, 191, 36, 0.08) 20%,
-        rgba(255, 255, 255, 0.95) 45%,
-        rgba(251, 191, 36, 0.35) 55%,
-        rgba(245, 158, 11, 0.1) 80%,
-        transparent 100%
-      );
-      filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.35));
-      pointer-events: none;
-      z-index: 1;
-      animation: synchronizedButtonShine 3s ease-in-out infinite;
-      animation-delay: 0s !important;
-    }
-    .btn-standards-primary > *,
-    .btn-standards-gold > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    .standards-call-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 14.5px;
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1.5px solid rgba(255, 255, 255, 0.22);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .standards-call-link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.4);
+    .standards-float-topright:hover {
       transform: translateY(-2px);
     }
-/* ============================================================
+    body.dark-theme .standards-float-topright {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6);
+    }
+    .standards-float-icon-box {
+      width: 50px;
+      min-width: 50px;
+      background: #059669;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+    }
+    .standards-float-text-box {
+      padding: 10px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+    .standards-float-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark, #121217);
+      line-height: 1.2;
+    }
+    body.dark-theme .standards-float-title {
+      color: #ffffff;
+    }
+    .standards-float-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #059669;
+      line-height: 1.2;
+    }
+    body.dark-theme .standards-float-sub {
+      color: #34d399;
+    }
+
+    /* Responsive Breakdown */
+    @media (max-width: 992px) {
+      .about-standards-section {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+      }
+      .standards-stage {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 0;
+      }
+      .standards-card {
+        width: 100%;
+        border-radius: 0;
+        padding: 38px 24px;
+      }
+      .standards-h2 {
+        max-width: 100%;
+      }
+      .standards-items-list {
+        max-width: 100%;
+      }
+      .standards-photo-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        height: 380px;
+        border-radius: 22px;
+        border: none !important;
+      }
+      .standards-float-topright {
+        top: 14px;
+        right: 14px;
+      }
+    }
+    @media (max-width: 768px) {
+      .about-standards-section {
+        margin-left: -14px;
+        margin-right: -14px;
+        width: calc(100% + 28px);
+      }
+      .standards-photo-card {
+        width: calc(100% - 28px);
+        height: 320px;
+      }
+    }
+    @media (max-width: 576px) {
+      .standards-card {
+        padding: 28px 20px;
+        border-radius: 20px;
+      }
+      .standards-h2 {
+        font-size: clamp(1.6rem, 5.8vw, 2rem);
+        margin-bottom: 22px;
+      }
+      .standards-photo-card {
+        height: 280px;
+        border-radius: 20px;
+      }
+      .standards-item {
+        gap: 12px;
+      }
+      .standards-item-num {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 13.5px;
+      }
+    }
+    /* ============================================================
        BENTO GRID SECTION: Why ApexFix Is the Best Choice
        Matching Reference media_1790426910760.png
     ============================================================ */
@@ -1871,6 +1811,11 @@
 
     /* Responsive */
     @media (max-width: 992px) {
+      .pillars-banner-card { grid-template-columns: 1fr; }
+      .pillars-visual-col { padding: 0 16px 16px 16px; order: -1; }
+      .pillars-image-container { min-height: 280px; max-height: 340px; }
+      .pillars-header-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .pillars-cards-grid { grid-template-columns: repeat(2, 1fr); }
       .mission-cards-grid {
         grid-template-columns: 1fr;
         max-width: 580px;
@@ -1886,11 +1831,11 @@
       .pillar-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
       .about-stats-strip { grid-template-columns: repeat(2, 1fr); }
       .about-stats-strip-item:nth-child(2) { border-right: none; }
-      .about-stats-strip-item:nth-child(1), .about-stats-strip-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
       .about-process-layout { grid-template-columns: 1fr; gap: 36px; }
-      .about-process-visual { order: -1; max-width: 420px; margin: 0 auto; }
-      .process-float-badge { bottom: 12px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
-      .about-standards-section { margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); }
+      .about-process-visual { order: -1; max-width: 440px; margin: 0 auto; align-items: center; }
+      .process-technicians-img { margin-left: 0; }
+      .process-float-badge { bottom: 16px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+      /* .about-standards-section responsive */
       .standards-split-card { grid-template-columns: 1fr; }
       .standards-media-col { min-height: 400px; max-height: 480px; }
       .standards-stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
@@ -1901,7 +1846,7 @@
     @media (max-width: 768px) {
       .pillar-grid { grid-template-columns: 1fr; }
       .process-steps-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-      .about-standards-section { margin-left: -14px; margin-right: -14px; width: calc(100% + 28px); }
+      /* .about-standards-section responsive */
       .standards-media-col { min-height: 360px; }
       .standards-quote-card { bottom: 16px; left: 16px; right: 16px; padding: 18px 20px; }
       .standards-content-col { padding: 36px 24px; }
@@ -1914,6 +1859,10 @@
       .mcard-bottom-img-wrap { height: 200px; }
     }
     @media (max-width: 480px) {
+      .pillars-cards-grid { grid-template-columns: 1fr; }
+      .pillars-content-col { padding: 22px 14px; }
+      .pillars-visual-col { padding: 0 10px 10px 10px; }
+      .pillars-image-container { min-height: 230px; }
       .btn-cta-green, .btn-cta-navy { justify-content: center; }
       .about-float-chip-top, .pillar-card { padding: 20px 16px; }
       .compare-card-pro, .compare-card-risk { padding: 22px 18px; }
@@ -1940,7 +1889,7 @@
       .mcard-bottom-img-wrap { height: 180px; }
     }
     @media (max-width: 360px) {
-      .about-standards-section { margin-left: -8px; margin-right: -8px; width: calc(100% + 16px); }
+      /* .about-standards-section responsive */
       .standards-content-col { padding: 22px 14px; }
       .standards-stats-row { grid-template-columns: 1fr; gap: 12px; }
       .about-stats-strip { grid-template-columns: 1fr; }
@@ -2466,7 +2415,7 @@
                     <span>WHY CHOOSE US</span>
                   </div>
                   <h2 class="pillars-h2">
-                    Committed to Your <span class="highlight-navy">Comfort &amp; Safety.</span>
+                    Committed to Your<br><span class="highlight-navy">Comfort &amp; Safety.</span>
                   </h2>
                 </div>
 
@@ -2483,7 +2432,7 @@
                 
                 <!-- Pillar 01: Licensed & Insured -->
                 <div class="pillar-box-card">
-                  <div class="pillar-icon-wrap icon-blue">
+                  <div class="pillar-icon-wrap">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="3" y="4" width="18" height="16" rx="3"></rect>
                       <circle cx="9" cy="10" r="2"></circle>
@@ -2498,7 +2447,7 @@
 
                 <!-- Pillar 02: Same-Day Service -->
                 <div class="pillar-box-card">
-                  <div class="pillar-icon-wrap icon-cyan">
+                  <div class="pillar-icon-wrap">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
@@ -2510,7 +2459,7 @@
 
                 <!-- Pillar 03: Fixed Upfront Pricing -->
                 <div class="pillar-box-card">
-                  <div class="pillar-icon-wrap icon-green">
+                  <div class="pillar-icon-wrap">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                     </svg>
@@ -2521,7 +2470,7 @@
 
                 <!-- Pillar 04: 15,000+ Repairs -->
                 <div class="pillar-box-card">
-                  <div class="pillar-icon-wrap icon-gold">
+                  <div class="pillar-icon-wrap">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                       <polyline points="9 12 11 14 15 10"></polyline>
@@ -2594,12 +2543,11 @@
 
                 <!-- Step 01 -->
                 <div class="process-step-item">
-                  <span class="process-step-watermark">01</span>
                   <div class="process-step-top">
-                    <div class="process-step-num">01</div>
                     <div class="process-step-icon" aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     </div>
+                    <span class="process-step-count">01</span>
                   </div>
                   <h3 class="process-step-title">Instant Request</h3>
                   <p class="process-step-desc">Book online or call 24/7. Closest mobile unit is dispatched immediately.</p>
@@ -2607,12 +2555,11 @@
 
                 <!-- Step 02 -->
                 <div class="process-step-item">
-                  <span class="process-step-watermark">02</span>
                   <div class="process-step-top">
-                    <div class="process-step-num">02</div>
                     <div class="process-step-icon" aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                     </div>
+                    <span class="process-step-count">02</span>
                   </div>
                   <h3 class="process-step-title">Doorstep Arrival</h3>
                   <p class="process-step-desc">Certified technician arrives within 30 mins in a fully equipped mobile unit.</p>
@@ -2620,12 +2567,11 @@
 
                 <!-- Step 03 -->
                 <div class="process-step-item">
-                  <span class="process-step-watermark">03</span>
                   <div class="process-step-top">
-                    <div class="process-step-num">03</div>
                     <div class="process-step-icon" aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
                     </div>
+                    <span class="process-step-count">03</span>
                   </div>
                   <h3 class="process-step-title">Digital Diagnosis</h3>
                   <p class="process-step-desc">Multi-meter testing and error scan with upfront itemized pricing.</p>
@@ -2633,12 +2579,11 @@
 
                 <!-- Step 04 -->
                 <div class="process-step-item">
-                  <span class="process-step-watermark">04</span>
                   <div class="process-step-top">
-                    <div class="process-step-num">04</div>
                     <div class="process-step-icon" aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
                     </div>
+                    <span class="process-step-count">04</span>
                   </div>
                   <h3 class="process-step-title">OEM Fix &amp; Warranty</h3>
                   <p class="process-step-desc">Factory OEM parts installed on the spot with complete warranty coverage.</p>
@@ -2665,86 +2610,76 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════
-           SECTION: EFFICIENCY & HIGH QUALITY STANDARDS
-           Matching User Reference media_1790571449059.png
+           SECTION: WHY CHOOSE APEXFIX (QUALITY & STANDARDS)
+           Exact Match of User Reference media_1790595189211.png
+           (Full-Width Asymmetric Stage with Smooth Rounded Geometry - Zero White Border)
       ═══════════════════════════════════════════════════════ -->
-      <section class="about-standards-section" id="standards">
-        <div class="standards-split-card">
+      <section class="about-standards-section" id="standards" aria-label="Why Choose ApexFix Appliance Repair">
+        <!-- Asymmetric Overlapping Stage Container (Full-Width, No Teaser Bar) -->
+        <div class="standards-stage">
 
-          <!-- Left Column: Lifestyle Photo & Floating Testimonial Overlay -->
-          <div class="standards-media-col">
-            <img src="assets/standards-customer.jpg" alt="Satisfied Dubai Homeowner with Restored AC & Home Appliances" class="standards-photo" loading="lazy">
-            <div class="standards-media-scrim" aria-hidden="true"></div>
-
-            <!-- Floating Customer Testimonial Card (Matching Reference) -->
-            <div class="standards-quote-card">
-              <div class="standards-quote-header">
-                <div class="standards-quote-stars" aria-label="5 out of 5 stars">
-                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <span class="standards-quote-badge">✓ Verified Fix</span>
-              </div>
-              <p class="standards-quote-text">
-                "ApexFix restored our refrigerator within 45 minutes on a Sunday afternoon. Professional, clean, and 100% genuine factory parts. True peace of mind!"
-              </p>
-              <p class="standards-quote-author">
-                — Tariq Al-Mansoor, Dubai Marina Resident
-              </p>
-            </div>
-          </div>
-
-          <!-- Right Column: Navy Standards Content (Matching Reference) -->
-          <div class="standards-content-col">
-            <!-- Eyebrow Pill -->
-            <div class="standards-eyebrow">
-              <span>✦ WHY CHOOSE APEXFIX ?</span>
+          <!-- Left Navy Banner Card (Rounded Geometry, No Sharp Edges) -->
+          <div class="standards-card">
+            
+            <!-- Eyebrow Row with horizontal accent line (Matching "WORK PROCESS --" in reference) -->
+            <div class="standards-eyebrow-row">
+              <span class="standards-eyebrow-text">✦ WHY CHOOSE APEXFIX ?</span>
+              <span class="standards-eyebrow-line" aria-hidden="true"></span>
             </div>
 
-            <!-- Section H2 Heading (Dual Color) -->
+            <!-- Main Heading (Dual Color) -->
             <h2 class="standards-h2">
-              Focus On Getting Repairs Done <span class="highlight-blue">Quickly And Efficiently</span> While Maintaining High Standards
+              Focus On Getting Repairs Done <span class="highlight-blue">Quickly &amp; Efficiently</span> While Maintaining High Standards
             </h2>
 
-            <!-- Lead Paragraph -->
-            <p class="standards-lead">
-              ApexFix delivers fast, dependable appliance repair with skilled certified technicians, rapid 1-hour response, and 100% genuine factory parts across Dubai homes. Every service follows strict diagnostic protocols to guarantee long-term performance and complete customer satisfaction.
-            </p>
+            <!-- 2 Numbered Feature Items (Exact Reference Match 01 & 02) -->
+            <div class="standards-items-list">
+              
+              <!-- Item 01 -->
+              <div class="standards-item">
+                <div class="standards-item-num" aria-hidden="true">01</div>
+                <div class="standards-item-content">
+                  <h3 class="standards-item-title">Rapid 1-Hour Doorstep Arrival</h3>
+                  <p class="standards-item-desc">Certified mobile diagnostic vans dispatched across all 27+ Dubai communities for same-day inspection and repair.</p>
+                </div>
+              </div>
 
-            <!-- 4 Stats Bar (Matching Reference) -->
-            <div class="standards-stats-row">
-              <div class="standards-stat-item">
-                <span class="standards-stat-num">15,000+</span>
-                <span class="standards-stat-label">Happy Clients</span>
+              <!-- Item 02 -->
+              <div class="standards-item">
+                <div class="standards-item-num" aria-hidden="true">02</div>
+                <div class="standards-item-content">
+                  <h3 class="standards-item-title">100% Genuine OEM Factory Spares</h3>
+                  <p class="standards-item-desc">Direct factory-sealed replacement components sourced directly from official brand suppliers with written warranty.</p>
+                </div>
               </div>
-              <div class="standards-stat-item">
-                <span class="standards-stat-num">10+</span>
-                <span class="standards-stat-label">Years Experience</span>
+
+            </div>
+
+          </div><!-- /.standards-card -->
+
+          <!-- Right Overlapping Landscape Photo (Extends Down Below Navy Card - Zero White Border) -->
+          <div class="standards-photo-card">
+            <img src="assets/standards-team-collab.jpg" alt="ApexFix Master Engineering Team Collaborating in Dubai Workshop" class="standards-photo-img" loading="lazy">
+
+            <!-- Floating Callout Badge on Top-Right (Matching Reference: Icon Box + 2 Text Lines) -->
+            <div class="standards-float-topright">
+              <div class="standards-float-icon-box" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
               </div>
-              <div class="standards-stat-item">
-                <span class="standards-stat-num">45+</span>
-                <span class="standards-stat-label">Master Techs</span>
-              </div>
-              <div class="standards-stat-item">
-                <span class="standards-stat-num">27+</span>
-                <span class="standards-stat-label">Dubai Hubs</span>
+              <div class="standards-float-text-box">
+                <span class="standards-float-title">Certified Dubai Team</span>
+                <span class="standards-float-sub">Together for Quality</span>
               </div>
             </div>
 
-            <!-- Action CTA Group -->
-            <div class="standards-action-row">
-              <button class="btn-standards-primary btn-standards-gold book-trigger" type="button">
-                <span>Book a Repair Now</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-              </button>
-              <a href="tel:+971508867234" class="standards-call-link">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>+971 50 886 7234</span>
-              </a>
-            </div>
+          </div><!-- /.standards-photo-card -->
 
-          </div><!-- /.standards-content-col -->
-
-        </div><!-- /.standards-split-card -->
+        </div><!-- /.standards-stage -->
       </section>
 
       <!-- ═══════════════════════════════════════════════════════

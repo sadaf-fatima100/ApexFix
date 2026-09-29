@@ -25,9 +25,10 @@
       position: relative;
     }
     .contact-hero-container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 clamp(14px, 3.5vw, 36px);
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
     .contact-hero-layout {
       display: grid;
@@ -498,67 +499,87 @@
 
 
     /* ── SECTION 2: FULL-WIDTH CONSULTATION & EMERGENCY BANNER ── */
-    /* Featuring 3-Persons Cutout (assets/cta-team-cutout.png) with Heads Popping Out of Top */
+    /* Featuring 3-Persons Cutout (assets/cta-team-cutout.png) with Heads Popping Out of Top on Light Card Surface */
     .contact-consult-banner {
-      margin: clamp(72px, 8vw, 105px) 0 clamp(44px, 5.5vw, 68px);
+      margin: clamp(100px, 10vw, 140px) 0 clamp(44px, 5.5vw, 68px);
       position: relative;
     }
     .consult-banner-container {
       max-width: 1240px;
       margin: 0 auto;
       padding: 0 clamp(14px, 3.5vw, 36px);
+      position: relative;
     }
     .consult-banner-grid {
-      background: linear-gradient(135deg, #07152d 0%, #0f2b5c 52%, #081a3d 100%);
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 43, 92, 0.12);
       border-radius: 28px;
       position: relative;
       overflow: visible; /* Allows heads to pop out of card at the top */
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns: 0.9fr 1.1fr;
       align-items: end;
-      box-shadow: 0 24px 60px rgba(15, 43, 92, 0.25);
+      box-shadow: 0 16px 45px rgba(15, 43, 92, 0.08);
+      transition: all 0.3s ease;
+    }
+    body.dark-theme .consult-banner-grid {
+      background: #181924;
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
     }
     .consult-banner-grid::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(0, 212, 255, 0.12) 0%, transparent 70%);
+      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(15, 43, 92, 0.03) 0%, transparent 70%);
       pointer-events: none;
       border-radius: 28px;
+    }
+    body.dark-theme .consult-banner-grid::before {
+      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(96, 165, 250, 0.05) 0%, transparent 70%);
     }
 
     /* Cutout Visual Stage with Head Popping Out */
     .consult-banner-visual {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-end;
       height: 100%;
+      min-height: 340px;
       position: relative;
-      z-index: 5;
-      padding-left: clamp(16px, 3vw, 40px);
+      z-index: 10;
+      padding-left: clamp(10px, 1.8vw, 24px);
+      overflow: visible;
     }
     .consult-visual-stage {
       position: relative;
       width: 100%;
-      max-width: 500px;
+      height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-end;
+      overflow: visible;
     }
     .consult-team-img {
-      max-height: 430px;
+      position: absolute;
+      bottom: 0;
+      left: clamp(-10px, -1vw, 5px);
       width: auto;
-      max-width: 108%;
+      max-width: none;
+      height: 440px; /* Big scale with heads popping out of card top */
       object-fit: contain;
       display: block;
-      filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.5));
-      margin-top: -95px; /* Heads extend above the top border of card */
-      transform: translateY(2px);
+      filter: drop-shadow(0 18px 30px rgba(15, 43, 92, 0.22));
+      pointer-events: none;
+      z-index: 10;
+    }
+    body.dark-theme .consult-team-img {
+      filter: drop-shadow(0 20px 38px rgba(0, 0, 0, 0.65));
     }
 
     /* Content & Emergency CTAs - Compact Sleeker Height */
     .consult-banner-content {
-      padding: clamp(26px, 3.5vw, 40px) clamp(22px, 3.8vw, 48px) clamp(26px, 3.5vw, 40px) 16px;
+      padding: clamp(32px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(32px, 4vw, 48px) clamp(20px, 3vw, 44px);
       position: relative;
       z-index: 2;
     }
@@ -566,25 +587,33 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 43, 92, 0.06);
+      border: 1px solid rgba(15, 43, 92, 0.15);
       border-radius: 9999px;
       padding: 4px 13px;
       font-size: 10.5px;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #facc15;
+      color: var(--brand-accent, #0f2b5c);
       margin-bottom: 12px;
+    }
+    body.dark-theme .consult-badge {
+      background: rgba(96, 165, 250, 0.12);
+      border-color: rgba(96, 165, 250, 0.25);
+      color: #93c5fd;
     }
     .pulse-amber-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #facc15;
-      animation: pulse-amber 1.8s infinite;
+      background: var(--brand-accent, #0f2b5c);
+      animation: pulse-badge 1.8s infinite;
     }
-    @keyframes pulse-amber {
+    body.dark-theme .pulse-amber-dot {
+      background: #60a5fa;
+    }
+    @keyframes pulse-badge {
       0% { transform: scale(0.95); opacity: 1; }
       50% { transform: scale(1.3); opacity: 0.5; }
       100% { transform: scale(0.95); opacity: 1; }
@@ -594,19 +623,22 @@
       font-weight: 800;
       line-height: 1.2;
       letter-spacing: -0.025em;
-      color: #ffffff;
+      color: var(--text-dark, #121217);
       margin: 0 0 10px;
     }
-    .highlight-cyan {
-      color: #00d4ff !important;
+    body.dark-theme .consult-heading {
+      color: #ffffff;
     }
     .consult-desc {
       font-size: 14.5px;
       font-weight: 500;
       line-height: 1.62;
-      color: rgba(255, 255, 255, 0.82);
+      color: var(--text-sub, #4b5563);
       margin: 0 0 20px;
       max-width: 530px;
+    }
+    body.dark-theme .consult-desc {
+      color: rgba(255, 255, 255, 0.75);
     }
     .consult-features-row {
       display: flex;
@@ -618,37 +650,37 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
       border-radius: 9999px;
       padding: 6px 14px;
       font-size: 12.5px;
       font-weight: 700;
-      color: #ffffff;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-dark, #1e293b);
+      box-shadow: 0 2px 6px rgba(15, 43, 92, 0.04);
     }
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 9999px;
-      padding: 7px 16px;
-      font-size: 13px;
-      font-weight: 700;
+    body.dark-theme .consult-feature-badge {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
       color: #ffffff;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      box-shadow: none;
     }
     .feature-check-icon {
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: #00d4ff;
-      color: #07152d;
+      background: var(--brand-accent, #0f2b5c);
+      color: #ffffff;
       font-size: 11px;
       font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 1;
+    }
+    body.dark-theme .feature-check-icon {
+      background: #3b82f6;
+      color: #ffffff;
     }
     .consult-cta-group {
       display: flex;
@@ -660,7 +692,7 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      background: #059669;
+      background: var(--brand-accent, #0f2b5c);
       color: #ffffff;
       font-family: inherit;
       font-weight: 700;
@@ -668,21 +700,32 @@
       border-radius: 9999px;
       padding: 13px 28px;
       text-decoration: none;
-      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.4);
+      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.25);
+      border: 1.5px solid var(--brand-accent, #0f2b5c);
       transition: all 0.25s ease;
     }
     .btn-consult-call:hover {
-      background: #10b981;
+      background: var(--brand-accent-hover, #183f80);
+      border-color: var(--brand-accent-hover, #183f80);
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.5);
+      box-shadow: 0 12px 28px rgba(15, 43, 92, 0.35);
+    }
+    body.dark-theme .btn-consult-call {
+      background: #3b82f6;
+      border-color: #3b82f6;
+    }
+    body.dark-theme .btn-consult-call:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.4);
     }
     .btn-consult-wa {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      color: #ffffff;
+      background: #ffffff;
+      border: 1.5px solid var(--brand-accent, #0f2b5c);
+      color: var(--brand-accent, #0f2b5c);
       font-family: inherit;
       font-weight: 700;
       font-size: 14.5px;
@@ -692,17 +735,26 @@
       transition: all 0.25s ease;
     }
     .btn-consult-wa:hover {
-      background: #25d366;
-      border-color: #25d366;
+      background: var(--brand-accent, #0f2b5c);
       color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.2);
+    }
+    body.dark-theme .btn-consult-wa {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+    body.dark-theme .btn-consult-wa:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
 
     /* ── SECTION 3: CENTRAL OPERATIONS HUB & SPARES DEPOT ── */
+    /* Redesigned to match reference image (media_1790594484434.png) with rounded corners & ApexFix brand colors */
     .contact-hub-section {
-      padding: clamp(36px, 4.5vw, 64px) 0 clamp(44px, 5.5vw, 76px);
+      padding: clamp(40px, 5vw, 68px) 0 clamp(44px, 5.5vw, 76px);
       position: relative;
     }
     .hub-container {
@@ -712,9 +764,9 @@
     }
     .hub-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: clamp(36px, 4.5vw, 60px);
-      align-items: stretch;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(36px, 4.5vw, 64px);
+      align-items: center;
     }
 
     /* Left Hub Info */
@@ -756,108 +808,108 @@
       font-weight: 500;
       line-height: 1.65;
       color: var(--text-sub, #5a5f70);
-      margin: 0 0 28px;
-      max-width: 580px;
+      margin: 0 0 22px;
+      max-width: 540px;
     }
     body.dark-theme .hub-desc {
       color: rgba(255, 255, 255, 0.7);
     }
 
-    /* 2 Dark Hub Cards Side-by-Side (matching reference image) */
-    .hub-cards-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-    .hub-dark-card {
-      background: linear-gradient(155deg, #0e1e3b 0%, #09152b 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.09);
-      border-radius: 20px;
-      padding: 22px 20px;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.12);
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-    .hub-dark-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 16px 40px rgba(15, 43, 92, 0.22);
-    }
-    .hub-card-header {
-      margin-bottom: 16px;
-    }
-    .hub-pill-tag {
-      display: inline-block;
-      background: rgba(0, 212, 255, 0.12);
-      color: #00d4ff;
-      border: 1px solid rgba(0, 212, 255, 0.25);
-      border-radius: 9999px;
-      padding: 3px 10px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-    .hub-card-title {
-      font-size: 16.5px;
-      font-weight: 800;
-      color: #ffffff;
-      margin: 0;
-      line-height: 1.3;
-    }
-    .hub-card-items {
+    /* 3 Bullet points matching reference layout */
+    .hub-feature-bullets {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-bottom: 24px;
     }
-    .hub-info-row {
+    .hub-bullet-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
     }
-    .hub-row-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.06);
-      color: #38bdf8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .bullet-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand-accent, #0f2b5c);
+      margin-top: 7px;
       flex-shrink: 0;
     }
-    .hub-row-content {
+    body.dark-theme .bullet-dot {
+      background: #60a5fa;
+    }
+    .bullet-text {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text-dark, #1e293b);
+    }
+    body.dark-theme .bullet-text {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    .bullet-text strong {
+      font-weight: 700;
+      color: var(--text-dark, #0f2b5c);
+    }
+    body.dark-theme .bullet-text strong {
+      color: #ffffff;
+    }
+
+    /* Progress bar metric card */
+    .hub-progress-card {
+      background: rgba(15, 43, 92, 0.04);
+      border: 1px solid rgba(15, 43, 92, 0.08);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-bottom: 26px;
+      max-width: 480px;
+    }
+    body.dark-theme .hub-progress-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    .hub-progress-header {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
     }
-    .row-label {
-      font-size: 10.5px;
+    .hub-progress-label {
+      font-size: 13px;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #94a3b8;
-      margin-bottom: 2px;
+      color: var(--text-dark, #121217);
     }
-    .row-val {
-      font-size: 13.5px;
-      font-weight: 600;
+    body.dark-theme .hub-progress-label {
       color: #ffffff;
-      line-height: 1.4;
     }
-    .link-val {
-      color: #38bdf8;
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.2s ease;
-    }
-    .link-val:hover {
+    .hub-progress-val {
+      font-size: 11.5px;
+      font-weight: 800;
+      background: var(--brand-accent, #0f2b5c);
       color: #ffffff;
-      text-decoration: underline;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    body.dark-theme .hub-progress-val {
+      background: #3b82f6;
+      color: #ffffff;
+    }
+    .hub-progress-track {
+      width: 100%;
+      height: 7px;
+      background: rgba(15, 43, 92, 0.1);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    body.dark-theme .hub-progress-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .hub-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #0f2b5c 0%, #1e40af 100%);
+      border-radius: 9999px;
+    }
+    body.dark-theme .hub-progress-bar {
+      background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
     }
 
     .hub-action-row {
@@ -885,71 +937,131 @@
       box-shadow: 0 10px 28px rgba(5, 150, 105, 0.35);
     }
 
-    /* Right Column: Tall Technician Diagnostics Photo */
+    /* Right Column: Stage Wrapper with Overlapping 3 Floating Cards (No Sharp Edges) */
     .hub-right-col {
       display: flex;
-    }
-    .hub-image-card {
+      justify-content: flex-end;
       position: relative;
-      border-radius: 24px;
-      overflow: hidden;
+    }
+    .hub-stage-wrapper {
+      position: relative;
       width: 100%;
-      min-height: 480px;
-      box-shadow: 0 20px 50px rgba(15, 43, 92, 0.12);
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .hub-photo-container {
+      width: 86%;
+      min-height: 480px;
+      border-radius: 24px; /* Smooth rounded corners, no sharp edges */
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(15, 43, 92, 0.12);
+      position: relative;
     }
     .hub-technician-photo {
       width: 100%;
       height: 100%;
+      min-height: 480px;
       object-fit: cover;
       display: block;
       transition: transform 0.4s ease;
     }
-    .hub-image-card:hover .hub-technician-photo {
+    .hub-photo-container:hover .hub-technician-photo {
       transform: scale(1.025);
     }
-    .hub-floating-badge {
+
+    /* 3 Floating Cards Stack Overlapping the Left Edge */
+    .hub-overlap-cards {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(9, 21, 43, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1.5px solid rgba(255, 255, 255, 0.15);
-      border-radius: 18px;
-      padding: 16px 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 215px;
       display: flex;
-      align-items: center;
-      gap: 14px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+      flex-direction: column;
+      gap: 12px;
+      z-index: 10;
     }
-    .badge-icon-wrap {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: #00d4ff;
-      color: #07152d;
+    .hub-float-card {
+      border-radius: 18px; /* Smooth rounded corners, NO sharp edges as requested */
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hub-float-card:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+    .hub-float-card.card-light {
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
+      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.12);
+      color: var(--text-dark, #121217);
+    }
+    body.dark-theme .hub-float-card.card-light {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+    }
+    .hub-float-card.card-highlight {
+      background: linear-gradient(145deg, #0f2b5c 0%, #153b7a 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 16px 40px rgba(15, 43, 92, 0.35);
+      color: #ffffff;
+    }
+    body.dark-theme .hub-float-card.card-highlight {
+      background: linear-gradient(145deg, #0d2249 0%, #081a3d 100%);
+      border-color: rgba(96, 165, 250, 0.4);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+    .float-card-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(15, 43, 92, 0.07);
+      color: var(--brand-accent, #0f2b5c);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      margin-bottom: 8px;
     }
-    .badge-content {
-      display: flex;
-      flex-direction: column;
+    body.dark-theme .float-card-icon {
+      background: rgba(96, 165, 250, 0.12);
+      color: #60a5fa;
     }
-    .badge-title {
-      font-size: 14.5px;
-      font-weight: 800;
+    .float-card-icon.highlight-icon {
+      background: rgba(255, 255, 255, 0.18);
       color: #ffffff;
-      margin-bottom: 2px;
     }
-    .badge-sub {
-      font-size: 12px;
+    body.dark-theme .float-card-icon.highlight-icon {
+      background: rgba(96, 165, 250, 0.2);
+      color: #93c5fd;
+    }
+    .float-card-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+      display: block;
+    }
+    .card-highlight .float-card-title {
+      color: #ffffff;
+    }
+    .float-card-sub {
+      font-size: 11px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.35;
+      line-height: 1.45;
+      color: var(--text-sub, #64748b);
+      margin: 0;
+    }
+    .card-highlight .float-card-sub {
+      color: #cbd5e1;
+    }
+    body.dark-theme .card-light .float-card-sub {
+      color: rgba(255, 255, 255, 0.65);
     }
 
 
@@ -959,29 +1071,70 @@
         grid-template-columns: 1fr;
         gap: 36px;
       }
+      .contact-consult-banner {
+        margin: 40px 0;
+      }
       .consult-banner-grid {
         grid-template-columns: 1fr;
         align-items: center;
         text-align: left;
+        overflow: hidden;
       }
       .consult-banner-visual {
         order: 2;
-        padding-left: 0;
+        padding: 0 16px;
+        min-height: auto;
+        height: auto;
         justify-content: center;
+      }
+      .consult-visual-stage {
+        height: auto;
       }
       .consult-banner-content {
         order: 1;
-        padding: 36px 28px 24px;
+        padding: 32px 24px 20px;
       }
       .consult-team-img {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
         max-height: 360px;
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+        display: block;
       }
       .hub-grid {
         grid-template-columns: 1fr;
         gap: 36px;
       }
-      .hub-image-card {
-        min-height: 380px;
+      .hub-stage-wrapper {
+        flex-direction: column;
+        width: 100%;
+      }
+      .hub-photo-container {
+        width: 100%;
+        min-height: 320px;
+        border-radius: 20px;
+        order: 1;
+      }
+      .hub-technician-photo {
+        width: 100%;
+        min-height: 320px;
+        border-radius: 20px;
+      }
+      .hub-overlap-cards {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        width: 100%;
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        order: 2;
       }
     }
 
@@ -1527,7 +1680,7 @@
                 <span>NEED IMMEDIATE EMERGENCY ASSISTANCE?</span>
               </div>
               <h2 class="consult-heading">
-                Consult the services you <span class="highlight-cyan">need now!</span>
+                Consult the services you <span class="highlight-navy">need now!</span>
               </h2>
               <p class="consult-desc">
                 For active water leaks, refrigerator cooling failure, or severe appliance breakdowns, connect instantly with our dispatch team. Our mobile diagnostic fleet covers every Dubai neighborhood with genuine OEM parts.
@@ -1568,13 +1721,15 @@
 
       <!-- ========================================================
            SECTION 3: CENTRAL OPERATIONS HUB & SPARES DEPOT
-           (Matches Reference Image media_1790590812988.png - Bottom Part)
+           (Matches Reference Image media_1790594484434.png)
+           Left: Headings, 3 Bullets, 98% Resolution Bar, Open Maps
+           Right: Photo with 3 Overlapping Floating Cards (No Sharp Edges)
            ======================================================== -->
       <section class="contact-hub-section" id="hubLocation">
         <div class="hub-container">
           <div class="hub-grid">
             
-            <!-- Left Column: Headings, 2 Dark Hub Cards, and Open Maps Button -->
+            <!-- Left Column: Headings, 3 Bullets, Resolution Progress Bar, and Open Maps Button -->
             <div class="hub-left-col">
               <div class="hub-badge">CENTRAL OPERATIONS HUB</div>
               <h2 class="hub-heading">
@@ -1584,89 +1739,31 @@
                 Arham Electric Household Appliances Repairing &amp; Maintenance coordinates centralized technician dispatch, genuine spares inventory, and emergency mobile vans throughout Dubai and the UAE.
               </p>
 
-              <!-- 2 Dark Hub Cards Side-by-Side (matching reference layout) -->
-              <div class="hub-cards-row">
-                
-                <!-- Hub Card 1: Dispatch -->
-                <div class="hub-dark-card">
-                  <div class="hub-card-header">
-                    <span class="hub-pill-tag">DISPATCH HUB 01</span>
-                    <h3 class="hub-card-title">Dubai Central Dispatch</h3>
-                  </div>
-
-                  <div class="hub-card-items">
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Address</span>
-                        <strong class="row-val">Dubai, United Arab Emirates</strong>
-                      </div>
-                    </div>
-
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Dispatch Hotline</span>
-                        <a href="tel:+971567991964" class="row-val link-val">+971 56 799 1964</a>
-                      </div>
-                    </div>
-
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Fleet Response</span>
-                        <strong class="row-val">24/7 Rapid Mobile Vans</strong>
-                      </div>
-                    </div>
-                  </div>
+              <!-- 3 Feature Bullets matching reference format -->
+              <div class="hub-feature-bullets">
+                <div class="hub-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-text"><strong>24/7 Rapid Mobile Dispatch</strong> &mdash; Immediate on-site response across all Dubai residential communities.</div>
                 </div>
-
-                <!-- Hub Card 2: Spares Depot & Maintenance -->
-                <div class="hub-dark-card">
-                  <div class="hub-card-header">
-                    <span class="hub-pill-tag">FACILITY DEPOT 02</span>
-                    <h3 class="hub-card-title">Spares &amp; Diagnostics Lab</h3>
-                  </div>
-
-                  <div class="hub-card-items">
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Entity Name</span>
-                        <strong class="row-val">Arham Electric Household Appliances Repairing</strong>
-                      </div>
-                    </div>
-
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Inventory</span>
-                        <strong class="row-val">OEM Factory Spares &amp; Testing</strong>
-                      </div>
-                    </div>
-
-                    <div class="hub-info-row">
-                      <div class="hub-row-icon">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                      </div>
-                      <div class="hub-row-content">
-                        <span class="row-label">Official Support</span>
-                        <a href="mailto:info@aerepair.ae" class="row-val link-val">info@aerepair.ae</a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="hub-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-text"><strong>OEM Factory Parts Inventory</strong> &mdash; Genuine components stocked directly from certified manufacturers.</div>
                 </div>
+                <div class="hub-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-text"><strong>Certified Diagnostics Lab</strong> &mdash; Precision testing, compressor analysis, and circuit board repair.</div>
+                </div>
+              </div>
 
+              <!-- Resolution Rate Progress Bar matching reference image -->
+              <div class="hub-progress-card">
+                <div class="hub-progress-header">
+                  <span class="hub-progress-label">First-Visit Resolution Rate</span>
+                  <span class="hub-progress-val">98%</span>
+                </div>
+                <div class="hub-progress-track">
+                  <div class="hub-progress-bar" style="width: 98%;"></div>
+                </div>
               </div>
 
               <!-- Open Maps Button -->
@@ -1678,20 +1775,58 @@
               </div>
             </div>
 
-            <!-- Right Column: Tall Technician Diagnostics Photo (matching reference image) -->
+            <!-- Right Column: Technician Diagnostics Photo with 3 Overlapping Floating Cards (No Sharp Edges) -->
             <div class="hub-right-col">
-              <div class="hub-image-card">
-                <img src="assets/protocol-tech-diagnosis.jpg" alt="Master Certified Appliance Technician Diagnosing Components" class="hub-technician-photo" loading="lazy">
+              <div class="hub-stage-wrapper">
                 
-                <div class="hub-floating-badge">
-                  <div class="badge-icon-wrap">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <!-- The 3 Vertically Stacked Floating Cards Overlapping Left Edge -->
+                <div class="hub-overlap-cards">
+                  
+                  <!-- Card 1: Top White Card -->
+                  <div class="hub-float-card card-light">
+                    <div class="float-card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <strong class="float-card-title">Expert Team</strong>
+                    <p class="float-card-sub">Certified specialists stationed across all Dubai.</p>
                   </div>
-                  <div class="badge-content">
-                    <strong class="badge-title">Direct On-Site Diagnostics</strong>
-                    <span class="badge-sub">Loaded Mobile Units &amp; Genuine OEM Parts</span>
+
+                  <!-- Card 2: Middle Highlight Card (Navy / Cyan) -->
+                  <div class="hub-float-card card-highlight">
+                    <div class="float-card-icon highlight-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
+                    </div>
+                    <strong class="float-card-title">Target Fulfil</strong>
+                    <p class="float-card-sub">100% genuine factory parts loaded for doorstep repair.</p>
                   </div>
+
+                  <!-- Card 3: Bottom White Card -->
+                  <div class="hub-float-card card-light">
+                    <div class="float-card-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                      </svg>
+                    </div>
+                    <strong class="float-card-title">Productivity</strong>
+                    <p class="float-card-sub">Under 60-min rapid arrival &amp; precision diagnostics.</p>
+                  </div>
+
                 </div>
+
+                <!-- Right Photo with Smooth Rounded Corners (No Sharp Edges) -->
+                <div class="hub-photo-container">
+                  <img src="assets/protocol-tech-diagnosis.jpg" alt="Master Certified Appliance Technician Diagnosing Components" class="hub-technician-photo" loading="lazy">
+                </div>
+
               </div>
             </div>
 
