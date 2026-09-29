@@ -12,16 +12,17 @@ This project follows strict engineering and visual standards. Every change must 
   - On sub-pages like `services.html`, Quick Links must reference `index.html#section` (e.g. `index.html#home`, `index.html#about`).
 
 ## 2. Brand Identity & Theme Palette
-- Primary Accent: Navy `#0f2b5c` (`var(--brand-accent)`)
-- Primary Hover: `#183f80` (`var(--brand-accent-hover)`)
+- Primary Brand Accent: Deep Sapphire Navy `#143877` (`var(--brand-accent)`) with rich dark depth
+- Primary Action Gradient (Matching CTA Call Now button): `linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%)`
+- Primary Action Hover Gradient: `linear-gradient(135deg, #2563eb 0%, #183f80 50%, #0f2b5c 100%)`
 - Secondary Call / Emergency: `#059669` / `#10b981`
 - Canvas Light: `#fbfbfe` / `#f3f4f8` with `#ffffff` card surfaces
 - Dark Theme (`body.dark-theme`): Canvas `#0c1017` / `#121217`, Cards `#181924`, Borders `rgba(255, 255, 255, 0.08)`
 - Theme Toggle: `#themeToggleBtn` storing in `localStorage.getItem('apexfix-theme')`
 
 ## 3. UI Component Geometry
-- Primary & Action Buttons: MUST use pill shape (`border-radius: var(--radius-pill);` or `9999px`).
-- Brand Grid: All 20 brand logo cards MUST have `1.5px solid #0f2b5c` navy border.
+- Primary & Action Buttons: MUST use pill shape (`border-radius: var(--radius-pill);` or `9999px`) styled with the signature Call Now gradient.
+- Brand Grid: All 20 brand logo cards MUST have `1.5px solid #143877` navy border with `#1e4ab5` on hover.
 - Outer Frame / Canvas: `var(--radius-outer)` (32px desktop, 26px tablet, 22px mobile).
 
 ## 4. Typography Hierarchy & Consistency (Matching Home Page)
@@ -41,7 +42,7 @@ This project follows strict engineering and visual standards. Every change must 
   - **Micro-copy / Labels**: `10.5px` to `12.5px`.
 - **Dual-Color Section Headings Standard**:
   - **EVERY section heading across ALL pages (excluding hero sections) MUST use dual colors** matching `index.html`.
-  - Light mode: Base text in dark charcoal `var(--text-dark)` (`#121217`), emphasis text in `<span class="highlight-navy">` (`var(--brand-accent)` `#0f2b5c`).
+  - Light mode: Base text in dark charcoal `var(--text-dark)` (`#121217`), emphasis text in `<span class="highlight-navy">` (`var(--brand-accent)` `#143877`).
   - Dark mode (`body.dark-theme`): Base text in `#ffffff`, emphasis text in `#60a5fa` (`body.dark-theme .highlight-navy`).
   - Dark cards/banners: Base text in `#ffffff`, emphasis text in `#60a5fa`.
 
