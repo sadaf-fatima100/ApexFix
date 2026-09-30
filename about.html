@@ -223,7 +223,7 @@
     }
     .mission-card-light:hover .mcard-arrow-light,
     .mcard-arrow-light:hover {
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       color: #ffffff;
       transform: rotate(45deg);
     }
@@ -491,7 +491,9 @@
       gap: 10px;
     }
     .heritage-metric-card {
-      background: linear-gradient(145deg, #0a1f44 0%, #0f2b5c 60%, #153b75 100%);
+      background:
+        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
+        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
       border: 1.5px solid rgba(255, 255, 255, 0.16);
       border-radius: 18px;
       padding: 12px 14px;
@@ -519,7 +521,9 @@
       box-shadow: 0 16px 36px rgba(15, 43, 92, 0.48);
     }
     body.dark-theme .heritage-metric-card {
-      background: linear-gradient(145deg, #071224 0%, #0d1e3a 60%, #132a4e 100%);
+      background:
+        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
+        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
       border-color: rgba(125, 175, 245, 0.25);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
     }
@@ -601,7 +605,7 @@
       transform: scale(1.025);
     }
 
-    /* Floating Top-Right Tool / Gear Badge - SOLID NAVY BLUE */
+    /* Floating Top-Right Tool / Gear Badge - HOME PAGE GRADIENT */
     .heritage-lab-top-badge {
       position: absolute;
       top: 18px;
@@ -609,7 +613,7 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -620,7 +624,7 @@
       transition: transform 0.25s ease;
     }
     body.dark-theme .heritage-lab-top-badge {
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       border-color: rgba(255, 255, 255, 0.2);
     }
     .heritage-lab-card:hover .heritage-lab-top-badge {
@@ -664,7 +668,7 @@
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
     }
 
-    /* Floating Icon Badge Top-Right - SOLID NAVY BLUE, NO GRADIENT */
+    /* Floating Icon Badge Top-Right - HOME PAGE GRADIENT */
     .heritage-card-icon-badge {
       position: absolute;
       top: 16px;
@@ -672,7 +676,7 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -682,7 +686,7 @@
       flex-shrink: 0;
     }
     body.dark-theme .heritage-card-icon-badge {
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       border: 1px solid rgba(255, 255, 255, 0.12);
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
     }
@@ -1108,7 +1112,9 @@
       overflow: hidden;
     }
     body.dark-theme .about-standards-section {
-      background: #0f1c36;
+      background:
+        radial-gradient(120% 85% at 20% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 65%),
+        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #061226 100%);
     }
 
     /* Standards Stage Container (Full-bleed edge-to-edge) */
@@ -1294,7 +1300,7 @@
     .standards-float-icon-box {
       width: 50px;
       min-width: 50px;
-      background: var(--brand-accent, #0f2b5c);
+      background: var(--btn-gradient-primary);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -2109,7 +2115,11 @@
       }
 
     /* Dark theme fine-tuning */
-    body.dark-theme body.dark-theme body.dark-theme .compare-card-pro { background: #0c2550; }
+    body.dark-theme body.dark-theme body.dark-theme .compare-card-pro {
+      background:
+        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
+        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
+    }
     </style>
 </head>
 <body>
@@ -2364,15 +2374,24 @@
       <!-- ========================================================
            TIER 1: Top Hero Split Row (Matching Services Master Layout)
            ======================================================== -->
-      <section class="service-hero-split-row" id="home">
+      <section class="service-hero-split-row portfolio-hero-row about-hero-row" id="home">
         
         <!-- Left Hero Copy & Stats Card -->
         <div class="service-hero-copy-card">
           <div class="hero-copy-main">
+            <!-- Eyebrow Badge Tag -->
+            <div class="badge-tag hero-copy-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>ABOUT APEXFIX DUBAI</span>
+            </div>
+
             <h1 class="hero-headline">
-              <span class="hl-line line-1">Engineering Trust</span>
-              <span class="hl-line line-2">In Greater Dubai</span>
-              <span class="hl-line line-3">Appliance Repair</span>
+              <span class="hl-line line-1">Engineering Trust In</span>
+              <span class="hl-line line-2">Dubai Appliance Repair</span>
             </h1>
 
             <p class="hero-description">
@@ -2394,6 +2413,16 @@
                 </svg>
                 <span>Emergency Call 24/7</span>
               </a>
+            </div>
+
+            <!-- Social Proof Client Ribbon (Clean Floating Avatar Stack without Box/Border) -->
+            <div class="pf-hero-social-proof">
+              <div class="pf-proof-avatars">
+                <img src="assets/avatar1.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+                <img src="assets/avatar2.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+                <img src="assets/avatar3.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+              </div>
+              <span class="pf-proof-tag">15,000+ Happy Clients Across Dubai</span>
             </div>
           </div>
 
@@ -2435,31 +2464,6 @@
 
       </section>
 
-      <!-- Sleek Horizontal Service Marquee Ribbon (Infinite Smooth Motion) -->
-      <div class="hero-horizontal-service-marquee">
-        <div class="marquee-track">
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Bosch Expert</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Spin Noise Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drum Bearing Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drain Pump Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Compressor Repair</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Siemens Specialist</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Freezer Cooling Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> PCB Board Repair</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Miele Service Care</span>
-          
-          <!-- Duplicate Set for Seamless Loop -->
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Bosch Expert</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Spin Noise Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drum Bearing Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Drain Pump Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Compressor Repair</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Siemens Specialist</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Freezer Cooling Fix</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> PCB Board Repair</span>
-          <span class="marquee-pill"><span class="pill-dot-navy"></span> Miele Service Care</span>
-        </div>
-      </div>
 
       <!-- ═══════════════════════════════════════════════════════
            SECTION 3: COMMITTED TO RELIABLE APPLIANCE REPAIR
