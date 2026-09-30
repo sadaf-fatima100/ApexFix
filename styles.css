@@ -10379,6 +10379,143 @@ body.dark-theme .pill-dot-navy {
   font-weight: 600;
   color: var(--text-sub);
   line-height: 1.35;
+}
+
+/* ========================================================
+/* ========================================================
+   CENTER-ALIGNED TRUST HIGHLIGHTS BAR (Navy Blue Brand Theme Matching About Page)
+   ======================================================== */
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(20, 56, 119, 0.1);
+  margin-top: auto;
+  width: 100%;
+}
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+.hero-trust-icon-box {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(20, 56, 119, 0.08);
+  color: var(--brand-accent, #143877);
+  border: 1.5px solid rgba(20, 56, 119, 0.16);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-trust-icon-box svg {
+  color: var(--brand-accent, #143877);
+}
+.hero-trust-item:hover .hero-trust-icon-box {
+  background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 6px 16px rgba(15, 43, 92, 0.25);
+}
+.hero-trust-item:hover .hero-trust-icon-box svg {
+  color: #ffffff;
+}
+.hero-trust-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+/* Navy Blue Text Matching About Page Standard */
+.hero-trust-title {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--brand-accent, #143877);
+  line-height: 1.25;
+  white-space: nowrap;
+}
+.hero-trust-sub {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(20, 56, 119, 0.72);
+  line-height: 1.35;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* Dark Theme Compatibility */
+body.dark-theme .hero-trust-bar {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-theme .hero-trust-icon-box {
+  background: rgba(96, 165, 250, 0.12);
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.25);
+}
+body.dark-theme .hero-trust-icon-box svg {
+  color: #60a5fa;
+}
+body.dark-theme .hero-trust-item:hover .hero-trust-icon-box {
+  background: var(--btn-gradient-primary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(6, 18, 40, 0.5);
+}
+body.dark-theme .hero-trust-item:hover .hero-trust-icon-box svg {
+  color: #ffffff;
+}
+body.dark-theme .hero-trust-title {
+  color: #60a5fa;
+}
+body.dark-theme .hero-trust-sub {
+  color: #93c5fd;
+}
+
+/* Responsive Rules for Trust Highlights Bar */
+@media (max-width: 1080px) {
+  .hero-trust-bar {
+    justify-content: center;
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-trust-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 20px;
+    padding-top: 18px;
+  }
+  .hero-trust-item {
+    flex: 0 1 auto;
+  }
+}
+@media (max-width: 480px) {
+  .hero-trust-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 14px;
+  }
+  .hero-trust-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .hero-trust-title {
+    font-size: 13px;
+  }
+  .hero-trust-sub {
+    font-size: 11px;
+  }
 } /* Tier 1 Hero Media Stage End */
 .hero-media-gradient {
   position: absolute;
@@ -14009,15 +14146,21 @@ body.dark-theme .pf-lb-reassurance {
   padding-bottom: var(--section-py, 56px);
 }
 .blog-section-header {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 .blog-section-header-left {
-  max-width: 680px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .blog-section-subtitle-tag {
   display: inline-flex;
@@ -14046,13 +14189,16 @@ body.dark-theme .pf-lb-reassurance {
   line-height: 1.22;
   color: var(--text-dark, #0f2b5c);
   margin: 0 0 10px 0;
+  text-align: center;
 }
 .blog-section-lead {
   font-size: 15px;
   font-weight: 500;
   line-height: 1.6;
   color: var(--text-sub, #5a5f70);
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 660px;
 }
 .blog-header-status-pill {
   display: inline-flex;

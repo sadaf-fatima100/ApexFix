@@ -152,7 +152,7 @@
         linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
       border: 1px solid rgba(125, 175, 245, 0.25);
       box-shadow: 0 22px 55px -10px rgba(6, 18, 40, 0.45);
-      padding: 0 clamp(20px, 2vw, 26px) clamp(22px, 2vw, 26px);
+      padding: clamp(24px, 2.4vw, 32px) clamp(20px, 2vw, 26px) clamp(22px, 2vw, 26px);
       color: #ffffff;
     }
     .mission-card-featured:hover {
@@ -341,62 +341,10 @@
       transform: scale(1.05);
     }
 
-    /* Card 2 (Middle): Exact Asterisk Cutout Top Image */
-    .mcard-cutout-container {
-      width: calc(100% + clamp(40px, 4vw, 52px));
-      margin: 0 calc(0px - clamp(20px, 2vw, 26px)) 20px calc(0px - clamp(20px, 2vw, 26px));
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-    }
-    .mcard-cutout-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      clip-path: url(#agentforce-asterisk-cut);
-      -webkit-clip-path: polygon(0.0% 0.0%, 0.0% 23.6%, 7.2% 28.9%, 0.0% 35.8%, 0.0% 62.8%, 14.8% 52.2%, 23.8% 53.9%, 21.2% 97.8%, 44.8% 97.2%, 42.0% 53.6%, 47.5% 48.3%, 77.5% 73.3%, 93.8% 60.8%, 93.2% 49.7%, 58.5% 34.2%, 57.8% 26.7%, 93.2% 10.3%, 94.0% 0.0%, 55.5% 0.0%, 45.0% 16.1%, 42.0% 0.0%, 23.2% 0.0%, 24.0% 6.9%, 9.5% 0.0%);
-      clip-path: polygon(0.0% 0.0%, 0.0% 23.6%, 7.2% 28.9%, 0.0% 35.8%, 0.0% 62.8%, 14.8% 52.2%, 23.8% 53.9%, 21.2% 97.8%, 44.8% 97.2%, 42.0% 53.6%, 47.5% 48.3%, 77.5% 73.3%, 93.8% 60.8%, 93.2% 49.7%, 58.5% 34.2%, 57.8% 26.7%, 93.2% 10.3%, 94.0% 0.0%, 55.5% 0.0%, 45.0% 16.1%, 42.0% 0.0%, 23.2% 0.0%, 24.0% 6.9%, 9.5% 0.0%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      display: block;
-    }
-    .mission-card-featured:hover .mcard-cutout-img {
-      transform: scale(1.04);
-    }
-
-    /* Featured Card Bottom Action Bar */
-    .mcard-featured-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: auto;
-      padding-top: 18px;
-    }
-    .mcard-featured-btn {
-      flex: 1;
-      padding: 12px 20px;
-      background: #ffffff;
-      color: var(--brand-accent, #0f2b5c);
-      border: 1.5px solid #ffffff;
-      border-radius: 9999px;
-      font-size: 13.5px;
-      font-weight: 800;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-      transition: all 0.25s ease;
-      text-decoration: none;
-    }
-    .mcard-featured-btn:hover {
-      background: #f1f5f9;
-      color: var(--brand-accent-hover, #183f80);
-      border-color: #f1f5f9;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    /* Card 2: Featured Navy Card Bottom Image Accent */
+    .mission-card-featured .mcard-bottom-img-wrap {
+      border: 1px solid rgba(125, 175, 245, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
 
@@ -2045,9 +1993,6 @@
         margin: 0 auto;
         gap: 32px;
       }
-      .mcard-cutout-container {
-        height: 240px;
-      }
       .mcard-bottom-img-wrap {
         height: 220px;
       }
@@ -2078,7 +2023,6 @@
       .bento-card-wide { height: 230px; }
       .bento-card-square { height: 210px; }
       .bento-card-trust { height: auto; min-height: 220px; }
-      .mcard-cutout-container { height: 220px; }
       .mcard-bottom-img-wrap { height: 200px; }
     }
     @media (max-width: 480px) {
@@ -2097,13 +2041,8 @@
       .standards-action-row { flex-direction: column; align-items: stretch; }
       .btn-standards-primary, .btn-standards-gold, .standards-call-link { justify-content: center; }
       .about-stats-strip { grid-template-columns: 1fr 1fr; }
-      .mission-card-light { padding: 22px 18px 20px 18px; }
-      .mission-card-featured { padding: 0 18px 22px 18px; }
-      .mcard-cutout-container {
-        width: calc(100% + 36px);
-        margin: 0 -18px 18px -18px;
-        height: 190px;
-      }
+      .mission-card-light,
+      .mission-card-featured { padding: 22px 18px 20px 18px; }
       .mcard-bottom-img-wrap { height: 180px; }
     }
     @media (max-width: 360px) {
@@ -2526,22 +2465,23 @@
               </div>
             </div>
 
-            <!-- Card 2: Our Vision (Middle Featured Navy Card with Exact Asterisk Clip-Path) -->
+            <!-- Card 2: Our Vision (Middle Featured Navy Card) -->
             <div class="mission-card mission-card-featured">
-              <!-- Exact Agentforce Asterisk Cutout Top Image -->
-              <div class="mcard-cutout-container">
-                <img class="mcard-cutout-img" src="assets/why-choose-us.jpg" alt="ApexFix Vision Engineering Excellence" loading="lazy">
-              </div>
-
-              <div style="padding-top: 4px;">
-                <div style="margin-bottom: 14px;">
+              <div>
+                <div class="mcard-top-row">
                   <div class="mcard-pill mcard-pill-dark">
                     <span>👁️</span>
                     <span>Our Vision</span>
                   </div>
+                  <button class="mcard-arrow-btn mcard-arrow-featured book-trigger" type="button" aria-label="Book Certified Technician Visit">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </button>
                 </div>
-                <div class="mcard-body" style="margin-bottom: 18px;">
-                  <h3 class="mcard-title mcard-title-dark">Integrity & Uncompromising Standards</h3>
+                <div class="mcard-body">
+                  <h3 class="mcard-title mcard-title-dark">Integrity &amp; Uncompromising Standards</h3>
                   <p class="mcard-desc mcard-desc-dark">
                     We value integrity, quality workmanship, and complete customer satisfaction in every repair service delivered across Dubai with dedication and transparency.
                   </p>
@@ -2554,18 +2494,8 @@
                   </ul>
                 </div>
               </div>
-
-              <!-- Featured Bottom Action Bar -->
-              <div class="mcard-featured-footer">
-                <button class="mcard-featured-btn book-trigger" type="button">
-                  <span>Book Certified Visit</span>
-                </button>
-                <button class="mcard-arrow-btn mcard-arrow-featured book-trigger" type="button" aria-label="Book Certified Technician Visit">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </button>
+              <div class="mcard-bottom-img-wrap">
+                <img src="assets/why-choose-us.jpg" alt="ApexFix Vision Engineering Excellence" loading="lazy">
               </div>
             </div>
 

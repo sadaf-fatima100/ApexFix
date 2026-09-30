@@ -20,10 +20,10 @@ This project follows strict engineering and visual standards. Every change must 
 - Dark Theme (`body.dark-theme`): Canvas `#0c1017` / `#121217`, Cards `#181924`, Borders `rgba(255, 255, 255, 0.08)`
 - Theme Toggle: `#themeToggleBtn` storing in `localStorage.getItem('apexfix-theme')`
 
-## 3. UI Component Geometry
+## 3. UI Component Geometry & Full-Bleed Layout
 - Primary & Action Buttons: MUST use pill shape (`border-radius: var(--radius-pill);` or `9999px`) styled with the signature Call Now gradient.
 - Brand Grid: All 20 brand logo cards MUST have `1.5px solid #143877` navy border with `#1e4ab5` on hover.
-- Outer Frame / Canvas: `var(--radius-outer)` (32px desktop, 26px tablet, 22px mobile).
+- Full-Bleed Architecture: Unified edge-to-edge canvas with zero outer frame border or grey gutters. Content centered inside 1360px container with clean internal padding. No outer floating card borders.
 
 ## 4. Typography Hierarchy & Consistency (Matching Home Page)
 - **Unified Font Family**: All pages MUST use `'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` (`var(--font-family)`). Rogue font families are strictly prohibited.
