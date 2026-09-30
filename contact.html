@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.2">
 
   <style>
     /* ============================================================
@@ -393,27 +393,27 @@
       position: relative;
     }
     .consult-banner-grid {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.12);
+      background: linear-gradient(135deg, #f2f5fa 0%, #e9eff7 100%);
+      border: 1.5px solid rgba(15, 43, 92, 0.10);
       border-radius: 28px;
       position: relative;
       overflow: visible; /* Allows heads to pop out of card at the top */
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.85fr 1.15fr;
       align-items: end;
-      box-shadow: 0 16px 45px rgba(15, 43, 92, 0.08);
+      box-shadow: 0 16px 45px rgba(15, 43, 92, 0.06);
       transition: all 0.3s ease;
     }
     body.dark-theme .consult-banner-grid {
-      background: #181924;
-      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(145deg, #161922 0%, #11141c 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
     }
     .consult-banner-grid::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(15, 43, 92, 0.03) 0%, transparent 70%);
+      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(15, 43, 92, 0.02) 0%, transparent 70%);
       pointer-events: none;
       border-radius: 28px;
     }
@@ -524,26 +524,29 @@
     }
     .consult-features-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-wrap: nowrap;
+      gap: 8px;
       margin-bottom: 24px;
+      align-items: center;
     }
     .consult-feature-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: #f8fafc;
-      border: 1.5px solid #e2e8f0;
+      gap: 6px;
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 43, 92, 0.1);
       border-radius: 9999px;
-      padding: 6px 14px;
-      font-size: 12.5px;
+      padding: 6px 13px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-dark, #1e293b);
-      box-shadow: 0 2px 6px rgba(15, 43, 92, 0.04);
+      box-shadow: 0 2px 8px rgba(15, 43, 92, 0.05);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     body.dark-theme .consult-feature-badge {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.14);
       color: #ffffff;
       box-shadow: none;
     }
@@ -984,6 +987,9 @@
       .consult-banner-content {
         order: 1;
         padding: 32px 24px 20px;
+      }
+      .consult-features-row {
+        flex-wrap: wrap;
       }
       .consult-team-img {
         position: relative;
