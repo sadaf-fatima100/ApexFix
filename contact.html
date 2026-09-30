@@ -14,313 +14,492 @@
 
   <style>
     /* ============================================================
-       APEXFIX CONTACT PAGE — REDESIGNED ARCHITECTURE
-       Matching Reference Design (media_1790590812988.png)
-       ApexFix Theme Colors & Full Dark/Light Theme Integration
+       APEXFIX CONTACT PAGE — FAST ON-SITE BOOKING & DISPATCH HUB
+       Matches user reference (media_1790761206969.png) with
+       Form on the RIGHT, Emergency + Map Hub on the LEFT,
+       and Official ApexFix Brand Colors & Dual-Color Typography.
        ============================================================ */
 
-    /* ── SECTION 2: FAST ON-SITE BOOKING & DIRECT CHANNELS ── */
-    .contact-main-hero {
-      padding: clamp(16px, 2.5vw, 36px) 0 clamp(32px, 4vw, 54px);
+    .contact-booking-hub-section {
+      padding: clamp(24px, 3.2vw, 40px) 0 clamp(44px, 5.5vw, 68px);
       position: relative;
     }
-    .contact-hero-container {
+    .contact-hub-container {
       width: 100%;
       max-width: 100%;
       margin: 0;
       padding: 0;
     }
-    .contact-hero-layout {
+    .contact-booking-hub-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: clamp(32px, 4.5vw, 60px);
+      grid-template-columns: 0.88fr 1.12fr; /* Left: Emergency + Map Hub | Right: Booking Form */
+      gap: clamp(24px, 3vw, 36px);
       align-items: start;
     }
 
-    /* Left Column: Clean Minimalist Support Card */
-    .contact-support-info-card {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 24px;
-      padding: clamp(26px, 3.2vw, 36px);
-      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.04);
-      height: 100%;
-      box-sizing: border-box;
+    /* ── LEFT COLUMN: STACKED EMERGENCY & OPERATIONS HUB CARDS ── */
+    .contact-hub-left-stack {
       display: flex;
       flex-direction: column;
-    }
-    body.dark-theme .contact-support-info-card {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    }
-    .support-card-title {
-      font-size: clamp(1.4rem, 2vw, 1.75rem);
-      font-weight: 800;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 10px;
-    }
-    body.dark-theme .support-card-title {
-      color: #ffffff;
-    }
-    .support-card-desc {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.6;
-      color: var(--text-sub, #5a5f70);
-      margin: 0 0 24px;
-    }
-    body.dark-theme .support-card-desc {
-      color: #94a3b8;
+      gap: clamp(20px, 2.5vw, 26px);
     }
 
-    /* Sleek Contact Channel Items */
-    .contact-clean-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 24px;
+    /* Card 1: Emergency Card */
+    .contact-side-emergency-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(20, 56, 119, 0.10);
+      border-radius: 22px;
+      padding: clamp(22px, 2.5vw, 28px);
+      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.05), 0 3px 12px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
     }
-    .contact-clean-item {
+    body.dark-theme .contact-side-emergency-card {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+    }
+    .emergency-card-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 13px 16px;
-      background: #f8fafc;
-      border: 1px solid rgba(15, 43, 92, 0.06);
-      border-radius: 16px;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .emergency-bolt-icon {
+      color: var(--brand-accent, #143877);
+      flex-shrink: 0;
+    }
+    body.dark-theme .emergency-bolt-icon {
+      color: #60a5fa;
+    }
+    .emergency-card-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--text-dark, #121217);
+      margin: 0;
+      letter-spacing: -0.015em;
+    }
+    body.dark-theme .emergency-card-title {
+      color: #ffffff;
+    }
+    .emergency-card-desc {
+      font-size: 13.5px;
+      font-weight: 500;
+      line-height: 1.58;
+      color: var(--text-sub, #5a5f70);
+      margin: 0 0 18px;
+    }
+    body.dark-theme .emergency-card-desc {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .emergency-card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .btn-emergency-call {
+      height: 46px;
+      background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
-      color: inherit;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 20px -3px rgba(15, 43, 92, 0.45);
       transition: all 0.25s ease;
     }
-    body.dark-theme .contact-clean-item {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 255, 255, 0.06);
+    .btn-emergency-call:hover {
+      background: var(--btn-gradient-hover, linear-gradient(135deg, #2563eb 0%, #183f80 50%, #0f2b5c 100%));
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -3px rgba(15, 43, 92, 0.55);
     }
-    a.contact-clean-item:hover {
+    .btn-emergency-wa {
+      height: 46px;
       background: #ffffff;
-      border-color: var(--brand-accent, #143877);
-      transform: translateX(4px);
-      box-shadow: 0 6px 20px rgba(15, 43, 92, 0.08);
+      border: 1.5px solid var(--brand-accent, #143877);
+      color: var(--brand-accent, #143877);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(20, 56, 119, 0.08);
+      transition: all 0.25s ease;
     }
-    body.dark-theme a.contact-clean-item:hover {
-      background: rgba(255, 255, 255, 0.08);
+    .btn-emergency-wa:hover {
+      background: rgba(20, 56, 119, 0.06);
+      border-color: #1d4ed8;
+      color: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(20, 56, 119, 0.16);
+    }
+    body.dark-theme .btn-emergency-wa {
+      background: rgba(255, 255, 255, 0.05);
       border-color: #60a5fa;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      color: #60a5fa;
+      box-shadow: none;
     }
-    .contact-clean-icon {
+    body.dark-theme .btn-emergency-wa:hover {
+      background: rgba(96, 165, 250, 0.14);
+      border-color: #93c5fd;
+      color: #93c5fd;
+      transform: translateY(-2px);
+    }
+
+    /* Card 2: Operations Hub & Map Card */
+    .contact-side-hub-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(20, 56, 119, 0.10);
+      border-radius: 22px;
+      padding: clamp(22px, 2.5vw, 28px);
+      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.05), 0 3px 12px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+    body.dark-theme .contact-side-hub-card {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+    }
+    .hub-card-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .hub-card-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(20, 56, 119, 0.08);
+      border: 1px solid rgba(20, 56, 119, 0.16);
+      border-radius: 9999px;
+      padding: 4px 12px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--brand-accent, #143877);
+      text-transform: uppercase;
+    }
+    body.dark-theme .hub-card-pill {
+      background: rgba(96, 165, 250, 0.12);
+      border-color: rgba(96, 165, 250, 0.25);
+      color: #93c5fd;
+    }
+    .hub-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--brand-accent, #143877);
+      animation: pulse-badge 1.8s infinite;
+    }
+    body.dark-theme .hub-pill-dot {
+      background: #60a5fa;
+    }
+    .btn-hub-open-maps {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 7px 16px;
+      box-shadow: 0 6px 16px -2px rgba(15, 43, 92, 0.38);
+      transition: all 0.25s ease;
+    }
+    .btn-hub-open-maps:hover {
+      background: var(--btn-gradient-hover, linear-gradient(135deg, #2563eb 0%, #183f80 50%, #0f2b5c 100%));
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -2px rgba(15, 43, 92, 0.48);
+    }
+    .hub-card-title {
+      font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+      font-weight: 800;
+      color: var(--text-dark, #121217);
+      margin: 0 0 16px;
+      line-height: 1.28;
+      letter-spacing: -0.015em;
+    }
+    body.dark-theme .hub-card-title {
+      color: #ffffff;
+    }
+    .hub-map-stage {
+      position: relative;
+      width: 100%;
+      height: 215px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1.5px solid rgba(20, 56, 119, 0.12);
+      background: #eef2f8;
+      margin-bottom: 16px;
+    }
+    body.dark-theme .hub-map-stage {
+      border-color: rgba(255, 255, 255, 0.1);
+      background: #181d28;
+    }
+    .hub-map-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .hub-map-overlay-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(20, 56, 119, 0.15);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brand-accent, #143877);
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(15, 43, 92, 0.12);
+      transition: all 0.2s ease;
+      z-index: 5;
+    }
+    .hub-map-overlay-badge:hover {
+      background: #ffffff;
+      color: #1d4ed8;
+      box-shadow: 0 4px 12px rgba(15, 43, 92, 0.2);
+    }
+    body.dark-theme .hub-map-overlay-badge {
+      background: rgba(24, 25, 36, 0.95);
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #60a5fa;
+    }
+    .hub-location-details-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .hub-loc-icon-box {
       width: 42px;
       height: 42px;
       border-radius: 12px;
+      background: rgba(20, 56, 119, 0.08);
+      color: var(--brand-accent, #143877);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .icon-phone {
-      background: rgba(20, 56, 119, 0.08);
-      color: var(--brand-accent, #143877);
-    }
-    body.dark-theme .icon-phone {
-      background: rgba(96, 165, 250, 0.15);
+    body.dark-theme .hub-loc-icon-box {
+      background: rgba(96, 165, 250, 0.14);
       color: #60a5fa;
     }
-    .icon-whatsapp {
-      background: rgba(16, 185, 129, 0.1);
-      color: #059669;
-    }
-    body.dark-theme .icon-whatsapp {
-      background: rgba(16, 185, 129, 0.18);
-      color: #34d399;
-    }
-    .icon-mail {
-      background: rgba(99, 102, 241, 0.08);
-      color: #4f46e5;
-    }
-    body.dark-theme .icon-mail {
-      background: rgba(129, 140, 248, 0.15);
-      color: #a5b4fc;
-    }
-    .icon-map {
-      background: rgba(245, 158, 11, 0.1);
-      color: #d97706;
-    }
-    body.dark-theme .icon-map {
-      background: rgba(251, 191, 36, 0.15);
-      color: #fbbf24;
-    }
-    .contact-clean-details {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
+    .hub-loc-text {
       flex: 1;
     }
-    .contact-clean-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-sub, #64748b);
-    }
-    body.dark-theme .contact-clean-label {
-      color: #94a3b8;
-    }
-    .contact-clean-val {
-      font-size: 14.5px;
-      font-weight: 700;
+    .hub-loc-name {
+      font-size: 13.5px;
+      font-weight: 800;
       color: var(--text-dark, #121217);
+      margin: 0 0 3px;
+      line-height: 1.35;
     }
-    body.dark-theme .contact-clean-val {
+    body.dark-theme .hub-loc-name {
       color: #ffffff;
     }
-    .contact-clean-arrow {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text-sub, #94a3b8);
-      transition: transform 0.25s ease;
+    .hub-loc-city {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-sub, #64748b);
+      margin: 0 0 8px;
     }
-    a.contact-clean-item:hover .contact-clean-arrow {
-      color: var(--brand-accent, #143877);
-      transform: translateX(3px);
+    body.dark-theme .hub-loc-city {
+      color: #94a3b8;
     }
-    body.dark-theme a.contact-clean-item:hover .contact-clean-arrow {
-      color: #60a5fa;
-    }
-    .support-card-footer-note {
+    .hub-loc-badges {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #059669;
-      background: rgba(16, 185, 129, 0.08);
-      padding: 10px 14px;
-      border-radius: 12px;
-      margin-top: auto;
+      flex-wrap: wrap;
     }
-    body.dark-theme .support-card-footer-note {
-      background: rgba(16, 185, 129, 0.14);
+    .hub-spec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #ecfdf5;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 9999px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #047857;
+    }
+    body.dark-theme .hub-spec-badge {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.25);
       color: #34d399;
     }
 
-    /* Right Column: Form Card */
-    .contact-form-card {
+    /* ── RIGHT COLUMN: BOOKING FORM CARD ── */
+    .booking-form-card {
       background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.1);
-      border-radius: 26px;
-      padding: clamp(26px, 3.5vw, 40px);
-      box-shadow: 0 18px 48px rgba(15, 43, 92, 0.08);
+      border: 1.5px solid rgba(20, 56, 119, 0.10);
+      border-radius: 24px;
+      padding: clamp(26px, 3.5vw, 38px);
+      box-shadow: 0 14px 40px rgba(15, 43, 92, 0.05), 0 4px 18px rgba(0, 0, 0, 0.03);
       position: relative;
+      transition: all 0.3s ease;
     }
-    body.dark-theme .contact-form-card {
+    body.dark-theme .booking-form-card {
       background: #181924;
       border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
     }
-    .card-badge-tag {
-      display: inline-block;
-      background: rgba(15, 43, 92, 0.06);
-      color: var(--brand-accent, #0f2b5c);
-      font-size: 10.5px;
+    .booking-eyebrow-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .booking-eyebrow-text {
+      font-size: 11.5px;
       font-weight: 800;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      margin-bottom: 10px;
+      color: var(--brand-accent, #143877);
     }
-    body.dark-theme .card-badge-tag {
-      background: rgba(96, 165, 250, 0.12);
+    body.dark-theme .booking-eyebrow-text {
       color: #60a5fa;
     }
-    .card-form-title {
-      font-size: clamp(1.4rem, 2.2vw, 1.8rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 8px;
-      line-height: 1.25;
+    .booking-eyebrow-line {
+      display: inline-block;
+      width: 38px;
+      height: 2.5px;
+      background: var(--brand-accent, #143877);
+      border-radius: 9999px;
     }
-    body.dark-theme .card-form-title {
+    body.dark-theme .booking-eyebrow-line {
+      background: #60a5fa;
+    }
+    .booking-card-heading {
+      font-size: clamp(1.6rem, 2.3vw, 2.15rem);
+      font-weight: 800;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      color: var(--text-dark, #121217);
+      margin: 0 0 10px;
+    }
+    body.dark-theme .booking-card-heading {
       color: #ffffff;
     }
-    .card-form-sub {
-      font-size: 13.5px;
+    .booking-card-desc {
+      font-size: 14px;
       font-weight: 500;
       line-height: 1.6;
       color: var(--text-sub, #5a5f70);
-      margin: 0 0 22px;
+      margin: 0 0 24px;
+      max-width: 580px;
     }
-    body.dark-theme .card-form-sub {
-      color: rgba(255, 255, 255, 0.65);
+    body.dark-theme .booking-card-desc {
+      color: rgba(255, 255, 255, 0.7);
     }
 
-    .form-grid-2 {
+    /* Form Fields */
+    .bform-row-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 16px;
+      margin-bottom: 16px;
     }
-    .form-field-wrap {
+    .bform-field {
       display: flex;
       flex-direction: column;
       position: relative;
     }
-    .field-label {
+    .bform-field-full {
+      margin-bottom: 22px;
+    }
+    .bform-label {
       font-size: 12.5px;
       font-weight: 700;
       color: var(--text-dark, #1e293b);
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
     }
-    body.dark-theme .field-label {
+    body.dark-theme .bform-label {
       color: #e2e8f0;
     }
-    .form-field-input,
-    .form-field-select,
-    .form-field-textarea {
+    .bform-req {
+      color: #dc2626;
+      font-weight: 800;
+    }
+    .bform-input,
+    .bform-select,
+    .bform-textarea {
       width: 100%;
       height: 48px;
+      background: #fbfcfe;
       border: 1.5px solid #d9e0ea;
       border-radius: 12px;
-      padding: 0 14px;
+      padding: 0 15px;
       font-family: inherit;
       font-size: 14px;
       font-weight: 500;
       color: var(--text-dark, #121217);
-      background: #ffffff;
       outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
     }
-    .form-field-input:focus,
-    .form-field-select:focus,
-    .form-field-textarea:focus {
-      border-color: var(--brand-accent, #0f2b5c);
-      box-shadow: 0 0 0 3px rgba(15, 43, 92, 0.12);
+    .bform-input::placeholder,
+    .bform-textarea::placeholder {
+      color: #94a3b8;
+      font-weight: 400;
     }
-    body.dark-theme .form-field-input,
-    body.dark-theme .form-field-select,
-    body.dark-theme .form-field-textarea {
+    .bform-input:focus,
+    .bform-select:focus,
+    .bform-textarea:focus {
+      background: #ffffff;
+      border-color: var(--brand-accent, #143877);
+      box-shadow: 0 0 0 3px rgba(20, 56, 119, 0.12);
+    }
+    body.dark-theme .bform-input,
+    body.dark-theme .bform-select,
+    body.dark-theme .bform-textarea {
       background: #11141c;
       border-color: rgba(255, 255, 255, 0.12);
       color: #ffffff;
     }
-    body.dark-theme .form-field-input:focus,
-    body.dark-theme .form-field-select:focus,
-    body.dark-theme .form-field-textarea:focus {
+    body.dark-theme .bform-input:focus,
+    body.dark-theme .bform-select:focus,
+    body.dark-theme .bform-textarea:focus {
+      background: #141822;
       border-color: #60a5fa;
       box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
     }
-    .field-select-container {
+    .bform-select-wrap {
       position: relative;
     }
-    .field-select-container select {
+    .bform-select-wrap select {
       appearance: none;
-      padding-right: 36px;
+      padding-right: 38px;
       cursor: pointer;
     }
-    .select-arrow-icon {
+    .bform-select-chevron {
       position: absolute;
       right: 14px;
       top: 50%;
@@ -328,797 +507,91 @@
       pointer-events: none;
       color: #64748b;
     }
-    body.dark-theme .select-arrow-icon {
+    body.dark-theme .bform-select-chevron {
       color: #94a3b8;
     }
-    .form-field-textarea {
+    .bform-textarea {
       height: auto;
-      min-height: 85px;
-      padding: 12px 14px;
+      min-height: 94px;
+      padding: 12px 15px;
       resize: vertical;
-      margin-bottom: 18px;
     }
-    .btn-confirm-booking {
+    .btn-bform-submit {
       width: 100%;
       height: 52px;
-      background: var(--btn-gradient-primary);
+      background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
       color: #ffffff;
       font-family: inherit;
       font-size: 15px;
       font-weight: 700;
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 9999px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 10px 24px -3px rgba(15, 43, 92, 0.45);
       transition: all 0.25s ease;
-      box-shadow: 0 8px 22px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
     }
-    .btn-confirm-booking:hover {
-      background: var(--btn-gradient-hover);
+    .btn-bform-submit:hover {
+      background: var(--btn-gradient-hover, linear-gradient(135deg, #2563eb 0%, #183f80 50%, #0f2b5c 100%));
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px -3px rgba(6, 18, 40, 0.55), 0 0 20px rgba(22, 56, 120, 0.38);
-    }
-    .form-footer-assurance {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 14px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-sub, #64748b);
-      text-align: center;
-    }
-    body.dark-theme .form-footer-assurance {
-      color: rgba(255, 255, 255, 0.65);
+      box-shadow: 0 14px 28px -3px rgba(15, 43, 92, 0.55);
     }
 
-
-    /* ── SECTION 2: FULL-WIDTH CONSULTATION & EMERGENCY BANNER ── */
-    /* Featuring 3-Persons Cutout (assets/cta-team-cutout.png) with Heads Popping Out of Top on Light Card Surface */
-    .contact-consult-banner {
-      margin: clamp(100px, 10vw, 140px) 0 clamp(44px, 5.5vw, 68px);
-      position: relative;
-    }
-    .consult-banner-container {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      padding: 0;
-      position: relative;
-    }
-    .consult-banner-grid {
-      background: linear-gradient(135deg, #f2f5fa 0%, #e9eff7 100%);
-      border: 1.5px solid rgba(15, 43, 92, 0.10);
-      border-radius: 28px;
-      position: relative;
-      overflow: visible; /* Allows heads to pop out of card at the top */
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      align-items: end;
-      box-shadow: 0 16px 45px rgba(15, 43, 92, 0.06);
-      transition: all 0.3s ease;
-    }
-    body.dark-theme .consult-banner-grid {
-      background: linear-gradient(145deg, #161922 0%, #11141c 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-    }
-    .consult-banner-grid::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(15, 43, 92, 0.02) 0%, transparent 70%);
-      pointer-events: none;
-      border-radius: 28px;
-    }
-    body.dark-theme .consult-banner-grid::before {
-      background: radial-gradient(ellipse 70% 60% at 85% 30%, rgba(96, 165, 250, 0.05) 0%, transparent 70%);
-    }
-
-    /* Cutout Visual Stage with Head Popping Out */
-    .consult-banner-visual {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
-      height: 100%;
-      min-height: 340px;
-      position: relative;
-      z-index: 10;
-      padding-left: clamp(10px, 1.8vw, 24px);
-      overflow: visible;
-    }
-    .consult-visual-stage {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
-      overflow: visible;
-    }
-    .consult-team-img {
-      position: absolute;
-      bottom: 0;
-      left: clamp(-10px, -1vw, 5px);
-      width: auto;
-      max-width: none;
-      height: 440px; /* Big scale with heads popping out of card top */
-      object-fit: contain;
-      display: block;
-      filter: drop-shadow(0 18px 30px rgba(15, 43, 92, 0.22));
-      pointer-events: none;
-      z-index: 10;
-    }
-    body.dark-theme .consult-team-img {
-      filter: drop-shadow(0 20px 38px rgba(0, 0, 0, 0.65));
-    }
-
-    /* Content & Emergency CTAs - Compact Sleeker Height */
-    .consult-banner-content {
-      padding: clamp(32px, 4vw, 48px) clamp(24px, 4vw, 48px) clamp(32px, 4vw, 48px) clamp(20px, 3vw, 44px);
-      position: relative;
-      z-index: 2;
-    }
-    .consult-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(20, 56, 119, 0.06);
-      border: 1px solid rgba(20, 56, 119, 0.15);
-      border-radius: 9999px;
-      padding: 4px 13px;
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brand-accent, #143877);
-      margin-bottom: 12px;
-    }
-    body.dark-theme .consult-badge {
-      background: rgba(96, 165, 250, 0.12);
-      border-color: rgba(96, 165, 250, 0.25);
-      color: #93c5fd;
-    }
-    .pulse-amber-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--brand-accent, #143877);
-      animation: pulse-badge 1.8s infinite;
-    }
-    body.dark-theme .pulse-amber-dot {
-      background: #60a5fa;
-    }
     @keyframes pulse-badge {
       0% { transform: scale(0.95); opacity: 1; }
       50% { transform: scale(1.3); opacity: 0.5; }
       100% { transform: scale(0.95); opacity: 1; }
     }
-    .consult-heading {
-      font-size: clamp(1.85rem, 2.9vw, 2.6rem);
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -0.025em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 10px;
-    }
-    body.dark-theme .consult-heading {
-      color: #ffffff;
-    }
-    .consult-desc {
-      font-size: 14.5px;
-      font-weight: 500;
-      line-height: 1.62;
-      color: var(--text-sub, #4b5563);
-      margin: 0 0 20px;
-      max-width: 530px;
-    }
-    body.dark-theme .consult-desc {
-      color: rgba(255, 255, 255, 0.75);
-    }
-    .consult-features-row {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 8px;
-      margin-bottom: 24px;
-      align-items: center;
-    }
-    .consult-feature-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.1);
-      border-radius: 9999px;
-      padding: 6px 13px;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-dark, #1e293b);
-      box-shadow: 0 2px 8px rgba(15, 43, 92, 0.05);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    body.dark-theme .consult-feature-badge {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      box-shadow: none;
-    }
-    .feature-check-icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-    }
-    body.dark-theme .feature-check-icon {
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-    }
-    .consult-cta-group {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-    .btn-consult-call {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 14.5px;
-      border-radius: 9999px;
-      padding: 13px 28px;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 8px 22px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      transition: all 0.25s ease;
-    }
-    .btn-consult-call:hover {
-      background: var(--btn-gradient-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px -3px rgba(6, 18, 40, 0.55), 0 0 20px rgba(22, 56, 120, 0.38);
-    }
-    body.dark-theme .btn-consult-call {
-      background: var(--btn-gradient-primary);
-      border-color: rgba(255, 255, 255, 0.22);
-    }
-    body.dark-theme .btn-consult-call:hover {
-      background: var(--btn-gradient-hover);
-      box-shadow: 0 12px 28px -3px rgba(6, 18, 40, 0.65), 0 0 20px rgba(22, 56, 120, 0.45);
-    }
-    .btn-consult-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: #ffffff;
-      border: 1.5px solid var(--brand-accent, #143877);
-      color: var(--brand-accent, #143877);
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 14.5px;
-      border-radius: 9999px;
-      padding: 12px 24px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-    .btn-consult-wa:hover {
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      border-color: transparent;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.25);
-    }
-    body.dark-theme .btn-consult-wa {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-    }
-    body.dark-theme .btn-consult-wa:hover {
-      background: var(--btn-gradient-primary);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-
-    /* ── SECTION 3: CENTRAL OPERATIONS HUB & SPARES DEPOT ── */
-    /* Redesigned to match reference image (media_1790594484434.png) with rounded corners & ApexFix brand colors */
-    .contact-hub-section {
-      padding: clamp(40px, 5vw, 68px) 0 clamp(44px, 5.5vw, 76px);
-      position: relative;
-    }
-    .hub-container {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    .hub-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: clamp(36px, 4.5vw, 64px);
-      align-items: center;
-    }
-
-    /* Left Hub Info */
-    .hub-left-col {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .hub-badge {
-      display: inline-block;
-      background: rgba(20, 56, 119, 0.08);
-      color: var(--brand-accent, #143877);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-radius: 9999px;
-      padding: 4px 14px;
-      margin-bottom: 12px;
-      align-self: flex-start;
-    }
-    body.dark-theme .hub-badge {
-      background: rgba(96, 165, 250, 0.12);
-      color: #60a5fa;
-    }
-    .hub-heading {
-      font-size: var(--text-h2, clamp(1.85rem, 2.8vw, 2.5rem));
-      font-weight: 800;
-      line-height: 1.22;
-      letter-spacing: -0.025em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 14px;
-    }
-    body.dark-theme .hub-heading {
-      color: #ffffff;
-    }
-    .hub-desc {
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.65;
-      color: var(--text-sub, #5a5f70);
-      margin: 0 0 22px;
-      max-width: 540px;
-    }
-    body.dark-theme .hub-desc {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* 3 Bullet points matching reference layout */
-    .hub-feature-bullets {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .hub-bullet-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .bullet-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--brand-accent, #143877);
-      margin-top: 7px;
-      flex-shrink: 0;
-    }
-    body.dark-theme .bullet-dot {
-      background: #60a5fa;
-    }
-    .bullet-text {
-      font-size: 14px;
-      line-height: 1.55;
-      color: var(--text-dark, #1e293b);
-    }
-    body.dark-theme .bullet-text {
-      color: rgba(255, 255, 255, 0.85);
-    }
-    .bullet-text strong {
-      font-weight: 700;
-      color: var(--text-dark, #143877);
-    }
-    body.dark-theme .bullet-text strong {
-      color: #ffffff;
-    }
-
-    /* Progress bar metric card */
-    .hub-progress-card {
-      background: rgba(20, 56, 119, 0.04);
-      border: 1px solid rgba(20, 56, 119, 0.08);
-      border-radius: 16px;
-      padding: 14px 18px;
-      margin-bottom: 26px;
-      max-width: 480px;
-    }
-    body.dark-theme .hub-progress-card {
-      background: rgba(255, 255, 255, 0.03);
-      border-color: rgba(255, 255, 255, 0.08);
-    }
-    .hub-progress-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 8px;
-    }
-    .hub-progress-label {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text-dark, #121217);
-    }
-    body.dark-theme .hub-progress-label {
-      color: #ffffff;
-    }
-    .hub-progress-val {
-      font-size: 11.5px;
-      font-weight: 800;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      padding: 2px 8px;
-      border-radius: 6px;
-    }
-    body.dark-theme .hub-progress-val {
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-    }
-    .hub-progress-track {
-      width: 100%;
-      height: 7px;
-      background: rgba(20, 56, 119, 0.1);
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-    body.dark-theme .hub-progress-track {
-      background: rgba(255, 255, 255, 0.1);
-    }
-    .hub-progress-bar {
-      height: 100%;
-      background: var(--btn-gradient-primary);
-      border-radius: 9999px;
-    }
-    body.dark-theme .hub-progress-bar {
-      background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-    }
-
-    .hub-action-row {
-      display: flex;
-      align-items: center;
-    }
-    .btn-open-maps {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      font-family: inherit;
-      font-weight: 700;
-      font-size: 14.5px;
-      border-radius: 9999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      padding: 13px 28px;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 8px 22px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
-      transition: all 0.25s ease;
-    }
-    .btn-open-maps:hover {
-      background: var(--btn-gradient-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px -3px rgba(6, 18, 40, 0.55), 0 0 20px rgba(22, 56, 120, 0.38);
-    }
-
-    /* Right Column: Stage Wrapper with Overlapping 3 Floating Cards (No Sharp Edges) */
-    .hub-right-col {
-      display: flex;
-      justify-content: flex-end;
-      position: relative;
-    }
-    .hub-stage-wrapper {
-      position: relative;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
-    .hub-photo-container {
-      width: 86%;
-      min-height: 480px;
-      border-radius: 24px; /* Smooth rounded corners, no sharp edges */
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(15, 43, 92, 0.12);
-      position: relative;
-    }
-    .hub-technician-photo {
-      width: 100%;
-      height: 100%;
-      min-height: 480px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .hub-photo-container:hover .hub-technician-photo {
-      transform: scale(1.025);
-    }
-
-    /* 3 Floating Cards Stack Overlapping the Left Edge */
-    .hub-overlap-cards {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 215px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 10;
-    }
-    .hub-float-card {
-      border-radius: 18px; /* Smooth rounded corners, NO sharp edges as requested */
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .hub-float-card:hover {
-      transform: translateY(-2px) scale(1.02);
-    }
-    .hub-float-card.card-light {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.12);
-      color: var(--text-dark, #121217);
-    }
-    body.dark-theme .hub-float-card.card-light {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
-      color: #ffffff;
-    }
-    .hub-float-card.card-highlight {
-      background:
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
-      border: 1px solid rgba(125, 175, 245, 0.25);
-      box-shadow: 0 16px 40px rgba(3, 9, 20, 0.55);
-      color: #ffffff;
-    }
-    body.dark-theme .hub-float-card.card-highlight {
-      background:
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
-      border-color: rgba(125, 175, 245, 0.35);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
-    }
-    .float-card-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(20, 56, 119, 0.07);
-      color: var(--brand-accent, #143877);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
-    }
-    body.dark-theme .float-card-icon {
-      background: rgba(96, 165, 250, 0.12);
-      color: #60a5fa;
-    }
-    .float-card-icon.highlight-icon {
-      background: rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-    }
-    body.dark-theme .float-card-icon.highlight-icon {
-      background: rgba(96, 165, 250, 0.2);
-      color: #93c5fd;
-    }
-    .float-card-title {
-      font-size: 13.5px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      margin-bottom: 4px;
-      display: block;
-    }
-    .card-highlight .float-card-title {
-      color: #ffffff;
-    }
-    .float-card-sub {
-      font-size: 11px;
-      font-weight: 500;
-      line-height: 1.45;
-      color: var(--text-sub, #64748b);
-      margin: 0;
-    }
-    .card-highlight .float-card-sub {
-      color: #cbd5e1;
-    }
-    body.dark-theme .card-light .float-card-sub {
-      color: rgba(255, 255, 255, 0.65);
-    }
-
 
     /* ── RESPONSIVE RULES DOWN TO 250PX ── */
     @media (max-width: 992px) {
-      .contact-hero-layout {
+      .contact-booking-hub-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 28px;
       }
-      .contact-consult-banner {
-        margin: 40px 0;
+      .booking-form-card {
+        order: 1; /* Form appears first on mobile for rapid conversion */
       }
-      .consult-banner-grid {
-        grid-template-columns: 1fr;
-        align-items: center;
-        text-align: left;
-        overflow: hidden;
-      }
-      .consult-banner-visual {
-        order: 2;
-        padding: 0 16px;
-        min-height: auto;
-        height: auto;
-        justify-content: center;
-      }
-      .consult-visual-stage {
-        height: auto;
-      }
-      .consult-banner-content {
-        order: 1;
-        padding: 32px 24px 20px;
-      }
-      .consult-features-row {
-        flex-wrap: wrap;
-      }
-      .consult-team-img {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        max-height: 360px;
-        width: 100%;
-        max-width: 440px;
-        margin: 0 auto;
-        display: block;
-      }
-      .hub-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-      .hub-stage-wrapper {
-        flex-direction: column;
-        width: 100%;
-      }
-      .hub-photo-container {
-        width: 100%;
-        min-height: 320px;
-        border-radius: 20px;
-        order: 1;
-      }
-      .hub-technician-photo {
-        width: 100%;
-        min-height: 320px;
-        border-radius: 20px;
-      }
-      .hub-overlap-cards {
-        position: relative;
-        left: 0;
-        top: 0;
-        transform: none;
-        width: 100%;
-        margin-top: 16px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
+      .contact-hub-left-stack {
         order: 2;
       }
     }
-
-    @media (max-width: 768px) {
-      .contact-main-hero {
-        padding: 28px 0 36px;
-      }
-      .contact-channels-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .contact-channels-dock {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 13px 16px;
-        border-radius: 16px;
-      }
-      .dock-col-center {
-        border-left: none;
-        border-right: none;
-        padding: 0;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      .contact-consult-banner {
-        margin: 36px 0;
-      }
-      .consult-cta-group {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-      }
-      .btn-consult-call,
-      .btn-consult-wa {
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-      }
-      .btn-open-maps {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-
     @media (max-width: 576px) {
-      .contact-channels-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+      .booking-form-card,
+      .contact-side-emergency-card,
+      .contact-side-hub-card {
+        padding: 20px 16px;
+        border-radius: 18px;
       }
-      .contact-channels-dock {
-        padding: 12px 14px;
-      }
-      .form-grid-2 {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .hub-cards-row {
+      .bform-row-2 {
         grid-template-columns: 1fr;
         gap: 14px;
       }
-      .consult-team-img {
-        max-height: 280px;
+      .emergency-card-actions {
+        grid-template-columns: 1fr;
       }
-      .hub-floating-badge {
-        bottom: 12px;
-        left: 12px;
-        right: 12px;
-        padding: 12px 14px;
+      .hub-card-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .btn-hub-open-maps {
+        align-self: flex-start;
+      }
+      .hub-map-stage {
+        height: 185px;
       }
     }
-
     @media (max-width: 360px) {
-      .contact-hero-title {
-        font-size: 1.75rem;
+      .booking-card-heading {
+        font-size: 1.4rem;
       }
-      .contact-form-card {
-        padding: 18px 14px;
-      }
-      .consult-heading {
-        font-size: 1.6rem;
-      }
-      .hub-heading {
-        font-size: 1.55rem;
-      }
-      .hub-image-card {
-        min-height: 280px;
+      .hub-loc-badges {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -1472,380 +945,267 @@
       </section>
 
       <!-- ========================================================
-           SECTION 2: FAST ON-SITE BOOKING FORM & DIRECT CONTACT CHANNELS
-           (Matches Reference Image media_1790590812988.png)
+           SECTION 2: FAST ON-SITE BOOKING & DISPATCH HUB
+           Pixel-perfect match to user reference (media_1790761206969.png)
+           Left: Schedule Doorstep Inspection & Repair (Form)
+           Right: Emergency Assistance + Operations Hub & Spares Depot (Map)
            ======================================================== -->
-      <section class="contact-main-hero" id="book-section">
-        <div class="contact-hero-container">
-          <div class="contact-hero-layout">
-            
-            <!-- Left Column: Clean Direct Dispatch Support Card -->
-            <div class="contact-hero-left">
-              <div class="contact-support-info-card">
-                <div class="badge-tag" style="margin-bottom: 14px; align-self: flex-start;">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                  </svg>
-                  <span>DIRECT DISPATCH &amp; SUPPORT</span>
-                </div>
-                <h2 class="support-card-title">
-                  Direct Support &amp; <span class="highlight-navy">Dispatch Desk</span>
-                </h2>
-                <p class="support-card-desc">
-                  Have an urgent appliance breakdown or leak? Connect directly with our Dubai dispatch team via phone or WhatsApp for immediate triage.
-                </p>
-
-                <!-- Sleek Contact Channels List -->
-                <div class="contact-clean-list">
-                  <a href="tel:+971508867234" class="contact-clean-item" aria-label="Call Emergency Hotline">
-                    <div class="contact-clean-icon icon-phone">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                      </svg>
-                    </div>
-                    <div class="contact-clean-details">
-                      <span class="contact-clean-label">24/7 Emergency Hotline</span>
-                      <strong class="contact-clean-val">+971 50 886 7234</strong>
-                    </div>
-                    <span class="contact-clean-arrow">&rsaquo;</span>
-                  </a>
-
-                  <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20urgent%20appliance%20repair." target="_blank" rel="noopener" class="contact-clean-item" aria-label="Chat on WhatsApp">
-                    <div class="contact-clean-icon icon-whatsapp">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                      </svg>
-                    </div>
-                    <div class="contact-clean-details">
-                      <span class="contact-clean-label">WhatsApp Fast Diagnostics</span>
-                      <strong class="contact-clean-val">+971 50 886 7234</strong>
-                    </div>
-                    <span class="contact-clean-arrow">&rsaquo;</span>
-                  </a>
-
-                  <div class="contact-clean-item">
-                    <div class="contact-clean-icon icon-mail">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                      </svg>
-                    </div>
-                    <div class="contact-clean-details">
-                      <span class="contact-clean-label">Inquiries &amp; Official Quotes</span>
-                      <strong class="contact-clean-val">info@apexfix.ae</strong>
-                    </div>
-                  </div>
-
-                  <div class="contact-clean-item">
-                    <div class="contact-clean-icon icon-map">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                      </svg>
-                    </div>
-                    <div class="contact-clean-details">
-                      <span class="contact-clean-label">Service Coverage</span>
-                      <strong class="contact-clean-val">All 27+ Dubai Communities</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Footer Dispatch Tag -->
-                <div class="support-card-footer-note">
-                  <span class="live-pulse-dot"></span>
-                  <span>Active doorstep diagnostic vans on standby</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Form Container Card -->
-            <div class="contact-hero-right">
-              <div class="contact-form-card" id="bookingCard">
-                <h2 class="card-form-title">Book a Certified Technician</h2>
-                <p class="card-form-sub">Submit your details below and a technician stationed in your neighborhood will be assigned with OEM parts.</p>
-
-                <form class="contact-booking-form" id="contactForm" novalidate>
-                  <div class="form-grid-2">
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="fullName">Full Name*</label>
-                      <input type="text" id="fullName" name="fullName" class="form-field-input" placeholder="e.g. Tariq Al Hashimi" required>
-                    </div>
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="contactPhone">Contact Number*</label>
-                      <input type="tel" id="contactPhone" name="contactPhone" class="form-field-input" placeholder="+971 50 000 0000" required>
-                    </div>
-                  </div>
-
-                  <div class="form-grid-2">
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="emailAddress">Email Address*</label>
-                      <input type="email" id="emailAddress" name="emailAddress" class="form-field-input" placeholder="yourname@domain.com" required>
-                    </div>
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="communityArea">Dubai Community / Area*</label>
-                      <div class="field-select-container">
-                        <select id="communityArea" name="communityArea" class="form-field-select" required>
-                          <option value="" disabled selected>Select Your Area</option>
-                          <option value="Dubai Marina & JBR">Dubai Marina &amp; JBR</option>
-                          <option value="Downtown Dubai & Business Bay">Downtown Dubai &amp; Business Bay</option>
-                          <option value="Palm Jumeirah & Al Sufouh">Palm Jumeirah &amp; Al Sufouh</option>
-                          <option value="Arabian Ranches & Damac Hills">Arabian Ranches &amp; Damac Hills</option>
-                          <option value="Jumeirah Village Circle (JVC) & JVT">Jumeirah Village Circle (JVC) &amp; JVT</option>
-                          <option value="Dubai Hills Estate & Meydan">Dubai Hills Estate &amp; Meydan</option>
-                          <option value="Jumeirah & Umm Suqeim">Jumeirah &amp; Umm Suqeim</option>
-                          <option value="The Greens, Springs & Meadows">The Greens, Springs &amp; Meadows</option>
-                          <option value="Al Barsha & Barsha Heights">Al Barsha &amp; Barsha Heights</option>
-                          <option value="Mirdif & Festival City">Mirdif &amp; Festival City</option>
-                          <option value="Motor City & Sports City">Motor City &amp; Sports City</option>
-                          <option value="Deira & Bur Dubai">Deira &amp; Bur Dubai</option>
-                          <option value="Other Dubai Area">Other Dubai Area</option>
-                        </select>
-                        <svg class="select-arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-grid-2">
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="applianceCategory">Appliance Category*</label>
-                      <div class="field-select-container">
-                        <select id="applianceCategory" name="applianceCategory" class="form-field-select" required>
-                          <option value="" disabled selected>Select Appliance</option>
-                          <option value="Refrigerator & Fridge Repair">Refrigerator &amp; Fridge Repair</option>
-                          <option value="Dishwasher Repair">Dishwasher Repair</option>
-                          <option value="Clothes Dryer Repair">Clothes Dryer Repair</option>
-                          <option value="Cooking Range Repair">Cooking Range Repair</option>
-                          <option value="Gas Cooker & Stove Repair">Gas Cooker &amp; Stove Repair</option>
-                          <option value="Microwave Oven Repair">Microwave Oven Repair</option>
-                          <option value="Air Conditioner (AC) Repair">Air Conditioner (AC) Repair</option>
-                          <option value="Other Appliance">Other Appliance</option>
-                        </select>
-                        <svg class="select-arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                      </div>
-                    </div>
-                    <div class="form-field-wrap">
-                      <label class="field-label" for="applianceBrand">Appliance Brand</label>
-                      <div class="field-select-container">
-                        <select id="applianceBrand" name="applianceBrand" class="form-field-select">
-                          <option value="" selected>Select Brand (Optional)</option>
-                          <option value="Bosch">Bosch</option>
-                          <option value="Siemens">Siemens</option>
-                          <option value="LG">LG</option>
-                          <option value="Samsung">Samsung</option>
-                          <option value="Whirlpool">Whirlpool</option>
-                          <option value="Miele">Miele</option>
-                          <option value="Electrolux">Electrolux</option>
-                          <option value="AEG">AEG</option>
-                          <option value="Ariston">Ariston</option>
-                          <option value="Indesit">Indesit</option>
-                          <option value="Super General">Super General</option>
-                          <option value="Other Brand">Other Brand</option>
-                        </select>
-                        <svg class="select-arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-field-wrap">
-                    <label class="field-label" for="problemSymptoms">Describe Problem Symptoms (Optional)</label>
-                    <textarea id="problemSymptoms" name="problemSymptoms" class="form-field-textarea" placeholder="Describe the problem, error codes, noise or cooling failure symptoms..." rows="3"></textarea>
-                  </div>
-
-                  <button type="submit" class="btn-confirm-booking">
-                    <span>Confirm Doorstep Booking</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </button>
-
-                  <div class="form-footer-assurance">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    <span>100% Genuine OEM Factory Parts • Upfront Pricing • 1-Year Guarantee</span>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       <!-- ========================================================
-           SECTION 2: FULL-WIDTH CONSULTATION & EMERGENCY BANNER
-           (Matches Reference Image media_1790590812988.png - Middle Part)
-           USES 3-PERSONS CUTOUT (assets/cta-team-cutout.png) as instructed
+           SECTION 2: FAST ON-SITE BOOKING & DISPATCH HUB
+           Matches user reference (media_1790761206969.png) with
+           Emergency + Map Hub on LEFT, Booking Form on RIGHT,
+           and official website theme colors.
            ======================================================== -->
-      <section class="contact-consult-banner" id="emergencyAssistance">
-        <div class="consult-banner-container">
-          <div class="consult-banner-grid">
-            
-            <!-- Left Column: 3 Persons Team Cutout (replacing the girl) -->
-            <div class="consult-banner-visual">
-              <div class="consult-visual-stage">
-                <img src="assets/cta-team-cutout.png" alt="ApexFix Certified Appliance Repair Specialists" class="consult-team-img" loading="lazy">
-              </div>
-            </div>
+      <section class="contact-booking-hub-section" id="bookingHubSection">
+        <div class="contact-hub-container">
+          <div class="contact-booking-hub-grid">
 
-            <!-- Right Column: Text & Emergency CTAs -->
-            <div class="consult-banner-content">
-              <div class="consult-badge">
-                <span class="pulse-amber-dot"></span>
-                <span>NEED IMMEDIATE EMERGENCY ASSISTANCE?</span>
-              </div>
-              <h2 class="consult-heading">
-                Consult the services you <span class="highlight-navy">need now!</span>
-              </h2>
-              <p class="consult-desc">
-                For active water leaks, refrigerator cooling failure, or severe appliance breakdowns, connect instantly with our dispatch team. Our mobile diagnostic fleet covers every Dubai neighborhood with genuine OEM parts.
-              </p>
+            <!-- LEFT COLUMN: STACKED EMERGENCY & OPERATIONS HUB CARDS -->
+            <div class="contact-hub-left-stack">
 
-              <!-- 3 Checklist Items -->
-              <div class="consult-features-row">
-                <div class="consult-feature-badge">
-                  <div class="feature-check-icon">✓</div>
-                  <span>24/7 Rapid Dispatch</span>
-                </div>
-                <div class="consult-feature-badge">
-                  <div class="feature-check-icon">✓</div>
-                  <span>100% Genuine OEM Parts</span>
-                </div>
-                <div class="consult-feature-badge">
-                  <div class="feature-check-icon">✓</div>
-                  <span>1-Year Service Warranty</span>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="consult-cta-group">
-                <a href="tel:+971567991964" class="btn-consult-call">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-                  <span>Call Now: +971 56 799 1964</span>
-                </a>
-                <a href="https://wa.me/971567991964?text=Hello%20ApexFix%2C%20I%20have%20an%20urgent%20appliance%20repair%20request." target="_blank" rel="noopener" class="btn-consult-wa">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                  <span>WhatsApp Dispatch</span>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================================
-           SECTION 3: CENTRAL OPERATIONS HUB & SPARES DEPOT
-           (Matches Reference Image media_1790594484434.png)
-           Left: Headings, 3 Bullets, 98% Resolution Bar, Open Maps
-           Right: Photo with 3 Overlapping Floating Cards (No Sharp Edges)
-           ======================================================== -->
-      <section class="contact-hub-section" id="hubLocation">
-        <div class="hub-container">
-          <div class="hub-grid">
-            
-            <!-- Left Column: Headings, 3 Bullets, Resolution Progress Bar, and Open Maps Button -->
-            <div class="hub-left-col">
-              <div class="hub-badge">CENTRAL OPERATIONS HUB</div>
-              <h2 class="hub-heading">
-                Direct On-Site Dispatch &amp; <span class="highlight-navy">Spares Depot</span>
-              </h2>
-              <p class="hub-desc">
-                Arham Electric Household Appliances Repairing &amp; Maintenance coordinates centralized technician dispatch, genuine spares inventory, and emergency mobile vans throughout Dubai and the UAE.
-              </p>
-
-              <!-- 3 Feature Bullets matching reference format -->
-              <div class="hub-feature-bullets">
-                <div class="hub-bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div class="bullet-text"><strong>24/7 Rapid Mobile Dispatch</strong> &mdash; Immediate on-site response across all Dubai residential communities.</div>
-                </div>
-                <div class="hub-bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div class="bullet-text"><strong>OEM Factory Parts Inventory</strong> &mdash; Genuine components stocked directly from certified manufacturers.</div>
-                </div>
-                <div class="hub-bullet-item">
-                  <div class="bullet-dot"></div>
-                  <div class="bullet-text"><strong>Certified Diagnostics Lab</strong> &mdash; Precision testing, compressor analysis, and circuit board repair.</div>
-                </div>
-              </div>
-
-              <!-- Resolution Rate Progress Bar matching reference image -->
-              <div class="hub-progress-card">
-                <div class="hub-progress-header">
-                  <span class="hub-progress-label">First-Visit Resolution Rate</span>
-                  <span class="hub-progress-val">98%</span>
-                </div>
-                <div class="hub-progress-track">
-                  <div class="hub-progress-bar" style="width: 98%;"></div>
-                </div>
-              </div>
-
-              <!-- Open Maps Button -->
-              <div class="hub-action-row">
-                <a href="https://maps.app.goo.gl/GxDCmANMdHkHQhgY8?g_st=awb" target="_blank" rel="noopener" class="btn-open-maps">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-                  <span>Open in Google Maps</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Column: Technician Diagnostics Photo with 3 Overlapping Floating Cards (No Sharp Edges) -->
-            <div class="hub-right-col">
-              <div class="hub-stage-wrapper">
+              <!-- Top Card: Direct On-Site Dispatch & Spares Depot (Map) -->
+              <div class="contact-side-hub-card">
                 
-                <!-- The 3 Vertically Stacked Floating Cards Overlapping Left Edge -->
-                <div class="hub-overlap-cards">
-                  
-                  <!-- Card 1: Top White Card -->
-                  <div class="hub-float-card card-light">
-                    <div class="float-card-icon">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                      </svg>
-                    </div>
-                    <strong class="float-card-title">Expert Team</strong>
-                    <p class="float-card-sub">Certified specialists stationed across all Dubai.</p>
+                <!-- Eyebrow Pill + Open Maps Button -->
+                <div class="hub-card-top-row">
+                  <div class="hub-card-pill">
+                    <span class="hub-pill-dot" aria-hidden="true"></span>
+                    <span>CENTRAL OPERATIONS HUB</span>
                   </div>
-
-                  <!-- Card 2: Middle Highlight Card (Navy / Cyan) -->
-                  <div class="hub-float-card card-highlight">
-                    <div class="float-card-icon highlight-icon">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <circle cx="12" cy="12" r="6"></circle>
-                        <circle cx="12" cy="12" r="2"></circle>
-                      </svg>
-                    </div>
-                    <strong class="float-card-title">Target Fulfil</strong>
-                    <p class="float-card-sub">100% genuine factory parts loaded for doorstep repair.</p>
-                  </div>
-
-                  <!-- Card 3: Bottom White Card -->
-                  <div class="hub-float-card card-light">
-                    <div class="float-card-icon">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                      </svg>
-                    </div>
-                    <strong class="float-card-title">Productivity</strong>
-                    <p class="float-card-sub">Under 60-min rapid arrival &amp; precision diagnostics.</p>
-                  </div>
-
+                  <a href="https://maps.app.goo.gl/GxDCmANMdHkHQhgY8?g_st=awb" target="_blank" rel="noopener noreferrer" class="btn-hub-open-maps" aria-label="Open Maps in Google Maps">
+                    <span>Open Maps</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
                 </div>
 
-                <!-- Right Photo with Smooth Rounded Corners (No Sharp Edges) -->
-                <div class="hub-photo-container">
-                  <img src="assets/protocol-tech-diagnosis.jpg" alt="Master Certified Appliance Technician Diagnosing Components" class="hub-technician-photo" loading="lazy">
+                <!-- Title adhering to Dual-Color Rule -->
+                <h3 class="hub-card-title">
+                  Direct On-Site Dispatch &amp; <span class="highlight-navy">Spares Depot</span>
+                </h3>
+
+                <!-- Embedded Interactive Google Map -->
+                <div class="hub-map-stage">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=Dubai%20Marina,%20Dubai,%20United%20Arab%20Emirates&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+                    class="hub-map-iframe" 
+                    title="ApexFix Operations Depot &amp; Technician Dispatch Location in Dubai" 
+                    loading="lazy" 
+                    allowfullscreen>
+                  </iframe>
+                  <a href="https://maps.app.goo.gl/GxDCmANMdHkHQhgY8?g_st=awb" target="_blank" rel="noopener noreferrer" class="hub-map-overlay-badge" aria-label="Open in Maps">
+                    <span>Open in Maps</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+
+                <!-- Location Details & Badges -->
+                <div class="hub-location-details-row">
+                  <div class="hub-loc-icon-box" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="hub-loc-text">
+                    <h4 class="hub-loc-name">Arham Electric Household Appliances Repairing &amp; Maintenance</h4>
+                    <p class="hub-loc-city">Dubai, United Arab Emirates</p>
+                    <div class="hub-loc-badges">
+                      <span class="hub-spec-badge">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>24/7 Rapid Dispatch</span>
+                      </span>
+                      <span class="hub-spec-badge">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>OEM Factory Inventory</span>
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
               </div>
+
+              <!-- Bottom Card: Need Immediate Emergency Assistance? -->
+              <div class="contact-side-emergency-card">
+                <div class="emergency-card-header">
+                  <svg class="emergency-bolt-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <h3 class="emergency-card-title">Need Immediate Emergency Assistance?</h3>
+                </div>
+                <p class="emergency-card-desc">
+                  For active water leaks, refrigerator cooling failure, or severe appliance breakdowns, connect instantly with our dispatch team.
+                </p>
+                <div class="emergency-card-actions">
+                  <a href="tel:+971508867234" class="btn-emergency-call" aria-label="Call Now: 050 886 7234">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span>Call Now</span>
+                  </a>
+                  <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20urgent%20emergency%20appliance%20assistance" target="_blank" rel="noopener noreferrer" class="btn-emergency-wa" aria-label="WhatsApp Us">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: BOOKING FORM CARD -->
+            <div class="booking-form-card" id="bookingCard">
+              
+              <!-- Eyebrow Header with Brand Navy Line -->
+              <div class="booking-eyebrow-row">
+                <span class="booking-eyebrow-text">FAST ON-SITE BOOKING</span>
+                <span class="booking-eyebrow-line" aria-hidden="true"></span>
+              </div>
+
+              <!-- Main Heading with Dual-Color Rule -->
+              <h2 class="booking-card-heading">
+                Schedule Doorstep <span class="highlight-navy">Inspection &amp; Repair</span>
+              </h2>
+
+              <!-- Subtitle Description -->
+              <p class="booking-card-desc">
+                Submit your appliance details below. A certified technician stationed in your neighborhood will be assigned with OEM factory parts.
+              </p>
+
+              <!-- Form with 2-Column Grid -->
+              <form class="booking-form-grid" id="contactForm" novalidate>
+                
+                <!-- Row 1: Full Name & Contact Number -->
+                <div class="bform-row-2">
+                  <div class="bform-field">
+                    <label class="bform-label" for="fullName">
+                      Full Name <span class="bform-req">*</span>
+                    </label>
+                    <input type="text" id="fullName" name="fullName" class="bform-input" placeholder="e.g. Tariq Mansoor" required>
+                  </div>
+                  <div class="bform-field">
+                    <label class="bform-label" for="contactPhone">
+                      Contact Number <span class="bform-req">*</span>
+                    </label>
+                    <input type="tel" id="contactPhone" name="contactPhone" class="bform-input" placeholder="e.g. +971 50 886 7234" required>
+                  </div>
+                </div>
+
+                <!-- Row 2: Email Address & Dubai Community / Area -->
+                <div class="bform-row-2">
+                  <div class="bform-field">
+                    <label class="bform-label" for="emailAddress">
+                      Email Address <span class="bform-req">*</span>
+                    </label>
+                    <input type="email" id="emailAddress" name="emailAddress" class="bform-input" placeholder="e.g. yourname@domain.com" required>
+                  </div>
+                  <div class="bform-field">
+                    <label class="bform-label" for="communityArea">
+                      Dubai Community / Area <span class="bform-req">*</span>
+                    </label>
+                    <div class="bform-select-wrap">
+                      <select id="communityArea" name="communityArea" class="bform-select" required>
+                        <option value="" disabled selected>Select Your Area</option>
+                        <option value="Dubai Marina & JBR">Dubai Marina &amp; JBR</option>
+                        <option value="Downtown Dubai & Business Bay">Downtown Dubai &amp; Business Bay</option>
+                        <option value="Palm Jumeirah & Al Sufouh">Palm Jumeirah &amp; Al Sufouh</option>
+                        <option value="Jumeirah Lakes Towers (JLT)">Jumeirah Lakes Towers (JLT)</option>
+                        <option value="Jumeirah Village Circle (JVC) & JVT">Jumeirah Village Circle (JVC) &amp; JVT</option>
+                        <option value="Arabian Ranches & Damac Hills">Arabian Ranches &amp; Damac Hills</option>
+                        <option value="Dubai Hills Estate & Meydan">Dubai Hills Estate &amp; Meydan</option>
+                        <option value="Jumeirah & Umm Suqeim">Jumeirah &amp; Umm Suqeim</option>
+                        <option value="The Greens, Springs & Meadows">The Greens, Springs &amp; Meadows</option>
+                        <option value="Al Barsha & Barsha Heights">Al Barsha &amp; Barsha Heights</option>
+                        <option value="Mirdif & Festival City">Mirdif &amp; Festival City</option>
+                        <option value="Motor City & Sports City">Motor City &amp; Sports City</option>
+                        <option value="Deira & Bur Dubai">Deira &amp; Bur Dubai</option>
+                        <option value="Other Dubai Area">Other Dubai Area</option>
+                      </select>
+                      <svg class="bform-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 3: Appliance Category & Appliance Brand -->
+                <div class="bform-row-2">
+                  <div class="bform-field">
+                    <label class="bform-label" for="applianceCategory">
+                      Appliance Category <span class="bform-req">*</span>
+                    </label>
+                    <div class="bform-select-wrap">
+                      <select id="applianceCategory" name="applianceCategory" class="bform-select" required>
+                        <option value="" disabled selected>Select Appliance</option>
+                        <option value="Washing Machine Repair">Washing Machine Repair</option>
+                        <option value="Refrigerator & Fridge Repair">Refrigerator &amp; Fridge Repair</option>
+                        <option value="Dishwasher Repair">Dishwasher Repair</option>
+                        <option value="Clothes Dryer Repair">Clothes Dryer Repair</option>
+                        <option value="Cooking Range Repair">Cooking Range Repair</option>
+                        <option value="Gas Cooker & Stove Repair">Gas Cooker &amp; Stove Repair</option>
+                        <option value="Microwave Oven Repair">Microwave Oven Repair</option>
+                        <option value="Air Conditioner (AC) Repair">Air Conditioner (AC) Repair</option>
+                        <option value="Other Appliance">Other Appliance</option>
+                      </select>
+                      <svg class="bform-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                  <div class="bform-field">
+                    <label class="bform-label" for="applianceBrand">
+                      Appliance Brand
+                    </label>
+                    <div class="bform-select-wrap">
+                      <select id="applianceBrand" name="applianceBrand" class="bform-select">
+                        <option value="" selected>Select Brand (Optional)</option>
+                        <option value="Bosch">Bosch</option>
+                        <option value="Siemens">Siemens</option>
+                        <option value="LG">LG</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Whirlpool">Whirlpool</option>
+                        <option value="Miele">Miele</option>
+                        <option value="Electrolux">Electrolux</option>
+                        <option value="AEG">AEG</option>
+                        <option value="Ariston">Ariston</option>
+                        <option value="Indesit">Indesit</option>
+                        <option value="Super General">Super General</option>
+                        <option value="Other Brand">Other Brand</option>
+                      </select>
+                      <svg class="bform-select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row 4: Describe Problem Symptoms (Optional) -->
+                <div class="bform-field bform-field-full">
+                  <label class="bform-label" for="problemSymptoms">
+                    Describe Problem Symptoms (Optional)
+                  </label>
+                  <textarea id="problemSymptoms" name="problemSymptoms" class="bform-textarea" rows="3" placeholder="e.g. Washing machine showing error E18 / not draining; Fridge not cooling bottom section..."></textarea>
+                </div>
+
+                <!-- Submit Button with Paper Plane Icon and Brand Signature Gradient -->
+                <button type="submit" class="btn-bform-submit" aria-label="Confirm Doorstep Booking">
+                  <span>Confirm Doorstep Booking</span>
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+
             </div>
 
           </div>
         </div>
       </section>
 
-<footer class="site-footer-master" id="contact">
+      <footer class="site-footer-master" id="contact">
 
         <!-- Top Identity & Social Channels -->
         <div class="footer-top-brand">
