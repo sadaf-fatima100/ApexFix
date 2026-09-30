@@ -5990,6 +5990,7 @@ body.dark-theme .trust-item svg {
   }
   .about-layout {
     flex-direction: column;
+    align-items: stretch;
     gap: 36px;
   }
   .about-content-col {
@@ -6002,6 +6003,7 @@ body.dark-theme .trust-item svg {
     width: 100%;
     max-width: 100%;
     margin: 0;
+    flex: 0 0 auto;
   }
   .about-stats-column {
     position: absolute;
@@ -6038,6 +6040,7 @@ body.dark-theme .trust-item svg {
   }
   .about-visual-group {
     height: 420px;
+    overflow: hidden;
   }
   .about-image-clip {
     height: 100%;
