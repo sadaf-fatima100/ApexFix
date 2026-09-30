@@ -6472,8 +6472,26 @@ body.dark-theme .trust-item svg {
     font-size: 26px;
   } /* Process */
   .process-steps-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .process-step-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 14px;
+    border-radius: 16px;
+  }
+  .step-icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+  .step-title {
+    font-size: 13.5px;
+    margin-bottom: 3px;
+  }
+  .step-desc {
+    font-size: 11.5px;
   }
   .tech-center-showcase {
     display: none;
@@ -6785,8 +6803,9 @@ body.dark-theme .trust-item svg {
     height: 220px;
   }
   .emergency-pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 6px;
+    padding: 10px 8px;
   }
   .why-stats-strip {
     grid-template-columns: 1fr;
@@ -9901,12 +9920,31 @@ body.dark-theme .emergency-pillar-item:hover {
     font-size: 10.5px;
   }
   .emergency-pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 16px 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 10px;
+    padding: 14px 12px;
   }
   .emergency-pillar-item {
-    padding: 10px 12px;
+    padding: 8px 8px;
+    gap: 8px;
+  }
+  .pillar-icon-box {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+  .pillar-icon-box svg {
+    width: 15px;
+    height: 15px;
+  }
+  .pillar-title {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .pillar-desc {
+    font-size: 10px;
+    line-height: 1.2;
   }
 } /* ==========================================================================   MID-PAGE CONVERSION CTA SECTION (Appliance Repair Minimal & High-Converting)   ========================================================================== */
 .cta-showcase-section {
@@ -10702,9 +10740,9 @@ body.dark-theme .hero-trust-sub {
    ======================================================== */
 .blog-hero-trust-bar {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px 20px;
-  padding-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 12px;
+  padding-top: 18px;
   border-top: 1px solid rgba(20, 56, 119, 0.1);
   margin-top: 22px;
   width: 100%;
@@ -10712,13 +10750,13 @@ body.dark-theme .hero-trust-sub {
 .blog-trust-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 .blog-trust-icon-box {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -10731,6 +10769,8 @@ body.dark-theme .hero-trust-sub {
 }
 .blog-trust-icon-box svg {
   color: var(--brand-accent, #143877);
+  width: 14px;
+  height: 14px;
 }
 .blog-trust-item:hover .blog-trust-icon-box {
   background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
@@ -10749,11 +10789,12 @@ body.dark-theme .hero-trust-sub {
 }
 .blog-trust-title {
   font-family: var(--font-family);
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 800;
   color: var(--brand-accent, #143877);
-  line-height: 1.25;
-  white-space: nowrap;
+  line-height: 1.28;
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* Dark Theme Compatibility */
@@ -10782,24 +10823,12 @@ body.dark-theme .blog-trust-title {
 }
 
 /* Responsive Rules for Blog Hero Trust Bar */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .blog-hero-trust-bar {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px 14px;
     padding-top: 16px;
     margin-top: 16px;
-  }
-  .blog-trust-title {
-    font-size: 12.5px;
-    white-space: normal;
-  }
-}
-@media (max-width: 600px) {
-  .blog-hero-trust-bar {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding-top: 14px;
-    margin-top: 14px;
   }
   .blog-trust-icon-box {
     width: 32px;
@@ -10807,17 +10836,57 @@ body.dark-theme .blog-trust-title {
     min-width: 32px;
   }
   .blog-trust-title {
+    font-size: 12.5px;
+  }
+}
+@media (max-width: 768px) {
+  .blog-hero-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 12px;
+    padding-top: 14px;
+    margin-top: 14px;
+  }
+  .blog-trust-title {
     font-size: 12px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
+  .blog-hero-trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px 10px;
+    padding-top: 12px;
+    margin-top: 12px;
+  }
   .blog-trust-icon-box {
     width: 28px;
     height: 28px;
     min-width: 28px;
   }
+  .blog-trust-icon-box svg {
+    width: 12px;
+    height: 12px;
+  }
   .blog-trust-title {
     font-size: 11px;
+  }
+}
+@media (max-width: 360px) {
+  .blog-trust-icon-box {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+  }
+  .blog-trust-title {
+    font-size: 10.5px;
+  }
+}
+@media (max-width: 300px) {
+  .blog-hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .blog-trust-item {
+    flex-direction: row;
   }
 } /* Tier 1 Hero Media Stage End */
 .hero-media-gradient {
