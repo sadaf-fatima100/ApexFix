@@ -19,9 +19,9 @@
        ApexFix Theme Colors & Full Dark/Light Theme Integration
        ============================================================ */
 
-    /* ── SECTION 1: TOP MAIN HERO & FAST ON-SITE BOOKING ── */
+    /* ── SECTION 2: FAST ON-SITE BOOKING & DIRECT CHANNELS ── */
     .contact-main-hero {
-      padding: clamp(36px, 4.5vw, 64px) 0 clamp(32px, 4vw, 54px);
+      padding: clamp(16px, 2.5vw, 36px) 0 clamp(32px, 4vw, 54px);
       position: relative;
     }
     .contact-hero-container {
@@ -37,404 +37,171 @@
       align-items: start;
     }
 
-    /* Left Column Details */
-    .contact-hero-left {
+    /* Left Column: Clean Minimalist Support Card */
+    .contact-support-info-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
+      border-radius: 24px;
+      padding: clamp(26px, 3.2vw, 36px);
+      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.04);
+      height: 100%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
     }
-    .contact-badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(15, 43, 92, 0.08);
-      border: 1px solid rgba(15, 43, 92, 0.14);
-      border-radius: 9999px;
-      padding: 5px 16px;
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--brand-accent, #0f2b5c);
-      margin-bottom: 20px;
-      align-self: flex-start;
-    }
-    body.dark-theme .contact-badge-pill {
-      background: rgba(96, 165, 250, 0.12);
-      border-color: rgba(96, 165, 250, 0.25);
-      color: #60a5fa;
-    }
-    .live-pulse-dot {
-      width: 7.5px;
-      height: 7.5px;
-      background: #10b981;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-      animation: pulse-green 1.8s infinite;
-    }
-    @keyframes pulse-green {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-      70% { transform: scale(1.1); box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-    }
-
-    .contact-hero-title {
-      font-size: clamp(2.1rem, 3.8vw, 3.25rem);
-      font-weight: 800;
-      line-height: 1.16;
-      letter-spacing: -0.025em;
-      color: var(--text-dark, #121217);
-      margin: 0 0 16px;
-    }
-    body.dark-theme .contact-hero-title {
-      color: #ffffff;
-    }
-    .highlight-navy {
-      color: var(--brand-accent, #0f2b5c);
-    }
-    body.dark-theme .highlight-navy {
-      color: #60a5fa !important;
-    }
-
-    .contact-hero-lead {
-      font-size: 15.5px;
-      font-weight: 500;
-      line-height: 1.68;
-      color: var(--text-sub, #5a5f70);
-      margin: 0 0 24px;
-      max-width: 580px;
-    }
-    body.dark-theme .contact-hero-lead {
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    /* Action Buttons Row */
-    .contact-hero-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 32px;
-    }
-    .btn-hero-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      font-family: inherit;
-      font-size: 14.5px;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 13px 28px;
-      border-radius: 9999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      box-shadow: 0 8px 22px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
-      transition: all 0.25s ease;
-    }
-    .btn-hero-primary:hover {
-      background: var(--btn-gradient-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px -3px rgba(6, 18, 40, 0.55), 0 0 20px rgba(22, 56, 120, 0.38);
-    }
-    .btn-hero-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #ffffff;
-      color: var(--brand-accent, #143877);
-      border: 1.5px solid var(--brand-accent, #143877);
-      font-family: inherit;
-      font-size: 14.5px;
-      font-weight: 700;
-      text-decoration: none;
-      padding: 12px 26px;
-      border-radius: 9999px;
-      transition: all 0.25s ease;
-    }
-    .btn-hero-secondary:hover {
-      background: #059669;
-      border-color: #059669;
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.35);
-    }
-    body.dark-theme .btn-hero-secondary {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-    }
-    body.dark-theme .btn-hero-secondary:hover {
-      background: #059669;
-      border-color: #059669;
-      color: #ffffff;
-      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.45);
-    }
-
-    /* ── Action Hub & Direct Contact Channels ── */
-    .contact-hero-actions {
-      display: none !important;
-    }
-    .contact-channels-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-    .contact-action-card-prominent {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.1);
-      border-radius: 20px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 16px;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 4px 20px rgba(15, 43, 92, 0.04);
-      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-    }
-    .contact-action-card-prominent:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 30px rgba(15, 43, 92, 0.10);
-    }
-    .contact-action-card-prominent.card-phone-pro:hover {
-      border-color: var(--brand-accent, #143877);
-    }
-    .contact-action-card-prominent.card-wa-pro {
-      border-color: rgba(16, 185, 129, 0.25);
-    }
-    .contact-action-card-prominent.card-wa-pro:hover {
-      border-color: #10b981;
-      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.15);
-    }
-    body.dark-theme .contact-action-card-prominent {
+    body.dark-theme .contact-support-info-card {
       background: #181924;
       border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
-    body.dark-theme .contact-action-card-prominent:hover {
-      border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
+    .support-card-title {
+      font-size: clamp(1.4rem, 2vw, 1.75rem);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--text-dark, #121217);
+      margin: 0 0 10px;
     }
-    body.dark-theme .contact-action-card-prominent.card-wa-pro:hover {
-      border-color: #34d399;
-      box-shadow: 0 14px 32px rgba(16, 185, 129, 0.2);
+    body.dark-theme .support-card-title {
+      color: #ffffff;
+    }
+    .support-card-desc {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text-sub, #5a5f70);
+      margin: 0 0 24px;
+    }
+    body.dark-theme .support-card-desc {
+      color: #94a3b8;
     }
 
-    .action-card-head {
+    /* Sleek Contact Channel Items */
+    .contact-clean-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .contact-clean-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      gap: 14px;
+      padding: 13px 16px;
+      background: #f8fafc;
+      border: 1px solid rgba(15, 43, 92, 0.06);
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
     }
-    .action-card-icon-wrap {
-      width: 44px;
-      height: 44px;
+    body.dark-theme .contact-clean-item {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.06);
+    }
+    a.contact-clean-item:hover {
+      background: #ffffff;
+      border-color: var(--brand-accent, #143877);
+      transform: translateX(4px);
+      box-shadow: 0 6px 20px rgba(15, 43, 92, 0.08);
+    }
+    body.dark-theme a.contact-clean-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #60a5fa;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    .contact-clean-icon {
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .icon-wrap-navy {
+    .icon-phone {
       background: rgba(20, 56, 119, 0.08);
       color: var(--brand-accent, #143877);
     }
-    body.dark-theme .icon-wrap-navy {
+    body.dark-theme .icon-phone {
       background: rgba(96, 165, 250, 0.15);
       color: #60a5fa;
     }
-    .icon-wrap-emerald {
-      background: rgba(16, 185, 129, 0.12);
+    .icon-whatsapp {
+      background: rgba(16, 185, 129, 0.1);
       color: #059669;
     }
-    body.dark-theme .icon-wrap-emerald {
-      background: rgba(16, 185, 129, 0.2);
-      color: #34d399;
-    }
-    .action-card-live-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #059669;
-      background: rgba(16, 185, 129, 0.09);
-      padding: 3px 9px;
-      border-radius: 9999px;
-    }
-    body.dark-theme .action-card-live-tag {
+    body.dark-theme .icon-whatsapp {
       background: rgba(16, 185, 129, 0.18);
       color: #34d399;
     }
-    .action-live-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10b981;
-      animation: pulse-green 1.8s infinite;
+    .icon-mail {
+      background: rgba(99, 102, 241, 0.08);
+      color: #4f46e5;
     }
-
-    .action-card-info {
+    body.dark-theme .icon-mail {
+      background: rgba(129, 140, 248, 0.15);
+      color: #a5b4fc;
+    }
+    .icon-map {
+      background: rgba(245, 158, 11, 0.1);
+      color: #d97706;
+    }
+    body.dark-theme .icon-map {
+      background: rgba(251, 191, 36, 0.15);
+      color: #fbbf24;
+    }
+    .contact-clean-details {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2px;
+      flex: 1;
     }
-    .action-card-title {
+    .contact-clean-label {
       font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.07em;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: var(--text-sub, #64748b);
     }
-    body.dark-theme .action-card-title {
+    body.dark-theme .contact-clean-label {
       color: #94a3b8;
     }
-    .action-card-number {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--text-dark, #121217);
-      letter-spacing: -0.01em;
-      line-height: 1.25;
-    }
-    body.dark-theme .action-card-number {
-      color: #ffffff;
-    }
-    .action-card-meta {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--text-sub, #64748b);
-    }
-    body.dark-theme .action-card-meta {
-      color: rgba(255, 255, 255, 0.65);
-    }
-
-    .btn-action-trigger {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 11px 18px;
-      border-radius: 9999px;
-      font-size: 13.5px;
+    .contact-clean-val {
+      font-size: 14.5px;
       font-weight: 700;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-trigger-navy {
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      box-shadow: 0 6px 18px -2px rgba(6, 18, 40, 0.4), 0 0 12px rgba(18, 48, 105, 0.25);
-    }
-    .contact-action-card-prominent.card-phone-pro:hover .btn-trigger-navy {
-      background: var(--btn-gradient-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px -2px rgba(6, 18, 40, 0.5), 0 0 16px rgba(22, 56, 120, 0.35);
-    }
-    .btn-trigger-wa {
-      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-      color: #ffffff;
-      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
-    }
-    .contact-action-card-prominent.card-wa-pro:hover .btn-trigger-wa {
-      background: linear-gradient(135deg, #047857 0%, #059669 100%);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
-    }
-    body.dark-theme .btn-trigger-navy {
-      background: var(--btn-gradient-primary);
-    }
-    body.dark-theme .contact-action-card-prominent.card-phone-pro:hover .btn-trigger-navy {
-      background: var(--btn-gradient-hover);
-    }
-
-    /* Secondary Trust & Channels Dock below */
-    .contact-channels-dock {
-      background: #ffffff;
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      border-radius: 18px;
-      padding: 13px 20px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 3px 14px rgba(15, 43, 92, 0.03);
-    }
-    body.dark-theme .contact-channels-dock {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    .dock-col-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .dock-stars {
-      display: inline-flex;
-      align-items: center;
-      gap: 2px;
-      color: #f59e0b;
-    }
-    .dock-score {
-      font-size: 13px;
-      font-weight: 800;
       color: var(--text-dark, #121217);
     }
-    body.dark-theme .dock-score {
+    body.dark-theme .contact-clean-val {
       color: #ffffff;
     }
-    .dock-col-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--text-sub, #64748b);
-      border-left: 1px solid rgba(15, 43, 92, 0.08);
-      border-right: 1px solid rgba(15, 43, 92, 0.08);
-      padding: 0 16px;
+    .contact-clean-arrow {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-sub, #94a3b8);
+      transition: transform 0.25s ease;
     }
-    body.dark-theme .dock-col-center {
-      border-color: rgba(255, 255, 255, 0.08);
-      color: rgba(255, 255, 255, 0.7);
+    a.contact-clean-item:hover .contact-clean-arrow {
+      color: var(--brand-accent, #143877);
+      transform: translateX(3px);
     }
-    .dock-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    .dock-link:hover {
-      color: var(--brand-accent, #0f2b5c);
-    }
-    body.dark-theme .dock-link:hover {
+    body.dark-theme a.contact-clean-item:hover .contact-clean-arrow {
       color: #60a5fa;
     }
-    .dock-col-right {
-      display: inline-flex;
+    .support-card-footer-note {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 11.5px;
-      font-weight: 700;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
       color: #059669;
       background: rgba(16, 185, 129, 0.08);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      white-space: nowrap;
+      padding: 10px 14px;
+      border-radius: 12px;
+      margin-top: auto;
     }
-    body.dark-theme .dock-col-right {
-      background: rgba(16, 185, 129, 0.16);
+    body.dark-theme .support-card-footer-note {
+      background: rgba(16, 185, 129, 0.14);
       color: #34d399;
     }
 
@@ -1576,112 +1343,220 @@
       </header>
 
       <!-- ========================================================
-           SECTION 1: TOP MAIN HERO & FAST ON-SITE BOOKING FORM
-           (Matches Reference Image media_1790590812988.png - Top Part)
+           TIER 1: Top Hero Split Row (Matching Service Page Exact Architecture)
+           ======================================================== -->
+      <section class="service-hero-split-row portfolio-hero-row" id="contact-hero">
+        
+        <!-- Left Hero Copy & Stats Card -->
+        <div class="service-hero-copy-card">
+          <div class="hero-copy-main">
+            <!-- Eyebrow Badge Tag -->
+            <div class="badge-tag hero-copy-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>CONTACT APEXFIX DUBAI</span>
+            </div>
+
+            <h1 class="hero-headline">
+              <span class="hl-line line-1">24/7 Doorstep Repair</span>
+              <span class="hl-line line-2">&amp; Direct Support in Dubai</span>
+            </h1>
+
+            <p class="hero-description">
+              Connect directly with certified Dubai appliance specialists for same-day on-site diagnostics, 100% genuine factory OEM parts, and transparent upfront pricing across all 27+ Dubai communities.
+            </p>
+
+            <!-- Hero CTA Button Group: 2 Dedicated Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="#bookingCard" class="btn-hero-primary" id="contactBookBtn">
+                <span>Book a Repair</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="tel:+971508867234" class="btn-hero-secondary" id="contactCallBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span>Emergency Call 24/7</span>
+              </a>
+            </div>
+
+            <!-- Social Proof Client Ribbon -->
+            <div class="pf-hero-social-proof">
+              <div class="pf-proof-avatars">
+                <img src="assets/avatar1.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+                <img src="assets/avatar2.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+                <img src="assets/avatar3.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+              </div>
+              <span class="pf-proof-tag">15,000+ Happy Clients Across Dubai</span>
+            </div>
+          </div>
+
+          <!-- Center-Aligned Trust Highlights Bar (Navy Blue Theme Matching Services/About Page) -->
+          <div class="hero-trust-bar">
+            <!-- Item 1: 2-Hour Arrival -->
+            <div class="hero-trust-item">
+              <div class="hero-trust-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="hero-trust-text">
+                <span class="hero-trust-title">2-Hour Arrival</span>
+                <span class="hero-trust-sub">Dubai-Wide Response</span>
+              </div>
+            </div>
+
+            <!-- Item 2: Quality Assurance -->
+            <div class="hero-trust-item">
+              <div class="hero-trust-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <div class="hero-trust-text">
+                <span class="hero-trust-title">Quality Assurance</span>
+                <span class="hero-trust-sub">100% Genuine Parts</span>
+              </div>
+            </div>
+
+            <!-- Item 3: 4.9 / 5 Rating -->
+            <div class="hero-trust-item">
+              <div class="hero-trust-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="hero-trust-text">
+                <span class="hero-trust-title">4.9 / 5 Rating</span>
+                <span class="hero-trust-sub">3,800+ Verified Repairs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Media Stage (Clean Architectural 1-to-1 Frame) -->
+        <div class="service-hero-media-wrap">
+          <!-- Main Asymmetric Image Card (Exact #top-left-hero-cut) -->
+          <div class="service-hero-media-card">
+            <img src="assets/contact-hero-support.jpg" alt="ApexFix Certified Customer Support and Dispatch Specialists in Dubai" class="hero-media-img">
+            
+            <!-- Subtle Top-Right Live Dispatch Floating Chip -->
+            <div class="hero-media-live-chip">
+              <span class="pulse-dot-green"></span>
+              <span>24/7 Priority Doorstep Dispatch</span>
+            </div>
+
+            <!-- Subtle Bottom-Left Rating Glass Badge -->
+            <div class="hero-media-rating-chip">
+              <span class="star-gold">★ 4.9</span>
+              <span>Google Verified Service</span>
+            </div>
+
+            <!-- Subtle Brand Gradient Scrim -->
+            <div class="hero-media-gradient"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           SECTION 2: FAST ON-SITE BOOKING FORM & DIRECT CONTACT CHANNELS
+           (Matches Reference Image media_1790590812988.png)
            ======================================================== -->
       <section class="contact-main-hero" id="book-section">
         <div class="contact-hero-container">
           <div class="contact-hero-layout">
             
-            <!-- Left Column: Details & Channels -->
+            <!-- Left Column: Clean Direct Dispatch Support Card -->
             <div class="contact-hero-left">
-              <div class="contact-badge-pill">
-                <span class="live-pulse-dot"></span>
-                <span>24/7 SAME-DAY DISPATCH</span>
-              </div>
-              <h1 class="contact-hero-title">
-                Book Same-Day Repair <span class="highlight-navy">Across All Dubai</span>
-              </h1>
-              <p class="contact-hero-lead">
-                Connect with certified Dubai repair specialists for fast on-site diagnostics, 100% genuine OEM factory parts, and transparent upfront pricing at your doorstep.
-              </p>
-              
-              <!-- Direct Primary Action Cards (Emergency Call & WhatsApp Diagnostics) -->
-              <div class="contact-channels-grid">
-                
-                <!-- Card 1: Emergency Hotline -->
-                <div class="contact-action-card-prominent card-phone-pro">
-                  <div class="action-card-head">
-                    <div class="action-card-icon-wrap icon-wrap-navy">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div class="contact-support-info-card">
+                <div class="badge-tag" style="margin-bottom: 14px; align-self: flex-start;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>DIRECT DISPATCH &amp; SUPPORT</span>
+                </div>
+                <h2 class="support-card-title">
+                  Direct Support &amp; <span class="highlight-navy">Dispatch Desk</span>
+                </h2>
+                <p class="support-card-desc">
+                  Have an urgent appliance breakdown or leak? Connect directly with our Dubai dispatch team via phone or WhatsApp for immediate triage.
+                </p>
+
+                <!-- Sleek Contact Channels List -->
+                <div class="contact-clean-list">
+                  <a href="tel:+971508867234" class="contact-clean-item" aria-label="Call Emergency Hotline">
+                    <div class="contact-clean-icon icon-phone">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
                     </div>
-                    <span class="action-card-live-tag">
-                      <span class="action-live-dot"></span>
-                      <span>24/7 On-Call</span>
-                    </span>
-                  </div>
-                  <div class="action-card-info">
-                    <span class="action-card-title">Emergency Hotline</span>
-                    <span class="action-card-number">+971 56 799 1964</span>
-                    <span class="action-card-meta">⚡ Direct line to Dubai dispatch team</span>
-                  </div>
-                  <a href="tel:+971567991964" class="btn-action-trigger btn-trigger-navy" aria-label="Call Hotline Now">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-                    <span>Call Hotline Now</span>
-                  </a>
-                </div>
-
-                <!-- Card 2: WhatsApp Diagnostics -->
-                <div class="contact-action-card-prominent card-wa-pro">
-                  <div class="action-card-head">
-                    <div class="action-card-icon-wrap icon-wrap-emerald">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <div class="contact-clean-details">
+                      <span class="contact-clean-label">24/7 Emergency Hotline</span>
+                      <strong class="contact-clean-val">+971 50 886 7234</strong>
                     </div>
-                    <span class="action-card-live-tag">
-                      <span class="action-live-dot"></span>
-                      <span>Instant Chat</span>
-                    </span>
-                  </div>
-                  <div class="action-card-info">
-                    <span class="action-card-title">WhatsApp Diagnostics</span>
-                    <span class="action-card-number">+971 56 799 1964</span>
-                    <span class="action-card-meta">💬 Send photos or video of the fault</span>
-                  </div>
-                  <a href="https://wa.me/971567991964?text=Hello%20ApexFix%2C%20I%20would%20like%20to%20book%20a%20technician%20for%20my%20home%20appliance." target="_blank" rel="noopener" class="btn-action-trigger btn-trigger-wa" aria-label="Chat on WhatsApp">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    <span>Chat on WhatsApp</span>
+                    <span class="contact-clean-arrow">&rsaquo;</span>
                   </a>
+
+                  <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20urgent%20appliance%20repair." target="_blank" rel="noopener" class="contact-clean-item" aria-label="Chat on WhatsApp">
+                    <div class="contact-clean-icon icon-whatsapp">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                      </svg>
+                    </div>
+                    <div class="contact-clean-details">
+                      <span class="contact-clean-label">WhatsApp Fast Diagnostics</span>
+                      <strong class="contact-clean-val">+971 50 886 7234</strong>
+                    </div>
+                    <span class="contact-clean-arrow">&rsaquo;</span>
+                  </a>
+
+                  <div class="contact-clean-item">
+                    <div class="contact-clean-icon icon-mail">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                      </svg>
+                    </div>
+                    <div class="contact-clean-details">
+                      <span class="contact-clean-label">Inquiries &amp; Official Quotes</span>
+                      <strong class="contact-clean-val">info@apexfix.ae</strong>
+                    </div>
+                  </div>
+
+                  <div class="contact-clean-item">
+                    <div class="contact-clean-icon icon-map">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                      </svg>
+                    </div>
+                    <div class="contact-clean-details">
+                      <span class="contact-clean-label">Service Coverage</span>
+                      <strong class="contact-clean-val">All 27+ Dubai Communities</strong>
+                    </div>
+                  </div>
                 </div>
 
+                <!-- Footer Dispatch Tag -->
+                <div class="support-card-footer-note">
+                  <span class="live-pulse-dot"></span>
+                  <span>Active doorstep diagnostic vans on standby</span>
+                </div>
               </div>
-
-              <!-- Secondary Trust & Quick Channels Dock -->
-              <div class="contact-channels-dock">
-                <div class="dock-col-left">
-                  <div class="dock-stars">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <span class="dock-score">4.9/5</span>
-                </div>
-                <div class="dock-col-center">
-                  <a href="mailto:info@aerepair.ae" class="dock-link">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    <span>info@aerepair.ae</span>
-                  </a>
-                  <span>•</span>
-                  <a href="#hubLocation" class="dock-link">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>All Dubai Communities</span>
-                  </a>
-                </div>
-                <div class="dock-col-right">
-                  <span class="action-live-dot"></span>
-                  <span>Same-Day Dispatch</span>
-                </div>
-              </div>
-
             </div>
 
             <!-- Right Column: Form Container Card -->
             <div class="contact-hero-right">
               <div class="contact-form-card" id="bookingCard">
-                <div class="card-badge-tag">FAST ON-SITE BOOKING</div>
-                <h2 class="card-form-title">Schedule Doorstep Inspection &amp; Repair</h2>
-                <p class="card-form-sub">Submit your appliance details below. A certified technician stationed in your neighborhood will be assigned with OEM factory parts.</p>
+                <h2 class="card-form-title">Book a Certified Technician</h2>
+                <p class="card-form-sub">Submit your details below and a technician stationed in your neighborhood will be assigned with OEM parts.</p>
 
                 <form class="contact-booking-form" id="contactForm" novalidate>
                   <div class="form-grid-2">

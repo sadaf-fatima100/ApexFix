@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.2">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
 </head>
 <body>
@@ -230,9 +230,9 @@
             <!-- Social Proof Client Ribbon (Clean Floating Avatar Stack without Box/Border) -->
             <div class="pf-hero-social-proof">
               <div class="pf-proof-avatars">
-                <img src="assets/avatar1.jpg" alt="Dubai Client Avatar" class="pf-avatar">
-                <img src="assets/avatar2.jpg" alt="Dubai Client Avatar" class="pf-avatar">
-                <img src="assets/avatar3.jpg" alt="Dubai Client Avatar" class="pf-avatar">
+                <img src="assets/avatar1.jpg" alt="Dubai Client Avatar" class="pf-avatar" width="36" height="36" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+                <img src="assets/avatar2.jpg" alt="Dubai Client Avatar" class="pf-avatar" width="36" height="36" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+                <img src="assets/avatar3.jpg" alt="Dubai Client Avatar" class="pf-avatar" width="36" height="36" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
               </div>
               <span class="pf-proof-tag">10k+ Happy Clients Across Dubai</span>
             </div>
@@ -845,7 +845,7 @@
   <!-- ========================================================
        PORTFOLIO IMAGE LIGHTBOX MODAL (Direct Call & WhatsApp Enabled)
        ======================================================== -->
-  <div class="pf-lightbox-modal" id="pfLightboxModal" aria-hidden="true">
+  <div class="pf-lightbox-modal" id="pfLightboxModal" aria-hidden="true" style="display: none;">
     <div class="pf-lightbox-overlay" id="pfLightboxOverlay"></div>
     <div class="pf-lightbox-container">
       <button class="pf-lightbox-close" id="pfLightboxClose" aria-label="Close Lightbox">
@@ -1072,6 +1072,7 @@
           waBtn.href = `https://wa.me/971508867234?text=${encodeURIComponent('Hi ApexFix, I need assistance with ' + itemTitle + ' in Dubai.')}`;
         }
 
+        lightboxModal.style.display = 'flex';
         lightboxModal.classList.add('active');
         lightboxModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -1080,6 +1081,7 @@
       function closeLightbox() {
         if (!lightboxModal) return;
         lightboxModal.classList.remove('active');
+        lightboxModal.style.display = 'none';
         lightboxModal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
       }

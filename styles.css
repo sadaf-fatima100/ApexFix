@@ -10382,7 +10382,6 @@ body.dark-theme .pill-dot-navy {
 }
 
 /* ========================================================
-/* ========================================================
    CENTER-ALIGNED TRUST HIGHLIGHTS BAR (Navy Blue Brand Theme Matching About Page)
    ======================================================== */
 .hero-trust-bar {
@@ -13004,10 +13003,11 @@ body.dark-theme .pf-collage-fade-bottom {
   display: flex;
   align-items: center;
 }
+.pf-avatar,
 .pf-proof-avatars .pf-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
   border: 2px solid #ffffff;
   object-fit: cover;
   margin-left: -10px;
@@ -13462,13 +13462,13 @@ body.dark-theme .pf-proof-tag {
   }
 } /* ==========================================================================   PORTFOLIO IMAGE LIGHTBOX MODAL & DUBAI DIRECT CALL/WHATSAPP CONTACT BAR   ========================================================================== */
 .pf-lightbox-modal {
+  display: none !important;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 999999;
-  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -13476,6 +13476,7 @@ body.dark-theme .pf-proof-tag {
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .pf-lightbox-modal.active {
+  display: flex !important;
   opacity: 1;
   pointer-events: auto;
 }

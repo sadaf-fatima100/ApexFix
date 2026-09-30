@@ -21,9 +21,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Dependencies and caches
+# Dependencies, python & test scripts
 node_modules/
 __pycache__/
+*.py
 *.py[cod]
 
 # Editor & IDE files
