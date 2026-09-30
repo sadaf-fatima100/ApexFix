@@ -1449,37 +1449,31 @@ a.service-card-item *,
   );
   z-index: 1;
   pointer-events: none;
-} /* Translucent Navy Blue Overlay Text Card (Exact match to Why Choose Us) */
+} /* Translucent Frosted Navy Blue Overlay Text Card (Exact match to Portfolio Cards) */
 .service-card-content {
   position: relative;
   z-index: 2;
   margin: 14px;
   padding: 20px 20px 20px 20px;
-  background: 
-    radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-    linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
+  background: rgba(11, 28, 62, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 18px;
-  border: 1px solid rgba(125, 175, 245, 0.25);
-  box-shadow: 
-    0 18px 42px -4px rgba(3, 9, 20, 0.75),
-    0 0 24px -2px rgba(18, 48, 105, 0.35),
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.3),
-    inset 0 0 16px rgba(20, 56, 122, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 12px 32px rgba(5, 14, 32, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.22);
   display: flex;
   flex-direction: column;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none !important;
 }
 .service-card-item:hover .service-card-content {
-  background: 
-    radial-gradient(120% 85% at 15% 0%, rgba(32, 85, 175, 0.52) 0%, transparent 68%),
-    linear-gradient(145deg, #184284 0%, #0d2754 50%, #07152d 100%);
-  border-color: rgba(145, 195, 255, 0.4);
-  box-shadow: 
-    0 22px 50px -4px rgba(3, 9, 20, 0.85),
-    0 0 28px rgba(20, 56, 120, 0.42),
-    inset 0 1px 2px rgba(255, 255, 255, 0.42),
-    inset 0 0 20px rgba(24, 68, 145, 0.25);
+  background: rgba(11, 28, 62, 0.94);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 16px 40px rgba(5, 14, 32, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.32);
   transform: translateY(-2px);
 } /* Icon Badge inside Luminous Navy Card */
 .service-card-icon-badge {
@@ -2148,36 +2142,30 @@ a.service-card-item *,
   );
   z-index: 1;
   pointer-events: none;
-} /* Translucent Navy Blue Overlay Text Card with Opacity & Frosted Glass (Matching User Reference) */
+} /* Translucent Frosted Navy Blue Overlay Text Card (Exact match to Portfolio & Service Cards) */
 .why-card-content {
   position: relative;
   z-index: 2;
   margin: 14px;
   padding: 18px 18px 20px 18px;
-  background: 
-    radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-    linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
+  background: rgba(11, 28, 62, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 18px;
-  border: 1px solid rgba(125, 175, 245, 0.25);
-  box-shadow: 
-    0 18px 42px -4px rgba(3, 9, 20, 0.75),
-    0 0 20px -2px rgba(18, 48, 105, 0.3),
-    inset 0 1px 1.5px rgba(255, 255, 255, 0.28),
-    inset 0 0 16px rgba(20, 56, 120, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 12px 32px rgba(5, 14, 32, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.22);
   display: flex;
   flex-direction: column;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .why-card-item:hover .why-card-content {
-  background: 
-    radial-gradient(120% 85% at 15% 0%, rgba(32, 85, 175, 0.5) 0%, transparent 68%),
-    linear-gradient(145deg, #184284 0%, #0d2754 50%, #07152d 100%);
-  border-color: rgba(145, 195, 255, 0.38);
-  box-shadow: 
-    0 22px 50px -4px rgba(3, 9, 20, 0.85),
-    0 0 28px rgba(24, 66, 132, 0.4),
-    inset 0 1px 2px rgba(255, 255, 255, 0.38),
-    inset 0 0 20px rgba(26, 75, 160, 0.25);
+  background: rgba(11, 28, 62, 0.94);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 16px 40px rgba(5, 14, 32, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.32);
   transform: translateY(-2px);
 } /* Icon Badge inside Translucent Navy Card */
 .why-card-icon-badge {
@@ -5994,7 +5982,11 @@ body.dark-theme .trust-item svg {
     flex-direction: column;
     gap: 36px;
   }
+  .about-content-col {
+    order: 1;
+  }
   .about-visual-group {
+    order: 2;
     flex: 0 0 auto;
     max-width: 540px;
     width: 100%;
@@ -6012,6 +6004,8 @@ body.dark-theme .trust-item svg {
     max-height: none;
     margin-right: 0;
     align-self: auto;
+    position: static;
+    z-index: auto;
   }
   .about-rating-badge {
     left: 10px;
@@ -6457,7 +6451,11 @@ body.dark-theme .trust-item svg {
   } /* About */
   .about-stats-column {
     grid-template-columns: 1fr;
+    width: 100%;
     gap: 10px;
+  }
+  .about-visual-group {
+    max-width: 100%;
   }
   .about-cta-group {
     flex-direction: column;
@@ -7600,6 +7598,20 @@ body.dark-theme .tech-floating-status {
 body.dark-theme .why-card-item {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+body.dark-theme .why-card-content {
+  background: rgba(10, 22, 48, 0.88);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+body.dark-theme .why-card-item:hover .why-card-content {
+  background: rgba(10, 22, 48, 0.96);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.75),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
 }
 body.dark-theme .why-stats-strip {
   background-color: #1a1a24;
@@ -10499,31 +10511,103 @@ body.dark-theme .hero-trust-sub {
 }
 @media (max-width: 768px) {
   .hero-trust-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
     padding-top: 18px;
+    justify-content: unset;
+    align-items: start;
   }
   .hero-trust-item {
-    flex: 0 1 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    text-align: center;
+    flex: unset;
+  }
+  .hero-trust-icon-box {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    flex-shrink: 0;
+  }
+  .hero-trust-text {
+    align-items: center;
+  }
+  .hero-trust-title {
+    font-size: 12.5px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .hero-trust-sub {
+    font-size: 10.5px;
+    white-space: normal;
+    line-height: 1.3;
   }
 }
 @media (max-width: 480px) {
   .hero-trust-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     padding-top: 14px;
   }
   .hero-trust-item {
-    width: 100%;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+  .hero-trust-icon-box {
+    width: 33px;
+    height: 33px;
+    min-width: 33px;
+  }
+  .hero-trust-icon-box svg {
+    width: 15px;
+    height: 15px;
   }
   .hero-trust-title {
-    font-size: 13px;
+    font-size: 11.5px;
+    white-space: normal;
+    line-height: 1.28;
   }
   .hero-trust-sub {
-    font-size: 11px;
+    font-size: 10px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+}
+@media (max-width: 360px) {
+  .hero-trust-bar {
+    gap: 8px;
+    padding-top: 12px;
+  }
+  .hero-trust-icon-box {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+  .hero-trust-title {
+    font-size: 10.5px;
+  }
+  .hero-trust-sub {
+    font-size: 9.5px;
+  }
+}
+@media (max-width: 300px) {
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .hero-trust-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 8px;
+  }
+  .hero-trust-text {
+    align-items: flex-start;
   }
 }
 
