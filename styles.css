@@ -5939,15 +5939,25 @@ body.dark-theme .trust-item svg {
     white-space: normal;
   }
   .process-layout {
-    flex-direction: column;
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .process-featured-card {
     max-width: 100%;
     min-width: unset;
+    min-height: unset;
+    height: auto;
+  }
+  .process-featured-inner {
+    height: auto;
   }
   .process-right-col {
     padding-left: 0;
+    height: auto;
+  }
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   } /* Why Choose Us Section - Tablet Adaptations */
   .why-stage-grid {
     grid-template-columns: 1fr;
