@@ -452,12 +452,6 @@
               
               <!-- Metric 1: Appliances Fixed -->
               <div class="about-stat-card">
-                <div class="stat-card-badge-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
                 <div class="stat-card-info">
                   <span class="stat-card-number">15,000+</span>
                   <span class="stat-card-label">Appliances Fixed</span>
@@ -466,12 +460,6 @@
 
               <!-- Metric 2: Rapid Dispatch -->
               <div class="about-stat-card">
-                <div class="stat-card-badge-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                </div>
                 <div class="stat-card-info">
                   <span class="stat-card-number">1-Hour</span>
                   <span class="stat-card-label">Rapid Dispatch</span>
@@ -480,12 +468,6 @@
 
               <!-- Metric 3: Genuine OEM Parts -->
               <div class="about-stat-card">
-                <div class="stat-card-badge-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <polyline points="9 12 11 14 15 10"></polyline>
-                  </svg>
-                </div>
                 <div class="stat-card-info">
                   <span class="stat-card-number">100%</span>
                   <span class="stat-card-label">Genuine OEM Parts</span>
@@ -2562,81 +2544,100 @@
 
             <!-- 100% Satisfaction Guaranteed Rosette Ribbon Badge (Top-Right Overlap matching reference) -->
             <div class="prefooter-seal-badge" aria-label="100% Satisfaction Guaranteed">
-              <svg class="seal-svg" width="105" height="120" viewBox="0 0 105 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Ribbon Tails with 3D Fold & Gradients -->
-                <g filter="url(#tailsShadow)">
-                  <path d="M28 70 L14 112 L34 100 L44 112 L40 70 Z" fill="url(#tailGradLeft)"/>
-                  <path d="M77 70 L91 112 L71 100 L61 112 L65 70 Z" fill="url(#tailGradRight)"/>
-                </g>
-
-                <!-- Outer Scalloped / Beveled Ring -->
-                <circle cx="52.5" cy="48" r="44" fill="url(#silverBevelGrad)" filter="url(#sealDropShadow)"/>
-                <circle cx="52.5" cy="48" r="40" fill="url(#outerBlueRing)" stroke="#ffffff" stroke-width="2"/>
-
-                <!-- Inner Dotted Decorative Ring -->
-                <circle cx="52.5" cy="48" r="34" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.5" stroke-dasharray="2.5 2.5"/>
-
-                <!-- Deep Navy Center Circle -->
-                <circle cx="52.5" cy="48" r="30" fill="url(#centerNavyGrad)"/>
-
-                <!-- Top Curved Arc for SATISFACTION text -->
-                <path id="curveSatisfaction" d="M 28 48 A 24.5 24.5 0 0 1 77 48" fill="none"/>
-                <text font-family="'Plus Jakarta Sans', sans-serif" font-size="6.8" font-weight="800" fill="#ffffff" letter-spacing="1.8">
-                  <textPath href="#curveSatisfaction" startOffset="50%" text-anchor="middle">SATISFACTION</textPath>
-                </text>
-
-                <!-- Center 100% Bold Headline -->
-                <text x="52.5" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">100%</text>
-
-                <!-- Draped Ribbon Banner Across Bottom of Circle -->
-                <g filter="url(#bannerDropShadow)">
-                  <path d="M 12 56 Q 52.5 61 93 56 L 89 72 Q 52.5 77 16 72 Z" fill="url(#bannerBlueGrad)" stroke="#ffffff" stroke-width="1.8"/>
-                  <path d="M 12 56 L 6 62 L 16 72 Z" fill="#081836"/>
-                  <path d="M 93 56 L 99 62 L 89 72 Z" fill="#081836"/>
-                  <text x="52.5" y="67.5" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.2" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.9">SATISFACTION GUARANTEED</text>
-                </g>
-
-                <!-- Gradients & Filter Definitions -->
+              <svg class="seal-svg" width="125" height="140" viewBox="0 0 125 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                  <filter id="sealDropShadow" x="-15%" y="-15%" width="130%" height="130%">
-                    <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="rgba(15, 43, 92, 0.3)"/>
+                  <!-- 3D Elevation Filters -->
+                  <filter id="sealOuterShadow" x="-20%" y="-15%" width="140%" height="135%">
+                    <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="rgba(10, 28, 64, 0.35)"/>
                   </filter>
-                  <filter id="tailsShadow" x="-10%" y="-10%" width="120%" height="120%">
-                    <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="rgba(15, 43, 92, 0.25)"/>
+                  <filter id="sealBannerShadow" x="-10%" y="-15%" width="120%" height="140%">
+                    <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="rgba(0, 0, 0, 0.4)"/>
                   </filter>
-                  <filter id="bannerDropShadow" x="-10%" y="-10%" width="120%" height="130%">
-                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.35)"/>
+                  <filter id="badgeTextShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="1.2" stdDeviation="0.8" flood-color="rgba(2, 8, 20, 0.95)"/>
                   </filter>
-                  <linearGradient id="silverBevelGrad" x1="10" y1="10" x2="95" y2="86" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#ffffff"/>
-                    <stop offset="0.3" stop-color="#93c5fd"/>
-                    <stop offset="0.7" stop-color="#1e40af"/>
-                    <stop offset="1" stop-color="#0f2b5c"/>
+
+                  <!-- Chrome / Metallic Beveled Outer Ring -->
+                  <linearGradient id="chromeBevelGrad" x1="18" y1="6" x2="107" y2="90" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="30%" stop-color="#cbd5e1"/>
+                    <stop offset="55%" stop-color="#64748b"/>
+                    <stop offset="80%" stop-color="#f8fafc"/>
+                    <stop offset="100%" stop-color="#475569"/>
                   </linearGradient>
-                  <linearGradient id="outerBlueRing" x1="12" y1="8" x2="93" y2="88" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2563eb"/>
-                    <stop offset="0.5" stop-color="#0f2b5c"/>
-                    <stop offset="1" stop-color="#091b38"/>
-                  </linearGradient>
-                  <radialGradient id="centerNavyGrad" cx="52.5" cy="44" r="30" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1d4ed8"/>
-                    <stop offset="0.65" stop-color="#0f2b5c"/>
-                    <stop offset="1" stop-color="#081836"/>
+
+                  <!-- Deep Navy Core Disc -->
+                  <radialGradient id="discNavyCoreGrad" cx="62.5" cy="46" r="38" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1e4ab5"/>
+                    <stop offset="45%" stop-color="#143877"/>
+                    <stop offset="90%" stop-color="#0a1f44"/>
+                    <stop offset="100%" stop-color="#06132b"/>
                   </radialGradient>
-                  <linearGradient id="bannerBlueGrad" x1="12" y1="56" x2="93" y2="72" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2563eb"/>
-                    <stop offset="0.5" stop-color="#0f2b5c"/>
-                    <stop offset="1" stop-color="#1e40af"/>
+
+                  <!-- Luminous Sapphire Ribbon Gradient -->
+                  <linearGradient id="ribbonSapphireGrad" x1="16" y1="56" x2="109" y2="76" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#2563eb"/>
+                    <stop offset="35%" stop-color="#1d4ed8"/>
+                    <stop offset="70%" stop-color="#143877"/>
+                    <stop offset="100%" stop-color="#1e40af"/>
                   </linearGradient>
-                  <linearGradient id="tailGradLeft" x1="14" y1="70" x2="44" y2="112" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1d4ed8"/>
-                    <stop offset="1" stop-color="#091936"/>
+
+                  <!-- Ribbon Tails -->
+                  <linearGradient id="tailGradLeftSeal" x1="24" y1="68" x2="56" y2="122" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="50%" stop-color="#143877"/>
+                    <stop offset="100%" stop-color="#07152d"/>
                   </linearGradient>
-                  <linearGradient id="tailGradRight" x1="61" y1="70" x2="91" y2="112" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#1d4ed8"/>
-                    <stop offset="1" stop-color="#091936"/>
+                  <linearGradient id="tailGradRightSeal" x1="101" y1="68" x2="69" y2="122" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1e40af"/>
+                    <stop offset="50%" stop-color="#143877"/>
+                    <stop offset="100%" stop-color="#07152d"/>
                   </linearGradient>
                 </defs>
+
+                <!-- Ribbon Tails with Deep 3D Shadow -->
+                <g filter="url(#sealOuterShadow)">
+                  <path d="M 35 66 L 20 124 L 40 108 L 52 124 L 48 66 Z" fill="url(#tailGradLeftSeal)"/>
+                  <path d="M 35 66 L 20 124 L 40 108 Z" fill="rgba(255, 255, 255, 0.1)"/>
+                  <path d="M 90 66 L 105 124 L 85 108 L 73 124 L 77 66 Z" fill="url(#tailGradRightSeal)"/>
+                  <path d="M 90 66 L 105 124 L 85 108 Z" fill="rgba(0, 0, 0, 0.15)"/>
+                </g>
+
+                <!-- Chrome Beveled Rim & Core Disc -->
+                <g filter="url(#sealOuterShadow)">
+                  <circle cx="62.5" cy="48" r="44" fill="url(#chromeBevelGrad)"/>
+                  <circle cx="62.5" cy="48" r="41" fill="#0f254e"/>
+                  <circle cx="62.5" cy="48" r="39.5" fill="url(#discNavyCoreGrad)" stroke="#ffffff" stroke-width="1.8"/>
+                </g>
+
+                <!-- Inner Dotted Decorative Ring -->
+                <circle cx="62.5" cy="48" r="33.5" fill="none" stroke="rgba(255, 255, 255, 0.45)" stroke-width="1.2" stroke-dasharray="2 2.5"/>
+
+                <!-- Top Arc Text: ★ SATISFACTION ★ -->
+                <path id="arcTopSeal" d="M 32 46 A 29 29 0 0 1 93 46" fill="none"/>
+                <text font-family="'Plus Jakarta Sans', sans-serif" font-size="6.2" font-weight="800" fill="#ffffff" letter-spacing="1.2" filter="url(#badgeTextShadow)">
+                  <textPath href="#arcTopSeal" startOffset="50%" text-anchor="middle">★ SATISFACTION ★</textPath>
+                </text>
+
+                <!-- Center 100% Bold Trust Headline -->
+                <text x="62.5" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5" filter="url(#badgeTextShadow)">100%</text>
+
+                <!-- Draped Ribbon Banner Across Bottom of Disc -->
+                <g filter="url(#sealBannerShadow)">
+                  <!-- 3D Fold Undersides -->
+                  <path d="M 16 58 L 9 66 L 21 76 Z" fill="#061226"/>
+                  <path d="M 109 58 L 116 66 L 104 76 Z" fill="#061226"/>
+
+                  <!-- Main Front Ribbon with Crisp White Stroke -->
+                  <path d="M 16 58 Q 62.5 64 109 58 L 104 76 Q 62.5 82 21 76 Z" fill="url(#ribbonSapphireGrad)" stroke="#ffffff" stroke-width="1.8"/>
+                  <path d="M 18 59.5 Q 62.5 65.5 107 59.5" stroke="rgba(255, 255, 255, 0.4)" stroke-width="0.8" fill="none"/>
+
+                  <!-- Curved Banner Text with High Legibility & Zero Spillage -->
+                  <path id="ribbonPathSeal" d="M 21 70.5 Q 62.5 76.5 104 70.5" fill="none"/>
+                  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900" fill="#ffffff" filter="url(#badgeTextShadow)">
+                    <textPath href="#ribbonPathSeal" startOffset="50%" text-anchor="middle" letter-spacing="1.4">GUARANTEED</textPath>
+                  </text>
+                </g>
               </svg>
             </div>
 
