@@ -3529,22 +3529,24 @@ body.dark-theme .why-card-content .why-card-desc {
   align-items: center;
   text-align: center;
   gap: 6px;
-  background: 
-    radial-gradient(120% 85% at 20% 0%, rgba(26, 68, 142, 0.42) 0%, transparent 65%),
-    linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #061226 100%);
-  border: 1.5px solid rgba(135, 185, 255, 0.25);
+  background: rgba(11, 28, 62, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 16px;
   padding: 10px 10px;
-  box-shadow: 0 12px 30px rgba(6, 18, 40, 0.5), 0 0 18px rgba(18, 48, 105, 0.25);
+  box-shadow:
+    0 16px 40px rgba(5, 14, 32, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.32);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .about-stat-card:hover {
   transform: translateY(-3px) scale(1.02);
-  background: 
-    radial-gradient(120% 85% at 20% 0%, rgba(32, 85, 175, 0.52) 0%, transparent 65%),
-    linear-gradient(145deg, #184284 0%, #0d2754 50%, #07152d 100%);
-  border-color: rgba(145, 195, 255, 0.45);
-  box-shadow: 0 16px 36px rgba(6, 18, 40, 0.65), 0 0 24px rgba(24, 66, 132, 0.4);
+  background: rgba(11, 28, 62, 0.98);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 20px 48px rgba(5, 14, 32, 0.7),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
 } /* Image Visual Stage (Right part of Left Visual Group) */
 .about-visual-stage {
   flex: 1;
@@ -8404,14 +8406,14 @@ body.dark-theme .feature-description {
   padding-bottom: var(--section-py);
   margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background-color: transparent;
 }
 .stories-container {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 4px;
 }
 .stories-header {
   position: relative;
@@ -8439,12 +8441,13 @@ body.dark-theme .feature-description {
 }
 .stories-nav-controls {
   position: absolute;
-  right: 0;
+  right: 6px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 8px;
 }
 .stories-nav-btn {
   width: 46px;
