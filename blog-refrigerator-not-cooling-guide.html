@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -135,7 +135,10 @@
         
         <!-- Breadcrumbs -->
         <nav class="article-breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Home</span>
+          </a>
           <span class="crumb-sep">/</span>
           <a href="blog.html">Blog Guides</a>
           <span class="crumb-sep">/</span>
@@ -146,49 +149,21 @@
 
         <!-- Article Header Card -->
         <header class="article-post-header">
-          <div class="article-header-meta-top">
-            <span class="blog-category-badge category-fridge">Refrigerator &amp; Cooling</span>
-            <span class="blog-read-time-pill" style="background:#1e3a8a;">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span>7 min diagnostic read</span>
-            </span>
-            <span style="font-size:12.5px; color:var(--text-sub); font-weight:600;">Updated: September 11, 2026</span>
-          </div>
-
           <h1 class="article-post-title">
-            Refrigerator Not Cooling But Freezer Works? Master Technician Diagnosis Guide
+            Refrigerator Not Cooling But Freezer Works? <span class="highlight-navy">Master Technician Diagnosis</span> Guide
           </h1>
 
           <p class="article-post-lead">
             It is one of the most frustrating household emergencies in Dubai: you open your freezer to find ice cream frozen solid, but your milk, berries, and gourmet cheeses in the upper refrigerator compartment are lukewarm and rapidly spoiling. Over 85% of Dubai homeowners assume the compressor is broken, but the actual cause is almost always an airflow restriction or defrost circuit failure. Here is how our diagnostic team triages the problem.
           </p>
-
-          <div class="article-byline-bar">
-            <div class="article-author-cluster">
-              <img src="assets/avatar3.jpg" alt="Lead Refrigeration Technician" class="author-avatar-img">
-              <div>
-                <span class="author-meta-name">Eng. David Vance</span>
-                <span class="author-meta-title">Lead Refrigeration Specialist, ApexFix Luxury Diagnostics</span>
-              </div>
-            </div>
-
-            <div class="article-share-strip">
-              <span class="share-strip-label">Share:</span>
-              <a href="https://wa.me/?text=Refrigerator%20Not%20Cooling%20Freezer%20Works%20Guide" target="_blank" rel="noopener" class="share-pill-btn">
-                <span>WhatsApp</span>
-              </a>
-              <a href="mailto:?subject=Refrigerator%20Diagnostic%20Guide" class="share-pill-btn">
-                <span>Email</span>
-              </a>
-            </div>
-          </div>
         </header>
 
         <!-- Featured Media Hero -->
         <div class="article-featured-media-card">
           <img src="assets/service-fridge-repair.jpg" alt="ApexFix master appliance technician testing evaporator fan and defrost circuit in French Door refrigerator">
           <div class="article-media-caption">
-            <span>Testing defrost bi-metal continuity and inverter compressor PWM signals on a Sub-Zero / Samsung French Door refrigerator in Palm Jumeirah.</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <span>Testing defrost bi-metal continuity and inverter compressor PWM signals on a French Door refrigerator</span>
           </div>
         </div>
 
@@ -213,7 +188,7 @@
               </ul>
             </div>
 
-            <h2>How Modern Frost-Free Refrigerators Actually Manufacture Cold Air</h2>
+            <h2 id="how-it-works">How Modern Frost-Free Refrigerators <span class="highlight-navy">Actually Produce Cold Air</span></h2>
             <p>
               In over 90% of contemporary free-standing and integrated refrigerators (including Bosch, Siemens, LG, Samsung, Whirlpool, Sub-Zero, and Hitachi), there is only <strong>one evaporator cooling coil</strong>, and it is located hidden behind the back wall of the freezer compartment.
             </p>
@@ -221,7 +196,7 @@
               The fresh food refrigerator compartment does not generate its own cold. Instead, a motorized centrifugal or axial evaporator fan blows frigid -18°C air upwards through a sealed polystyrene duct into the fresh food cavity. A motorized butterfly flap called the <strong>air damper assembly</strong> opens and closes based on readings from a temperature thermistor sensor inside the fridge. When this airflow highway is choked by ice, a dead fan, or a stuck damper, the refrigerator section warms up while the freezer remains cold.
             </p>
 
-            <h2>Diagnosis #1: Frosted-Over Evaporator Coils (Defrost System Failure)</h2>
+            <h2 id="defrost-failure">Diagnosis #1: Frosted-Over Evaporator Coils <span class="highlight-navy">(Defrost Circuit Failure)</span></h2>
             <p>
               Every time you open your freezer door in Dubai, humid room air enters and condenses as frost on the -25°C aluminum evaporator tubes. To prevent this frost from choking the airflow, every modern refrigerator has an automated defrost cycle that turns on every 8 to 12 hours.
             </p>
@@ -240,7 +215,7 @@
               <span>If you see heavy ice on the back wall of your freezer, NEVER use a knife, screwdriver, or ice pick to chip it away. Evaporator coil tubes are made of razor-thin 0.5mm aluminum. A single pinhole puncture vents flammable isobutane (R600a) refrigerant gas, destroys the sealed cooling system, and costs over AED 2,200 to repair.</span>
             </div>
 
-            <h2>Diagnosis #2: Seized or Squealing Evaporator Fan Motor</h2>
+            <h2 id="fan-failure">Diagnosis #2: Seized or Squealing <span class="highlight-navy">Evaporator Circulation Fan</span></h2>
             <p>
               The evaporator fan motor is the heart of internal air distribution. Located directly above the cooling coil, it draws air across the cold fins and pushes it into the delivery ducts.
             </p>
@@ -248,7 +223,7 @@
               <strong>How to Test It in 30 Seconds:</strong> Open the freezer door. Most refrigerators have a door switch that cuts power to the fan when the door opens. Locate the small plastic plunger switch (or magnetic reed switch on modern French door models) and press it with your finger. You should hear the fan spin up and feel strong air blowing from the back vents. If you hear silence, a loud buzzing vibration, or an intermittent squeaking chirping noise, the fan motor bearings have seized or ice buildup is jamming the plastic fan blades.
             </p>
 
-            <h2>Diagnosis #3: Stuck or Broken Air Damper Flap Assembly</h2>
+            <h2 id="damper-failure">Diagnosis #3: Stuck or Broken <span class="highlight-navy">Air Damper Flap Assembly</span></h2>
             <p>
               The air damper unit is positioned in the upper-rear corner of the refrigerator compartment, often concealed inside the central LED lighting and air tower housing. It contains a tiny 12V DC stepper motor and a motorized foam-sealed flap.
             </p>
@@ -257,7 +232,7 @@
             </p>
 
             <!-- Diagnostic Matrix Table -->
-            <h2>Refrigerator "Warm Fridge / Cold Freezer" Diagnostic Matrix</h2>
+            <h2 id="diagnostic-matrix">Refrigerator "Warm Fridge / Cold Freezer" <span class="highlight-navy">Diagnostic Matrix</span></h2>
             <div class="article-table-container">
               <table class="article-diagnostic-table">
                 <thead>
@@ -309,7 +284,30 @@
               </table>
             </div>
 
-            <h2>Diagnosis #4: Blocked Defrost Drain &amp; Ice Under Crispers</h2>
+            <!-- Emergency CTA Dispatch Banner -->
+            <div class="article-cta-banner">
+              <div class="article-cta-banner-content">
+                <div class="article-cta-badge">
+                  <span class="status-pulse-dot"></span>
+                  <span>Emergency Cold Recovery &bull; Same-Day Dispatch</span>
+                </div>
+                <h3 class="article-cta-title">Fridge Warm &amp; Groceries Spoiling Right Now?</h3>
+                <p class="article-cta-desc">
+                  Our certified refrigeration technicians arrive within hours across Dubai with OEM fans, defrost sensors, heaters, and digital pressure gauges.
+                </p>
+              </div>
+              <div class="article-cta-actions">
+                <a href="tel:+971508867234" class="article-cta-call-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+                  <span>Call +971 50 886 7234</span>
+                </a>
+                <button class="article-cta-book-btn book-trigger" data-service="Refrigerator Repair">
+                  Book Priority Fridge Repair
+                </button>
+              </div>
+            </div>
+
+            <h2 id="drain-blockage">Diagnosis #4: Blocked Defrost Drain &amp; <span class="highlight-navy">Ice Under Crispers</span></h2>
             <p>
               Have you noticed sheets of thick clear ice accumulating beneath your lower vegetable crisper drawers, or water trickling out onto your kitchen floor?
             </p>
@@ -317,7 +315,7 @@
               During every defrost cycle, several hundred milliliters of melted frost must exit down a 1/2-inch plastic drain hole into the compressor drip tray. Over time, food debris, algae slime, and mineral dust wash into the drain hole and freeze into an ice plug. With nowhere to drain, melted water overflows the metal pan, cascades into the bottom of the fresh food compartment, and freezes solid under your crispers. Eventually, the ice builds up so high that it blocks the lower air return duct, suffocating airflow.
             </p>
 
-            <h2>Diagnosis #5: Inverter Linear Compressor Faults &amp; Control PCB Glitches</h2>
+            <h2 id="inverter-faults">Diagnosis #5: Inverter Linear Compressor Faults &amp; <span class="highlight-navy">Control PCB Glitches</span></h2>
             <p>
               In modern smart refrigerators from LG (Inverter Linear Compressor) and Samsung (Digital Inverter Technology), the compressor does not simply click on and off; it modulates its motor speed between 1,200 and 3,600 RPM based on heat load.
             </p>
@@ -331,7 +329,7 @@
               <span class="quote-author-tag">— Eng. David Vance, Master Refrigeration Diagnostic Specialist</span>
             </blockquote>
 
-            <h2>Emergency Food Safety Protocol (The First 4 Hours)</h2>
+            <h2 id="food-safety">Emergency Food Safety Protocol <span class="highlight-navy">(The First 4 Hours)</span></h2>
             <p>
               According to UAE food safety guidelines, perishable foods (dairy, raw meats, cooked leftovers, mayonnaise) enter the food danger zone when kept above 4°C for more than two hours. Follow this urgent triage protocol:
             </p>
