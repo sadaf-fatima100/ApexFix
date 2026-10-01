@@ -481,9 +481,9 @@ body.dark-theme .navbar.is-scrolled {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ffffff;
-  color: #065f46;
-  border: 1.5px solid rgba(16, 185, 129, 0.45);
+  background-color: rgba(5, 150, 105, 0.05);
+  color: #047857;
+  border: 1.5px solid #059669;
   font-family: inherit;
   font-size: 14.5px;
   font-weight: 700;
@@ -493,7 +493,7 @@ body.dark-theme .navbar.is-scrolled {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.12);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   white-space: nowrap;
@@ -535,14 +535,14 @@ body.dark-theme .navbar.is-scrolled {
 @keyframes callButtonGreenPulseLoop {
   0%,
   100% {
-    border-color: rgba(16, 185, 129, 0.35);
-    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.1);
+    border-color: #059669;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12);
   }
   50% {
-    border-color: rgba(16, 185, 129, 0.9);
+    border-color: #10b981;
     box-shadow:
-      0 6px 22px rgba(16, 185, 129, 0.28),
-      0 0 0 5px rgba(16, 185, 129, 0.1);
+      0 6px 20px rgba(5, 150, 105, 0.25),
+      0 0 0 4px rgba(16, 185, 129, 0.12);
   }
 } /* Keyframes: Secondary Navy Subtle Pulse Loop */
 @keyframes secondaryNavyPulseLoop {
@@ -3031,7 +3031,7 @@ body.dark-theme .why-card-content .why-card-desc {
   width: 100%;
 } /* Process Section Header (Left-aligned above the left card) */
 .process-section-header {
-  margin-bottom: 24px;
+  margin-bottom: clamp(32px, 3.5vw, 48px);
 }
 .process-grid-title {
   font-family: var(--font-heading);
@@ -3221,7 +3221,7 @@ body.dark-theme .why-card-content .why-card-desc {
   justify-content: center;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: #fbfcfe;
   border: 1.5px solid rgba(15, 43, 92, 0.08);
   border-radius: 24px;
@@ -3231,7 +3231,7 @@ body.dark-theme .why-card-content .why-card-desc {
 .process-steps-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px 130px;
+  gap: 14px 150px;
   align-content: center;
   flex: 1;
   position: relative;
@@ -3269,11 +3269,11 @@ body.dark-theme .why-card-content .why-card-desc {
 }
 .tech-glow-circle {
   position: absolute;
-  top: 45%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -3285,11 +3285,11 @@ body.dark-theme .why-card-content .why-card-desc {
 }
 .tech-radar-ring {
   position: absolute;
-  top: 45%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
-  width: 195px;
-  height: 195px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   border: 1.5px dashed rgba(15, 43, 92, 0.2);
   z-index: 2;
@@ -3304,13 +3304,13 @@ body.dark-theme .why-card-content .why-card-desc {
   }
 }
 .tech-showcase-img {
-  height: 355px;
+  height: 485px;
   width: auto;
   object-fit: contain;
   object-position: bottom center;
   position: relative;
   z-index: 3;
-  filter: drop-shadow(0 14px 28px rgba(15, 43, 92, 0.22));
+  filter: drop-shadow(0 18px 36px rgba(15, 43, 92, 0.24));
   flex-shrink: 0;
   display: block;
   vertical-align: bottom;
@@ -3852,8 +3852,8 @@ body.dark-theme .why-card-content .why-card-desc {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ffffff;
-  color: #065f46;
+  background-color: rgba(5, 150, 105, 0.05);
+  color: #047857;
   font-family: inherit;
   font-size: 13.5px;
   font-weight: 700;
@@ -3861,8 +3861,8 @@ body.dark-theme .why-card-content .why-card-desc {
   padding: 12.5px 24px;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  border: 1.5px solid rgba(16, 185, 129, 0.45);
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.12);
+  border: 1.5px solid #059669;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.12);
   cursor: pointer;
   position: relative;
   overflow: hidden;
