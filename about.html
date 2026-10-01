@@ -110,30 +110,30 @@
 
     /* Common Card Structure */
     .mission-card {
-      border-radius: 28px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
       height: 100%;
       box-sizing: border-box;
       position: relative;
       overflow: hidden;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      padding: clamp(28px, 3vw, 36px) clamp(22px, 2.4vw, 30px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .mission-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-5px);
     }
 
     /* Card 1 & Card 3: Light Clean Surface */
     .mission-card-light {
       background: #ffffff;
       border: 1.5px solid rgba(15, 43, 92, 0.08);
-      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.05);
-      padding: clamp(24px, 2.4vw, 32px) clamp(20px, 2vw, 26px) clamp(22px, 2vw, 26px);
+      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.04);
     }
     .mission-card-light:hover {
-      box-shadow: 0 20px 48px -10px rgba(15, 43, 92, 0.12);
-      border-color: rgba(15, 43, 92, 0.18);
+      box-shadow: 0 18px 44px -8px rgba(15, 43, 92, 0.12);
+      border-color: rgba(20, 56, 119, 0.22);
     }
     body.dark-theme .mission-card-light {
       background: #181924;
@@ -141,210 +141,104 @@
       box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
     }
     body.dark-theme .mission-card-light:hover {
-      border-color: rgba(96, 165, 250, 0.3);
+      border-color: rgba(96, 165, 250, 0.35);
       box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
     }
 
-    /* Card 2: Featured ApexFix Navy Hero Card */
+    /* Card 2: Featured ApexFix Sapphire Navy Hero Card (Exact Website Color) */
     .mission-card-featured {
       background: 
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
-      border: 1px solid rgba(125, 175, 245, 0.25);
-      box-shadow: 0 22px 55px -10px rgba(6, 18, 40, 0.45);
-      padding: clamp(24px, 2.4vw, 32px) clamp(20px, 2vw, 26px) clamp(22px, 2vw, 26px);
+        radial-gradient(120% 85% at 20% 0%, rgba(29, 78, 216, 0.35) 0%, transparent 70%),
+        linear-gradient(145deg, #143877 0%, #0f2b5c 50%, #081a38 100%);
+      border: 1.5px solid rgba(125, 175, 245, 0.35);
+      box-shadow: 0 18px 45px -8px rgba(15, 43, 92, 0.38);
       color: #ffffff;
     }
     .mission-card-featured:hover {
-      box-shadow: 0 30px 70px -10px rgba(6, 18, 40, 0.6);
-      border-color: rgba(125, 175, 245, 0.45);
+      box-shadow: 0 26px 60px -8px rgba(15, 43, 92, 0.52);
+      border-color: rgba(147, 197, 253, 0.6);
     }
     body.dark-theme .mission-card-featured {
       background: 
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.35) 0%, transparent 68%),
-        linear-gradient(145deg, #102d5c 0%, #07152b 50%, #030a16 100%);
-      border-color: rgba(125, 175, 245, 0.25);
+        radial-gradient(120% 85% at 20% 0%, rgba(29, 78, 216, 0.25) 0%, transparent 70%),
+        linear-gradient(145deg, #102d62 0%, #0a1e45 50%, #061226 100%);
+      border-color: rgba(96, 165, 250, 0.35);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
     }
 
-    /* Top Row in Light Cards */
-    .mcard-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    /* Pill Badges */
-    .mcard-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .mcard-pill-light {
-      background: rgba(15, 43, 92, 0.06);
-      color: var(--brand-accent, #0f2b5c);
-      border: 1px solid rgba(15, 43, 92, 0.1);
-    }
-    body.dark-theme .mcard-pill-light {
-      background: rgba(255, 255, 255, 0.07);
-      color: #93c5fd;
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-    .mcard-pill-dark {
-      background: rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Circular Arrow Buttons */
-    .mcard-arrow-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
+    /* Top Left Squarish Icon Box (Reference media_1790832483982.png) */
+    .mcard-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      border: none;
+      margin-bottom: 22px;
       flex-shrink: 0;
+      transition: all 0.25s ease;
     }
-    .mcard-arrow-light {
-      background: #f1f4f9;
-      color: var(--brand-accent, #0f2b5c);
-      border: 1px solid rgba(15, 43, 92, 0.08);
+    .mcard-icon-light {
+      background: rgba(20, 56, 119, 0.08);
+      color: var(--brand-accent, #143877);
+      border: 1px solid rgba(20, 56, 119, 0.12);
     }
-    .mission-card-light:hover .mcard-arrow-light,
-    .mcard-arrow-light:hover {
-      background: var(--btn-gradient-primary);
+    .mission-card-light:hover .mcard-icon-light {
+      background: var(--brand-accent, #143877);
       color: #ffffff;
-      transform: rotate(45deg);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(20, 56, 119, 0.25);
     }
-    body.dark-theme .mcard-arrow-light {
-      background: rgba(255, 255, 255, 0.08);
-      color: #e2e8f0;
-      border-color: rgba(255, 255, 255, 0.1);
+    body.dark-theme .mcard-icon-light {
+      background: rgba(96, 165, 250, 0.12);
+      color: #60a5fa;
+      border-color: rgba(96, 165, 250, 0.22);
     }
-    body.dark-theme .mission-card-light:hover .mcard-arrow-light {
-      background: var(--btn-gradient-primary);
+    body.dark-theme .mission-card-light:hover .mcard-icon-light {
+      background: #2563eb;
       color: #ffffff;
-    }
-    .mcard-arrow-featured {
-      background: #ffffff;
-      color: var(--brand-accent, #0f2b5c);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-    }
-    .mcard-arrow-featured:hover {
-      background: #f1f5f9;
-      color: var(--brand-accent-hover, #183f80);
-      transform: rotate(45deg) scale(1.08);
     }
 
-    /* Content Area */
-    .mcard-body {
-      margin-bottom: 22px;
+    .mcard-icon-featured {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
+    .mission-card-featured:hover .mcard-icon-featured {
+      background: #ffffff;
+      color: var(--brand-accent, #143877);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Card Headings */
     .mcard-title {
-      font-size: clamp(1.2rem, 1.4vw, 1.35rem);
+      font-size: clamp(1.22rem, 1.4vw, 1.38rem);
       font-weight: 800;
       line-height: 1.3;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.02em;
       color: var(--text-dark, #121217);
-      margin: 0 0 10px;
+      margin: 0 0 12px 0;
     }
     body.dark-theme .mcard-title { color: #ffffff; }
     .mcard-title-dark {
       color: #ffffff;
     }
+
+    /* Card Paragraphs */
     .mcard-desc {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 500;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text-sub, #5a5f70);
-      margin: 0 0 18px;
+      margin: 0;
     }
     body.dark-theme .mcard-desc { color: #94a3b8; }
     .mcard-desc-dark {
-      color: rgba(255, 255, 255, 0.82);
-    }
-
-    /* Checklist */
-    .mcard-checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-    .mcard-checklist li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--text-dark, #1e293b);
-    }
-    body.dark-theme .mcard-checklist li { color: #e2e8f0; }
-    .mcard-checklist-dark li {
-      color: #f1f5f9;
-    }
-    .mcard-check {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(15, 43, 92, 0.08);
-      color: var(--brand-accent, #0f2b5c);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-    body.dark-theme .mcard-check {
-      background: rgba(96, 165, 250, 0.15);
-      color: #60a5fa;
-    }
-    .mcard-check-dark {
-      background: rgba(255, 255, 255, 0.15);
-      color: #ffffff;
-    }
-
-    /* Card 1 & 3: Bottom Rounded Image */
-    .mcard-bottom-img-wrap {
-      width: 100%;
-      height: 215px;
-      border-radius: 18px;
-      overflow: hidden;
-      margin-top: auto;
-      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.08);
-    }
-    body.dark-theme .mcard-bottom-img-wrap {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-    .mcard-bottom-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .mission-card:hover .mcard-bottom-img-wrap img {
-      transform: scale(1.05);
-    }
-
-    /* Card 2: Featured Navy Card Bottom Image Accent */
-    .mission-card-featured .mcard-bottom-img-wrap {
-      border: 1px solid rgba(125, 175, 245, 0.25);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      color: rgba(255, 255, 255, 0.88);
     }
 
 
@@ -397,12 +291,13 @@
       transform: translateY(-3px);
     }
 
-    /* Box 1: Action Repair Photo (Top-Left) */
+    /* Box 1: Action Repair Photo (Top-Left) - Tall */
     .mosaic-img-box {
-      height: 250px;
+      height: 330px;
       box-shadow: 0 10px 30px rgba(15, 43, 92, 0.08);
       border: 1px solid rgba(15, 43, 92, 0.08);
       background: #e2e8f0;
+      box-sizing: border-box;
     }
     body.dark-theme .mosaic-img-box {
       border-color: rgba(255, 255, 255, 0.08);
@@ -421,54 +316,62 @@
       transform: scale(1.035);
     }
 
-    /* Box 2: Warm Accent / Gold Stat Card (Top-Right) */
+    /* Box 2: Navy/Theme-Aligned Stat Card (Top-Right) - Strictly No Yellow */
     .mosaic-stat-card {
-      background: linear-gradient(145deg, #fef3c7 0%, #fde68a 100%);
-      border: 1.5px solid rgba(245, 158, 11, 0.28);
-      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.14);
-      padding: 22px 20px;
-      min-height: 145px;
+      background: linear-gradient(135deg, #f4f8fe 0%, #eaf2fb 100%);
+      border: 1.5px solid rgba(20, 56, 119, 0.2);
+      box-shadow: 0 8px 24px rgba(20, 56, 119, 0.08);
+      padding: 18px 20px;
+      height: 114px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    body.dark-theme .mosaic-stat-card {
+      background: linear-gradient(135deg, #181924 0%, #1c2033 100%);
+      border-color: rgba(96, 165, 250, 0.2);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+    }
+    .mosaic-stat-icon-wrap {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 14px;
+      background: rgba(20, 56, 119, 0.09);
+      color: var(--brand-accent, #143877);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    body.dark-theme .mosaic-stat-icon-wrap {
+      background: rgba(96, 165, 250, 0.16);
+      color: #60a5fa;
+    }
+    .mosaic-stat-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    body.dark-theme .mosaic-stat-card {
-      background: #181f2f;
-      border-color: rgba(251, 191, 36, 0.3);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-    }
-    .mosaic-stat-icon-wrap {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: rgba(180, 83, 9, 0.12);
-      color: #92400e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-    body.dark-theme .mosaic-stat-icon-wrap {
-      background: rgba(251, 191, 36, 0.16);
-      color: #fbbf24;
-    }
     .mosaic-stat-number {
-      font-size: 34px;
+      font-size: 28px;
       font-weight: 800;
-      line-height: 1;
+      line-height: 1.1;
       letter-spacing: -0.025em;
       font-family: var(--font-family);
-      color: #78350f;
+      color: var(--brand-accent, #143877);
     }
     body.dark-theme .mosaic-stat-number {
-      color: #fbbf24;
+      color: #60a5fa;
     }
     .mosaic-stat-label {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       line-height: 1.3;
-      color: #92400e;
-      margin-top: 5px;
+      color: var(--text-dark, #121217);
+      margin-top: 3px;
       letter-spacing: -0.01em;
     }
     body.dark-theme .mosaic-stat-label {
@@ -480,12 +383,13 @@
       background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 20px;
-      padding: 24px 22px;
+      padding: 20px 20px;
       color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 165px;
+      height: 134px;
+      box-sizing: border-box;
       box-shadow: 0 12px 32px rgba(15, 43, 92, 0.22);
     }
     body.dark-theme .mosaic-navy-card {
@@ -494,9 +398,9 @@
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
     }
     .mosaic-navy-title {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
-      line-height: 1.35;
+      line-height: 1.32;
       color: #ffffff;
       margin: 0;
       letter-spacing: -0.015em;
@@ -505,23 +409,24 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
       color: #93c5fd;
       letter-spacing: 0.02em;
-      margin-top: 14px;
+      margin-top: 8px;
     }
     .mosaic-navy-dash {
       font-weight: 800;
       color: #60a5fa;
     }
 
-    /* Box 4: Standing Master Technician Photo (Bottom-Right) */
+    /* Box 4: Standing Master Technician Photo (Bottom-Right) - Tall */
     .mosaic-img-tall-box {
-      height: 270px;
+      height: 350px;
       box-shadow: 0 12px 32px rgba(15, 43, 92, 0.1);
       border: 1px solid rgba(15, 43, 92, 0.08);
       background: #e2e8f0;
+      box-sizing: border-box;
     }
     body.dark-theme .mosaic-img-tall-box {
       border-color: rgba(255, 255, 255, 0.08);
@@ -643,24 +548,34 @@
     }
     @media (max-width: 576px) {
       .mosaic-img-box {
-        height: 200px;
+        height: 240px;
       }
       .mosaic-navy-card {
-        min-height: 140px;
-        padding: 18px 16px;
+        height: 120px;
+        padding: 14px 14px;
       }
       .mosaic-navy-title {
-        font-size: 15px;
+        font-size: 14px;
       }
       .mosaic-stat-card {
-        min-height: 120px;
-        padding: 16px 14px;
+        height: 100px;
+        padding: 12px 14px;
+        gap: 12px;
+      }
+      .mosaic-stat-icon-wrap {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 10px;
       }
       .mosaic-stat-number {
-        font-size: 28px;
+        font-size: 22px;
+      }
+      .mosaic-stat-label {
+        font-size: 11px;
       }
       .mosaic-img-tall-box {
-        height: 220px;
+        height: 260px;
       }
       .heritage-action-wrap {
         flex-direction: column;
@@ -680,26 +595,39 @@
         gap: 10px;
       }
       .mosaic-img-box {
-        height: 160px;
+        height: 180px;
         border-radius: 14px;
       }
       .mosaic-img-tall-box {
-        height: 180px;
+        height: 205px;
         border-radius: 14px;
       }
       .mosaic-navy-card,
       .mosaic-stat-card {
         border-radius: 14px;
-        padding: 14px 12px;
+      }
+      .mosaic-navy-card {
+        height: 110px;
+        padding: 10px 10px;
+      }
+      .mosaic-stat-card {
+        height: 85px;
+        padding: 10px 10px;
+        gap: 8px;
+      }
+      .mosaic-stat-icon-wrap {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
       }
       .mosaic-navy-title {
-        font-size: 13.5px;
+        font-size: 12.5px;
       }
       .mosaic-stat-number {
-        font-size: 24px;
+        font-size: 19px;
       }
       .mosaic-stat-label {
-        font-size: 11px;
+        font-size: 10px;
       }
     }
 
@@ -997,379 +925,364 @@
     }
 
     /* ═══════════════════════════════════════════════════════
-       SECTION: WHY CHOOSE APEXFIX (QUALITY & STANDARDS)
-       Exact Match of User Reference media_1790595189211.png
-       (Full-Width Overlapping Stage with Smooth Rounded Geometry - Zero White Border)
+       SECTION: WHY CHOOSE APEXFIX (3-COLUMN BENTO GRID)
+       Matching Reference media_1790832540015.png
        ═══════════════════════════════════════════════════════ */
-    .about-standards-section {
-      padding: 0;
-      margin: clamp(40px, 4.5vw, 60px) -48px;
-      width: calc(100% + 96px);
+    .about-why-choose {
+      padding: clamp(48px, 5vw, 76px) 0;
       position: relative;
-      background: 
-        radial-gradient(120% 85% at 20% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 65%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #061226 100%);
-      overflow: hidden;
-    }
-    body.dark-theme .about-standards-section {
-      background:
-        radial-gradient(120% 85% at 20% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 65%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #061226 100%);
-    }
-
-    /* Standards Stage Container (Full-bleed edge-to-edge) */
-    .standards-stage {
-      position: relative;
-      width: 100%;
-      min-height: 520px;
-      display: flex;
-      align-items: stretch;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Left Navy Content Area (Full background to absolute left edge) */
-    .standards-card {
-      width: 52%;
       background: transparent;
-      border-radius: 0;
-      padding: clamp(48px, 5vw, 68px) clamp(28px, 3vw, 44px);
-      padding-left: clamp(48px, 5.5vw, 84px);
-      position: relative;
-      z-index: 1;
-      box-shadow: none;
-      border: none;
-    }
-    body.dark-theme .standards-card {
-      background: transparent;
-      border: none;
-      box-shadow: none;
     }
 
-    /* Eyebrow Row with horizontal accent line */
-    .standards-eyebrow-row {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      position: relative;
-      z-index: 1;
+    .why-choose-header {
+      text-align: center;
+      max-width: 840px;
+      margin: 0 auto clamp(32px, 3.8vw, 46px);
     }
-    .standards-eyebrow-text {
-      font-size: 11.5px;
+    .why-choose-h2 {
+      font-size: var(--text-h2, clamp(1.85rem, 2.8vw, 2.5rem));
       font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    .standards-eyebrow-line {
-      width: 38px;
-      height: 2.5px;
-      background: rgba(255, 255, 255, 0.4);
-      border-radius: 2px;
-    }
-
-    /* Heading H2 */
-    .standards-h2 {
-      font-size: clamp(1.75rem, 2.4vw, 2.25rem);
-      font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.22;
       letter-spacing: -0.025em;
-      color: #ffffff;
-      margin: 0 0 18px 0;
-      position: relative;
-      z-index: 1;
-      max-width: 500px;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
+      color: var(--text-dark, #121217);
+      margin: 0 0 14px;
     }
-    .standards-h2 .highlight-blue {
+    body.dark-theme .why-choose-h2 {
       color: #ffffff;
+    }
+    .why-choose-h2 .highlight-navy {
+      color: var(--brand-accent, #143877);
+    }
+    body.dark-theme .why-choose-h2 .highlight-navy {
+      color: #60a5fa;
+    }
+    .why-choose-lead {
+      font-size: 15.5px;
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--text-sub, #5a5f70);
+      margin: 0 auto;
+      max-width: 720px;
+    }
+    body.dark-theme .why-choose-lead {
+      color: #94a3b8;
     }
 
-    /* Feature Items List */
-    .standards-items-list {
+    /* 3-Column Bento Grid */
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    /* Column 1: Left Primary Navy Card */
+    .why-card-main {
+      background: linear-gradient(155deg, #143877 0%, #0c2452 55%, #07152e 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      padding: clamp(28px, 3vw, 36px);
+      color: #ffffff;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      max-width: 500px;
-      position: relative;
-      z-index: 1;
+      justify-content: space-between;
+      box-shadow: 0 16px 40px rgba(15, 43, 92, 0.2);
+      min-height: 480px;
+      box-sizing: border-box;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     }
-    .standards-item {
+    .why-card-main:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(15, 43, 92, 0.28);
+    }
+    body.dark-theme .why-card-main {
+      background: linear-gradient(155deg, #0e244d 0%, #09172e 60%, #060e1d 100%);
+      border-color: rgba(96, 165, 250, 0.2);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+    }
+    body.dark-theme .why-card-main:hover {
+      box-shadow: 0 22px 52px rgba(0, 0, 0, 0.7);
+    }
+
+    .why-card-title {
+      font-size: clamp(20px, 1.9vw, 24px);
+      font-weight: 700;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin: 0 0 12px;
+    }
+    .why-card-desc {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.62;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0;
+    }
+
+    /* Metrics Row */
+    .why-card-metrics {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
+      gap: clamp(24px, 2.5vw, 40px);
+      margin: 28px 0 26px;
     }
-    .standards-item-num {
-      width: 38px;
-      height: 38px;
-      min-width: 38px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
+    .why-metric-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
+      flex-direction: column;
+    }
+    .why-metric-number {
+      font-size: clamp(30px, 2.4vw, 36px);
       font-weight: 800;
       color: #ffffff;
       line-height: 1;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      letter-spacing: -0.025em;
+      font-family: var(--font-family);
     }
-    .standards-item-content {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .standards-item-title {
-      font-size: 15.5px;
-      font-weight: 700;
-      color: #ffffff;
-      margin: 0;
-      line-height: 1.3;
-    }
-    .standards-item-desc {
-      font-size: 13px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.78);
-      line-height: 1.45;
-      margin: 0;
+    .why-metric-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.72);
+      margin-top: 6px;
+      letter-spacing: -0.01em;
     }
 
-    /* Right Overlapping Photo Area - Flush with Right Edge, Curved on Left */
-    .standards-photo-card {
-      position: absolute;
-      top: 0;
-      left: 47%;
-      right: 0;
-      bottom: 0;
-      border-radius: 36px 0 0 36px;
+    /* Action CTA Button (White Pill with navy text & arrow, matching reference) */
+    .why-card-cta {
+      background: #ffffff;
+      color: var(--brand-accent, #143877);
+      border: none;
+      border-radius: 9999px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: var(--font-family);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      align-self: flex-start;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+    .why-card-cta:hover {
+      background: #e6efff;
+      color: #0c2452;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .why-card-cta svg {
+      transition: transform 0.25s ease;
+    }
+    .why-card-cta:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Column 2: Center Image Card (Tall Portrait) */
+    .why-center-card {
+      border-radius: 22px;
       overflow: hidden;
-      z-index: 2;
-      box-shadow: -10px 0 36px rgba(0, 0, 0, 0.24);
-      border: none !important;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(15, 43, 92, 0.08);
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
+      background: #e2e8f0;
+      height: 100%;
+      min-height: 480px;
+      box-sizing: border-box;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .why-center-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 44px rgba(15, 43, 92, 0.14);
+    }
+    body.dark-theme .why-center-card {
+      border-color: rgba(255, 255, 255, 0.08);
       background: #181924;
-      transition: box-shadow 0.4s ease;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
     }
-    body.dark-theme .standards-photo-card {
-      border: none !important;
-      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
-    }
-    .standards-photo-card:hover {
-      box-shadow: -14px 0 44px rgba(0, 0, 0, 0.32);
-    }
-    .standards-photo-img {
+    .why-center-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
       display: block;
-      border: none !important;
-      border-radius: 36px 0 0 36px;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .standards-photo-card:hover .standards-photo-img {
-      transform: scale(1.025);
+    .why-center-card:hover .why-center-img {
+      transform: scale(1.035);
     }
 
-    /* Floating Badge on Top-Right of Photo (Matching Reference) */
-    .standards-float-topright {
-      position: absolute;
-      top: 24px;
-      right: clamp(24px, 3.5vw, 48px);
-      z-index: 5;
+    /* Column 3: Right Stacked Column */
+    .why-right-stack {
       display: flex;
-      align-items: stretch;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
-      border: 1px solid rgba(15, 43, 92, 0.08);
-      transition: transform 0.25s ease;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+      box-sizing: border-box;
     }
-    .standards-float-topright:hover {
-      transform: translateY(-2px);
-    }
-    body.dark-theme .standards-float-topright {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6);
-    }
-    .standards-float-icon-box {
-      width: 50px;
-      min-width: 50px;
-      background: var(--btn-gradient-primary);
+
+    /* Top Card of Column 3 */
+    .why-right-card {
+      background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 24px 22px;
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 8px rgba(15, 43, 92, 0.25);
-    }
-    body.dark-theme .standards-float-icon-box {
-      background: var(--btn-gradient-primary);
-      box-shadow: 0 2px 8px rgba(6, 18, 40, 0.45);
-    }
-    .standards-float-text-box {
-      padding: 10px 18px;
+      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.14);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 2px;
+      box-sizing: border-box;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     }
-    .standards-float-title {
+    .why-right-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(15, 43, 92, 0.22);
+    }
+    body.dark-theme .why-right-card {
+      background: linear-gradient(145deg, #0e2753 0%, #081734 100%);
+      border-color: rgba(96, 165, 250, 0.2);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+    .why-right-desc {
       font-size: 13.5px;
+      font-weight: 500;
+      line-height: 1.58;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 14px;
+    }
+    .why-right-checkpoints {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .why-checkpoint-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
       font-weight: 700;
-      color: var(--text-dark, #121217);
-      line-height: 1.2;
+      color: #93c5fd;
+      letter-spacing: 0.01em;
     }
-    body.dark-theme .standards-float-title {
-      color: #ffffff;
-    }
-    .standards-float-sub {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--brand-accent, #0f2b5c);
-      line-height: 1.2;
-    }
-    body.dark-theme .standards-float-sub {
+    .why-checkpoint-item svg {
       color: #60a5fa;
+      flex-shrink: 0;
     }
 
-    /* Responsive Breakdown */
-    @media (max-width: 1240px) {
-      .about-standards-section {
-        margin-left: -24px;
-        margin-right: -24px;
-        width: calc(100% + 48px);
-      }
+    /* Bottom Image of Column 3 */
+    .why-right-img-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      flex: 1;
+      min-height: 230px;
+      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.08);
+      border: 1.5px solid rgba(15, 43, 92, 0.08);
+      background: #e2e8f0;
+      position: relative;
+      box-sizing: border-box;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     }
+    .why-right-img-wrap:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 38px rgba(15, 43, 92, 0.14);
+    }
+    body.dark-theme .why-right-img-wrap {
+      border-color: rgba(255, 255, 255, 0.08);
+      background: #181924;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+    .why-right-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .why-right-img-wrap:hover .why-right-img {
+      transform: scale(1.035);
+    }
+
+    /* Responsive Breakpoints */
     @media (max-width: 992px) {
-      .about-standards-section {
-        margin: clamp(32px, 4vw, 48px) -20px;
-        width: calc(100% + 40px);
+      .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 600px;
+        margin: 0 auto;
       }
-      .standards-stage {
-        display: flex;
-        flex-direction: column;
+      .why-card-main {
         min-height: auto;
-        padding-bottom: 0;
       }
-      .standards-card {
-        width: 100%;
-        border-radius: 0;
-        padding: 36px 24px;
-        padding-left: 24px;
-      }
-      .standards-h2 {
-        max-width: 100%;
-      }
-      .standards-items-list {
-        max-width: 100%;
-      }
-      .standards-photo-card {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        width: 100%;
-        margin: 0;
+      .why-center-card {
         height: 380px;
-        border-radius: 0;
-        border: none !important;
-        box-shadow: none;
+        min-height: auto;
       }
-      .standards-photo-img {
-        border-radius: 0;
+      .why-right-stack {
+        gap: 16px;
       }
-      .standards-float-topright {
-        top: 14px;
-        right: 14px;
-      }
-    }
-    @media (max-width: 768px) {
-      .about-standards-section {
-        margin: clamp(28px, 3.5vw, 40px) -14px;
-        width: calc(100% + 28px);
-      }
-      .standards-card {
-        padding: 30px 18px;
-        padding-left: 18px;
-      }
-      .standards-photo-card {
-        width: 100%;
-        height: 320px;
-        border-radius: 0;
-      }
-      .standards-photo-img {
-        border-radius: 0;
+      .why-right-img-wrap {
+        height: 260px;
+        flex: none;
       }
     }
     @media (max-width: 576px) {
-      .about-standards-section {
-        margin-left: -12px;
-        margin-right: -12px;
-        width: calc(100% + 24px);
+      .why-card-main {
+        padding: 24px 20px;
+        border-radius: 18px;
       }
-      .standards-card {
-        padding: 26px 14px;
-        padding-left: 14px;
+      .why-card-title {
+        font-size: 20px;
       }
-      .standards-h2 {
-        font-size: clamp(1.35rem, 5.2vw, 1.65rem);
-        margin-bottom: 18px;
+      .why-card-metrics {
+        gap: 24px;
+        margin: 20px 0;
       }
-      .standards-photo-card {
-        height: 270px;
+      .why-metric-number {
+        font-size: 28px;
       }
-      .standards-item {
-        gap: 12px;
+      .why-card-cta {
+        width: 100%;
+        justify-content: center;
       }
-      .standards-item-num {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        font-size: 13px;
+      .why-center-card {
+        height: 280px;
+        border-radius: 18px;
       }
-    }
-    @media (max-width: 480px) {
-      .about-standards-section {
-        margin-left: -10px;
-        margin-right: -10px;
-        width: calc(100% + 20px);
+      .why-right-card {
+        padding: 20px 18px;
+        border-radius: 18px;
       }
-      .standards-card {
-        padding: 24px 12px;
-        padding-left: 12px;
+      .why-right-img-wrap {
+        height: 220px;
+        border-radius: 18px;
       }
-      .standards-h2 {
-        font-size: clamp(1.22rem, 4.8vw, 1.45rem);
-      }
-      .standards-photo-card {
-        height: 240px;
+      .why-choose-h2 {
+        font-size: clamp(1.4rem, 5vw, 1.85rem);
       }
     }
     @media (max-width: 360px) {
-      .about-standards-section {
-        margin-left: -8px;
-        margin-right: -8px;
-        width: calc(100% + 16px);
+      .why-card-main {
+        padding: 18px 14px;
       }
-      .standards-card {
-        padding: 22px 10px;
-        padding-left: 10px;
+      .why-card-metrics {
+        flex-direction: column;
+        gap: 12px;
       }
-      .standards-photo-card {
-        height: 210px;
+      .why-metric-number {
+        font-size: 24px;
       }
-    }
-    @media (max-width: 300px) {
-      .about-standards-section {
-        margin-left: -5px;
-        margin-right: -5px;
-        width: calc(100% + 10px);
+      .why-center-card {
+        height: 230px;
+      }
+      .why-right-img-wrap {
+        height: 180px;
+      }
+      .why-checkpoint-item {
+        font-size: 11px;
       }
     }
     /* ============================================================
@@ -1995,7 +1908,6 @@
       .about-stats-strip { grid-template-columns: 1fr 1fr; }
       .mission-card-light,
       .mission-card-featured { padding: 22px 18px 20px 18px; }
-      .mcard-bottom-img-wrap { height: 180px; }
     }
     @media (max-width: 360px) {
       /* .about-standards-section responsive */
@@ -2384,109 +2296,48 @@
             </p>
           </div>
 
-          <!-- 3-Card Grid Matching Reference media_1790523667595.png -->
+          <!-- 3-Card Grid Matching Reference media_1790832483982.png (Simple icon cards, pure website palette, no images) -->
           <div class="mission-cards-grid">
 
-            <!-- Card 1: Our Mission (Left Card) -->
+            <!-- Card 1: Our Mission (Left Light Card) -->
             <div class="mission-card mission-card-light">
-              <div>
-                <div class="mcard-top-row">
-                  <div class="mcard-pill mcard-pill-light">
-                    <span>🎯</span>
-                    <span>Our Mission</span>
-                  </div>
-                  <button class="mcard-arrow-btn mcard-arrow-light book-trigger" type="button" aria-label="Book Our Mission Service">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </button>
-                </div>
-                <div class="mcard-body">
-                  <h3 class="mcard-title">Reliable & Fast Doorstep Care</h3>
-                  <p class="mcard-desc">
-                    Provide dependable appliance repair with quick response times and expert service across Dubai for every home, ensuring consistent care.
-                  </p>
-                  <ul class="mcard-checklist">
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Fast response service</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Reliable repair solutions</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Certified repair experts</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Skilled technician support</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Customer-focused approach</span></li>
-                  </ul>
-                </div>
+              <div class="mcard-icon-box mcard-icon-light">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
               </div>
-              <div class="mcard-bottom-img-wrap">
-                <img src="assets/hero-technician-centered.jpg" alt="ApexFix Mission Certified Technician" loading="lazy">
-              </div>
+              <h3 class="mcard-title">Reliable &amp; Fast Doorstep Care</h3>
+              <p class="mcard-desc">
+                Provide dependable appliance repair with rapid response times and certified master technician expertise across Dubai, ensuring long-lasting performance for every home.
+              </p>
             </div>
 
-            <!-- Card 2: Our Vision (Middle Featured Navy Card) -->
+            <!-- Card 2: Our Vision (Middle Featured Sapphire Navy Card) -->
             <div class="mission-card mission-card-featured">
-              <div>
-                <div class="mcard-top-row">
-                  <div class="mcard-pill mcard-pill-dark">
-                    <span>👁️</span>
-                    <span>Our Vision</span>
-                  </div>
-                  <button class="mcard-arrow-btn mcard-arrow-featured book-trigger" type="button" aria-label="Book Certified Technician Visit">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </button>
-                </div>
-                <div class="mcard-body">
-                  <h3 class="mcard-title mcard-title-dark">Integrity &amp; Uncompromising Standards</h3>
-                  <p class="mcard-desc mcard-desc-dark">
-                    We value integrity, quality workmanship, and complete customer satisfaction in every repair service delivered across Dubai with dedication and transparency.
-                  </p>
-                  <ul class="mcard-checklist mcard-checklist-dark">
-                    <li><span class="mcard-check mcard-check-dark" aria-hidden="true">✓</span><span>Honest service approach</span></li>
-                    <li><span class="mcard-check mcard-check-dark" aria-hidden="true">✓</span><span>Clear pricing structure</span></li>
-                    <li><span class="mcard-check mcard-check-dark" aria-hidden="true">✓</span><span>High-quality standards</span></li>
-                    <li><span class="mcard-check mcard-check-dark" aria-hidden="true">✓</span><span>Reliable service promise</span></li>
-                    <li><span class="mcard-check mcard-check-dark" aria-hidden="true">✓</span><span>Customer satisfaction focus</span></li>
-                  </ul>
-                </div>
+              <div class="mcard-icon-box mcard-icon-featured">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
               </div>
-              <div class="mcard-bottom-img-wrap">
-                <img src="assets/why-choose-us.jpg" alt="ApexFix Vision Engineering Excellence" loading="lazy">
-              </div>
+              <h3 class="mcard-title mcard-title-dark">Integrity &amp; Uncompromising Standards</h3>
+              <p class="mcard-desc mcard-desc-dark">
+                We uphold uncompromising integrity, upfront transparent pricing, and 100% genuine OEM factory parts on every service call with complete customer satisfaction.
+              </p>
             </div>
 
-            <!-- Card 3: Our Goal (Right Card) -->
+            <!-- Card 3: Our Goal (Right Light Card) -->
             <div class="mission-card mission-card-light">
-              <div>
-                <div class="mcard-top-row">
-                  <div class="mcard-pill mcard-pill-light">
-                    <span>🏆</span>
-                    <span>Our Goal</span>
-                  </div>
-                  <button class="mcard-arrow-btn mcard-arrow-light book-trigger" type="button" aria-label="Book Our Goal Service">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </button>
-                </div>
-                <div class="mcard-body">
-                  <h3 class="mcard-title">Dubai's Most Trusted Appliance Partner</h3>
-                  <p class="mcard-desc">
-                    To become a trusted appliance repair provider known for reliable service, long-term quality across Dubai, with continuous growth and excellence.
-                  </p>
-                  <ul class="mcard-checklist">
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Expand service coverage</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Enhance repair efficiency</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Strengthen customer trust</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Deliver consistent quality</span></li>
-                    <li><span class="mcard-check" aria-hidden="true">✓</span><span>Maintain service excellence</span></li>
-                  </ul>
-                </div>
+              <div class="mcard-icon-box mcard-icon-light">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
               </div>
-              <div class="mcard-bottom-img-wrap">
-                <img src="assets/service-dishwasher-clean.jpg" alt="ApexFix Appliance Repair Goal" loading="lazy">
-              </div>
+              <h3 class="mcard-title">Dubai's Most Trusted Partner</h3>
+              <p class="mcard-desc">
+                Setting the benchmark for excellence in major home appliance restoration through prompt dispatch, dedicated warranties, and trusted multi-brand mastery.
+              </p>
             </div>
 
           </div><!-- /.mission-cards-grid -->
@@ -2519,20 +2370,22 @@
                 </div>
               </div>
 
-              <!-- Right Sub-Column (Warm Accent Stat Card + Tall Technician Photo) -->
+              <!-- Right Sub-Column (Navy Brand Stat Card + Tall Technician Photo) -->
               <div class="mosaic-col mosaic-col-right">
-                <!-- Box 2: Warm Accent / Gold Stat Card -->
+                <!-- Box 2: Navy Brand Stat Card (Horizontal Row) -->
                 <div class="mosaic-item mosaic-stat-card">
                   <div class="mosaic-stat-icon-wrap" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                       <path d="M16 2v2"></path>
                       <path d="M8 2v2"></path>
                     </svg>
                   </div>
-                  <div class="mosaic-stat-number">15+</div>
-                  <div class="mosaic-stat-label">Years of Experience</div>
+                  <div class="mosaic-stat-info">
+                    <div class="mosaic-stat-number">15+</div>
+                    <div class="mosaic-stat-label">Years of Experience</div>
+                  </div>
                 </div>
 
                 <!-- Box 4: Standing Master Technician Photo -->
@@ -2602,9 +2455,6 @@
             </div><!-- /.heritage-content-col -->
 
           </div><!-- /.heritage-layout-wrap -->
-        </div><!-- /.section-container-inner -->
-      </section>
-
         </div><!-- /.section-container-inner -->
       </section>
       <!-- ═══════════════════════════════════════════════════════
@@ -2714,85 +2564,111 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════
-           SECTION: WHY CHOOSE APEXFIX (QUALITY & STANDARDS)
-           Exact Match of User Reference media_1790595189211.png
-           (Full-Width Asymmetric Stage with Smooth Rounded Geometry - Zero White Border)
+           SECTION: WHY CHOOSE APEXFIX (3-COLUMN BENTO GRID)
+           Exact Match of User Reference media_1790832540015.png
       ═══════════════════════════════════════════════════════ -->
-      <section class="about-standards-section" id="standards" aria-label="Why Choose ApexFix Appliance Repair">
-        <!-- Asymmetric Overlapping Stage Container (Full-Width, No Teaser Bar) -->
-        <div class="standards-stage">
+      <section class="about-why-choose" id="standards" aria-label="Why Choose ApexFix Appliance Repair">
+        <div class="section-container-inner">
 
-          <!-- Left Navy Banner Card (Rounded Geometry, No Sharp Edges) -->
-          <div class="standards-card">
-            
-            <!-- Eyebrow Row with horizontal accent line (Matching "WORK PROCESS --" in reference) -->
-            <div class="standards-eyebrow-row">
-              <span class="standards-eyebrow-text">✦ WHY CHOOSE APEXFIX ?</span>
-              <span class="standards-eyebrow-line" aria-hidden="true"></span>
+          <!-- Centered Header (Eyebrow, Dual-Color H2, Subtitle) -->
+          <div class="why-choose-header">
+            <div class="badge-tag" style="margin: 0 auto 16px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>WHY CHOOSE APEXFIX</span>
             </div>
 
-            <!-- Main Heading (Dual Color) -->
-            <h2 class="standards-h2">
-              Focus On Getting Repairs Done <span class="highlight-blue">Quickly &amp; Efficiently</span> While Maintaining High Standards
+            <h2 class="why-choose-h2">
+              Focus On Getting Repairs Done <span class="highlight-navy">Quickly &amp; Efficiently</span> While Maintaining High Standards
             </h2>
 
-            <!-- 3 Numbered Feature Items -->
-            <div class="standards-items-list">
-              
-              <!-- Item 01 -->
-              <div class="standards-item">
-                <div class="standards-item-num" aria-hidden="true">01</div>
-                <div class="standards-item-content">
-                  <h3 class="standards-item-title">Licensed Master Technicians</h3>
-                  <p class="standards-item-desc">Certified, background-checked and factory-trained engineers.</p>
+            <p class="why-choose-lead">
+              ApexFix brings together background-verified master engineers, 100% genuine OEM factory parts, and transparent pricing to restore your essential home appliances on the very first visit.
+            </p>
+          </div>
+
+          <!-- 3-Column Bento Grid Matching Reference -->
+          <div class="why-choose-grid">
+
+            <!-- Column 1: Left Feature Card (Navy Brand Gradient + Metrics + Action Pill) -->
+            <div class="why-card-main">
+              <div class="why-card-top">
+                <h3 class="why-card-title">A Clear Path To Reliable Appliances</h3>
+                <p class="why-card-desc">
+                  Start with rapid diagnostic inspection, receive a clear itemized quote, and get factory-certified repairs with full warranty coverage—designed to keep the process swift, transparent, and hassle-free.
+                </p>
+              </div>
+
+              <!-- Two Metrics Side-by-Side -->
+              <div class="why-card-metrics">
+                <div class="why-metric-item">
+                  <div class="why-metric-number">15K+</div>
+                  <div class="why-metric-label">Appliances Restored</div>
+                </div>
+                <div class="why-metric-item">
+                  <div class="why-metric-number">12+</div>
+                  <div class="why-metric-label">Years of Excellence</div>
                 </div>
               </div>
 
-              <!-- Item 02 -->
-              <div class="standards-item">
-                <div class="standards-item-num" aria-hidden="true">02</div>
-                <div class="standards-item-content">
-                  <h3 class="standards-item-title">Rapid 1-Hour Same-Day Arrival</h3>
-                  <p class="standards-item-desc">Equipped mobile diagnostic vans dispatched across all Dubai areas.</p>
-                </div>
-              </div>
-
-              <!-- Item 03 -->
-              <div class="standards-item">
-                <div class="standards-item-num" aria-hidden="true">03</div>
-                <div class="standards-item-content">
-                  <h3 class="standards-item-title">100% Genuine OEM Factory Spares</h3>
-                  <p class="standards-item-desc">Direct manufacturer-sealed parts backed by full warranty.</p>
-                </div>
-              </div>
-
-            </div>
-
-          </div><!-- /.standards-card -->
-
-          <!-- Right Overlapping Landscape Photo (Extends Down Below Navy Card - Zero White Border) -->
-          <div class="standards-photo-card">
-            <img src="assets/standards-team-collab.jpg" alt="ApexFix Master Engineering Team Collaborating in Dubai Workshop" class="standards-photo-img" loading="lazy">
-
-            <!-- Floating Callout Badge on Top-Right (Matching Reference: Icon Box + 2 Text Lines) -->
-            <div class="standards-float-topright">
-              <div class="standards-float-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              <!-- Action Pill Button (White Pill with Navy Text, matching reference 'Learn More →') -->
+              <button class="why-card-cta book-trigger" type="button" data-service="General Repair">
+                <span>Book Technician</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
+              </button>
+            </div>
+
+            <!-- Column 2: Middle Tall Portrait Image (Team Collaborating in Workshop) -->
+            <div class="why-center-card">
+              <img src="assets/standards-team-collab.jpg" alt="ApexFix Master Engineering Team Collaborating in Dubai Workshop" class="why-center-img" loading="lazy">
+            </div>
+
+            <!-- Column 3: Right Stacked Column (Top Feature Card + Bottom Landscape Image) -->
+            <div class="why-right-stack">
+              <!-- Top Card: Summary & 3 Checkpoint Pills -->
+              <div class="why-right-card">
+                <p class="why-right-desc">
+                  Our certified engineers follow established factory diagnostic frameworks to restore every appliance to original manufacturer specifications.
+                </p>
+                <div class="why-right-checkpoints">
+                  <span class="why-checkpoint-item">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Diagnose</span>
+                  </span>
+                  <span class="why-checkpoint-item">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <span>OEM Spares</span>
+                  </span>
+                  <span class="why-checkpoint-item">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span>90-Day Warranty</span>
+                  </span>
+                </div>
               </div>
-              <div class="standards-float-text-box">
-                <span class="standards-float-title">Certified Dubai Team</span>
-                <span class="standards-float-sub">Committed to Quality &amp; Safety</span>
+
+              <!-- Bottom Image: Master Technician Servicing Kitchen Appliance -->
+              <div class="why-right-img-wrap">
+                <img src="assets/why-choose-us.jpg" alt="ApexFix Master Technician Servicing Kitchen Appliance" class="why-right-img" loading="lazy">
               </div>
             </div>
 
-          </div><!-- /.standards-photo-card -->
+          </div><!-- /.why-choose-grid -->
 
-        </div><!-- /.standards-stage -->
+        </div><!-- /.section-container-inner -->
       </section>
 
 
