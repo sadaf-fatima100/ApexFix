@@ -353,8 +353,12 @@
        SECTION: OUR HERITAGE (ENGINEERING & TRANSPARENCY)
        Matching Reference media_1790658528050.png
        ═══════════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════════════
+       SECTION: OUR HERITAGE (MOSAIC GRID & EDITORIAL STORY)
+       Matching Reference media_1790828984467.png
+       ═══════════════════════════════════════════════════════ */
     .about-heritage-section {
-      padding: clamp(40px, 4.5vw, 64px) 0;
+      padding: clamp(44px, 4.8vw, 68px) 0;
       background: transparent;
       position: relative;
     }
@@ -363,17 +367,176 @@
       z-index: 1;
     }
 
-    /* Header Row */
-    .heritage-header-row {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 36px;
-      margin-bottom: clamp(26px, 3vw, 38px);
+    .heritage-layout-wrap {
+      display: grid;
+      grid-template-columns: 1.08fr 1fr;
+      gap: clamp(32px, 4vw, 54px);
+      align-items: center;
     }
-    .heritage-title-group {
-      flex: 1;
-      max-width: 640px;
+
+    /* ─── LEFT COLUMN: 4-PIECE ASYMMETRIC MOSAIC ─── */
+    .heritage-mosaic-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .mosaic-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mosaic-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .mosaic-item:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Box 1: Action Repair Photo (Top-Left) */
+    .mosaic-img-box {
+      height: 250px;
+      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.08);
+      border: 1px solid rgba(15, 43, 92, 0.08);
+      background: #e2e8f0;
+    }
+    body.dark-theme .mosaic-img-box {
+      border-color: rgba(255, 255, 255, 0.08);
+      background: #181924;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    }
+    .mosaic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .mosaic-item:hover .mosaic-img {
+      transform: scale(1.035);
+    }
+
+    /* Box 2: Warm Accent / Gold Stat Card (Top-Right) */
+    .mosaic-stat-card {
+      background: linear-gradient(145deg, #fef3c7 0%, #fde68a 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.28);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.14);
+      padding: 22px 20px;
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    body.dark-theme .mosaic-stat-card {
+      background: #181f2f;
+      border-color: rgba(251, 191, 36, 0.3);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+    }
+    .mosaic-stat-icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(180, 83, 9, 0.12);
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    body.dark-theme .mosaic-stat-icon-wrap {
+      background: rgba(251, 191, 36, 0.16);
+      color: #fbbf24;
+    }
+    .mosaic-stat-number {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      font-family: var(--font-family);
+      color: #78350f;
+    }
+    body.dark-theme .mosaic-stat-number {
+      color: #fbbf24;
+    }
+    .mosaic-stat-label {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #92400e;
+      margin-top: 5px;
+      letter-spacing: -0.01em;
+    }
+    body.dark-theme .mosaic-stat-label {
+      color: #e2e8f0;
+    }
+
+    /* Box 3: Solid Navy Accent Card (Bottom-Left) */
+    .mosaic-navy-card {
+      background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 24px 22px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 165px;
+      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.22);
+    }
+    body.dark-theme .mosaic-navy-card {
+      background: linear-gradient(145deg, #0e2753 0%, #081734 100%);
+      border-color: rgba(96, 165, 250, 0.2);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+    }
+    .mosaic-navy-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin: 0;
+      letter-spacing: -0.015em;
+    }
+    .mosaic-navy-caption {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #93c5fd;
+      letter-spacing: 0.02em;
+      margin-top: 14px;
+    }
+    .mosaic-navy-dash {
+      font-weight: 800;
+      color: #60a5fa;
+    }
+
+    /* Box 4: Standing Master Technician Photo (Bottom-Right) */
+    .mosaic-img-tall-box {
+      height: 270px;
+      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.1);
+      border: 1px solid rgba(15, 43, 92, 0.08);
+      background: #e2e8f0;
+    }
+    body.dark-theme .mosaic-img-tall-box {
+      border-color: rgba(255, 255, 255, 0.08);
+      background: #181924;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ─── RIGHT COLUMN: EDITORIAL CONTENT & CTA ─── */
+    .heritage-content-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .heritage-badge {
+      margin-bottom: 14px;
     }
     .heritage-h2 {
       font-size: var(--text-h2, clamp(1.85rem, 2.7vw, 2.45rem));
@@ -381,7 +544,7 @@
       line-height: 1.2;
       letter-spacing: -0.025em;
       color: var(--text-dark, #121217);
-      margin: 0;
+      margin: 0 0 16px 0;
     }
     body.dark-theme .heritage-h2 {
       color: #ffffff;
@@ -393,361 +556,150 @@
       color: #60a5fa;
     }
 
-    .heritage-intro-group {
-      max-width: 420px;
-      flex-shrink: 0;
-      padding-bottom: 4px;
-    }
-    .heritage-intro-desc {
-      font-size: 15px;
+    .heritage-lead-p {
+      font-size: 15.5px;
       font-weight: 500;
+      line-height: 1.65;
+      color: var(--text-dark, #121217);
+      margin: 0 0 12px 0;
+    }
+    body.dark-theme .heritage-lead-p {
+      color: #e2e8f0;
+    }
+    .heritage-sub-p {
+      font-size: 14.5px;
+      font-weight: 400;
       line-height: 1.62;
       color: var(--text-sub, #5a5f70);
-      margin: 0;
+      margin: 0 0 20px 0;
     }
-    body.dark-theme .heritage-intro-desc {
+    body.dark-theme .heritage-sub-p {
       color: #94a3b8;
     }
 
-    /* Main 2-Column Grid */
-    .heritage-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: clamp(24px, 3vw, 42px);
-      align-items: center;
-    }
-
-    /* Left Column: Visual Stage with Overlapping Metrics Grid */
-    .heritage-visual-stage {
-      position: relative;
-      width: 100%;
-      min-height: 510px;
-      display: flex;
-      align-items: center;
-    }
-
-    /* Overlapping Metrics Single Column (Navy Blue Background - Matching User Request) */
-    .heritage-metrics-grid {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 156px;
-      z-index: 4;
+    /* 3 Core Heritage Trust Checkpoints */
+    .heritage-pillars-row {
       display: flex;
       flex-direction: column;
       gap: 10px;
-    }
-    .heritage-metric-card {
-      background:
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.16);
-      border-radius: 18px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(15, 43, 92, 0.32);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .heritage-metric-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(125, 175, 245, 0.4), transparent);
-    }
-    .heritage-metric-card:hover {
-      transform: translateX(4px) translateY(-2px);
-      border-color: rgba(125, 175, 245, 0.45);
-      box-shadow: 0 16px 36px rgba(15, 43, 92, 0.48);
-    }
-    body.dark-theme .heritage-metric-card {
-      background:
-        radial-gradient(120% 85% at 15% 0%, rgba(26, 68, 142, 0.45) 0%, transparent 68%),
-        linear-gradient(145deg, #13366e 0%, #0a1f42 50%, #051022 100%);
-      border-color: rgba(125, 175, 245, 0.25);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
-    }
-    body.dark-theme .heritage-metric-card:hover {
-      border-color: rgba(125, 175, 245, 0.45);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
-    }
-    .heritage-metric-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 6px;
-      backdrop-filter: blur(6px);
-    }
-    body.dark-theme .heritage-metric-icon {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-    }
-    .heritage-metric-val {
-      font-size: 19px;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      margin-bottom: 2px;
-      font-family: var(--font-family);
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-    }
-    body.dark-theme .heritage-metric-val {
-      color: #ffffff;
-    }
-    .heritage-metric-lbl {
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1.25;
-      color: rgba(255, 255, 255, 0.88);
-      letter-spacing: 0.01em;
-      font-family: var(--font-family);
-    }
-    body.dark-theme .heritage-metric-lbl {
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    /* Left Column: Reduced-Width PCB Diagnostic Lab Card */
-    .heritage-lab-card {
-      position: relative;
-      width: 80%;
-      margin-left: auto;
-      border-radius: 24px;
-      overflow: hidden;
-      height: 510px;
-      min-height: 510px;
-      box-shadow: 0 14px 40px rgba(15, 43, 92, 0.1);
-      border: 1.5px solid rgba(15, 43, 92, 0.12);
-      background: #e2e8f0;
-      display: flex;
-    }
-    body.dark-theme .heritage-lab-card {
-      background: #141923;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
-    }
-    .heritage-lab-img {
+      margin-bottom: 26px;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .heritage-lab-card:hover .heritage-lab-img {
-      transform: scale(1.025);
+    .heritage-pillar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark, #121217);
     }
-
-    /* Floating Top-Right Tool / Gear Badge - HOME PAGE GRADIENT */
-    .heritage-lab-top-badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 44px;
-      height: 44px;
+    body.dark-theme .heritage-pillar-item {
+      color: #e2e8f0;
+    }
+    .pillar-bullet-check {
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      display: flex;
+      background: #eff6ff;
+      color: var(--brand-accent, #143877);
+      font-size: 11.5px;
+      font-weight: 800;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 18px rgba(15, 43, 92, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.7);
-      z-index: 3;
-      transition: transform 0.25s ease;
-    }
-    body.dark-theme .heritage-lab-top-badge {
-      background: var(--btn-gradient-primary);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-    .heritage-lab-card:hover .heritage-lab-top-badge {
-      transform: scale(1.08) rotate(15deg);
-    }
-
-    /* Right Column: 3 Stacked Feature Cards - TIGHT GAP, NO HUGE SPACES */
-    .heritage-cards-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      justify-content: flex-start;
-    }
-    .heritage-feature-card {
-      background: #ffffff !important;
-      border: 1.5px solid rgba(15, 43, 92, 0.09);
-      border-radius: 20px;
-      padding: 18px 22px;
-      position: relative;
-      box-shadow: 0 4px 18px rgba(15, 43, 92, 0.06);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex: 1;
-    }
-    body.dark-theme .heritage-feature-card {
-      background: #181924 !important;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-    }
-    .heritage-feature-card:hover {
-      transform: translateY(-2px);
-      background: #ffffff !important;
-      border-color: var(--brand-accent, #0f2b5c);
-      box-shadow: 0 10px 28px rgba(15, 43, 92, 0.12);
-    }
-    body.dark-theme .heritage-feature-card:hover {
-      background: #1c1e2b !important;
-      border-color: #60a5fa;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
-    }
-
-    /* Floating Icon Badge Top-Right - HOME PAGE GRADIENT */
-    .heritage-card-icon-badge {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: var(--btn-gradient-primary);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 14px rgba(15, 43, 92, 0.25);
-      transition: transform 0.25s ease;
+      border: 1.5px solid rgba(20, 56, 119, 0.2);
       flex-shrink: 0;
     }
-    body.dark-theme .heritage-card-icon-badge {
-      background: var(--btn-gradient-primary);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-    }
-    .heritage-feature-card:hover .heritage-card-icon-badge {
-      transform: scale(1.06);
-    }
-
-    /* Eyebrow - THEME NAVY, ZERO FROZI */
-    .heritage-card-eyebrow {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brand-accent, #0f2b5c);
-      margin-bottom: 6px;
-      display: block;
-      line-height: 1.2;
-    }
-    body.dark-theme .heritage-card-eyebrow {
+    body.dark-theme .pillar-bullet-check {
+      background: rgba(96, 165, 250, 0.15);
       color: #60a5fa;
-    }
-    .heritage-card-title {
-      font-size: 17.5px;
-      font-weight: 700;
-      color: var(--text-dark, #121217);
-      line-height: 1.25;
-      margin: 0 0 6px 0;
-      padding-right: 50px;
-      letter-spacing: -0.015em;
-    }
-    body.dark-theme .heritage-card-title {
-      color: #ffffff;
-    }
-    .heritage-card-desc {
-      font-size: 13.2px;
-      font-weight: 500;
-      color: var(--text-sub, #5a5f70);
-      line-height: 1.52;
-      margin: 0;
-      padding-right: 18px;
-    }
-    body.dark-theme .heritage-card-desc {
-      color: #94a3b8;
+      border-color: rgba(96, 165, 250, 0.3);
     }
 
-    /* Responsive Queries for Heritage Section */
+    /* Action Buttons Wrap */
+    .heritage-action-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* ─── RESPONSIVE BREAKPOINTS ─── */
     @media (max-width: 992px) {
-      .heritage-header-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-      .heritage-intro-group {
-        max-width: 100%;
-      }
-      .heritage-grid {
+      .heritage-layout-wrap {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 36px;
       }
-      .heritage-visual-stage {
-        min-height: auto;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .heritage-lab-card {
+      .heritage-mosaic-stage {
+        max-width: 520px;
+        margin: 0 auto;
         width: 100%;
-        margin-left: 0;
-        height: 380px;
-        min-height: 380px;
       }
-      .heritage-metrics-grid {
-        position: static;
-        transform: none;
+      .heritage-content-col {
+        max-width: 600px;
+        margin: 0 auto;
         width: 100%;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
       }
     }
-    @media (max-width: 768px) {
-      .heritage-lab-card {
-        height: 320px;
-        min-height: 320px;
+    @media (max-width: 576px) {
+      .mosaic-img-box {
+        height: 200px;
       }
-      .heritage-metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
-      .heritage-feature-card {
+      .mosaic-navy-card {
+        min-height: 140px;
         padding: 18px 16px;
       }
-      .heritage-card-title {
-        font-size: 16.5px;
+      .mosaic-navy-title {
+        font-size: 15px;
+      }
+      .mosaic-stat-card {
+        min-height: 120px;
+        padding: 16px 14px;
+      }
+      .mosaic-stat-number {
+        font-size: 28px;
+      }
+      .mosaic-img-tall-box {
+        height: 220px;
+      }
+      .heritage-action-wrap {
+        flex-direction: column;
+        width: 100%;
+      }
+      .heritage-action-wrap .btn-hero-primary,
+      .heritage-action-wrap .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
       }
     }
-    @media (max-width: 480px) {
-      .heritage-lab-card {
-        height: 260px;
-        min-height: 260px;
+    @media (max-width: 360px) {
+      .heritage-mosaic-stage {
+        gap: 10px;
       }
-      .heritage-card-icon-badge {
-        width: 38px;
-        height: 38px;
-        top: 14px;
-        right: 14px;
+      .mosaic-col {
+        gap: 10px;
       }
-      .heritage-card-title {
-        padding-right: 44px;
+      .mosaic-img-box {
+        height: 160px;
+        border-radius: 14px;
       }
-      .heritage-metric-val {
-        font-size: 17px;
+      .mosaic-img-tall-box {
+        height: 180px;
+        border-radius: 14px;
       }
-      .heritage-metric-lbl {
-        font-size: 10px;
+      .mosaic-navy-card,
+      .mosaic-stat-card {
+        border-radius: 14px;
+        padding: 14px 12px;
+      }
+      .mosaic-navy-title {
+        font-size: 13.5px;
+      }
+      .mosaic-stat-number {
+        font-size: 24px;
+      }
+      .mosaic-stat-label {
+        font-size: 11px;
       }
     }
 
@@ -2368,12 +2320,16 @@
           <!-- Bottom Key Metrics Row -->
           <div class="hero-split-stats">
             <div class="hero-split-stat-item">
-              <span class="stat-number-brand">15k+</span>
+              <span class="stat-number-brand">12+</span>
+              <span class="stat-caption-sub">Years of<br>Excellence</span>
+            </div>
+            <div class="hero-split-stat-item">
+              <span class="stat-number-brand">50K+</span>
               <span class="stat-caption-sub">Appliances<br>Restored</span>
             </div>
             <div class="hero-split-stat-item">
-              <span class="stat-number-brand">1-Hr</span>
-              <span class="stat-caption-sub">Average Rapid<br>Dubai Dispatch</span>
+              <span class="stat-number-brand">100%</span>
+              <span class="stat-caption-sub">OEM Factory<br>Parts</span>
             </div>
           </div>
         </div>
@@ -2538,152 +2494,116 @@
         </div><!-- /.section-container-inner -->
       </section>
 
-      <!-- SECTION: OUR HERITAGE (ENGINEERING & TRANSPARENCY) -->
+      <!-- SECTION: OUR HERITAGE (MOSAIC GRID & EDITORIAL STORY) -->
       <section class="about-heritage-section" id="heritage" aria-label="Our Heritage &amp; Founding Principles">
         <div class="section-container-inner">
+          <div class="heritage-layout-wrap">
 
-          <!-- Header Row: Left Eyebrow & Title, Right Intro Paragraph -->
-          <div class="heritage-header-row">
-            <div class="heritage-title-group">
-              <div class="badge-tag" style="display:inline-flex;margin-bottom:14px;">
+            <!-- LEFT COLUMN: 4-Piece Asymmetric Mosaic Grid (Matching Reference) -->
+            <div class="heritage-mosaic-stage">
+              
+              <!-- Left Sub-Column (Taller Top Image + Navy Feature Card) -->
+              <div class="mosaic-col mosaic-col-left">
+                <!-- Box 1: Action Repair Photo -->
+                <div class="mosaic-item mosaic-img-box">
+                  <img src="assets/hero-technician-washer.jpg" alt="ApexFix Certified Appliance Repair in Dubai" class="mosaic-img" loading="lazy">
+                </div>
+                
+                <!-- Box 3: Solid Navy Accent Card -->
+                <div class="mosaic-item mosaic-navy-card">
+                  <h3 class="mosaic-navy-title">The Perfect Solutions For All Appliance Repairs</h3>
+                  <div class="mosaic-navy-caption">
+                    <span class="mosaic-navy-dash">/</span>
+                    <span>ApexFix Dubai</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Sub-Column (Warm Accent Stat Card + Tall Technician Photo) -->
+              <div class="mosaic-col mosaic-col-right">
+                <!-- Box 2: Warm Accent / Gold Stat Card -->
+                <div class="mosaic-item mosaic-stat-card">
+                  <div class="mosaic-stat-icon-wrap" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                      <path d="M16 2v2"></path>
+                      <path d="M8 2v2"></path>
+                    </svg>
+                  </div>
+                  <div class="mosaic-stat-number">15+</div>
+                  <div class="mosaic-stat-label">Years of Experience</div>
+                </div>
+
+                <!-- Box 4: Standing Master Technician Photo -->
+                <div class="mosaic-item mosaic-img-tall-box">
+                  <img src="assets/about-technician.jpg" alt="ApexFix Master Technician in Dubai" class="mosaic-img" loading="lazy">
+                </div>
+              </div>
+
+            </div><!-- /.heritage-mosaic-stage -->
+
+            <!-- RIGHT COLUMN: Editorial Story, Values & CTA -->
+            <div class="heritage-content-col">
+              
+              <div class="badge-tag heritage-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   <polyline points="9 12 11 14 15 10"></polyline>
                 </svg>
                 <span>OUR HERITAGE</span>
               </div>
+
               <h2 class="heritage-h2">
                 Built On Honest Advice, Rapid Visits &amp; <span class="highlight-navy">Certified Care</span>
               </h2>
-            </div>
-            <div class="heritage-intro-group">
-              <p class="heritage-intro-desc">
-                ApexFix was founded to deliver transparent, world-class appliance restoration for Dubai homeowners without hidden fees, subcontracted delays, or guesswork.
+
+              <p class="heritage-lead-p">
+                ApexFix was founded to deliver transparent, world-class appliance restoration for Dubai homeowners without hidden fees, subcontracted delays, or guesswork. What began as a dedicated team of diagnostic engineers has grown into Greater Dubai's most reliable appliance care service.
               </p>
-            </div>
-          </div>
 
-          <!-- Main 2-Column Showcase Grid -->
-          <div class="heritage-grid">
+              <p class="heritage-sub-p">
+                Every repair is executed by directly employed master technicians equipped with laboratory-grade diagnostic tools and 100% genuine OEM factory parts. From high-end refrigerators and washing machines to cooktops and AC units, we restore full manufacturer-grade performance on every visit.
+              </p>
 
-            <!-- Left Column: Stage with Reduced-Width PCB Lab Card and Overlapping Metrics Grid -->
-            <div class="heritage-visual-stage">
-
-              <!-- Overlapping 2x2 Metrics Cards on the Left (Half-Overlapping the Image) -->
-              <div class="heritage-metrics-grid">
-                <!-- Metric 1: Fixed Counter -->
-                <div class="heritage-metric-card">
-                  <div class="heritage-metric-icon" aria-hidden="true">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      <polyline points="9 12 11 14 15 10"></polyline>
-                    </svg>
-                  </div>
-                  <div class="heritage-metric-val">15k+</div>
-                  <div class="heritage-metric-lbl">Appliances Fixed</div>
+              <!-- 3 Core Heritage Trust Checkpoints -->
+              <div class="heritage-pillars-row">
+                <div class="heritage-pillar-item">
+                  <span class="pillar-bullet-check" aria-hidden="true">✓</span>
+                  <span>In-House Master Engineers</span>
                 </div>
-
-                <!-- Metric 2: First-Visit Rate -->
-                <div class="heritage-metric-card">
-                  <div class="heritage-metric-icon" aria-hidden="true">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <circle cx="12" cy="12" r="6"></circle>
-                      <circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                  </div>
-                  <div class="heritage-metric-val">99.4%</div>
-                  <div class="heritage-metric-lbl">First-Visit Fix</div>
+                <div class="heritage-pillar-item">
+                  <span class="pillar-bullet-check" aria-hidden="true">✓</span>
+                  <span>100% Genuine OEM Spares</span>
                 </div>
-
-                <!-- Metric 3: Experience -->
-                <div class="heritage-metric-card">
-                  <div class="heritage-metric-icon" aria-hidden="true">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="8" r="6"></circle>
-                      <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
-                    </svg>
-                  </div>
-                  <div class="heritage-metric-val">15+ Yrs</div>
-                  <div class="heritage-metric-lbl">In-House Techs</div>
-                </div>
-
-                <!-- Metric 4: Rapid Arrival -->
-                <div class="heritage-metric-card">
-                  <div class="heritage-metric-icon" aria-hidden="true">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                  </div>
-                  <div class="heritage-metric-val">30 Min</div>
-                  <div class="heritage-metric-lbl">Rapid Arrival</div>
+                <div class="heritage-pillar-item">
+                  <span class="pillar-bullet-check" aria-hidden="true">✓</span>
+                  <span>Clear Upfront Fixed Quotes</span>
                 </div>
               </div>
 
-              <!-- Reduced-Width PCB Diagnostic Lab Visual Card -->
-              <div class="heritage-lab-card">
-                <img src="assets/about-pcb-lab.jpg" alt="ApexFix In-House Micro-Electronics PCB Diagnostic Lab in Dubai" class="heritage-lab-img" loading="lazy">
-                
-                <!-- Floating Top-Right Tool / Gear Badge -->
-                <div class="heritage-lab-top-badge" aria-label="Micro-Electronics Certified">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              <!-- Action Buttons: Pill CTA Button (matching reference 'Learn More' position) -->
+              <div class="heritage-action-wrap">
+                <button class="btn-hero-primary book-trigger" id="heritageBookBtn" data-service="General Repair">
+                  <span>Book Technician</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
-                </div>
-              </div><!-- /.heritage-lab-card -->
-
-            </div><!-- /.heritage-visual-stage -->
-
-            <!-- Right Column: 3 Stacked Feature Cards -->
-            <div class="heritage-cards-stack">
-
-              <!-- Card 01: In-House Master Engineers -->
-              <div class="heritage-feature-card">
-                <!-- Floating Icon Badge Top-Right -->
-                <div class="heritage-card-icon-badge" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
+                </button>
+                <a href="tel:+971508867234" class="btn-hero-secondary" id="heritageCallBtn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
                   </svg>
-                </div>
-                <span class="heritage-card-eyebrow">01 / CERTIFIED TEAM</span>
-                <h3 class="heritage-card-title">In-House Master Engineers</h3>
-                <p class="heritage-card-desc">Directly employed, background-verified appliance technicians with rigorous brand-specific training.</p>
+                  <span>Emergency Call 24/7</span>
+                </a>
               </div>
 
-              <!-- Card 02: 100% Genuine OEM Spares -->
-              <div class="heritage-feature-card">
-                <!-- Floating Icon Badge Top-Right -->
-                <div class="heritage-card-icon-badge" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <polyline points="9 12 11 14 15 10"></polyline>
-                  </svg>
-                </div>
-                <span class="heritage-card-eyebrow">02 / FACTORY PARTS</span>
-                <h3 class="heritage-card-title">100% Genuine OEM Spares</h3>
-                <p class="heritage-card-desc">Direct manufacturer replacement parts with original factory seals and complete service assurance.</p>
-              </div>
+            </div><!-- /.heritage-content-col -->
 
-              <!-- Card 03: Clear Upfront Fixed Quotes -->
-              <div class="heritage-feature-card">
-                <!-- Floating Icon Badge Top-Right -->
-                <div class="heritage-card-icon-badge" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  </svg>
-                </div>
-                <span class="heritage-card-eyebrow">03 / TRANSPARENCY</span>
-                <h3 class="heritage-card-title">Clear Upfront Fixed Quotes</h3>
-                <p class="heritage-card-desc">Clear itemized estimates approved by you before any work starts. Zero hidden fees or surprise costs.</p>
-              </div>
-
-            </div><!-- /.heritage-cards-stack -->
-
-          </div><!-- /.heritage-grid -->
+          </div><!-- /.heritage-layout-wrap -->
+        </div><!-- /.section-container-inner -->
+      </section>
 
         </div><!-- /.section-container-inner -->
       </section>
