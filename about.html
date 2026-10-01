@@ -17,6 +17,40 @@
 
     /* Section 1 Hero styles are powered globally by styles.css (.service-hero-split-row, .service-hero-copy-card, .service-hero-media-wrap, .hero-horizontal-service-marquee) */
 
+    /* ═══════════════════════════════════════════════════════
+       EXPERT UI/UX: ABOUT HERO RIGHT MEDIA FRAMED CARD
+       Thick Navy Blue Border, No Clip-Path, Clean Architectural Frame
+       ═══════════════════════════════════════════════════════ */
+    .about-hero-row .service-hero-media-wrap {
+      filter: none;
+      height: 100%;
+    }
+    .about-hero-row .service-hero-media-card {
+      clip-path: none !important;
+      -webkit-clip-path: none !important;
+      border: 3.5px solid var(--brand-accent, #143877);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 16px 44px rgba(20, 56, 119, 0.16);
+      background: #e2e8f0;
+      height: 100%;
+      min-height: 480px;
+      box-sizing: border-box;
+    }
+    body.dark-theme .about-hero-row .service-hero-media-card {
+      border-color: #2563eb;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(37, 99, 235, 0.3);
+      background: #181924;
+    }
+    .about-hero-row .hero-media-img {
+      border-radius: calc(28px - 3.5px);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
     /* Dedicated Hero / Process Button Styles */
     .btn-cta-green {
       display: inline-flex;
@@ -1021,12 +1055,47 @@
       margin: 0;
     }
 
+    /* Feature List in Left Card (Fills middle space) */
+    .why-card-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .why-card-feat-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+    .why-feat-check {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
     /* Metrics Row */
     .why-card-metrics {
       display: flex;
       align-items: flex-start;
       gap: clamp(24px, 2.5vw, 40px);
-      margin: 28px 0 26px;
+      margin: 4px 0 24px;
     }
     .why-metric-item {
       display: flex;
@@ -1043,7 +1112,7 @@
     .why-metric-label {
       font-size: 12.5px;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.82);
       margin-top: 6px;
       letter-spacing: -0.01em;
     }
@@ -1156,20 +1225,29 @@
     .why-right-checkpoints {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .why-checkpoint-item {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 12px;
+      gap: 7px;
+      font-size: 12.5px;
       font-weight: 700;
-      color: #93c5fd;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 6px 14px;
+      border-radius: 9999px;
       letter-spacing: 0.01em;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .why-checkpoint-item:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.28);
     }
     .why-checkpoint-item svg {
-      color: #60a5fa;
+      color: #10b981; /* Emerald green checkmark - matches website theme */
       flex-shrink: 0;
     }
 
@@ -2581,24 +2659,40 @@
             </div>
 
             <h2 class="why-choose-h2">
-              Focus On Getting Repairs Done <span class="highlight-navy">Quickly &amp; Efficiently</span> While Maintaining High Standards
+              Rapid Appliance Repairs With <span class="highlight-navy">Certified Standards</span>
             </h2>
 
             <p class="why-choose-lead">
-              ApexFix brings together background-verified master engineers, 100% genuine OEM factory parts, and transparent pricing to restore your essential home appliances on the very first visit.
+              ApexFix delivers background-verified master engineers, 100% genuine OEM factory parts, and transparent pricing across Greater Dubai.
             </p>
           </div>
 
           <!-- 3-Column Bento Grid Matching Reference -->
           <div class="why-choose-grid">
 
-            <!-- Column 1: Left Feature Card (Navy Brand Gradient + Metrics + Action Pill) -->
+            <!-- Column 1: Left Feature Card (Navy Brand Gradient + Features + Metrics + Action Pill) -->
             <div class="why-card-main">
               <div class="why-card-top">
                 <h3 class="why-card-title">A Clear Path To Reliable Appliances</h3>
                 <p class="why-card-desc">
                   Start with rapid diagnostic inspection, receive a clear itemized quote, and get factory-certified repairs with full warranty coverage—designed to keep the process swift, transparent, and hassle-free.
                 </p>
+              </div>
+
+              <!-- Feature Checkpoints (Fills middle empty space) -->
+              <div class="why-card-features">
+                <div class="why-card-feat-item">
+                  <span class="why-feat-check" aria-hidden="true">✓</span>
+                  <span>In-House Certified Master Engineers</span>
+                </div>
+                <div class="why-card-feat-item">
+                  <span class="why-feat-check" aria-hidden="true">✓</span>
+                  <span>100% Genuine OEM Factory Spares</span>
+                </div>
+                <div class="why-card-feat-item">
+                  <span class="why-feat-check" aria-hidden="true">✓</span>
+                  <span>Transparent Rates &amp; 90-Day Warranty</span>
+                </div>
               </div>
 
               <!-- Two Metrics Side-by-Side -->
@@ -2630,7 +2724,7 @@
 
             <!-- Column 3: Right Stacked Column (Top Feature Card + Bottom Landscape Image) -->
             <div class="why-right-stack">
-              <!-- Top Card: Summary & 3 Checkpoint Pills -->
+              <!-- Top Card: Summary & 3 Checkpoint Pills (Zero Sky Blue) -->
               <div class="why-right-card">
                 <p class="why-right-desc">
                   Our certified engineers follow established factory diagnostic frameworks to restore every appliance to original manufacturer specifications.
@@ -2638,22 +2732,19 @@
                 <div class="why-right-checkpoints">
                   <span class="why-checkpoint-item">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>Diagnose</span>
                   </span>
                   <span class="why-checkpoint-item">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                      <polyline points="9 12 11 14 15 10"></polyline>
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>OEM Spares</span>
                   </span>
                   <span class="why-checkpoint-item">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                     <span>90-Day Warranty</span>
                   </span>

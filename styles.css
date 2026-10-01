@@ -4409,15 +4409,23 @@ body.dark-theme .btn-kitchen-call:hover {
     width: 100%;
   }
   .kitchen-showcase-img {
-    clip-path: none !important;
-    -webkit-clip-path: none !important;
     border-radius: 28px 28px 0 0;
   }
   .kitchen-content-bay {
+    position: relative;
+    bottom: auto;
+    left: auto;
     width: 100%;
     max-width: 100%;
-    padding: 32px 24px;
-    height: auto;
+    padding: 28px 24px;
+    border-radius: 0 0 28px 28px;
+    background: #ffffff;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+  }
+  body.dark-theme .kitchen-content-bay {
+    background: #141722;
   }
   .kitchen-main-heading {
     max-width: 100%;
@@ -4436,11 +4444,8 @@ body.dark-theme .btn-kitchen-call:hover {
   }
 }
 @media (max-width: 768px) {
-  .kitchen-showcase-container {
-    padding: 0;
-  }
   .kitchen-showcase-visual {
-    height: 320px;
+    height: 300px;
   }
   .kitchen-content-bay {
     padding: 24px 18px;
@@ -4452,7 +4457,7 @@ body.dark-theme .btn-kitchen-call:hover {
 }
 @media (max-width: 480px) {
   .kitchen-showcase-visual {
-    height: 260px;
+    height: 240px;
   }
   .kitchen-main-heading {
     font-size: 1.45rem;
