@@ -960,27 +960,44 @@
     }
 
     /* ═══════════════════════════════════════════════════════
-       SECTION: WHY CHOOSE APEXFIX (3-COLUMN BENTO GRID)
-       Matching Reference media_1790832540015.png
+       SECTION: WHY CHOOSE APEXFIX (ACCORDION STACK + FRAMED MEDIA)
+       Matching User Reference media_1790854424758.png
        ═══════════════════════════════════════════════════════ */
     .about-why-choose {
-      padding: clamp(48px, 5vw, 76px) 0;
+      padding: clamp(52px, 5.5vw, 84px) 0;
       position: relative;
       background: transparent;
     }
 
-    .why-choose-header {
-      text-align: center;
-      max-width: 840px;
-      margin: 0 auto clamp(32px, 3.8vw, 46px);
+    .why-choose-split {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: clamp(32px, 4vw, 54px);
+      align-items: start;
     }
+
+    /* Left Column: Heading, Subtitle & Interactive Accordion */
+    .why-choose-left-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: 0;
+      padding-top: 4px;
+    }
+
+    .why-choose-badge {
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+
     .why-choose-h2 {
       font-size: var(--text-h2, clamp(1.85rem, 2.8vw, 2.5rem));
       font-weight: 800;
-      line-height: 1.22;
+      line-height: 1.2;
       letter-spacing: -0.025em;
       color: var(--text-dark, #121217);
-      margin: 0 0 14px;
+      margin: 0 0 16px;
+      text-align: left;
     }
     body.dark-theme .why-choose-h2 {
       color: #ffffff;
@@ -991,377 +1008,359 @@
     body.dark-theme .why-choose-h2 .highlight-navy {
       color: #60a5fa;
     }
+
     .why-choose-lead {
       font-size: 15.5px;
       font-weight: 500;
       line-height: 1.62;
       color: var(--text-sub, #5a5f70);
-      margin: 0 auto;
-      max-width: 720px;
+      margin: 0 0 28px;
+      text-align: left;
+      max-width: 620px;
     }
     body.dark-theme .why-choose-lead {
       color: #94a3b8;
     }
 
-    /* 3-Column Bento Grid */
-    .why-choose-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 1fr 1fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-
-    /* Column 1: Left Primary Navy Card */
-    .why-card-main {
-      background: linear-gradient(155deg, #143877 0%, #0c2452 55%, #07152e 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 22px;
-      padding: clamp(28px, 3vw, 36px);
-      color: #ffffff;
+    /* Accordion Stack Container */
+    .why-acc-stack {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 16px 40px rgba(15, 43, 92, 0.2);
-      min-height: 480px;
-      box-sizing: border-box;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    }
-    .why-card-main:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 20px 48px rgba(15, 43, 92, 0.28);
-    }
-    body.dark-theme .why-card-main {
-      background: linear-gradient(155deg, #0e244d 0%, #09172e 60%, #060e1d 100%);
-      border-color: rgba(96, 165, 250, 0.2);
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
-    }
-    body.dark-theme .why-card-main:hover {
-      box-shadow: 0 22px 52px rgba(0, 0, 0, 0.7);
+      gap: 14px;
+      width: 100%;
     }
 
-    .why-card-title {
-      font-size: clamp(20px, 1.9vw, 24px);
-      font-weight: 700;
-      line-height: 1.28;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      margin: 0 0 12px;
-    }
-    .why-card-desc {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.62;
-      color: rgba(255, 255, 255, 0.82);
-      margin: 0;
-    }
-
-    /* Feature List in Left Card (Fills middle space) */
-    .why-card-features {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 20px 0;
-      padding: 16px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-    .why-card-feat-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: #ffffff;
-      line-height: 1.35;
-    }
-    .why-feat-check {
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      border-radius: 50%;
-      background: rgba(16, 185, 129, 0.2);
-      color: #10b981;
-      border: 1px solid rgba(16, 185, 129, 0.45);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    /* Metrics Row */
-    .why-card-metrics {
-      display: flex;
-      align-items: flex-start;
-      gap: clamp(24px, 2.5vw, 40px);
-      margin: 4px 0 24px;
-    }
-    .why-metric-item {
-      display: flex;
-      flex-direction: column;
-    }
-    .why-metric-number {
-      font-size: clamp(30px, 2.4vw, 36px);
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1;
-      letter-spacing: -0.025em;
-      font-family: var(--font-family);
-    }
-    .why-metric-label {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.82);
-      margin-top: 6px;
-      letter-spacing: -0.01em;
-    }
-
-    /* Action CTA Button (White Pill with navy text & arrow, matching reference) */
-    .why-card-cta {
+    /* Accordion Card (Base / Collapsed) */
+    .why-acc-card {
       background: #ffffff;
-      color: var(--brand-accent, #143877);
-      border: none;
-      border-radius: 9999px;
-      padding: 12px 24px;
-      font-size: 14px;
-      font-weight: 700;
-      font-family: var(--font-family);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      border: 1.5px solid rgba(20, 56, 119, 0.09);
+      border-radius: 20px;
+      padding: 16px 22px;
+      box-shadow: 0 3px 12px rgba(15, 43, 92, 0.03);
       cursor: pointer;
-      transition: all 0.25s ease;
-      align-self: flex-start;
-      text-decoration: none;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.35s ease, transform 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
     }
-    .why-card-cta:hover {
-      background: #e6efff;
-      color: #0c2452;
+    .why-acc-card:hover {
+      border-color: rgba(20, 56, 119, 0.24);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.08);
     }
-    .why-card-cta svg {
-      transition: transform 0.25s ease;
+    body.dark-theme .why-acc-card {
+      background: #181924;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
-    .why-card-cta:hover svg {
-      transform: translateX(3px);
+    body.dark-theme .why-acc-card:hover {
+      border-color: rgba(96, 165, 250, 0.3);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
     }
 
-    /* Column 2: Center Image Card (Tall Portrait) */
-    .why-center-card {
-      border-radius: 22px;
+    /* Card Top Row */
+    .why-acc-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+    }
+
+    /* Icon Box */
+    .why-acc-icon-box {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: rgba(20, 56, 119, 0.08);
+      color: var(--brand-accent, #143877);
+      border: 1.5px solid rgba(20, 56, 119, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    body.dark-theme .why-acc-icon-box {
+      background: rgba(96, 165, 250, 0.12);
+      color: #60a5fa;
+      border-color: rgba(96, 165, 250, 0.25);
+    }
+
+    /* Collapsed Header Text */
+    .why-acc-header-collapsed {
+      flex: 1;
+      min-width: 0;
+      max-width: 500px;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.25s ease, max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s ease;
+      white-space: nowrap;
       overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .why-acc-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark, #121217);
+      font-family: var(--font-family);
+      line-height: 1.3;
+      margin: 0;
+      display: block;
+      transition: color 0.25s ease;
+    }
+    body.dark-theme .why-acc-title {
+      color: #ffffff;
+    }
+
+    /* Circular Action Arrow Button */
+    .why-acc-action-btn {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 50%;
+      background: rgba(20, 56, 119, 0.06);
+      color: var(--brand-accent, #143877);
+      border: 1px solid rgba(20, 56, 119, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-left: auto;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      padding: 0;
+    }
+    body.dark-theme .why-acc-action-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #93c5fd;
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Card Body (Smooth Grid Animation Expand/Collapse) */
+    .why-acc-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    }
+    .why-acc-body-inner {
+      overflow: hidden;
+      padding-top: 0;
+      transition: padding-top 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .why-acc-body-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark, #121217);
+      font-family: var(--font-family);
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+    }
+    body.dark-theme .why-acc-body-title {
+      color: #ffffff;
+    }
+    .why-acc-desc {
+      font-size: 14.5px;
+      font-weight: 500;
+      line-height: 1.62;
+      color: var(--text-sub, #5a5f70);
+      margin: 0;
+      font-family: var(--font-family);
+    }
+    body.dark-theme .why-acc-desc {
+      color: #94a3b8;
+    }
+
+    /* Active / Expanded Card State */
+    .why-acc-card.is-active {
+      background: #ffffff;
+      border-color: rgba(20, 56, 119, 0.22);
+      border-radius: 24px;
+      padding: 24px 26px 26px 26px;
+      box-shadow: 0 14px 38px rgba(15, 43, 92, 0.09);
+    }
+    body.dark-theme .why-acc-card.is-active {
+      background: #1c1d2c;
+      border-color: rgba(96, 165, 250, 0.35);
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6);
+    }
+    .why-acc-card.is-active .why-acc-icon-box {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 8px 20px rgba(15, 43, 92, 0.28);
+    }
+    .why-acc-card.is-active .why-acc-icon-box svg {
+      width: 22px;
+      height: 22px;
+    }
+    .why-acc-card.is-active .why-acc-header-collapsed {
+      opacity: 0;
+      max-width: 0;
+      transform: translateX(-10px);
+      pointer-events: none;
+    }
+    .why-acc-card.is-active .why-acc-action-btn {
+      background: var(--brand-accent, #143877);
+      color: #ffffff;
+      border-color: transparent;
+      transform: rotate(45deg);
+      box-shadow: 0 4px 14px rgba(20, 56, 119, 0.25);
+    }
+    body.dark-theme .why-acc-card.is-active .why-acc-action-btn {
+      background: #2563eb;
+      color: #ffffff;
+    }
+    .why-acc-card.is-active .why-acc-body {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+    .why-acc-card.is-active .why-acc-body-inner {
+      padding-top: 18px;
+    }
+
+    /* Right Column: Media Frame with Locked Stable Height */
+    .why-choose-right-col {
+      display: flex;
+      align-self: start;
+      width: 100%;
+      min-width: 0;
+    }
+    .why-acc-media-stage {
       position: relative;
-      box-shadow: 0 12px 36px rgba(15, 43, 92, 0.08);
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      background: #e2e8f0;
+      width: 100%;
+      height: 520px;
+      min-height: 520px;
+      max-height: 520px;
+    }
+    .why-acc-media-card {
+      position: relative;
+      width: 100%;
       height: 100%;
-      min-height: 480px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px rgba(15, 43, 92, 0.14);
+      border: 3.5px solid var(--brand-accent, #143877);
+      background: #0f2b5c;
       box-sizing: border-box;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     }
-    .why-center-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 44px rgba(15, 43, 92, 0.14);
+    .why-acc-media-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 43, 92, 0) 50%, rgba(15, 43, 92, 0.55) 100%);
+      pointer-events: none;
     }
-    body.dark-theme .why-center-card {
-      border-color: rgba(255, 255, 255, 0.08);
+    .why-acc-media-card:hover {
+      transform: translateY(-3px) scale(1.008);
+      box-shadow: 0 24px 54px rgba(15, 43, 92, 0.2);
+    }
+    body.dark-theme .why-acc-media-card {
+      border-color: #2563eb;
       background: #181924;
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.65);
     }
-    .why-center-img {
+    body.dark-theme .why-acc-media-card::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    }
+    .why-acc-media-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
       display: block;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .why-center-card:hover .why-center-img {
-      transform: scale(1.035);
-    }
-
-    /* Column 3: Right Stacked Column */
-    .why-right-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      height: 100%;
-      box-sizing: border-box;
+    .why-acc-media-card:hover .why-acc-media-img {
+      transform: scale(1.025);
     }
 
-    /* Top Card of Column 3 */
-    .why-right-card {
-      background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 20px;
-      padding: 24px 22px;
+    /* Floating Bottom-Right Brand Seal (Matching Reference Mr. Appliance Seal) */
+    .why-media-brand-seal {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(15, 43, 92, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       color: #ffffff;
-      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.14);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-sizing: border-box;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    }
-    .why-right-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 36px rgba(15, 43, 92, 0.22);
-    }
-    body.dark-theme .why-right-card {
-      background: linear-gradient(145deg, #0e2753 0%, #081734 100%);
-      border-color: rgba(96, 165, 250, 0.2);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-    }
-    .why-right-desc {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
       font-size: 13.5px;
-      font-weight: 500;
-      line-height: 1.58;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0 0 14px;
-    }
-    .why-right-checkpoints {
+      font-weight: 700;
+      font-family: var(--font-family);
       display: flex;
       align-items: center;
       gap: 10px;
-      flex-wrap: wrap;
+      box-shadow: 0 12px 30px rgba(6, 18, 40, 0.45);
+      z-index: 2;
+      pointer-events: none;
     }
-    .why-checkpoint-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 12.5px;
-      font-weight: 700;
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      padding: 6px 14px;
+    .brand-seal-badge {
+      color: #fbbf24;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      background: rgba(251, 191, 36, 0.15);
+      padding: 3px 8px;
       border-radius: 9999px;
-      letter-spacing: 0.01em;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-    .why-checkpoint-item:hover {
-      background: rgba(255, 255, 255, 0.14);
-      border-color: rgba(255, 255, 255, 0.28);
-    }
-    .why-checkpoint-item svg {
-      color: #10b981; /* Emerald green checkmark - matches website theme */
-      flex-shrink: 0;
+      border: 1px solid rgba(251, 191, 36, 0.3);
     }
 
-    /* Bottom Image of Column 3 */
-    .why-right-img-wrap {
-      border-radius: 20px;
-      overflow: hidden;
-      flex: 1;
-      min-height: 230px;
-      box-shadow: 0 10px 30px rgba(15, 43, 92, 0.08);
-      border: 1.5px solid rgba(15, 43, 92, 0.08);
-      background: #e2e8f0;
-      position: relative;
-      box-sizing: border-box;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    }
-    .why-right-img-wrap:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 38px rgba(15, 43, 92, 0.14);
-    }
-    body.dark-theme .why-right-img-wrap {
-      border-color: rgba(255, 255, 255, 0.08);
-      background: #181924;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-    }
-    .why-right-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .why-right-img-wrap:hover .why-right-img {
-      transform: scale(1.035);
-    }
-
-    /* Responsive Breakpoints */
+    /* Responsive Breakdown */
     @media (max-width: 992px) {
-      .why-choose-grid {
+      .why-choose-split {
         grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 600px;
-        margin: 0 auto;
+        gap: 36px;
+        align-items: start;
       }
-      .why-card-main {
-        min-height: auto;
+      .why-acc-media-stage {
+        min-height: 420px;
+        max-height: 420px;
+        height: 420px;
       }
-      .why-center-card {
-        height: 380px;
-        min-height: auto;
-      }
-      .why-right-stack {
-        gap: 16px;
-      }
-      .why-right-img-wrap {
-        height: 260px;
-        flex: none;
+      .why-choose-lead {
+        max-width: 100%;
       }
     }
     @media (max-width: 576px) {
-      .why-card-main {
-        padding: 24px 20px;
+      .why-acc-media-stage {
+        min-height: 320px;
+        max-height: 320px;
+        height: 320px;
+        border-radius: 22px;
+      }
+      .why-acc-media-card {
+        border-radius: 22px;
+      }
+      .why-acc-card {
+        padding: 14px 16px;
         border-radius: 18px;
       }
-      .why-card-title {
-        font-size: 20px;
+      .why-acc-card.is-active {
+        padding: 18px 18px 22px 18px;
+        border-radius: 20px;
       }
-      .why-card-metrics {
-        gap: 24px;
-        margin: 20px 0;
+      .why-acc-title {
+        font-size: 15px;
       }
-      .why-metric-number {
-        font-size: 28px;
+      .why-acc-body-title {
+        font-size: 16.5px;
       }
-      .why-card-cta {
-        width: 100%;
-        justify-content: center;
+      .why-acc-desc {
+        font-size: 13.5px;
       }
-      .why-center-card {
-        height: 280px;
-        border-radius: 18px;
-      }
-      .why-right-card {
-        padding: 20px 18px;
-        border-radius: 18px;
-      }
-      .why-right-img-wrap {
-        height: 220px;
-        border-radius: 18px;
-      }
-      .why-choose-h2 {
-        font-size: clamp(1.4rem, 5vw, 1.85rem);
-      }
-    }
-    @media (max-width: 360px) {
-      .why-card-main {
-        padding: 18px 14px;
-      }
-      .why-card-metrics {
-        flex-direction: column;
-        gap: 12px;
-      }
-      .why-metric-number {
-        font-size: 24px;
-      }
-      .why-center-card {
-        height: 230px;
-      }
-      .why-right-img-wrap {
-        height: 180px;
-      }
-      .why-checkpoint-item {
-        font-size: 11px;
+      .why-media-brand-seal {
+        bottom: 14px;
+        right: 14px;
+        padding: 7px 14px;
+        font-size: 11.5px;
       }
     }
     /* ============================================================
@@ -2301,19 +2300,53 @@
             </div>
           </div>
 
-          <!-- Bottom Key Metrics Row -->
-          <div class="hero-split-stats">
-            <div class="hero-split-stat-item">
-              <span class="stat-number-brand">12+</span>
-              <span class="stat-caption-sub">Years of<br>Excellence</span>
+          <!-- Bottom Key Metrics Bar (Matching Blog & Contact Page Design) -->
+          <div class="blog-hero-trust-bar">
+            <!-- Metric 1: 12+ Years of Excellence -->
+            <div class="blog-trust-item">
+              <div class="blog-trust-icon-box">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <div class="blog-trust-text">
+                <span class="blog-trust-title">12+</span>
+                <span class="blog-trust-sub">Years of Excellence</span>
+              </div>
             </div>
-            <div class="hero-split-stat-item">
-              <span class="stat-number-brand">50K+</span>
-              <span class="stat-caption-sub">Appliances<br>Restored</span>
+
+            <!-- Vertical Separator 1 -->
+            <div class="blog-trust-divider" aria-hidden="true"></div>
+
+            <!-- Metric 2: 50K+ Appliances Restored -->
+            <div class="blog-trust-item">
+              <div class="blog-trust-icon-box">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <div class="blog-trust-text">
+                <span class="blog-trust-title">50K+</span>
+                <span class="blog-trust-sub">Appliances Restored</span>
+              </div>
             </div>
-            <div class="hero-split-stat-item">
-              <span class="stat-number-brand">100%</span>
-              <span class="stat-caption-sub">OEM Factory<br>Parts</span>
+
+            <!-- Vertical Separator 2 -->
+            <div class="blog-trust-divider" aria-hidden="true"></div>
+
+            <!-- Metric 3: 100% OEM Factory Parts -->
+            <div class="blog-trust-item">
+              <div class="blog-trust-icon-box">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <div class="blog-trust-text">
+                <span class="blog-trust-title">100%</span>
+                <span class="blog-trust-sub">OEM Factory Parts</span>
+              </div>
             </div>
           </div>
         </div>
@@ -2636,123 +2669,148 @@
       </section>
 
       <!-- ═══════════════════════════════════════════════════════
-           SECTION: WHY CHOOSE APEXFIX (3-COLUMN BENTO GRID)
-           Exact Match of User Reference media_1790832540015.png
+           SECTION: WHY CHOOSE APEXFIX (ACCORDION STACK + FRAMED MEDIA)
+           Exact Match of User Reference media_1790854424758.png
       ═══════════════════════════════════════════════════════ -->
       <section class="about-why-choose" id="standards" aria-label="Why Choose ApexFix Appliance Repair">
         <div class="section-container-inner">
+          <div class="why-choose-split">
 
-          <!-- Centered Header (Eyebrow, Dual-Color H2, Subtitle) -->
-          <div class="why-choose-header">
-            <div class="badge-tag" style="margin: 0 auto 16px;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              <span>WHY CHOOSE APEXFIX</span>
-            </div>
-
-            <h2 class="why-choose-h2">
-              Rapid Appliance Repairs With <span class="highlight-navy">Certified Standards</span>
-            </h2>
-
-            <p class="why-choose-lead">
-              ApexFix delivers background-verified master engineers, 100% genuine OEM factory parts, and transparent pricing across Greater Dubai.
-            </p>
-          </div>
-
-          <!-- 3-Column Bento Grid Matching Reference -->
-          <div class="why-choose-grid">
-
-            <!-- Column 1: Left Feature Card (Navy Brand Gradient + Features + Metrics + Action Pill) -->
-            <div class="why-card-main">
-              <div class="why-card-top">
-                <h3 class="why-card-title">A Clear Path To Reliable Appliances</h3>
-                <p class="why-card-desc">
-                  Start with rapid diagnostic inspection, receive a clear itemized quote, and get factory-certified repairs with full warranty coverage—designed to keep the process swift, transparent, and hassle-free.
-                </p>
-              </div>
-
-              <!-- Feature Checkpoints (Fills middle empty space) -->
-              <div class="why-card-features">
-                <div class="why-card-feat-item">
-                  <span class="why-feat-check" aria-hidden="true">✓</span>
-                  <span>In-House Certified Master Engineers</span>
-                </div>
-                <div class="why-card-feat-item">
-                  <span class="why-feat-check" aria-hidden="true">✓</span>
-                  <span>100% Genuine OEM Factory Spares</span>
-                </div>
-                <div class="why-card-feat-item">
-                  <span class="why-feat-check" aria-hidden="true">✓</span>
-                  <span>Transparent Rates &amp; 90-Day Warranty</span>
-                </div>
-              </div>
-
-              <!-- Two Metrics Side-by-Side -->
-              <div class="why-card-metrics">
-                <div class="why-metric-item">
-                  <div class="why-metric-number">15K+</div>
-                  <div class="why-metric-label">Appliances Restored</div>
-                </div>
-                <div class="why-metric-item">
-                  <div class="why-metric-number">12+</div>
-                  <div class="why-metric-label">Years of Excellence</div>
-                </div>
-              </div>
-
-              <!-- Action Pill Button (White Pill with Navy Text, matching reference 'Learn More →') -->
-              <button class="why-card-cta book-trigger" type="button" data-service="General Repair">
-                <span>Book Technician</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+            <!-- Left Column: Heading + Interactive Accordion Stack -->
+            <div class="why-choose-left-col">
+              
+              <!-- Eyebrow Badge Tag -->
+              <div class="badge-tag why-choose-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-              </button>
-            </div>
+                <span>WHY CHOOSE APEXFIX</span>
+              </div>
 
-            <!-- Column 2: Middle Tall Portrait Image (Team Collaborating in Workshop) -->
-            <div class="why-center-card">
-              <img src="assets/standards-team-collab.jpg" alt="ApexFix Master Engineering Team Collaborating in Dubai Workshop" class="why-center-img" loading="lazy">
-            </div>
+              <!-- Dual-Color H2 Heading (Brand Standard) -->
+              <h2 class="why-choose-h2">
+                Rapid Appliance Repairs With <span class="highlight-navy">Certified Standards</span>
+              </h2>
 
-            <!-- Column 3: Right Stacked Column (Top Feature Card + Bottom Landscape Image) -->
-            <div class="why-right-stack">
-              <!-- Top Card: Summary & 3 Checkpoint Pills (Zero Sky Blue) -->
-              <div class="why-right-card">
-                <p class="why-right-desc">
-                  Our certified engineers follow established factory diagnostic frameworks to restore every appliance to original manufacturer specifications.
-                </p>
-                <div class="why-right-checkpoints">
-                  <span class="why-checkpoint-item">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Diagnose</span>
-                  </span>
-                  <span class="why-checkpoint-item">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>OEM Spares</span>
-                  </span>
-                  <span class="why-checkpoint-item">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>90-Day Warranty</span>
-                  </span>
+              <!-- Subtitle Paragraph -->
+              <p class="why-choose-lead">
+                Reliable doorstep appliance repair with certified master technicians ensuring precision diagnostics, 100% genuine OEM factory parts, and guaranteed satisfaction every single time.
+              </p>
+
+              <!-- Interactive 3-Card Stack (Matching Reference Layout & Behavior) -->
+              <div class="why-acc-stack" id="whyChooseAccordion">
+                
+                <!-- Card 1: Active by Default -->
+                <div class="why-acc-card is-active" data-index="1">
+                  <div class="why-acc-top">
+                    <div class="why-acc-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="why-acc-header-collapsed">
+                      <span class="why-acc-title">Flexible Scheduling and Quick Repairs</span>
+                    </div>
+                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="true">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="why-acc-body">
+                    <div class="why-acc-body-inner">
+                      <h3 class="why-acc-body-title">Flexible Scheduling and Quick Repairs</h3>
+                      <p class="why-acc-desc">
+                        We promptly assess your appliance, explain needed repairs, and provide a clear upfront quote with rapid 2-hour doorstep response across Greater Dubai.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Transparent Costs -->
+                <div class="why-acc-card" data-index="2">
+                  <div class="why-acc-top">
+                    <div class="why-acc-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                    </div>
+                    <div class="why-acc-header-collapsed">
+                      <span class="why-acc-title">Transparent &amp; Upfront Costs</span>
+                    </div>
+                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="why-acc-body">
+                    <div class="why-acc-body-inner">
+                      <h3 class="why-acc-body-title">Transparent &amp; Upfront Costs</h3>
+                      <p class="why-acc-desc">
+                        Zero hidden callout fees or unexpected charges. Every repair begins with an itemized digital estimate detailing genuine OEM parts and fixed labor rates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Trusted Quality -->
+                <div class="why-acc-card" data-index="3">
+                  <div class="why-acc-top">
+                    <div class="why-acc-icon-box">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="why-acc-header-collapsed">
+                      <span class="why-acc-title">Trusted Quality &amp; Warranty</span>
+                    </div>
+                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="why-acc-body">
+                    <div class="why-acc-body-inner">
+                      <h3 class="why-acc-body-title">Trusted Quality &amp; Warranty</h3>
+                      <p class="why-acc-desc">
+                        Restored strictly to manufacturer specifications using 100% factory-original components, backed by our official written 90-day parts and labor guarantee.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- /.why-acc-stack -->
+
+            </div><!-- /.why-choose-left-col -->
+
+            <!-- Right Column: Framed Media Card (Thick Navy Blue Border) -->
+            <div class="why-choose-right-col">
+              <div class="why-acc-media-stage">
+                <div class="why-acc-media-card">
+                  <img src="assets/why-choose-us.jpg" alt="ApexFix Certified Master Technician Restoring Luxury Kitchen Appliance in Dubai" class="why-acc-media-img" loading="lazy">
+                  <!-- Brand Seal (Matching Reference Corner Badge) -->
+                  <div class="why-media-brand-seal">
+                    <span class="brand-seal-badge">★ 4.9</span>
+                    <span>100% Certified OEM Standards</span>
+                  </div>
                 </div>
               </div>
+            </div><!-- /.why-choose-right-col -->
 
-              <!-- Bottom Image: Master Technician Servicing Kitchen Appliance -->
-              <div class="why-right-img-wrap">
-                <img src="assets/why-choose-us.jpg" alt="ApexFix Master Technician Servicing Kitchen Appliance" class="why-right-img" loading="lazy">
-              </div>
-            </div>
-
-          </div><!-- /.why-choose-grid -->
-
+          </div><!-- /.why-choose-split -->
         </div><!-- /.section-container-inner -->
       </section>
 
@@ -3019,5 +3077,31 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Why Choose Us Interactive Accordion with smooth expand & close animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const accCards = document.querySelectorAll('#whyChooseAccordion .why-acc-card');
+      accCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+          if (e.target.closest('a')) return;
+          const isCurrentlyActive = this.classList.contains('is-active');
+
+          // Smoothly collapse all cards
+          accCards.forEach(c => {
+            c.classList.remove('is-active');
+            const btn = c.querySelector('.why-acc-action-btn');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle: if it was not active, expand it. If it was active, it stays collapsed.
+          if (!isCurrentlyActive) {
+            this.classList.add('is-active');
+            const btn = this.querySelector('.why-acc-action-btn');
+            if (btn) btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
