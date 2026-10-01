@@ -777,7 +777,7 @@
       background: #ffffff;
       border: 1.5px solid rgba(15, 43, 92, 0.08);
       border-radius: 18px;
-      padding: 16px 18px;
+      padding: 20px 20px;
       position: relative;
       overflow: hidden;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -812,7 +812,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     .process-step-icon {
@@ -866,11 +866,12 @@
     }
 
     .process-step-title {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: clamp(1.22rem, 1.45vw, 1.38rem);
+      font-weight: 800;
       line-height: 1.25;
+      letter-spacing: -0.02em;
       color: var(--text-dark, #121217);
-      margin: 0;
+      margin: 0 0 6px 0;
       position: relative;
       z-index: 1;
     }
@@ -879,10 +880,10 @@
     }
 
     .process-step-desc {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
       color: var(--text-sub, #5a5f70);
-      line-height: 1.58;
+      line-height: 1.6;
       margin: 0;
       position: relative;
       z-index: 1;
@@ -1888,7 +1889,6 @@
       .bento-card-wide { height: 230px; }
       .bento-card-square { height: 210px; }
       .bento-card-trust { height: auto; min-height: 220px; }
-      .mcard-bottom-img-wrap { height: 200px; }
     }
     @media (max-width: 480px) {
       .btn-cta-green, .btn-cta-navy { justify-content: center; }
