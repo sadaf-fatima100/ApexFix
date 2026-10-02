@@ -581,6 +581,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Article Copy Link Interaction
+  document.querySelectorAll('.copy-article-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('Article link copied to clipboard!');
+        }).catch(() => {
+          showToast('Article link copied!');
+        });
+      } else {
+        showToast('Article link: ' + window.location.href);
+      }
+    });
+  });
+
   window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
   window.addEventListener('resize', updateNavbarOnScroll, { passive: true });
   updateNavbarOnScroll();
