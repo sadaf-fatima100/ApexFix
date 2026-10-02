@@ -676,6 +676,461 @@
 
         </div>
       </section>
+      <section class="areas-serve-section" id="service-areas">
+        <div class="areas-boxed-container">
+        
+        <!-- Top Section Header: 2 Columns (Typography & Status Pills on Left, Styled Map with Hub Pin on Right) -->
+        <div class="areas-header-row">
+          
+          <!-- Left Column: Eyebrow, Main Title, Description & Status Badges -->
+          <div class="areas-header-left">
+            <div class="badge-tag">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>DUBAI SERVICE AREAS</span>
+            </div>
+
+            <h2 class="areas-main-title">
+              Areas We Proudly Serve<br><span class="highlight-navy">Across Dubai</span>
+            </h2>
+
+            <p class="areas-main-desc">
+              No matter where you are in Dubai, our technicians are ready to reach you. We cover all major communities and luxury towers for expert appliance repair services.
+            </p>
+
+            <!-- Status Pill Strip (Active Vans, Response Time, 24/7 Coverage) -->
+            <div class="areas-status-strip">
+              <div class="status-pill-item">
+                <span class="status-icon-chip chip-navy">
+                  <svg class="status-icon icon-truck" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                  </svg>
+                </span>
+                <span class="status-pill-text"><strong>14+</strong> <span class="pill-sub-word">Mobile </span>Vans Active</span>
+              </div>
+              <div class="status-pill-item">
+                <span class="status-icon-chip chip-navy">
+                  <svg class="status-icon icon-lightning" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 2L3 14h8v8l10-12h-8l0-8z"/>
+                  </svg>
+                </span>
+                <span class="status-pill-text"><strong>1-Hr</strong> <span class="pill-sub-word">Avg </span>Response</span>
+              </div>
+              <div class="status-pill-item">
+                <span class="status-icon-chip chip-navy">
+                  <svg class="status-icon icon-clock" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </span>
+                <span class="status-pill-text"><strong>24/7</strong> <span class="pill-sub-word">All Dubai </span>Coverage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Dispatch Map Stage -->
+          <div class="areas-header-map">
+            <div class="areas-map-stage">
+              <img src="assets/world-map-navy.png" alt="Dubai Dispatch Hub World Coverage" class="areas-map-img" loading="lazy">
+              
+              <!-- Animated Curved Trajectory Routes & White Location Pins matching user reference and theme -->
+              <svg class="map-routes-svg" viewBox="0 0 920 598" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <filter id="map-pin-shadow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feDropShadow dx="0" dy="3.5" stdDeviation="3" flood-color="#143877" flood-opacity="0.28" />
+                  </filter>
+                  <filter id="hub-pin-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#2563eb" flood-opacity="0.4" />
+                  </filter>
+
+                  <!-- Reusable White Theme-Matching Location Pin (Teardrop with inner cutout) -->
+                  <g id="white-location-pin" class="svg-map-pin">
+                    <ellipse cx="0" cy="0" rx="7" ry="2.6" fill="rgba(20, 56, 119, 0.28)" />
+                    <path d="M 0 0 C -3 -5 -11 -13 -11 -21 C -11 -27.075 -6.075 -32 0 -32 C 6.075 -32 11 -27.075 11 -21 C 11 -13 3 -5 0 0 Z"
+                          fill="#ffffff" stroke="rgba(20, 56, 119, 0.22)" stroke-width="1.6" filter="url(#map-pin-shadow)" />
+                    <circle cx="0" cy="-21" r="4.2" fill="#143877" />
+                  </g>
+                </defs>
+
+                <!-- Network White Location Pins on Continents matching user layout -->
+                <g class="network-pins-layer">
+                  <!-- Canada -->
+                  <g class="pin-wrapper" transform="translate(257, 115)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- North America (US) -->
+                  <g class="pin-wrapper" transform="translate(185, 230)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- South America -->
+                  <g class="pin-wrapper" transform="translate(290, 420)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Europe Hub -->
+                  <g class="pin-wrapper" transform="translate(490, 175)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Africa Hub -->
+                  <g class="pin-wrapper" transform="translate(500, 360)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- East Asia Hub -->
+                  <g class="pin-wrapper" transform="translate(780, 210)">
+                    <use href="#white-location-pin" />
+                  </g>
+                  <!-- Australia Hub -->
+                  <g class="pin-wrapper" transform="translate(801, 480)">
+                    <use href="#white-location-pin" />
+                  </g>
+
+                  <!-- Dubai Central Hero Pin (Highlighted Theme Accent & Live Emerald Status) -->
+                  <g class="pin-wrapper pin-hero-dubai" transform="translate(625, 281)">
+                    <circle cx="0" cy="0" r="14" class="hub-pulse-wave ring-1" />
+                    <circle cx="0" cy="0" r="26" class="hub-pulse-wave ring-2" />
+                    <ellipse cx="0" cy="0" rx="9" ry="3.5" fill="rgba(37, 99, 235, 0.4)" />
+                    <!-- Hero White Pin with Electric Blue Border -->
+                    <path d="M 0 0 C -4 -6 -13 -15 -13 -25 C -13 -32.2 -7.2 -38 0 -38 C 7.2 -38 13 -32.2 13 -25 C 13 -15 4 -6 0 0 Z"
+                          fill="#ffffff" stroke="#2563eb" stroke-width="2.4" filter="url(#hub-pin-shadow)" />
+                    <circle cx="0" cy="-25" r="5" fill="#10b981" />
+                  </g>
+                </g>
+              </svg>
+
+              <!-- Floating Dispatch Badge directly anchored above Dubai Pin -->
+              <div class="dubai-map-hub">
+                <div class="hub-dispatch-pill">
+                  <span class="hub-badge-dot"></span>
+                  <span class="hub-badge-text">Dubai Central Dispatch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Search Bar & Dynamic Counter Filter Strip -->
+        <div class="areas-search-wrapper">
+          <div class="areas-search-box">
+            <svg class="areas-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="areaSearchInput" class="area-search-input" placeholder="Quick search your neighborhood (e.g. Marina, Palm, Jumeirah, Downtown...)" aria-label="Search serviced neighborhood in Dubai" autocomplete="off">
+            <button class="areas-clear-btn" id="searchClearBtn" aria-label="Clear search input" style="display: none;">&times;</button>
+          </div>
+          <div class="areas-counter-badge" id="areasCountBadge">
+            <span id="areasCountText">24 Key Districts</span>
+          </div>
+        </div>
+
+        <!-- 24 Districts Grid -->
+        <div class="areas-districts-grid" id="areasDistrictsGrid">
+          
+          <div class="area-card" data-district="Dubai Water Front" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Water Front</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="DIFC" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">DIFC</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Downtown Dubai" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Downtown Dubai</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Business Bay" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Business Bay</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Al Safa" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Al Safa</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Mirdif" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Mirdif</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Beach" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Beach</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Island" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Island</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Lakes Towers" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Lakes Towers</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Umm Suqeim" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Umm Suqeim</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Sheikh Zayed Road" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Sheikh Zayed Road</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Production City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Production City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Sports City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Sports City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Jumeirah Golf Estates" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Jumeirah Golf Estates</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Discovery Gardens" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Discovery Gardens</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Marina" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Marina</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Silicon Oasis" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Silicon Oasis</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Media City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Media City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Barsha Heights" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Barsha Heights</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Dubai Internet City" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Dubai Internet City</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="The Greens" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">The Greens</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="Arabian Ranches" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">Arabian Ranches</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+          <div class="area-card" data-district="The Palm Jumeirah" role="button" tabindex="0">
+            <div class="area-card-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span class="area-card-name">The Palm Jumeirah</span>
+            <span class="area-card-dot" title="Technician Available" aria-label="Available"></span>
+          </div>
+
+        </div>
+
+        <!-- No Results Fallback (Shown via JS when search yields 0 matches) -->
+        <div class="areas-empty-state" id="areasEmptyState" style="display: none;">
+          <div class="empty-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h4 class="empty-title">Community not found in quick list?</h4>
+          <p class="empty-desc">We dispatch across 100% of Dubai! Call our central dispatch line for instant technician assignment to your location.</p>
+          <button class="empty-cta-btn book-trigger" data-service="General Repair">Book Immediate Dispatch</button>
+        </div>
+
+        <!-- Bottom CTA Banner (ApexFix High-Contrast Dispatch Callout) -->
+        <div class="areas-cta-banner">
+          <div class="cta-banner-text">
+            <span class="cta-banner-eyebrow">Don't see your community listed above?</span>
+            <h4 class="cta-banner-heading">ApexFix covers 100% of Greater Dubai &amp; Free Zones</h4>
+          </div>
+          <div class="cta-banner-action">
+            <a href="tel:+971508867234" class="btn-dispatch-call" id="dispatchCallBtn">
+              <svg class="phone-vibe-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <span>Call Central Dispatch: +971 50 886 7234</span>
+            </a>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+
       <!-- Pre-Footer CTA — Simple High-Conversion Banner Matching User Reference media_1790673423583.png -->
       <section class="prefooter-cta-section" id="prefooterCta" aria-label="Need Fast &amp; Reliable Appliance Repair">
         <div class="prefooter-cta-container">
@@ -804,7 +1259,7 @@
               <a href="https://wa.me/971508867234?text=Hello%20ApexFix%2C%20I%20need%20fast%20appliance%20repair" target="_blank" rel="noopener noreferrer" class="btn-simple-cta-whatsapp" aria-label="Live WhatsApp Chat">
                 <span class="btn-simple-icon btn-wa-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                   </svg>
                 </span>
                 <span>Live WhatsApp Chat</span>
@@ -1071,6 +1526,37 @@
       <div class="toast-title">Booking Request Received!</div>
       <div class="toast-desc">Our master technician dispatch has been alerted. Calling you shortly.</div>
     </div>
+  </div>
+
+    <!-- Production Floating Contact Dock (WhatsApp & Emergency Phone Call Chatty Icons) -->
+  <div class="floating-contact-dock" id="floatingContactDock" aria-label="Quick Contact Actions">
+    <!-- 1. Direct Phone Call Floating Button -->
+    <a href="tel:+971508867234" class="float-contact-btn float-call-btn" aria-label="Call ApexFix 24/7 Emergency Hotline">
+      <span class="float-sonar-ring" aria-hidden="true"></span>
+      <span class="float-sonar-ring ring-delay" aria-hidden="true"></span>
+      <span class="float-online-dot" aria-hidden="true"></span>
+      <svg class="float-icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <div class="float-btn-tooltip" aria-hidden="true">
+        <span class="float-tooltip-kicker"><span class="float-tooltip-dot"></span>24/7 Emergency Hotline</span>
+        <span class="float-tooltip-title">Call +971 50 886 7234</span>
+      </div>
+    </a>
+
+    <!-- 2. WhatsApp Instant Chat Floating Button -->
+    <a href="https://wa.me/971508867234?text=Hi%20ApexFix,%20I%20need%20certified%20appliance%20repair%20assistance%20in%20Dubai." target="_blank" rel="noopener noreferrer" class="float-contact-btn float-whatsapp-btn" aria-label="Chat with ApexFix on WhatsApp">
+      <span class="float-sonar-ring" aria-hidden="true"></span>
+      <span class="float-sonar-ring ring-delay" aria-hidden="true"></span>
+      <span class="float-online-dot" aria-hidden="true"></span>
+      <svg class="float-icon-svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <div class="float-btn-tooltip" aria-hidden="true">
+        <span class="float-tooltip-kicker"><span class="float-tooltip-dot"></span>Instant WhatsApp Chat</span>
+        <span class="float-tooltip-title">Chat with Master Tech</span>
+      </div>
+    </a>
   </div>
 
   <script src="script.js"></script>
