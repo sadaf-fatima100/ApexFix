@@ -2369,10 +2369,7 @@ body.dark-theme .why-card-content .why-card-desc {
   margin-bottom: 16px;
 }
 .areas-main-title .highlight-navy {
-  color: var(--brand-accent);
-  background: none;
-  -webkit-text-fill-color: initial;
-  display: inline;
+  /* Inherits signature Navy Blue gradient from .highlight-navy */
 }
 .areas-main-desc {
   font-size: var(--text-subtitle);
@@ -3709,14 +3706,30 @@ body.dark-theme .why-card-content .why-card-desc {
   display: inline;
 }
 .highlight-navy,
-.about-headline .highlight-navy {
-  color: var(--brand-accent);
-  background: none;
-  -webkit-text-fill-color: initial;
+h2 .highlight-navy,
+.about-headline .highlight-navy,
+.section-title .highlight-navy,
+.brands-main-title .highlight-navy,
+.process-main-title .highlight-navy,
+.areas-main-title .highlight-navy,
+.stories-title .highlight-navy,
+.faq-main-heading .highlight-navy,
+.prefooter-simple-heading .highlight-navy,
+.expertise-main-title .highlight-navy,
+.cta-showcase-title .highlight-navy {
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #143877;
   display: inline;
 }
 .process-featured-card .highlight-navy,
 .blog-urgent-card .highlight-navy {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
   color: #ffffff !important;
 }
 .about-lead {
@@ -4452,7 +4465,14 @@ body.dark-theme .kitchen-eyebrow-dot {
   max-width: 480px;
 }
 .kitchen-main-heading .highlight-navy {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: #60a5fa !important;
+  display: inline;
 }
 body.dark-theme .kitchen-main-heading {
   color: #ffffff;
@@ -5141,13 +5161,7 @@ body.dark-theme .prefooter-simple-heading {
   color: #ffffff;
 }
 
-.prefooter-simple-heading .highlight-navy {
-  color: var(--brand-accent, #0f2b5c);
-}
-
-body.dark-theme .prefooter-simple-heading .highlight-navy {
-  color: #60a5fa;
-}
+/* prefooter-simple-heading .highlight-navy inherits signature navy / royal blue gradient */
 
 /* Description */
 .prefooter-simple-desc {
@@ -8960,10 +8974,25 @@ body.dark-theme .about-headline {
   color: #ffffff;
 }
 body.dark-theme .highlight-navy,
-body.dark-theme .about-headline .highlight-navy {
+body.dark-theme h2 .highlight-navy,
+body.dark-theme .about-headline .highlight-navy,
+body.dark-theme .section-title .highlight-navy,
+body.dark-theme .brands-main-title .highlight-navy,
+body.dark-theme .process-main-title .highlight-navy,
+body.dark-theme .areas-main-title .highlight-navy,
+body.dark-theme .stories-title .highlight-navy,
+body.dark-theme .faq-main-heading .highlight-navy,
+body.dark-theme .prefooter-simple-heading .highlight-navy,
+body.dark-theme .expertise-main-title .highlight-navy,
+body.dark-theme .cta-showcase-title .highlight-navy {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: #60a5fa !important;
-  background: none;
-  -webkit-text-fill-color: initial;
+  display: inline;
 }
 body.dark-theme .about-lead {
   color: #9ca3af;
@@ -9130,13 +9159,7 @@ body.dark-theme .feature-description {
   flex-shrink: 0;
   box-sizing: border-box;
   padding: 16px 44px 38px 44px;
-} /* Individual Story Card — Animated Navy Blue Border Draw on Hover */
-@property --story-border-angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
+} /* Individual Story Card */
 .story-card {
   flex: 1 1 0;
   min-width: 0;
@@ -9144,7 +9167,7 @@ body.dark-theme .feature-description {
   width: auto;
   min-height: 335px;
   background-color: #ffffff;
-  border: 1.5px solid #e5eaf2;
+  border: 1.5px solid #ebeff5;
   border-radius: 22px;
   padding: 26px 22px 22px 22px;
   box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
@@ -9156,40 +9179,36 @@ body.dark-theme .feature-description {
   cursor: pointer;
   user-select: none;
   transition:
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-/* Animated Navy Blue Border Draw Overlay */
-.story-card::before {
+/* Smooth Navy Blue (#143877) Border-Draw Animation on Hover */
+.story-card::before,
+.story-card::after {
   content: "";
   position: absolute;
   inset: -1.5px;
   border-radius: 22px;
-  padding: 2.5px;
-  --story-border-angle: 0deg;
-  background: conic-gradient(
-    from -90deg at 50% 50%,
-    #143877 0deg,
-    #1d4ed8 calc(var(--story-border-angle) * 0.65),
-    #143877 var(--story-border-angle),
-    transparent var(--story-border-angle),
-    transparent 360deg
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  border: 2px solid #143877;
   pointer-events: none;
-  z-index: 5;
-  transition: --story-border-angle 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 4;
+  box-sizing: border-box;
+  transition: clip-path 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.story-card:hover::before {
-  --story-border-angle: 360deg;
+.story-card::before {
+  clip-path: inset(0 100% 100% 0);
 }
 
-/* Stories Category Badge */
+.story-card::after {
+  clip-path: inset(100% 0 0 100%);
+}
+
+.story-card:hover::before,
+.story-card:hover::after {
+  clip-path: inset(0 0 0 0);
+} /* Stories Category Badge */
 .story-card-top {
   display: flex;
   align-items: center;
@@ -9206,9 +9225,6 @@ body.dark-theme .feature-description {
   fill: #f59e0b;
   flex-shrink: 0;
   transition: transform 0.2s ease;
-}
-.story-card:hover .story-rating-stars svg {
-  transform: scale(1.08);
 }
 .story-badge {
   font-size: 11px;
@@ -9272,10 +9288,6 @@ body.dark-theme .feature-description {
   opacity: 0.9;
   margin-top: 6px;
   user-select: none;
-  transition: color 0.3s ease;
-}
-.story-card:hover .story-quote-mark {
-  color: #143877;
 } /* Desktop Fanned Convex Arc Deck (matching reference) */
 @media (min-width: 1081px) {
   .story-card.card-arc-1 {
@@ -9293,10 +9305,9 @@ body.dark-theme .feature-description {
   .story-card.card-arc-4 {
     transform: translateY(16px) rotate(4.5deg);
     z-index: 1;
-  } /* Interactive Hover: Keep arc angle (no straightening), draw navy border */
+  } /* Interactive Hover: Keep original tilt angle steady, draw navy border only */
   .story-card:hover {
-    z-index: 25 !important;
-    box-shadow: 0 20px 44px rgba(20, 56, 119, 0.14) !important;
+    box-shadow: 0 16px 38px rgba(20, 56, 119, 0.12) !important;
     opacity: 1 !important;
   }
 } /* Bottom Segmented Pagination Bar */
@@ -9381,7 +9392,7 @@ body.dark-theme .feature-description {
     min-width: 275px;
   }
   .story-card:hover {
-    transform: translateY(-6px) scale(1.01) !important;
+    transform: none !important;
   }
 }
 @media (max-width: 600px) {
@@ -9433,10 +9444,13 @@ body.dark-theme .story-card {
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
 }
+body.dark-theme .story-card::before,
+body.dark-theme .story-card::after {
+  border-color: #3b82f6;
+}
 body.dark-theme .story-card:hover {
-  background-color: #18233a !important;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65) !important;
-  border-color: rgba(96, 165, 250, 0.35) !important;
+  background-color: #152036 !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55) !important;
 }
 body.dark-theme .story-badge {
   color: #64748b;
@@ -9480,11 +9494,7 @@ body.dark-theme .areas-boxed-container::before {
 body.dark-theme .areas-main-title {
   color: #ffffff;
 }
-body.dark-theme .areas-main-title .highlight-navy {
-  color: #60a5fa;
-  background: none;
-  -webkit-text-fill-color: initial;
-}
+/* body.dark-theme .areas-main-title .highlight-navy inherits signature royal blue gradient */
 body.dark-theme .areas-main-desc {
   color: #94a3b8;
 }
@@ -12615,12 +12625,7 @@ body.dark-theme .expertise-eyebrow-line {
 body.dark-theme .expertise-header-wrap .expertise-main-title {
   color: #ffffff;
 }
-.expertise-header-wrap .expertise-main-title .highlight-navy {
-  color: var(--brand-accent, #143877);
-}
-body.dark-theme .expertise-header-wrap .expertise-main-title .highlight-navy {
-  color: #60a5fa;
-}
+/* .expertise-header-wrap .expertise-main-title .highlight-navy inherits signature navy/royal blue gradient */
 .expertise-subtitle {
   font-size: 15.5px;
   font-weight: 500;
@@ -17229,9 +17234,7 @@ body.dark-theme .blog-section-subtitle-tag {
   color: var(--text-dark, #121217);
   margin: 0 0 18px 0;
 }
-.article-post-title .highlight-navy {
-  color: var(--brand-accent, #143877);
-}
+/* .article-post-title .highlight-navy inherits signature navy gradient */
 
 /* Article Lead Paragraph */
 .article-post-lead {
@@ -17664,9 +17667,7 @@ body.dark-theme .blog-section-subtitle-tag {
   gap: 10px;
   flex-wrap: wrap;
 }
-.article-content-body h2 .highlight-navy {
-  color: var(--brand-accent, #143877);
-}
+/* .article-content-body h2 .highlight-navy inherits signature navy gradient */
 .article-content-body h3 {
   font-family: var(--font-family);
   font-size: 18.5px;
@@ -18376,9 +18377,7 @@ body.dark-theme .article-meta-date svg {
 body.dark-theme .article-post-title {
   color: #ffffff;
 }
-body.dark-theme .article-post-title .highlight-navy {
-  color: #60a5fa;
-}
+/* body.dark-theme .article-post-title .highlight-navy inherits signature royal blue gradient */
 body.dark-theme .article-post-lead {
   color: #94a3b8;
 }
@@ -18479,9 +18478,7 @@ body.dark-theme .article-content-body h2 {
   color: #f8fafc;
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
-body.dark-theme .article-content-body h2 .highlight-navy {
-  color: #60a5fa;
-}
+/* body.dark-theme .article-content-body h2 .highlight-navy inherits signature royal blue gradient */
 body.dark-theme .article-content-body h3 {
   color: #f8fafc;
 }

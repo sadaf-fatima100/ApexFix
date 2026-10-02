@@ -42,9 +42,9 @@ This project follows strict engineering and visual standards. Every change must 
   - **Micro-copy / Labels**: `10.5px` to `12.5px`.
 - **Dual-Color Section Headings Standard**:
   - **EVERY section heading across ALL pages (excluding hero sections) MUST use dual colors** matching `index.html`.
-  - Light mode: Base text in dark charcoal `var(--text-dark)` (`#121217`), emphasis text in `<span class="highlight-navy">` (`var(--brand-accent)` `#143877`).
-  - Dark mode (`body.dark-theme`): Base text in `#ffffff`, emphasis text in `#60a5fa` (`body.dark-theme .highlight-navy`).
-  - Dark cards/banners: Base text in `#ffffff`, emphasis text in `#60a5fa`.
+  - Light mode: Base text in dark charcoal `var(--text-dark)` (`#121217`), emphasis text in `<span class="highlight-navy">` styled with signature Navy Blue gradient (`linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%)`) with text clip.
+  - Dark mode (`body.dark-theme`): Base text in `#ffffff`, emphasis text in `<span class="highlight-navy">` styled with signature Royal Blue gradient (`linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%)`) with text clip.
+  - Dark cards/banners: Base text in `#ffffff`, emphasis text in royal blue gradient or `#60a5fa`.
 
 ## 5. Spacing & Vertical Rhythm Standards (Matching Home Page)
 - **Section Spacing**:
