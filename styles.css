@@ -3989,17 +3989,63 @@ body.dark-theme .why-card-content .why-card-desc {
   margin: 0 auto;
   padding: 0;
 }
+
+/* Floating Instruction Pill (Matching Reference media_1790925340792.png) */
+.kitchen-slider-instruction-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.kitchen-slider-instruction-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(15, 43, 92, 0.12);
+  box-shadow: 0 6px 20px rgba(10, 24, 52, 0.08);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f2b5c;
+  letter-spacing: -0.01em;
+  user-select: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.kitchen-slider-instruction-pill svg {
+  color: var(--brand-accent, #143877);
+  animation: pulseStatus 2s infinite;
+}
+.kitchen-slider-instruction-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(10, 24, 52, 0.12);
+  border-color: rgba(20, 56, 119, 0.25);
+}
+body.dark-theme .kitchen-slider-instruction-pill {
+  background: rgba(20, 25, 38, 0.92);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #93c5fd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+body.dark-theme .kitchen-slider-instruction-pill svg {
+  color: #60a5fa;
+}
+
+/* Main Showcase Card Container */
 .kitchen-showcase-card {
   position: relative;
   width: 100%;
-  min-height: 640px;
   background-color: #ffffff;
   border-radius: 32px;
   border: 1.5px solid rgba(15, 43, 92, 0.08);
-  box-shadow: 0 20px 50px rgba(15, 43, 92, 0.06);
+  box-shadow: 0 20px 50px rgba(15, 43, 92, 0.07);
   overflow: hidden;
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
 }
 body.dark-theme .kitchen-showcase-card {
   background-color: #141722;
@@ -4007,35 +4053,143 @@ body.dark-theme .kitchen-showcase-card {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* Visual Stage with Organic Clip-Path */
-.kitchen-showcase-visual {
+/* Interactive Before / After Comparison Slider Container */
+.kitchen-comparison-slider {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  min-height: 520px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  background-color: #0c1424;
+}
+
+/* Layer Base & Overlay */
+.comparison-layer {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.comparison-after {
   z-index: 1;
 }
+.comparison-before {
+  z-index: 3;
+  clip-path: inset(0 calc(100% - var(--split-pos, 50%)) 0 0);
+  -webkit-clip-path: inset(0 calc(100% - var(--split-pos, 50%)) 0 0);
+  will-change: clip-path;
+}
+
 .kitchen-showcase-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
   filter: contrast(1.03) saturate(1.02);
+  pointer-events: none;
 }
 body.dark-theme .kitchen-showcase-img {
-  filter: contrast(1.05) brightness(0.85) saturate(0.95);
+  filter: contrast(1.05) brightness(0.88) saturate(0.95);
+}
+
+/* Corner Status Badges (BEFORE & AFTER) */
+.comparison-corner-badge {
+  position: absolute;
+  top: 20px;
+  z-index: 7;
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.badge-before {
+  left: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fca5a5;
+  border: 1.5px solid rgba(239, 68, 68, 0.4);
+}
+.badge-after {
+  right: 20px;
+  background: rgba(5, 150, 105, 0.88);
+  color: #ffffff;
+  border: 1.5px solid rgba(16, 185, 129, 0.5);
+}
+
+/* Divider Line & Slider Chevrons Handle */
+.comparison-divider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--split-pos, 50%);
+  width: 3px;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.45);
+  transform: translateX(-50%);
+  z-index: 8;
+  pointer-events: none;
+  will-change: left;
+}
+.comparison-divider-handle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f2b5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 0 3.5px rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.kitchen-comparison-slider:hover .comparison-divider-handle,
+.kitchen-comparison-slider.is-dragging .comparison-divider-handle {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.45), 0 0 0 4px #60a5fa;
+}
+
+/* Invisible Range Input for Drag & Accessibility */
+.kitchen-comparison-range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 6;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: pan-y;
 }
 
 /* Floating Trust Pins over Kitchen Appliances */
-.kitchen-trust-pin,
-.kitchen-hotspot {
+.kitchen-trust-pin {
   position: absolute;
-  z-index: 6;
+  z-index: 7;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 9999px;
@@ -4047,21 +4201,18 @@ body.dark-theme .kitchen-showcase-img {
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
 }
-.kitchen-trust-pin:hover,
-.kitchen-hotspot:hover {
+.kitchen-trust-pin:hover {
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 14px 34px rgba(10, 24, 52, 0.25);
   border-color: var(--brand-accent, #143877);
   background: #ffffff;
 }
-body.dark-theme .kitchen-trust-pin,
-body.dark-theme .kitchen-hotspot {
+body.dark-theme .kitchen-trust-pin {
   background: rgba(24, 28, 40, 0.92);
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
 }
-body.dark-theme .kitchen-trust-pin:hover,
-body.dark-theme .kitchen-hotspot:hover {
+body.dark-theme .kitchen-trust-pin:hover {
   background: #181c28;
   border-color: rgba(96, 165, 250, 0.4);
 }
@@ -4086,6 +4237,16 @@ body.dark-theme .kitchen-hotspot:hover {
   box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
   animation: pulseStatus 2s infinite;
 }
+
+/* Alert pulse variant for Before pins */
+.pin-alert-pulse {
+  background: rgba(239, 68, 68, 0.18);
+}
+.pulse-alert-dot {
+  background-color: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.85);
+}
+
 .pin-icon {
   width: 24px;
   height: 24px;
@@ -4102,12 +4263,20 @@ body.dark-theme .kitchen-hotspot:hover {
   background: rgba(16, 185, 129, 0.12);
   color: #059669;
 }
+.pin-icon.pin-icon-alert {
+  background: rgba(239, 68, 68, 0.14);
+  color: #dc2626;
+}
 .kitchen-trust-pin:hover .pin-icon {
   background: var(--brand-accent, #143877);
   color: #ffffff;
 }
 .kitchen-trust-pin:hover .pin-icon.pin-icon-green {
   background: #059669;
+  color: #ffffff;
+}
+.kitchen-trust-pin:hover .pin-icon.pin-icon-alert {
+  background: #dc2626;
   color: #ffffff;
 }
 body.dark-theme .pin-icon {
@@ -4117,6 +4286,10 @@ body.dark-theme .pin-icon {
 body.dark-theme .pin-icon.pin-icon-green {
   background: rgba(16, 185, 129, 0.2);
   color: #34d399;
+}
+body.dark-theme .pin-icon.pin-icon-alert {
+  background: rgba(239, 68, 68, 0.22);
+  color: #f87171;
 }
 
 .pin-content {
@@ -4146,105 +4319,46 @@ body.dark-theme .pin-sub {
   color: #94a3b8;
 }
 
-/* Individual pin positions matching the kitchen appliances */
-.pin-arrival,
-.hotspot-available {
+/* Pin Positions matching appliances */
+.pin-arrival {
   top: 7%;
-  left: 45%;
+  left: 52%;
 }
-.pin-tech,
-.hotspot-tech {
-  top: 47%;
-  left: 41%;
+.pin-tech {
+  top: 38%;
+  left: 55%;
 }
-.pin-fridge,
-.hotspot-fridge {
-  top: 13%;
+.pin-fridge {
+  top: 12%;
   right: 5%;
 }
-.pin-dishwasher,
-.hotspot-dishwasher {
-  top: 61%;
+.pin-dishwasher {
+  top: 58%;
   right: 6%;
 }
-
-/* Compatibility classes for legacy hotspot markup */
-.hotspot-pin {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.pin-before-breakdown {
+  top: 10%;
+  left: 8%;
 }
-.hotspot-pin-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 1.5px solid rgba(20, 56, 119, 0.45);
-  transition: transform 0.25s ease;
-}
-.kitchen-hotspot:hover .hotspot-pin-ring {
-  transform: scale(1.25);
-  border-color: var(--brand-accent);
-}
-body.dark-theme .hotspot-pin-ring {
-  border-color: rgba(96, 165, 250, 0.5);
-}
-.hotspot-pin-dot {
-  width: 5.5px;
-  height: 5.5px;
-  border-radius: 50%;
-  background-color: var(--brand-accent);
-}
-body.dark-theme .hotspot-pin-dot {
-  background-color: #60a5fa;
-}
-.hotspot-pin-dot.active-green-dot {
-  background-color: #10b981;
-  box-shadow: 0 0 6px rgba(16, 185, 129, 0.8);
-}
-.pulse-green-indicator {
-  width: 6.5px;
-  height: 6.5px;
-  border-radius: 50%;
-  background-color: #10b981;
-  display: inline-block;
-  box-shadow: 0 0 6px rgba(16, 185, 129, 0.8);
-  animation: pulseStatus 2s infinite;
-}
-.hotspot-label {
-  font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-dark);
-  letter-spacing: -0.01em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-body.dark-theme .hotspot-label {
-  color: #ffffff;
+.pin-before-igniter {
+  top: 46%;
+  left: 6%;
 }
 
-/* Content Bay — Translucent Frosted Navy Overlay Card (Exact Match to Service Section Text Card) */
+/* Content Bay — Translucent Frosted Navy Overlay Card (Matching Reference media_1790925340792.png) */
 .kitchen-content-bay {
   position: absolute;
-  z-index: 5;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 36px;
-  width: 470px;
-  max-width: calc(44% - 36px);
-  padding: 38px 36px;
+  z-index: 8;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  padding: 28px 36px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: rgba(11, 28, 62, 0.86);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 28px;
+  background: rgba(11, 28, 62, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 26px;
   border: 1.5px solid rgba(255, 255, 255, 0.18);
   box-shadow:
     0 20px 50px rgba(5, 14, 32, 0.45),
@@ -4252,26 +4366,43 @@ body.dark-theme .hotspot-label {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .kitchen-content-bay:hover {
-  background: rgba(11, 28, 62, 0.93);
+  background: rgba(11, 28, 62, 0.96);
   border-color: rgba(255, 255, 255, 0.28);
   box-shadow:
     0 24px 60px rgba(5, 14, 32, 0.55),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 body.dark-theme .kitchen-content-bay {
-  background: rgba(10, 22, 48, 0.90);
+  background: rgba(10, 22, 48, 0.92);
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.65),
     inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 body.dark-theme .kitchen-content-bay:hover {
-  background: rgba(10, 22, 48, 0.96);
+  background: rgba(10, 22, 48, 0.98);
   border-color: rgba(96, 165, 250, 0.35);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.75),
     inset 0 1px 1px rgba(255, 255, 255, 0.25);
 }
+
+.kitchen-bay-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 36px;
+  align-items: center;
+}
+.kitchen-bay-left {
+  display: flex;
+  flex-direction: column;
+}
+.kitchen-bay-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .kitchen-eyebrow-pill {
   display: inline-flex;
   align-items: center;
@@ -4287,7 +4418,7 @@ body.dark-theme .kitchen-content-bay:hover {
   border-radius: 9999px;
   border: 1px solid rgba(96, 165, 250, 0.25);
   width: fit-content;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .kitchen-eyebrow-dot {
   width: 6px;
@@ -4303,15 +4434,16 @@ body.dark-theme .kitchen-eyebrow-pill {
 body.dark-theme .kitchen-eyebrow-dot {
   background: #60a5fa;
 }
+
 .kitchen-main-heading {
   font-family: var(--font-family);
-  font-size: clamp(1.65rem, 2.2vw, 2.1rem);
+  font-size: clamp(1.5rem, 2.1vw, 2.05rem);
   font-weight: 800;
   line-height: 1.22;
   letter-spacing: -0.025em;
   color: #ffffff;
-  margin-bottom: 14px;
-  max-width: 440px;
+  margin: 0;
+  max-width: 480px;
 }
 .kitchen-main-heading .highlight-navy {
   color: #60a5fa !important;
@@ -4319,18 +4451,19 @@ body.dark-theme .kitchen-eyebrow-dot {
 body.dark-theme .kitchen-main-heading {
   color: #ffffff;
 }
+
 .kitchen-main-desc {
   font-family: var(--font-family);
   font-size: 13.5px;
   font-weight: 500;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 24px;
-  max-width: 420px;
+  line-height: 1.58;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
 body.dark-theme .kitchen-main-desc {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.80);
 }
+
 .kitchen-action-row {
   display: flex;
   align-items: center;
@@ -4376,6 +4509,7 @@ body.dark-theme .kitchen-main-desc {
   transform: translate(2px, -2px);
   background: #1d4ed8;
 }
+
 .btn-kitchen-call {
   display: inline-flex;
   align-items: center;
@@ -4416,7 +4550,61 @@ body.dark-theme .btn-kitchen-call:hover {
   color: #ffffff;
 }
 
+/* Warranty Seal Badge (Matching Reference) */
+.kitchen-warranty-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  margin-left: auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+.kitchen-warranty-seal:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-1px);
+}
+.warranty-seal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.warranty-seal-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.warranty-seal-title {
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+.warranty-seal-sub {
+  font-family: var(--font-family);
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .kitchen-bay-grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 28px;
+  }
+  .kitchen-content-bay {
+    padding: 24px 28px;
+  }
+}
 @media (max-width: 992px) {
   .kitchen-showcase-container {
     padding: 0;
@@ -4426,22 +4614,22 @@ body.dark-theme .btn-kitchen-call:hover {
     flex-direction: column;
     align-items: stretch;
   }
-  .kitchen-showcase-visual {
-    position: relative;
-    height: 380px;
-    width: 100%;
-  }
-  .kitchen-showcase-img {
-    border-radius: 28px 28px 0 0;
+  .kitchen-comparison-slider {
+    height: 420px;
+    min-height: 380px;
   }
   .kitchen-trust-pin {
     display: none !important;
+  }
+  .comparison-divider-handle {
+    top: 50%;
   }
   .kitchen-content-bay {
     position: relative;
     top: auto;
     bottom: auto;
     left: auto;
+    right: auto;
     transform: none;
     width: 100%;
     max-width: 100%;
@@ -4455,40 +4643,44 @@ body.dark-theme .btn-kitchen-call:hover {
   body.dark-theme .kitchen-content-bay {
     background: #0a1630;
   }
+  .kitchen-bay-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
   .kitchen-main-heading {
     max-width: 100%;
   }
   .kitchen-main-desc {
     max-width: 100%;
   }
-  .kitchen-float-card {
-    display: none;
-  }
-  .kitchen-hotspot {
-    padding: 5px 12px 5px 8px;
-  }
-  .hotspot-label {
-    font-size: 11px;
-  }
 }
 @media (max-width: 768px) {
-  .kitchen-showcase-visual {
-    height: 300px;
+  .kitchen-comparison-slider {
+    height: 320px;
+    min-height: 300px;
   }
   .kitchen-content-bay {
     padding: 24px 18px;
   }
-  .hotspot-dishwasher,
-  .hotspot-range {
-    display: none;
+  .kitchen-main-heading {
+    font-size: 1.45rem;
+  }
+  .kitchen-warranty-seal {
+    margin-left: 0;
+    width: fit-content;
   }
 }
 @media (max-width: 480px) {
-  .kitchen-showcase-visual {
-    height: 240px;
+  .kitchen-comparison-slider {
+    height: 250px;
+    min-height: 240px;
+  }
+  .kitchen-slider-instruction-pill {
+    font-size: 11.5px;
+    padding: 6px 16px;
   }
   .kitchen-main-heading {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
   .kitchen-content-bay {
     padding: 20px 16px;
@@ -4496,11 +4688,26 @@ body.dark-theme .btn-kitchen-call:hover {
   .kitchen-action-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
   .btn-kitchen-quote,
   .btn-kitchen-call {
     width: 100%;
     justify-content: center;
+  }
+  .kitchen-warranty-seal {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 320px) {
+  .kitchen-comparison-slider {
+    height: 210px;
+    min-height: 200px;
+  }
+  .kitchen-slider-instruction-pill {
+    font-size: 10px;
+    padding: 5px 12px;
   }
 }
 

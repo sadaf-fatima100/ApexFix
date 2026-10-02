@@ -596,6 +596,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Kitchen Before/After Transformation Slider Interaction ---
+  const kitchenSlider = document.getElementById('kitchenComparisonSlider');
+  const kitchenRange = document.getElementById('kitchenComparisonRange');
+
+  if (kitchenSlider) {
+    let isDragging = false;
+
+    function setSplitPosition(percent) {
+      const clamped = Math.max(0, Math.min(100, percent));
+      kitchenSlider.style.setProperty('--split-pos', `${clamped}%`);
+      if (kitchenRange && Math.abs(parseFloat(kitchenRange.value) - clamped) > 0.1) {
+        kitchenRange.value = clamped;
+      }
+    }
+
+    function handlePointerDrag(clientX) {
+      const rect = kitchenSlider.getBoundingClientRect();
+      if (rect.width > 0) {
+        const percent = ((clientX - rect.left) / rect.width) * 100;
+        setSplitPosition(percent);
+      }
+    }
+
+    kitchenSlider.addEventListener('pointerdown', (e) => {
+      // Don't hijack clicks on buttons, links, or trust pins
+      if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.kitchen-trust-pin')) {
+        return;
+      }
+      isDragging = true;
+      kitchenSlider.classList.add('is-dragging');
+      try {
+        kitchenSlider.setPointerCapture(e.pointerId);
+      } catch (_) {}
+      handlePointerDrag(e.clientX);
+    });
+
+    kitchenSlider.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      handlePointerDrag(e.clientX);
+    });
+
+    const endDrag = (e) => {
+      if (isDragging) {
+        isDragging = false;
+        kitchenSlider.classList.remove('is-dragging');
+        try {
+          kitchenSlider.releasePointerCapture(e.pointerId);
+        } catch (_) {}
+      }
+    };
+
+    kitchenSlider.addEventListener('pointerup', endDrag);
+    kitchenSlider.addEventListener('pointercancel', endDrag);
+
+    // Range input listener for accessibility & keyboard arrows
+    if (kitchenRange) {
+      kitchenRange.addEventListener('input', (e) => {
+        setSplitPosition(parseFloat(e.target.value));
+      });
+    }
+
+    // Default 50% split position
+    setSplitPosition(50);
+  }
+
   window.addEventListener('scroll', updateNavbarOnScroll, { passive: true });
   window.addEventListener('resize', updateNavbarOnScroll, { passive: true });
   updateNavbarOnScroll();
