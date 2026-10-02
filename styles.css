@@ -8170,14 +8170,19 @@ body.dark-theme .trust-item svg {
   }
 } /* ==========================================================================   Dark Theme System (Activated by Theme Toggle Moon Button)   ========================================================================== */
 body.dark-theme {
-  background-color: #0c0c10;
-  --bg-frame: #0c0c10;
-  --text-dark: #f3f4f6;
-  --bg-canvas: #0c0c10;
+  background-color: #090d16;
+  --bg-frame: #090d16;
+  --text-dark: #f8fafc;
+  --bg-canvas: #090d16;
+  --color-subtitle: #94a3b8;
+  --dark-surface-1: #0d1424;
+  --dark-surface-2: #121b2d;
+  --dark-surface-3: #18233a;
+  --dark-border: rgba(255, 255, 255, 0.08);
 }
 body.dark-theme .site-canvas {
   background-color: transparent;
-  color: #f3f4f6;
+  color: #f8fafc;
   box-shadow: none !important;
   border-radius: 0 !important;
 }
@@ -8197,7 +8202,7 @@ body.dark-theme .logo-gear-path {
   fill: #60a5fa;
 }
 body.dark-theme .logo-gear-cutout {
-  fill: #141419;
+  fill: #090d16;
 }
 body.dark-theme .logo-wrench-path {
   fill: #60a5fa;
@@ -8223,9 +8228,9 @@ body.dark-theme .nav-link.active-pill:hover {
   color: #ffffff;
 }
 body.dark-theme .dropdown-content {
-  background-color: #1c1c24;
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  background-color: #121b2d;
+  border-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
 }
 body.dark-theme .dropdown-link {
   color: #e2e8f0;
@@ -8235,13 +8240,14 @@ body.dark-theme .dropdown-link:hover {
   color: #ffffff;
 }
 body.dark-theme .btn-theme-toggle {
-  background-color: #21212b;
-  border-color: rgba(255, 255, 255, 0.12);
+  background-color: #121b2d;
+  border-color: rgba(255, 255, 255, 0.1);
   color: #fcd34d;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 body.dark-theme .btn-theme-toggle:hover {
-  background-color: #2a2a37;
+  background-color: #18233a;
+  border-color: rgba(96, 165, 250, 0.35);
   color: #fef08a;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
@@ -8316,9 +8322,9 @@ body.dark-theme .chip-warranty {
   border-color: rgba(16, 185, 129, 0.35);
 }
 body.dark-theme .hero-trust-card {
-  background: #1a1a22;
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: #0d1424;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }
 body.dark-theme .trust-badge-label {
   color: #94a3b8;
@@ -8339,11 +8345,12 @@ body.dark-theme .hero-stat-txt {
   color: #94a3b8;
 }
 body.dark-theme .hero-stat-separator {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 body.dark-theme .hero-stat-box {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.07);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 body.dark-theme .badge-tag,
 body.dark-theme .process-eyebrow-badge {
@@ -9237,14 +9244,14 @@ body.dark-theme .pagination-bar:hover:not(.active) {
   background-color: rgba(255, 255, 255, 0.3);
 } /* ==========================================================================   Areas We Proudly Serve Across Dubai Section - Dark Theme System   ========================================================================== */
 body.dark-theme .areas-boxed-container {
-  background-color: #0c1424;
+  background-color: #0d1424;
   border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 body.dark-theme .areas-boxed-container::before {
   background-image: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.06) 1.25px,
+    rgba(255, 255, 255, 0.05) 1.25px,
     transparent 1.25px
   );
 }
@@ -9265,13 +9272,14 @@ body.dark-theme .areas-status-strip {
   box-shadow: none;
 }
 body.dark-theme .status-pill-item {
-  background: #181924;
-  border-color: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  background: #121b2d;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 body.dark-theme .status-pill-item:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  background: #18233a;
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
 }
 body.dark-theme .status-icon-chip.chip-emerald {
   background: rgba(16, 185, 129, 0.2);
@@ -9293,29 +9301,28 @@ body.dark-theme .status-icon.icon-clock {
   color: #60a5fa;
 }
 body.dark-theme .areas-map-img {
-  filter: brightness(0) saturate(100%) invert(45%) sepia(85%) saturate(1200%)
-    hue-rotate(190deg) brightness(105%) contrast(105%);
-  opacity: 0.9;
+  filter: brightness(0) invert(40%) sepia(30%) saturate(600%) hue-rotate(185deg) brightness(80%);
+  opacity: 0.36;
 }
 body.dark-theme .route-origin-dot {
   fill: #60a5fa;
   opacity: 0.85;
 }
 body.dark-theme .route-line {
-  stroke: #60a5fa;
-  opacity: 0.75;
+  stroke: rgba(96, 165, 250, 0.45);
+  opacity: 0.8;
 }
 body.dark-theme .hub-pin-dot {
-  background: #60a5fa;
-  border-color: #111a2e;
-  box-shadow: 0 0 12px rgba(96, 165, 250, 0.8);
+  background: #10b981;
+  border-color: #0d1424;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
 }
 body.dark-theme .hub-pulse-wave {
-  border-color: #60a5fa;
+  border-color: #10b981;
 }
 body.dark-theme .areas-search-wrapper {
-  background: #111a2e;
-  border-color: rgba(255, 255, 255, 0.12);
+  background: #121b2d;
+  border-color: rgba(255, 255, 255, 0.09);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
 }
 body.dark-theme .areas-search-wrapper:focus-within {
@@ -9345,12 +9352,15 @@ body.dark-theme .areas-counter-badge {
   border-color: rgba(96, 165, 250, 0.3);
 }
 body.dark-theme .area-card {
-  background: #111a2e;
-  border-color: rgba(255, 255, 255, 0.08);
+  background: #121b2d;
+  border-color: rgba(255, 255, 255, 0.07);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 body.dark-theme .area-card:hover {
-  background: #16223b;
+  background: #18233a;
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
   border-color: rgba(96, 165, 250, 0.45);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
