@@ -1507,11 +1507,11 @@ a.service-card-item *,
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .service-card-item:hover .service-card-icon-badge {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--brand-accent, #143877);
-  transform: scale(1.08);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 14px rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transform: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 .service-card-title {
   color: #ffffff !important;
@@ -4490,7 +4490,7 @@ body.dark-theme .kitchen-main-desc {
   min-height: 46px;
 }
 .btn-kitchen-quote:hover {
-  background: #f1f5f9;
+  background: #f8fafc;
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
@@ -4498,16 +4498,16 @@ body.dark-theme .kitchen-main-desc {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #0f2b5c;
+  background: var(--brand-accent, #143877);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 .btn-kitchen-quote:hover .btn-kitchen-arrow-circle {
   transform: translate(2px, -2px);
-  background: #1d4ed8;
+  background: #0b1c3e;
 }
 
 .btn-kitchen-call {
@@ -4550,14 +4550,14 @@ body.dark-theme .btn-kitchen-call:hover {
   color: #ffffff;
 }
 
-/* Warranty Seal Badge (Matching Reference) */
+/* Warranty Seal Badge (Matching Brand Sky Blue & Navy Palette) */
 .kitchen-warranty-seal {
   display: inline-flex;
   align-items: center;
   gap: 9px;
   padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.10);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   border-radius: 14px;
   margin-left: auto;
   backdrop-filter: blur(8px);
@@ -4565,14 +4565,18 @@ body.dark-theme .btn-kitchen-call:hover {
   transition: all 0.25s ease;
 }
 .kitchen-warranty-seal:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(96, 165, 250, 0.45);
   transform: translateY(-1px);
 }
 .warranty-seal-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #60a5fa;
+}
+.warranty-seal-icon svg {
+  stroke: #60a5fa;
 }
 .warranty-seal-text {
   display: flex;
@@ -4590,7 +4594,7 @@ body.dark-theme .btn-kitchen-call:hover {
   font-family: var(--font-family);
   font-size: 9.5px;
   font-weight: 700;
-  color: #fbbf24;
+  color: #93c5fd;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -8399,9 +8403,11 @@ body.dark-theme .service-card-icon-badge {
   color: #60a5fa;
 }
 body.dark-theme .service-card-item:hover .service-card-icon-badge {
-  background: var(--btn-gradient-primary);
-  border-color: rgba(125, 175, 245, 0.35);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #60a5fa;
+  transform: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 body.dark-theme .service-card-title {
   color: #ffffff !important;
@@ -10566,6 +10572,7 @@ body.dark-theme .faq-card-body {
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+  max-width: 320px;
   clip-path: polygon(
     0 0,
     calc(100% - 18px) 0,
@@ -11359,6 +11366,210 @@ body.dark-theme .hero-media-live-chip {
 .star-gold {
   color: #f59e0b;
   font-weight: 800;
+}
+
+/* ==========================================================================
+   HERO TRUST STICKERS (Tactile Floating Badges Matching Contact Page)
+   Used across About, Services, Blog, and Contact Hero Media Stages
+   ========================================================================== */
+.hero-trust-sticker {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 16px 36px rgba(15, 43, 92, 0.16), 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 11px 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  pointer-events: auto;
+  user-select: none;
+}
+.hero-trust-sticker:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(15, 43, 92, 0.24);
+}
+body.dark-theme .hero-trust-sticker {
+  background: rgba(20, 23, 34, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Top-Right Sticker Positioning */
+.hero-trust-sticker.sticker-top {
+  top: 22px;
+  right: 22px;
+}
+.hero-trust-sticker .sticker-live-dot-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-trust-sticker .sticker-live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.7);
+  animation: pulse-badge 1.8s infinite;
+}
+.hero-trust-sticker .sticker-live-dot-wrap.blue-wrap {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+.hero-trust-sticker .sticker-live-dot.blue-dot {
+  background: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+}
+
+/* Bottom-Left Sticker (Official Sapphire Card) */
+.hero-trust-sticker.sticker-bottom {
+  bottom: 22px;
+  left: 22px;
+  background: linear-gradient(145deg, rgba(15, 43, 92, 0.95) 0%, rgba(10, 28, 64, 0.98) 100%);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 48px rgba(10, 24, 52, 0.38), 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+body.dark-theme .hero-trust-sticker.sticker-bottom {
+  background: linear-gradient(145deg, rgba(16, 26, 46, 0.96) 0%, rgba(10, 16, 30, 0.98) 100%);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+.hero-trust-sticker .sticker-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(30, 64, 175, 0.45));
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-trust-sticker .sticker-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hero-trust-sticker .sticker-title {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-dark, #121217);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+body.dark-theme .hero-trust-sticker.sticker-top .sticker-title {
+  color: #ffffff;
+}
+.hero-trust-sticker.sticker-bottom .sticker-title {
+  color: #ffffff;
+}
+.hero-trust-sticker .sticker-desc {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sub, #5a5f70);
+  line-height: 1.25;
+}
+body.dark-theme .hero-trust-sticker.sticker-top .sticker-desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+.hero-trust-sticker.sticker-bottom .sticker-desc {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-trust-sticker .sticker-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.hero-trust-sticker .sticker-stars {
+  color: #fbbf24;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.hero-trust-sticker .sticker-score {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+@keyframes pulse-badge {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Responsive Rules for Hero Trust Stickers down to 250px */
+@media (max-width: 992px) {
+  .hero-trust-sticker.sticker-top {
+    top: 16px;
+    right: 16px;
+    padding: 9px 14px;
+  }
+  .hero-trust-sticker.sticker-bottom {
+    bottom: 16px;
+    left: 16px;
+    padding: 9px 14px;
+  }
+  .hero-trust-sticker .sticker-title {
+    font-size: 12px;
+  }
+  .hero-trust-sticker .sticker-desc {
+    font-size: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .hero-trust-sticker {
+    padding: 7px 11px;
+    border-radius: 14px;
+    gap: 8px;
+  }
+  .hero-trust-sticker .sticker-live-dot-wrap,
+  .hero-trust-sticker .sticker-icon-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+  .hero-trust-sticker .sticker-icon-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+  .hero-trust-sticker .sticker-title,
+  .hero-trust-sticker .sticker-score {
+    font-size: 11px;
+  }
+  .hero-trust-sticker .sticker-desc {
+    font-size: 9.5px;
+  }
+}
+@media (max-width: 360px) {
+  .hero-trust-sticker.sticker-top {
+    top: 10px;
+    right: 10px;
+  }
+  .hero-trust-sticker.sticker-bottom {
+    bottom: 10px;
+    left: 10px;
+  }
+  .hero-trust-sticker .sticker-desc {
+    display: none;
+  }
 } /* Sleek Horizontal Service Marquee Ribbon (Infinite Motion) */
 .hero-horizontal-service-marquee {
   width: 100%;
