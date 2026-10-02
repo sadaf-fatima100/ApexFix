@@ -327,7 +327,7 @@
 
     /* Box 1: Action Repair Photo (Top-Left) - Tall */
     .mosaic-img-box {
-      height: 330px;
+      height: 310px;
       box-shadow: 0 10px 30px rgba(15, 43, 92, 0.08);
       border: 1px solid rgba(15, 43, 92, 0.08);
       background: #e2e8f0;
@@ -415,43 +415,84 @@
     /* Box 3: Solid Navy Accent Card (Bottom-Left) */
     .mosaic-navy-card {
       background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 20px;
-      padding: 20px 20px;
+      padding: 18px 20px;
       color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 134px;
+      height: 154px;
       box-sizing: border-box;
-      box-shadow: 0 12px 32px rgba(15, 43, 92, 0.22);
+      box-shadow: 0 14px 34px rgba(15, 43, 92, 0.22);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .mosaic-navy-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(15, 43, 92, 0.32);
+      border-color: rgba(255, 255, 255, 0.25);
     }
     body.dark-theme .mosaic-navy-card {
       background: linear-gradient(145deg, #0e2753 0%, #081734 100%);
-      border-color: rgba(96, 165, 250, 0.2);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+    }
+    .mosaic-navy-top {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
     .mosaic-navy-title {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.32;
+      font-size: 15.5px;
+      font-weight: 800;
+      line-height: 1.25;
       color: #ffffff;
       margin: 0;
       letter-spacing: -0.015em;
     }
-    .mosaic-navy-caption {
+    .mosaic-navy-desc {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+    .mosaic-navy-footer {
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: #93c5fd;
-      letter-spacing: 0.02em;
-      margin-top: 8px;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
-    .mosaic-navy-dash {
-      font-weight: 800;
-      color: #60a5fa;
+    .mosaic-navy-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+    .mosaic-navy-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .mosaic-navy-guarantee {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3px 9px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      white-space: nowrap;
     }
 
     /* Box 4: Standing Master Technician Photo (Bottom-Right) - Tall */
@@ -585,11 +626,19 @@
         height: 240px;
       }
       .mosaic-navy-card {
-        height: 120px;
+        height: auto;
+        min-height: 135px;
         padding: 14px 14px;
       }
       .mosaic-navy-title {
-        font-size: 14px;
+        font-size: 13.5px;
+      }
+      .mosaic-navy-desc {
+        font-size: 11px;
+      }
+      .mosaic-navy-footer {
+        margin-top: 8px;
+        padding-top: 8px;
       }
       .mosaic-stat-card {
         height: 100px;
@@ -641,21 +690,27 @@
         border-radius: 14px;
       }
       .mosaic-navy-card {
-        height: 110px;
+        height: auto;
+        min-height: 120px;
         padding: 10px 10px;
-      }
-      .mosaic-stat-card {
-        height: 85px;
-        padding: 10px 10px;
-        gap: 8px;
-      }
-      .mosaic-stat-icon-wrap {
-        width: 30px;
-        height: 30px;
-        min-width: 30px;
       }
       .mosaic-navy-title {
-        font-size: 12.5px;
+        font-size: 12px;
+      }
+      .mosaic-navy-desc {
+        font-size: 9.5px;
+        line-height: 1.35;
+      }
+      .mosaic-navy-footer {
+        margin-top: 6px;
+        padding-top: 6px;
+      }
+      .mosaic-navy-brand {
+        font-size: 10px;
+      }
+      .mosaic-navy-guarantee {
+        font-size: 9.5px;
+        padding: 2px 6px;
       }
       .mosaic-stat-number {
         font-size: 19px;
@@ -811,7 +866,7 @@
       background: #ffffff;
       border: 1.5px solid rgba(15, 43, 92, 0.08);
       border-radius: 18px;
-      padding: 20px 20px;
+      padding: 16px 18px 18px 18px;
       position: relative;
       overflow: hidden;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -819,12 +874,12 @@
       flex-direction: column;
       align-items: stretch;
       text-align: left;
-      box-shadow: 0 4px 18px rgba(15, 43, 92, 0.03);
+      box-shadow: 0 3px 14px rgba(15, 43, 92, 0.03);
     }
     .process-step-item:hover {
-      transform: translateY(-3px);
-      border-color: rgba(15, 43, 92, 0.25);
-      box-shadow: 0 12px 30px rgba(15, 43, 92, 0.08);
+      transform: translateY(-2px);
+      border-color: rgba(15, 43, 92, 0.22);
+      box-shadow: 0 10px 26px rgba(15, 43, 92, 0.08);
     }
     body.dark-theme .process-step-item {
       background: #181924;
@@ -833,7 +888,7 @@
     }
     body.dark-theme .process-step-item:hover {
       border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5);
     }
 
     .process-step-watermark {
@@ -846,25 +901,36 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      margin-bottom: 14px;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .process-step-head {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+      flex: 1;
     }
 
     .process-step-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 10px;
       background: rgba(15, 43, 92, 0.06);
       color: var(--brand-accent, #0f2b5c);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.25s ease;
+      flex-shrink: 0;
     }
     .process-step-item:hover .process-step-icon {
       background: var(--btn-gradient-primary);
       color: #ffffff;
       transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(6, 18, 40, 0.45);
+      box-shadow: 0 4px 14px rgba(6, 18, 40, 0.35);
     }
     body.dark-theme .process-step-icon {
       background: rgba(255, 255, 255, 0.08);
@@ -873,51 +939,58 @@
     body.dark-theme .process-step-item:hover .process-step-icon {
       background: var(--btn-gradient-primary);
       color: #ffffff;
-      box-shadow: 0 6px 18px rgba(6, 18, 40, 0.6);
+      box-shadow: 0 4px 14px rgba(6, 18, 40, 0.5);
     }
 
-    /* Clean bold step numeral on top-right (Matching User Annotation) */
+    /* Clean bold step numeral on top-right */
     .process-step-count {
-      font-size: 34px;
+      font-size: 26px;
       font-weight: 800;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.03em;
       color: var(--brand-accent, #0f2b5c);
-      opacity: 0.45;
+      opacity: 0.35;
       font-feature-settings: "tnum";
       line-height: 1;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
     }
     .process-step-item:hover .process-step-count {
-      opacity: 1;
+      opacity: 0.9;
       transform: scale(1.06);
     }
     body.dark-theme .process-step-count {
       color: #60a5fa;
-      opacity: 0.55;
+      opacity: 0.45;
     }
     body.dark-theme .process-step-item:hover .process-step-count {
       opacity: 1;
     }
 
     .process-step-title {
-      font-size: clamp(1.22rem, 1.45vw, 1.38rem);
+      font-size: 15.5px;
       font-weight: 800;
       line-height: 1.25;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.015em;
       color: var(--text-dark, #121217);
-      margin: 0 0 6px 0;
+      margin: 0;
       position: relative;
       z-index: 1;
+      white-space: nowrap;
+    }
+    @media (max-width: 1200px) {
+      .process-step-title {
+        white-space: normal;
+      }
     }
     body.dark-theme .process-step-title {
       color: #f1f5f9;
     }
 
     .process-step-desc {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       color: var(--text-sub, #5a5f70);
-      line-height: 1.6;
+      line-height: 1.5;
       margin: 0;
       position: relative;
       z-index: 1;
@@ -1313,6 +1386,125 @@
       border: 1px solid rgba(251, 191, 36, 0.3);
     }
 
+    /* Floating Top-Right Trust Badge (Per User Arrow Annotation) */
+    .why-media-top-badge {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      background: rgba(15, 43, 92, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #ffffff;
+      padding: 11px 17px;
+      border-radius: 18px;
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 16px 36px rgba(6, 18, 40, 0.45);
+      z-index: 5;
+      pointer-events: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .why-badge-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.35) 0%, rgba(15, 43, 92, 0.6) 100%);
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #60a5fa;
+      flex-shrink: 0;
+    }
+    .why-badge-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .why-badge-kicker {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #93c5fd;
+    }
+    .why-badge-pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+      animation: pulseBadgeDot 2s infinite ease-in-out;
+    }
+    .why-badge-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      line-height: 1.25;
+      font-family: var(--font-family);
+    }
+
+    /* Floating Top-Left Live Dispatch Chip */
+    .why-media-dispatch-chip {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      color: #0f2b5c;
+      padding: 8px 15px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(15, 43, 92, 0.15);
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--font-family);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      z-index: 5;
+      pointer-events: none;
+    }
+    .why-dispatch-live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #059669;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseBadgeDot 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulseBadgeDot {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.35);
+        opacity: 0.65;
+      }
+    }
+
+    /* Dark theme overrides for media badges */
+    body.dark-theme .why-media-top-badge {
+      background: rgba(18, 25, 40, 0.94);
+      border-color: rgba(96, 165, 250, 0.35);
+    }
+    body.dark-theme .why-media-dispatch-chip {
+      background: rgba(24, 25, 36, 0.94);
+      color: #f1f5f9;
+      border-color: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
     /* Responsive Breakdown */
     @media (max-width: 992px) {
       .why-choose-split {
@@ -1361,6 +1553,35 @@
         right: 14px;
         padding: 7px 14px;
         font-size: 11.5px;
+      }
+      .why-media-top-badge {
+        top: 14px;
+        right: 14px;
+        padding: 8px 12px;
+        border-radius: 14px;
+        gap: 8px;
+      }
+      .why-badge-icon-wrap {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+      }
+      .why-badge-icon-wrap svg {
+        width: 15px;
+        height: 15px;
+      }
+      .why-badge-title {
+        font-size: 11px;
+      }
+      .why-badge-kicker {
+        font-size: 8.5px;
+      }
+      .why-media-dispatch-chip {
+        top: 14px;
+        left: 14px;
+        padding: 6px 11px;
+        font-size: 10px;
+        gap: 6px;
       }
     }
     /* ============================================================
@@ -2467,10 +2688,16 @@
                 
                 <!-- Box 3: Solid Navy Accent Card -->
                 <div class="mosaic-item mosaic-navy-card">
-                  <h3 class="mosaic-navy-title">The Perfect Solutions For All Appliance Repairs</h3>
-                  <div class="mosaic-navy-caption">
-                    <span class="mosaic-navy-dash">/</span>
-                    <span>ApexFix Dubai</span>
+                  <div class="mosaic-navy-top">
+                    <h3 class="mosaic-navy-title">The Perfect Solutions For All Appliance Repairs</h3>
+                    <p class="mosaic-navy-desc">Rapid on-site diagnostics, 100% genuine factory parts &amp; upfront pricing across Dubai.</p>
+                  </div>
+                  <div class="mosaic-navy-footer">
+                    <div class="mosaic-navy-brand">
+                      <span class="mosaic-navy-badge-dot" aria-hidden="true"></span>
+                      <span>ApexFix Dubai</span>
+                    </div>
+                    <span class="mosaic-navy-guarantee">30-Min Rapid Visit</span>
                   </div>
                 </div>
               </div>
@@ -2603,48 +2830,56 @@
                 <!-- Step 01 -->
                 <div class="process-step-item">
                   <div class="process-step-top">
-                    <div class="process-step-icon" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <div class="process-step-head">
+                      <div class="process-step-icon" aria-hidden="true">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                      </div>
+                      <h3 class="process-step-title">Instant Request</h3>
                     </div>
                     <span class="process-step-count">01</span>
                   </div>
-                  <h3 class="process-step-title">Instant Request</h3>
                   <p class="process-step-desc">Book online or call 24/7. Closest mobile unit is dispatched immediately.</p>
                 </div>
 
                 <!-- Step 02 -->
                 <div class="process-step-item">
                   <div class="process-step-top">
-                    <div class="process-step-icon" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <div class="process-step-head">
+                      <div class="process-step-icon" aria-hidden="true">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                      </div>
+                      <h3 class="process-step-title">Doorstep Arrival</h3>
                     </div>
                     <span class="process-step-count">02</span>
                   </div>
-                  <h3 class="process-step-title">Doorstep Arrival</h3>
                   <p class="process-step-desc">Certified technician arrives within 30 mins in a fully equipped mobile unit.</p>
                 </div>
 
                 <!-- Step 03 -->
                 <div class="process-step-item">
                   <div class="process-step-top">
-                    <div class="process-step-icon" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <div class="process-step-head">
+                      <div class="process-step-icon" aria-hidden="true">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                      </div>
+                      <h3 class="process-step-title">Digital Diagnosis</h3>
                     </div>
                     <span class="process-step-count">03</span>
                   </div>
-                  <h3 class="process-step-title">Digital Diagnosis</h3>
                   <p class="process-step-desc">Multi-meter testing and error scan with upfront itemized pricing.</p>
                 </div>
 
                 <!-- Step 04 -->
                 <div class="process-step-item">
                   <div class="process-step-top">
-                    <div class="process-step-icon" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                    <div class="process-step-head">
+                      <div class="process-step-icon" aria-hidden="true">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                      </div>
+                      <h3 class="process-step-title">OEM Fix &amp; Warranty</h3>
                     </div>
                     <span class="process-step-count">04</span>
                   </div>
-                  <h3 class="process-step-title">OEM Fix &amp; Warranty</h3>
                   <p class="process-step-desc">Factory OEM parts installed on the spot with complete warranty coverage.</p>
                 </div>
 
@@ -2701,8 +2936,8 @@
               <!-- Interactive 3-Card Stack (Matching Reference Layout & Behavior) -->
               <div class="why-acc-stack" id="whyChooseAccordion">
                 
-                <!-- Card 1: Active by Default -->
-                <div class="why-acc-card is-active" data-index="1">
+                <!-- Card 1: Collapsed by Default -->
+                <div class="why-acc-card" data-index="1">
                   <div class="why-acc-top">
                     <div class="why-acc-icon-box">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
@@ -2715,7 +2950,7 @@
                     <div class="why-acc-header-collapsed">
                       <span class="why-acc-title">Flexible Scheduling and Quick Repairs</span>
                     </div>
-                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="true">
+                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="7" y1="17" x2="17" y2="7"></line>
                         <polyline points="7 7 17 7 17 17"></polyline>
@@ -2801,6 +3036,30 @@
               <div class="why-acc-media-stage">
                 <div class="why-acc-media-card">
                   <img src="assets/why-choose-us.jpg" alt="ApexFix Certified Master Technician Restoring Luxury Kitchen Appliance in Dubai" class="why-acc-media-img" loading="lazy">
+                  
+                  <!-- Top-Left Floating Live Dispatch Chip -->
+                  <div class="why-media-dispatch-chip" aria-label="Dispatch Status">
+                    <span class="why-dispatch-live-dot" aria-hidden="true"></span>
+                    <span>Same-Day Rapid Dispatch · Dubai</span>
+                  </div>
+
+                  <!-- Top-Right Floating Trust Badge (Per User Arrow Annotation) -->
+                  <div class="why-media-top-badge" aria-label="Official Guarantee">
+                    <div class="why-badge-icon-wrap" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                      </svg>
+                    </div>
+                    <div class="why-badge-content">
+                      <div class="why-badge-kicker">
+                        <span class="why-badge-pulse-dot" aria-hidden="true"></span>
+                        <span>OFFICIAL GUARANTEE</span>
+                      </div>
+                      <strong class="why-badge-title">90-Day Parts &amp; Labor Warranty</strong>
+                    </div>
+                  </div>
+
                   <!-- Brand Seal (Matching Reference Corner Badge) -->
                   <div class="why-media-brand-seal">
                     <span class="brand-seal-badge">★ 4.9</span>
