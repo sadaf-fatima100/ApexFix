@@ -706,7 +706,12 @@ button[id*="phone"] svg {
 .btn-filter-browse,
 .btn-read-article,
 .btn-faq-call,
-.areas-clear-btn {
+.areas-clear-btn,
+.btn-bform-submit,
+.btn-emergency-call,
+.btn-hub-open-maps,
+.btn-simple-cta-call,
+.compare-card-cta {
   position: relative !important;
   overflow: hidden !important;
 }
@@ -736,7 +741,12 @@ button[id*="phone"] svg {
 .btn-filter-browse::before,
 .btn-read-article::before,
 .btn-faq-call::before,
-.areas-clear-btn::before {
+.areas-clear-btn::before,
+.btn-bform-submit::before,
+.btn-emergency-call::before,
+.btn-hub-open-maps::before,
+.btn-simple-cta-call::before,
+.compare-card-cta::before {
   content: "";
   position: absolute;
   top: 0;
@@ -784,7 +794,12 @@ button[id*="phone"] svg {
 .btn-filter-browse > *,
 .btn-read-article > *,
 .btn-faq-call > *,
-.areas-clear-btn > * {
+.areas-clear-btn > *,
+.btn-bform-submit > *,
+.btn-emergency-call > *,
+.btn-hub-open-maps > *,
+.btn-simple-cta-call > *,
+.compare-card-cta > * {
   position: relative;
   z-index: 2;
 }
@@ -839,7 +854,12 @@ button[id*="phone"] svg {
   .btn-process-action::before,
   .empty-cta-btn::before,
   .btn-get-started::before,
-  .why-btn-pill::before {
+  .why-btn-pill::before,
+  .btn-bform-submit::before,
+  .btn-emergency-call::before,
+  .btn-hub-open-maps::before,
+  .btn-simple-cta-call::before,
+  .compare-card-cta::before {
     animation: none !important;
     display: none !important;
   }
@@ -11674,26 +11694,34 @@ body.dark-theme .cta-card-featured .cta-circle-check {
 } /* ==========================================================================   NEW 3-TIER SERVICE PAGE LAYOUT (ApexFix Brand Consistent Palette & Typography)   Tier 1: Top Hero Split (Left Creative Card + Right Media Card)   Tier 2: Middle Interactive Bar (Search/Filter + Rotating CTA Banner)   Tier 3: Brand Navy "Our Expertise" Bento Showcase Grid   ========================================================================== */ /* --- TIER 1: Top Hero Split Row --- */
 .service-hero-split-row {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 28px;
   margin-top: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   align-items: stretch;
+  height: 544px;
+  min-height: 544px;
+  max-height: 544px;
+  box-sizing: border-box;
 } /* Right Hero Media Stage (Master UI/UX Frame: Perfectly Aligned with Navbar Right Edge) */
 .service-hero-media-wrap {
   position: relative;
   width: 100%;
-  height: 100%;
-  min-height: 470px;
+  height: 544px;
+  min-height: 544px;
+  max-height: 544px;
   padding-right: 0;
   filter: none;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .service-hero-media-card {
   position: relative;
   width: 100%;
   max-width: 100%;
   height: 100%;
-  min-height: 470px;
+  min-height: 100%;
+  max-height: 100%;
   margin: 0;
   clip-path: none !important;
   -webkit-clip-path: none !important;
@@ -12071,16 +12099,25 @@ body.dark-theme .pill-dot-navy {
     rgba(0, 0, 0, 0.2) 100%
   );
   pointer-events: none;
-} /* Left Hero Copy & Stats Card */
-.service-hero-copy-card {
+} .service-hero-copy-card {
   background: #ffffff;
   border-radius: 28px;
-  padding: 40px 28px 34px 30px;
+  padding: 34px 28px 26px 30px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 16px 40px rgba(15, 43, 92, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 544px;
+  min-height: 544px;
+  max-height: 544px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body.dark-theme .service-hero-copy-card {
+  background: #181924;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 .hero-copy-main {
   display: flex;
@@ -12091,6 +12128,8 @@ body.dark-theme .pill-dot-navy {
 .service-hero-copy-card .hero-copy-main {
   position: relative;
   padding-left: 42px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-hero-copy-card .hero-copy-main::before {
@@ -12116,16 +12155,38 @@ body.dark-theme .pill-dot-navy {
     0 14px 32px rgba(15, 43, 92, 0.48),
     0 6px 16px rgba(37, 99, 235, 0.32),
     inset 0 1px 1px rgba(255, 255, 255, 0.55);
-} /* Consistent Homepage Headline Typography */
+}
+
+/* 1. Badge Tag: Exact 14px Gap to Headline */
+.service-hero-copy-card .hero-copy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+/* 2. Consistent Homepage Headline Typography: Exact 14px Gap to Description */
 .service-hero-copy-card .hero-headline {
   font-family: var(--font-family);
-  font-size: clamp(2rem, 2.95vw, 3.05rem);
+  font-size: clamp(1.95rem, 2.75vw, 2.85rem);
   font-weight: 700;
-  line-height: 1.14;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   word-spacing: normal;
   color: #121217;
-  margin: 0 0 16px 0;
+  margin: 0 0 14px 0;
+  max-width: 100%;
+}
+body.dark-theme .service-hero-copy-card .hero-headline {
+  color: #ffffff;
 }
 .service-hero-copy-card .hl-line {
   display: block;
@@ -12134,22 +12195,37 @@ body.dark-theme .pill-dot-navy {
 .service-hero-copy-card .hl-line.line-2 {
   margin-left: 0;
 }
+
+/* 3. Description: Exact 18px Gap to CTA Buttons */
 .service-hero-copy-card .hero-description {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.62;
+  line-height: 1.6;
   color: #3b3f4e;
-  margin-bottom: 20px;
-  max-width: 560px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  max-width: 580px;
   width: 100%;
+  min-height: 72px;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+body.dark-theme .service-hero-copy-card .hero-description {
+  color: #94a3b8;
 }
 .service-hero-copy-card .desc-line {
   display: inline;
   white-space: normal;
 }
+
+/* 4. CTA Button Group: Exact 18px Gap to Social Proof */
 .service-hero-copy-card .hero-cta-group {
-  margin-top: 4px;
-  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  width: 100%;
 } /* Bottom Key Metrics Row */
 .hero-split-stats {
   display: flex;
@@ -12184,12 +12260,15 @@ body.dark-theme .pill-dot-navy {
 .hero-trust-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding-top: 20px;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 18px;
+  padding-bottom: 0;
   border-top: 1px solid rgba(20, 56, 119, 0.1);
   margin-top: auto;
   width: 100%;
+  height: 56px;
+  box-sizing: border-box;
 }
 .hero-trust-item {
   display: flex;
@@ -12199,9 +12278,9 @@ body.dark-theme .pill-dot-navy {
   min-width: 0;
 }
 .hero-trust-icon-box {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -12214,6 +12293,8 @@ body.dark-theme .pill-dot-navy {
 }
 .hero-trust-icon-box svg {
   color: var(--brand-accent, #143877);
+  width: 17px;
+  height: 17px;
 }
 .hero-trust-item:hover .hero-trust-icon-box {
   background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
@@ -12233,7 +12314,7 @@ body.dark-theme .pill-dot-navy {
 /* Navy Blue Text Matching About Page Standard */
 .hero-trust-title {
   font-family: var(--font-family);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--brand-accent, #143877);
   line-height: 1.25;
@@ -12244,7 +12325,7 @@ body.dark-theme .pill-dot-navy {
   font-size: 11px;
   font-weight: 600;
   color: rgba(20, 56, 119, 0.72);
-  line-height: 1.35;
+  line-height: 1.3;
   margin-top: 2px;
   white-space: nowrap;
 }
@@ -12395,9 +12476,12 @@ body.dark-theme .hero-trust-sub {
   justify-content: space-between;
   gap: 12px;
   padding-top: 18px;
+  padding-bottom: 0;
   border-top: 1px solid rgba(20, 56, 119, 0.1);
-  margin-top: 22px;
+  margin-top: auto;
   width: 100%;
+  height: 56px;
+  box-sizing: border-box;
 }
 .blog-trust-item {
   display: flex;
@@ -12407,9 +12491,9 @@ body.dark-theme .hero-trust-sub {
   min-width: 0;
 }
 .blog-trust-icon-box {
-  width: 34px;
-  height: 34px;
-  min-width: 34px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -12422,8 +12506,8 @@ body.dark-theme .hero-trust-sub {
 }
 .blog-trust-icon-box svg {
   color: var(--brand-accent, #143877);
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
 }
 .blog-trust-item:hover .blog-trust-icon-box {
   background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
@@ -12442,7 +12526,7 @@ body.dark-theme .hero-trust-sub {
 }
 .blog-trust-title {
   font-family: var(--font-family);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--brand-accent, #143877);
   line-height: 1.25;
@@ -12453,7 +12537,7 @@ body.dark-theme .hero-trust-sub {
   font-size: 11px;
   font-weight: 600;
   color: rgba(20, 56, 119, 0.72);
-  line-height: 1.35;
+  line-height: 1.3;
   margin-top: 2px;
   white-space: nowrap;
 }
@@ -13016,6 +13100,9 @@ body.dark-theme .expertise-card {
     gap: 28px;
     margin-top: 4px;
     margin-bottom: 24px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
   .service-hero-copy-card {
     padding: 34px 28px 30px 28px;
@@ -13023,6 +13110,10 @@ body.dark-theme .expertise-card {
     text-align: center;
     align-items: center;
     justify-content: center;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
   }
   .service-hero-copy-card .hero-copy-main {
     align-items: center;
@@ -13072,6 +13163,7 @@ body.dark-theme .expertise-card {
     width: 100%;
     height: 380px;
     min-height: 380px;
+    max-height: none;
   }
   .service-hero-media-card {
     position: relative;
@@ -14958,9 +15050,13 @@ body.dark-theme .pf-stat-item {
   margin-top: 24px;
   margin-bottom: 36px;
   align-items: stretch;
+  height: 544px;
+  min-height: 544px;
+  max-height: 544px;
+  box-sizing: border-box;
 }
 .portfolio-hero-row .service-hero-copy-card {
-  padding: 38px 28px 32px 30px;
+  padding: 34px 28px 26px 30px;
   overflow: hidden;
   height: 544px;
   min-height: 544px;
@@ -14968,15 +15064,24 @@ body.dark-theme .pf-stat-item {
   box-sizing: border-box;
 }
 .portfolio-hero-row .hero-headline {
-  font-size: clamp(1.95rem, 3.1vw, 3.1rem);
-  line-height: 1.16;
+  font-family: var(--font-family);
+  font-size: clamp(1.95rem, 2.75vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px 0;
   max-width: 100%;
 }
 .portfolio-hero-row .hero-description {
   font-size: 15px;
+  font-weight: 500;
   line-height: 1.6;
   white-space: normal;
-  max-width: 100%;
+  color: #3b3f4e;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 0 18px 0;
+  min-height: 72px;
   overflow-wrap: break-word;
   word-break: normal;
 }
@@ -15149,13 +15254,14 @@ body.dark-theme .pf-collage-fade-bottom {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 14px;
+  gap: 12px;
   background: transparent;
   border: none;
   padding: 0;
-  margin-top: 24px;
-  margin-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 0;
   width: 100%;
+  min-height: 36px;
   box-shadow: none;
 }
 .pf-proof-avatars {
@@ -15190,6 +15296,9 @@ body.dark-theme .pf-proof-tag {
     gap: 28px;
     margin-top: 4px;
     margin-bottom: 24px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
   .portfolio-hero-row .service-hero-copy-card {
     padding: 34px 28px 30px 28px;
