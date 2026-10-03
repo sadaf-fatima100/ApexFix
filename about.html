@@ -1023,8 +1023,8 @@
     }
 
     /* ═══════════════════════════════════════════════════════
-       SECTION: WHY CHOOSE APEXFIX (ACCORDION STACK + FRAMED MEDIA)
-       Matching User Reference media_1790854424758.png
+       SECTION: WHY CHOOSE APEXFIX (2-CARD FEATURE GRID + CLIPPED MEDIA)
+       Matching User Reference media_1791008231275.png & media_1791008307675.png
        ═══════════════════════════════════════════════════════ */
     .about-why-choose {
       padding: clamp(52px, 5.5vw, 84px) 0;
@@ -1034,18 +1034,17 @@
 
     .why-choose-split {
       display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: clamp(32px, 4vw, 54px);
-      align-items: start;
+      grid-template-columns: 1.28fr 0.72fr;
+      gap: clamp(32px, 3.8vw, 48px);
+      align-items: stretch;
     }
 
-    /* Left Column: Heading, Subtitle & Interactive Accordion */
+    /* Left Column: Heading, Subtitle & 2-Card Feature Grid */
     .why-choose-left-col {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between;
       min-width: 0;
-      padding-top: 4px;
     }
 
     .why-choose-badge {
@@ -1059,272 +1058,304 @@
       line-height: 1.2;
       letter-spacing: -0.025em;
       color: var(--text-dark, #121217);
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       text-align: left;
     }
     body.dark-theme .why-choose-h2 {
       color: #ffffff;
     }
-    /* .why-choose-h2 .highlight-navy inherits signature navy / royal blue gradient */
 
     .why-choose-lead {
       font-size: 15.5px;
       font-weight: 500;
       line-height: 1.62;
       color: var(--text-sub, #5a5f70);
-      margin: 0 0 28px;
+      margin: 0 0 26px;
       text-align: left;
-      max-width: 620px;
+      max-width: 660px;
     }
     body.dark-theme .why-choose-lead {
       color: #94a3b8;
     }
 
-    /* Accordion Stack Container */
-    .why-acc-stack {
+    /* 2-Card Side-by-Side Feature Grid (Exact Match to media_1791008231275.png) */
+    .why-dual-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .why-feat-card {
+      border-radius: 22px;
+      padding: 24px 22px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      width: 100%;
-    }
-
-    /* Accordion Card (Base / Collapsed) */
-    .why-acc-card {
-      background: #ffffff;
-      border: 1.5px solid rgba(20, 56, 119, 0.09);
-      border-radius: 20px;
-      padding: 16px 22px;
-      box-shadow: 0 3px 12px rgba(15, 43, 92, 0.03);
-      cursor: pointer;
-      transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.35s ease, transform 0.25s ease;
+      justify-content: space-between;
       position: relative;
-      overflow: hidden;
-      user-select: none;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
     }
-    .why-acc-card:hover {
-      border-color: rgba(20, 56, 119, 0.24);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.08);
-    }
-    body.dark-theme .why-acc-card {
-      background: #181924;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-    }
-    body.dark-theme .why-acc-card:hover {
-      border-color: rgba(96, 165, 250, 0.3);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+    .why-feat-card:hover {
+      transform: translateY(-4px);
     }
 
-    /* Card Top Row */
-    .why-acc-top {
+    /* Left Card: Soft Emerald / Mint Tint */
+    .why-feat-card.card-mint {
+      background: linear-gradient(145deg, #f2fbf7 0%, #eaf8f1 100%);
+      border: 1.5px solid rgba(16, 185, 129, 0.2);
+      box-shadow: 0 10px 28px rgba(5, 150, 105, 0.05);
+    }
+    .why-feat-card.card-mint:hover {
+      border-color: rgba(16, 185, 129, 0.42);
+      box-shadow: 0 16px 36px rgba(5, 150, 105, 0.11);
+    }
+    body.dark-theme .why-feat-card.card-mint {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.09) 0%, rgba(24, 25, 36, 0.95) 100%);
+      border-color: rgba(16, 185, 129, 0.25);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Right Card: Soft Sapphire / Ice-Blue Tint */
+    .why-feat-card.card-blue {
+      background: linear-gradient(145deg, #f2f6fe 0%, #eaf1fd 100%);
+      border: 1.5px solid rgba(29, 78, 216, 0.16);
+      box-shadow: 0 10px 28px rgba(20, 56, 119, 0.05);
+    }
+    .why-feat-card.card-blue:hover {
+      border-color: rgba(29, 78, 216, 0.36);
+      box-shadow: 0 16px 36px rgba(20, 56, 119, 0.11);
+    }
+    body.dark-theme .why-feat-card.card-blue {
+      background: linear-gradient(145deg, rgba(37, 99, 235, 0.11) 0%, rgba(24, 25, 36, 0.95) 100%);
+      border-color: rgba(96, 165, 250, 0.25);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Card Top Row: Circular Icon + 2-Line Title + Mini Accent Dash */
+    .why-fcard-top {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 14px;
-      width: 100%;
+      margin-bottom: 16px;
     }
 
-    /* Icon Box */
-    .why-acc-icon-box {
-      width: 42px;
-      height: 42px;
-      min-width: 42px;
+    .why-fcard-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
       border-radius: 50%;
-      background: rgba(20, 56, 119, 0.08);
-      color: var(--brand-accent, #143877);
-      border: 1.5px solid rgba(20, 56, 119, 0.14);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.3s ease;
     }
-    body.dark-theme .why-acc-icon-box {
-      background: rgba(96, 165, 250, 0.12);
+    .why-feat-card:hover .why-fcard-icon {
+      transform: scale(1.06);
+    }
+    .why-fcard-icon.icon-mint {
+      background: rgba(16, 185, 129, 0.16);
+      color: #059669;
+    }
+    body.dark-theme .why-fcard-icon.icon-mint {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+    }
+    .why-fcard-icon.icon-blue {
+      background: rgba(37, 99, 235, 0.14);
+      color: #1d4ed8;
+    }
+    body.dark-theme .why-fcard-icon.icon-blue {
+      background: rgba(96, 165, 250, 0.2);
       color: #60a5fa;
-      border-color: rgba(96, 165, 250, 0.25);
     }
 
-    /* Collapsed Header Text */
-    .why-acc-header-collapsed {
-      flex: 1;
-      min-width: 0;
-      max-width: 500px;
-      opacity: 1;
-      transform: translateX(0);
-      transition: opacity 0.25s ease, max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s ease;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .why-fcard-title-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .why-acc-title {
-      font-size: 16px;
-      font-weight: 700;
+    .why-fcard-title {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.26;
+      letter-spacing: -0.015em;
       color: var(--text-dark, #121217);
-      font-family: var(--font-family);
-      line-height: 1.3;
       margin: 0;
-      display: block;
-      transition: color 0.25s ease;
+      font-family: var(--font-family);
     }
-    body.dark-theme .why-acc-title {
+    body.dark-theme .why-fcard-title {
       color: #ffffff;
     }
+    .why-fcard-mini-line {
+      width: 24px;
+      height: 2.5px;
+      border-radius: 99px;
+      display: block;
+      margin-top: 8px;
+    }
+    .why-fcard-mini-line.line-mint {
+      background: #10b981;
+    }
+    .why-fcard-mini-line.line-blue {
+      background: #2563eb;
+    }
 
-    /* Circular Action Arrow Button */
-    .why-acc-action-btn {
+    /* Card Body Description */
+    .why-fcard-desc {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text-sub, #5a5f70);
+      margin: 0 0 20px 0;
+    }
+    body.dark-theme .why-fcard-desc {
+      color: #94a3b8;
+    }
+
+    /* Card Bottom Trust Footer */
+    .why-fcard-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .why-fcard-avatars {
+      display: flex;
+      align-items: center;
+    }
+    .why-fcard-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffffff;
+      margin-left: -9px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .why-fcard-avatar:first-child {
+      margin-left: 0;
+    }
+    body.dark-theme .why-fcard-avatar {
+      border-color: #181924;
+    }
+
+    .why-fcard-footer-icon {
       width: 38px;
       height: 38px;
       min-width: 38px;
       border-radius: 50%;
-      background: rgba(20, 56, 119, 0.06);
-      color: var(--brand-accent, #143877);
-      border: 1px solid rgba(20, 56, 119, 0.12);
+      background: #ffffff;
+      color: #1d4ed8;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
-      margin-left: auto;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      padding: 0;
+      box-shadow: 0 4px 12px rgba(20, 56, 119, 0.08);
     }
-    body.dark-theme .why-acc-action-btn {
-      background: rgba(255, 255, 255, 0.08);
-      color: #93c5fd;
-      border-color: rgba(255, 255, 255, 0.12);
+    body.dark-theme .why-fcard-footer-icon {
+      background: rgba(96, 165, 250, 0.16);
+      color: #60a5fa;
     }
 
-    /* Card Body (Smooth Grid Animation Expand/Collapse) */
-    .why-acc-body {
-      display: grid;
-      grid-template-rows: 0fr;
-      opacity: 0;
-      transition: grid-template-rows 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    .why-fcard-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
     }
-    .why-acc-body-inner {
-      overflow: hidden;
-      padding-top: 0;
-      transition: padding-top 0.38s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .why-acc-body-title {
-      font-size: 18px;
-      font-weight: 700;
+    .why-fcard-meta strong {
+      font-size: 14.5px;
+      font-weight: 800;
       color: var(--text-dark, #121217);
-      font-family: var(--font-family);
-      margin: 0 0 10px 0;
-      line-height: 1.3;
+      letter-spacing: -0.01em;
     }
-    body.dark-theme .why-acc-body-title {
+    body.dark-theme .why-fcard-meta strong {
       color: #ffffff;
     }
-    .why-acc-desc {
-      font-size: 14.5px;
-      font-weight: 500;
-      line-height: 1.62;
+    .why-fcard-meta span {
+      font-size: 12px;
+      font-weight: 600;
       color: var(--text-sub, #5a5f70);
-      margin: 0;
-      font-family: var(--font-family);
+      margin-top: 2px;
     }
-    body.dark-theme .why-acc-desc {
+    body.dark-theme .why-fcard-meta span {
       color: #94a3b8;
     }
 
-    /* Active / Expanded Card State */
-    .why-acc-card.is-active {
-      background: #ffffff;
-      border-color: rgba(20, 56, 119, 0.22);
-      border-radius: 24px;
-      padding: 24px 26px 26px 26px;
-      box-shadow: 0 14px 38px rgba(15, 43, 92, 0.09);
-    }
-    body.dark-theme .why-acc-card.is-active {
-      background: #1c1d2c;
-      border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.6);
-    }
-    .why-acc-card.is-active .why-acc-icon-box {
-      width: 48px;
-      height: 48px;
-      min-width: 48px;
-      background: var(--btn-gradient-primary, linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%));
-      color: #ffffff;
-      border-color: transparent;
-      box-shadow: 0 8px 20px rgba(15, 43, 92, 0.28);
-    }
-    .why-acc-card.is-active .why-acc-icon-box svg {
-      width: 22px;
-      height: 22px;
-    }
-    .why-acc-card.is-active .why-acc-header-collapsed {
-      opacity: 0;
-      max-width: 0;
-      transform: translateX(-10px);
-      pointer-events: none;
-    }
-    .why-acc-card.is-active .why-acc-action-btn {
-      background: var(--brand-accent, #143877);
-      color: #ffffff;
-      border-color: transparent;
-      transform: rotate(45deg);
-      box-shadow: 0 4px 14px rgba(20, 56, 119, 0.25);
-    }
-    body.dark-theme .why-acc-card.is-active .why-acc-action-btn {
-      background: #2563eb;
-      color: #ffffff;
-    }
-    .why-acc-card.is-active .why-acc-body {
-      grid-template-rows: 1fr;
-      opacity: 1;
-    }
-    .why-acc-card.is-active .why-acc-body-inner {
-      padding-top: 18px;
-    }
-
-    /* Right Column: Media Frame with Locked Stable Height */
+    /* Right Column: Top-Aligned with H2 Heading & Compact Width */
     .why-choose-right-col {
       display: flex;
-      align-self: start;
+      flex-direction: column;
+      justify-content: flex-end;
       width: 100%;
       min-width: 0;
+      padding-top: 44px; /* Aligns top of image directly with top of H2 heading */
     }
     .why-acc-media-stage {
       position: relative;
       width: 100%;
-      height: 520px;
-      min-height: 520px;
-      max-height: 520px;
+      flex: 1;
+      height: 100%;
+      min-height: 410px;
+      max-height: 445px;
+      display: flex;
+      gap: 14px;
+      align-items: stretch;
     }
     .why-acc-media-card {
       position: relative;
+      flex: 1;
       width: 100%;
       height: 100%;
-      border-radius: 28px;
+      clip-path: url(#main-hero-cut);
+      -webkit-clip-path: url(#main-hero-cut);
       overflow: hidden;
-      box-shadow: 0 20px 48px rgba(15, 43, 92, 0.14);
-      border: 3.5px solid var(--brand-accent, #143877);
-      background: #0f2b5c;
+      border: none;
+      background: transparent;
       box-sizing: border-box;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      filter: drop-shadow(0 20px 42px rgba(15, 43, 92, 0.16));
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .why-acc-media-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(15, 43, 92, 0) 50%, rgba(15, 43, 92, 0.55) 100%);
+      background: linear-gradient(180deg, rgba(15, 43, 92, 0) 55%, rgba(15, 43, 92, 0.45) 100%);
       pointer-events: none;
     }
-    .why-acc-media-card:hover {
-      transform: translateY(-3px) scale(1.008);
-      box-shadow: 0 24px 54px rgba(15, 43, 92, 0.2);
+    .why-acc-media-stage:hover .why-acc-media-card {
+      transform: translateY(-4px);
     }
     body.dark-theme .why-acc-media-card {
-      border-color: #2563eb;
-      background: #181924;
-      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.65);
+      background: transparent;
+      filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.65));
     }
     body.dark-theme .why-acc-media-card::after {
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.65) 100%);
+    }
+    .why-right-accent-line {
+      flex: 0 0 15px;
+      width: 15px;
+      height: 64%;
+      align-self: flex-start;
+      border-radius: 9999px;
+      background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      box-shadow:
+        0 10px 26px rgba(15, 43, 92, 0.38),
+        0 4px 12px rgba(6, 18, 40, 0.28),
+        inset 0 1px 1px rgba(255, 255, 255, 0.38);
+      position: relative;
+      z-index: 10;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .why-acc-media-stage:hover .why-right-accent-line {
+      background: var(--btn-gradient-hover);
+      box-shadow:
+        0 14px 32px rgba(15, 43, 92, 0.48),
+        0 6px 16px rgba(37, 99, 235, 0.32),
+        inset 0 1px 1px rgba(255, 255, 255, 0.55);
     }
     .why-acc-media-img {
       width: 100%;
@@ -1497,16 +1528,35 @@
         gap: 36px;
         align-items: start;
       }
+      .why-choose-right-col {
+        padding-top: 0;
+      }
       .why-acc-media-stage {
-        min-height: 420px;
-        max-height: 420px;
-        height: 420px;
+        min-height: 400px;
+        max-height: 400px;
+        height: 400px;
+      }
+      .why-acc-media-card {
+        clip-path: none !important;
+        -webkit-clip-path: none !important;
+        border-radius: 26px;
+      }
+      .why-right-accent-line {
+        display: none !important;
       }
       .why-choose-lead {
         max-width: 100%;
       }
     }
     @media (max-width: 576px) {
+      .why-dual-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .why-feat-card {
+        padding: 20px 18px;
+        border-radius: 20px;
+      }
       .why-acc-media-stage {
         min-height: 320px;
         max-height: 320px;
@@ -1515,23 +1565,6 @@
       }
       .why-acc-media-card {
         border-radius: 22px;
-      }
-      .why-acc-card {
-        padding: 14px 16px;
-        border-radius: 18px;
-      }
-      .why-acc-card.is-active {
-        padding: 18px 18px 22px 18px;
-        border-radius: 20px;
-      }
-      .why-acc-title {
-        font-size: 15px;
-      }
-      .why-acc-body-title {
-        font-size: 16.5px;
-      }
-      .why-acc-desc {
-        font-size: 13.5px;
       }
       .why-media-brand-seal {
         bottom: 14px;
@@ -3251,110 +3284,89 @@
                 Reliable doorstep appliance repair with certified master technicians ensuring precision diagnostics, 100% genuine OEM factory parts, and guaranteed satisfaction every single time.
               </p>
 
-              <!-- Interactive 3-Card Stack (Matching Reference Layout & Behavior) -->
-              <div class="why-acc-stack" id="whyChooseAccordion">
+              <!-- 2-Card Feature Grid (Matching Reference media_1791008231275.png) -->
+              <div class="why-dual-cards-grid">
                 
-                <!-- Card 1: Collapsed by Default -->
-                <div class="why-acc-card" data-index="1">
-                  <div class="why-acc-top">
-                    <div class="why-acc-icon-box">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Card 1: Skilled & Certified Technicians (Soft Mint / Emerald) -->
+                <div class="why-feat-card card-mint">
+                  <div>
+                    <div class="why-fcard-top">
+                      <div class="why-fcard-icon icon-mint" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                          <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                      </div>
+                      <div class="why-fcard-title-wrap">
+                        <h3 class="why-fcard-title">Skilled &amp; Certified<br>Technicians</h3>
+                        <span class="why-fcard-mini-line line-mint" aria-hidden="true"></span>
+                      </div>
+                    </div>
+                    <p class="why-fcard-desc">
+                      Our experts are trained and certified to handle all major appliance brands and models across Dubai.
+                    </p>
+                  </div>
+
+                  <div class="why-fcard-footer">
+                    <div class="why-fcard-avatars">
+                      <img src="assets/avatar1.jpg" alt="Happy Dubai Customer" class="why-fcard-avatar">
+                      <img src="assets/avatar2.jpg" alt="Happy Dubai Customer" class="why-fcard-avatar">
+                      <img src="assets/avatar3.jpg" alt="Happy Dubai Customer" class="why-fcard-avatar">
+                    </div>
+                    <div class="why-fcard-meta">
+                      <strong>15,000+</strong>
+                      <span>Happy Customers</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Fast & Reliable Service (Soft Sapphire / Ice-Blue) -->
+                <div class="why-feat-card card-blue">
+                  <div>
+                    <div class="why-fcard-top">
+                      <div class="why-fcard-icon icon-blue" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                      </div>
+                      <div class="why-fcard-title-wrap">
+                        <h3 class="why-fcard-title">Fast &amp; Reliable<br>Service</h3>
+                        <span class="why-fcard-mini-line line-blue" aria-hidden="true"></span>
+                      </div>
+                    </div>
+                    <p class="why-fcard-desc">
+                      We value your time. Get quick response, on-time visits and long-lasting OEM repair solutions.
+                    </p>
+                  </div>
+
+                  <div class="why-fcard-footer">
+                    <div class="why-fcard-footer-icon" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="16" y1="2" x2="16" y2="6"></line>
                         <line x1="8" y1="2" x2="8" y2="6"></line>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                       </svg>
                     </div>
-                    <div class="why-acc-header-collapsed">
-                      <span class="why-acc-title">Flexible Scheduling and Quick Repairs</span>
-                    </div>
-                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="why-acc-body">
-                    <div class="why-acc-body-inner">
-                      <h3 class="why-acc-body-title">Flexible Scheduling and Quick Repairs</h3>
-                      <p class="why-acc-desc">
-                        We promptly assess your appliance, explain needed repairs, and provide a clear upfront quote with rapid 2-hour doorstep response across Greater Dubai.
-                      </p>
+                    <div class="why-fcard-meta">
+                      <strong>Same Day Service</strong>
+                      <span>For Urgent Repairs</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- Card 2: Transparent Costs -->
-                <div class="why-acc-card" data-index="2">
-                  <div class="why-acc-top">
-                    <div class="why-acc-icon-box">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                      </svg>
-                    </div>
-                    <div class="why-acc-header-collapsed">
-                      <span class="why-acc-title">Transparent &amp; Upfront Costs</span>
-                    </div>
-                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="why-acc-body">
-                    <div class="why-acc-body-inner">
-                      <h3 class="why-acc-body-title">Transparent &amp; Upfront Costs</h3>
-                      <p class="why-acc-desc">
-                        Zero hidden callout fees or unexpected charges. Every repair begins with an itemized digital estimate detailing genuine OEM parts and fixed labor rates.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 3: Trusted Quality -->
-                <div class="why-acc-card" data-index="3">
-                  <div class="why-acc-top">
-                    <div class="why-acc-icon-box">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                      </svg>
-                    </div>
-                    <div class="why-acc-header-collapsed">
-                      <span class="why-acc-title">Trusted Quality &amp; Warranty</span>
-                    </div>
-                    <button class="why-acc-action-btn" type="button" aria-label="Toggle details" aria-expanded="false">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="why-acc-body">
-                    <div class="why-acc-body-inner">
-                      <h3 class="why-acc-body-title">Trusted Quality &amp; Warranty</h3>
-                      <p class="why-acc-desc">
-                        Restored strictly to manufacturer specifications using 100% factory-original components, backed by our official written 90-day parts and labor guarantee.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div><!-- /.why-acc-stack -->
+              </div><!-- /.why-dual-cards-grid -->
 
             </div><!-- /.why-choose-left-col -->
 
-            <!-- Right Column: Framed Media Card (Thick Navy Blue Border) -->
+            <!-- Right Column: Clipped Media Card + Right Vertical Accent Line -->
             <div class="why-choose-right-col">
               <div class="why-acc-media-stage">
                 <div class="why-acc-media-card">
-                  <img src="assets/why-choose-us.jpg" alt="ApexFix Certified Master Technician Restoring Luxury Kitchen Appliance in Dubai" class="why-acc-media-img" loading="lazy">
+                  <img src="assets/why-choose-us.jpg" alt="ApexFix Certified Master Technician Restoring Luxury Kitchen Appliance in Dubai" class="why-acc-media-img">
                 </div>
+                <div class="why-right-accent-line" aria-hidden="true"></div>
               </div>
             </div><!-- /.why-choose-right-col -->
 
