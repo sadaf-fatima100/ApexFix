@@ -9893,7 +9893,7 @@ body.dark-theme .areas-cta-banner .btn-dispatch-call:hover svg {
 } /* Individual Brand Card with Smooth Curves & Docked Full-Width Footer */
 .brand-curved-card {
   background-color: #ffffff;
-  border: 1.5px solid #143877;
+  border: 1.5px solid #1e4ab5;
   border-radius: 18px;
   padding: 0;
   display: flex;
@@ -9914,8 +9914,8 @@ body.dark-theme .areas-cta-banner .btn-dispatch-call:hover svg {
 }
 .brand-curved-card:hover {
   transform: translateY(-5px);
-  border-color: #1e4ab5;
-  box-shadow: 0 14px 30px rgba(15, 43, 92, 0.2);
+  border-color: #2563eb;
+  box-shadow: 0 14px 30px rgba(30, 74, 181, 0.22);
 } /* Card Body (Logo + Sub-tag) */
 .brand-card-body {
   padding: 20px 14px 14px 14px;
@@ -9982,10 +9982,10 @@ body.dark-theme .areas-cta-banner .btn-dispatch-call:hover svg {
 .brand-curved-card:hover .brand-card-footer {
   background-color: #eff5fc;
   border-top-color: #cbdbee;
-  color: #143877;
+  color: #1e4ab5;
 }
 .brand-curved-card:hover .brand-card-footer svg {
-  color: #143877;
+  color: #1e4ab5;
 } /* Card Filtering Animation State */
 .brand-curved-card.card-hidden {
   display: none !important;
@@ -10049,7 +10049,7 @@ body.dark-theme .brands-logos-inner {
 }
 body.dark-theme .brand-curved-card {
   background-color: #121b2d;
-  border-color: rgba(96, 165, 250, 0.22);
+  border-color: rgba(96, 165, 250, 0.28);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 body.dark-theme .brand-curved-card:hover {

@@ -22,7 +22,7 @@ This project follows strict engineering and visual standards. Every change must 
 
 ## 3. UI Component Geometry & Full-Bleed Layout
 - Primary & Action Buttons: MUST use pill shape (`border-radius: var(--radius-pill);` or `9999px`) styled with the signature Call Now gradient.
-- Brand Grid: All 20 brand logo cards MUST have `1.5px solid #143877` navy border with `#1e4ab5` on hover.
+- Brand Grid: All 20 brand logo cards MUST have `1.5px solid #1e4ab5` sapphire navy border with `#2563eb` on hover.
 - Full-Bleed Architecture: Unified edge-to-edge canvas with zero outer frame border or grey gutters. Content centered inside 1360px container with clean internal padding. No outer floating card borders.
 
 ## 4. Typography Hierarchy & Consistency (Matching Home Page)
