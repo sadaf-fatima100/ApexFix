@@ -14468,15 +14468,15 @@ body.dark-theme .stat-sep-divider {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(11, 28, 62, 0.88);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(10, 28, 62, 0.35);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .service-issue-card:hover .service-issue-icon {
@@ -14491,14 +14491,14 @@ body.dark-theme .stat-sep-divider {
   font-weight: 800;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background: rgba(11, 28, 62, 0.88);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 9999px;
   padding: 4px 11px;
   font-variant-numeric: tabular-nums;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(10, 28, 62, 0.35);
 }
 /* Translucent Frosted Navy Blue Overlay Text Card (Matching .service-card-content) */
 .service-issue-body {
@@ -14506,26 +14506,28 @@ body.dark-theme .stat-sep-divider {
   z-index: 2;
   margin: 14px;
   padding: 18px 18px 20px 18px;
-  background: rgba(11, 28, 62, 0.84);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.92) 0%, rgba(26, 68, 145, 0.88) 50%, rgba(12, 32, 72, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 12px 32px rgba(5, 14, 32, 0.4),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    0 12px 32px rgba(10, 28, 62, 0.35),
+    0 4px 14px rgba(20, 56, 119, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .service-issue-card:hover .service-issue-body {
-  background: rgba(11, 28, 62, 0.94);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border-color: rgba(255, 255, 255, 0.38);
   box-shadow:
-    0 16px 40px rgba(5, 14, 32, 0.55),
-    inset 0 1px 1px rgba(255, 255, 255, 0.32);
-  transform: translateY(-2px);
+    0 18px 44px rgba(10, 28, 62, 0.55),
+    0 6px 18px rgba(30, 74, 181, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
 }
 .service-issue-title {
   font-size: 16.5px;
@@ -14742,9 +14744,9 @@ body.dark-theme .service-issue-desc {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .tag-location {
-  background: rgba(11, 28, 62, 0.88);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.24);
 }
 .tag-brand {
   background: rgba(16, 185, 129, 0.92);
@@ -14757,25 +14759,27 @@ body.dark-theme .service-issue-desc {
   z-index: 2;
   margin: 14px;
   padding: 18px;
-  background: rgba(11, 28, 62, 0.84);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.92) 0%, rgba(26, 68, 145, 0.88) 50%, rgba(12, 32, 72, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 12px 32px rgba(5, 14, 32, 0.4),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    0 12px 32px rgba(10, 28, 62, 0.35),
+    0 4px 14px rgba(20, 56, 119, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .portfolio-card:hover .portfolio-card-body {
-  background: rgba(11, 28, 62, 0.94);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border-color: rgba(255, 255, 255, 0.38);
   box-shadow:
-    0 16px 40px rgba(5, 14, 32, 0.55),
-    inset 0 1px 1px rgba(255, 255, 255, 0.32);
-  transform: translateY(-2px);
+    0 18px 44px rgba(10, 28, 62, 0.55),
+    0 6px 18px rgba(30, 74, 181, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
 }
 .portfolio-card-title {
   font-family: var(--font-heading);
