@@ -12,9 +12,9 @@ This project follows strict engineering and visual standards. Every change must 
   - On sub-pages like `services.html`, Quick Links must reference `index.html#section` (e.g. `index.html#home`, `index.html#about`).
 
 ## 2. Brand Identity & Theme Palette
-- Primary Brand Accent: Deep Sapphire Navy `#143877` (`var(--brand-accent)`) with rich dark depth
-- Primary Action Gradient (Matching CTA Call Now button): `linear-gradient(135deg, #1d4ed8 0%, #0f2b5c 50%, #1e40af 100%)`
-- Primary Action Hover Gradient: `linear-gradient(135deg, #2563eb 0%, #183f80 50%, #0f2b5c 100%)`
+- Primary Brand Accent: Vibrant Sapphire Royal `#1e4ab5` (`var(--brand-accent)`) with `#2563eb` on hover (`var(--brand-accent-hover)`)
+- Primary Action Gradient (Matching CTA Call Now button): `linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%)`
+- Primary Action Hover Gradient: `linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%)`
 - Secondary Call / Emergency: `#059669` / `#10b981`
 - Canvas Light: `#fbfbfe` / `#f3f4f8` with `#ffffff` card surfaces
 - Dark Theme (`body.dark-theme`): Canvas `#0c1017` / `#121217`, Cards `#181924`, Borders `rgba(255, 255, 255, 0.08)`
