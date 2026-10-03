@@ -19123,23 +19123,28 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
   margin: 0 auto;
 }
 
-/* 2-Column Split: Visual vs Content */
+/* 2-Column Split: Visual vs Content (Flexbox for perfect top & bottom stretch matching Home Page About Us) */
 .wm-perf-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  display: flex;
   gap: clamp(36px, 4.5vw, 60px);
-  align-items: center;
+  align-items: stretch;
 }
 
-/* Left Column: Media & Floating Elements */
+/* Left Column: Media & Floating Elements (Height balances exactly with Content Column) */
 .wm-perf-media-col {
-  position: relative;
+  flex: 0 0 clamp(460px, 44vw, 530px);
+  max-width: 530px;
   width: 100%;
+  position: relative;
+  display: flex;
+  min-height: 0;
 }
 
 .wm-perf-media-wrap {
   position: relative;
   width: 100%;
+  height: 100%;
+  min-height: 0;
   display: flex;
   align-items: stretch;
   gap: 16px;
@@ -19150,8 +19155,8 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
   flex: 0 0 15px;
   width: 15px;
   min-width: 15px;
-  margin-top: 24%;
-  align-self: stretch;
+  height: 64%;
+  align-self: flex-end;
   border-radius: 9999px;
   background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -19175,6 +19180,8 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
 .wm-perf-img-frame {
   flex: 1;
   min-width: 0;
+  height: 100%;
+  min-height: 0;
   position: relative;
   clip-path: url(#main-hero-cut);
   -webkit-clip-path: url(#main-hero-cut);
@@ -19192,9 +19199,10 @@ body.dark-theme .wm-perf-img-frame {
 }
 
 .wm-perf-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -19204,8 +19212,17 @@ body.dark-theme .wm-perf-img-frame {
   transform: scale(1.025);
 }
 
-/* Responsive adjustment for wm-perf-img-frame & line */
+/* Tablet & Mobile responsive fallback */
 @media (max-width: 992px) {
+  .wm-perf-grid {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .wm-perf-media-col {
+    height: clamp(320px, 46vw, 440px);
+    min-height: 320px;
+    flex: 0 0 auto;
+  }
   .wm-perf-img-frame {
     clip-path: none !important;
     -webkit-clip-path: none !important;
@@ -19416,7 +19433,7 @@ body.dark-theme .wm-float-card-sub {
 .wm-perf-content-col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .wm-perf-eyebrow-row {
