@@ -3545,14 +3545,40 @@ body.dark-theme .why-card-content .why-card-desc {
   align-items: stretch;
 } /* Left Visual Unit (Accent Line + Image locked together as one cohesive group) */
 .about-visual-group {
-  flex: 0 0 580px;
-  max-width: 580px;
+  flex: 0 0 545px;
+  max-width: 545px;
   width: 100%;
   display: flex;
-  gap: 0;
+  gap: 14px;
   align-items: stretch;
   position: relative;
   min-height: 0;
+}
+
+/* Thick Vertical Accent Line on Left of Image (Matching Primary Button Gradient Shade) */
+.about-left-accent-line {
+  flex: 0 0 15px;
+  width: 15px;
+  height: 64%;
+  align-self: flex-end;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  position: relative;
+  z-index: 10;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-visual-group:hover .about-left-accent-line {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 
 /* Compact Metrics Column on Left */
