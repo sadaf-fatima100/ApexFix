@@ -998,15 +998,42 @@ button[id*="phone"] svg {
   position: relative;
   width: 100%;
   height: 535px;
-} /* Main Asymmetric Image Card */
+} /* Main Asymmetric Image Card (Shifted slightly left to accommodate right accent bar) */
 .main-image-card {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 29px;
   width: 66%;
   height: 535px;
   border-radius: 44px;
 }
+
+/* Thick Vertical Accent Line on Right of Hero Image (Matching About Section & Button Shade) */
+.hero-right-accent-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 64%;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  z-index: 20;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-stage:hover .hero-right-accent-line {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
+}
+
 .main-image-clip {
   width: 100%;
   height: 100%;
@@ -1074,11 +1101,11 @@ button[id*="phone"] svg {
   height: 3.5px;
   border-radius: 50%;
   background-color: #ffffff;
-} /* Sub Image Card (matching right image clip-path, with gap to main image) */
+} /* Sub Image Card (matching right image clip-path, shifted slightly left with main image) */
 .sub-image-card {
   position: absolute;
   bottom: 0px;
-  left: 0%;
+  left: -29px;
   width: 30.5%;
   height: 275px;
   z-index: 15;
@@ -1122,7 +1149,7 @@ button[id*="phone"] svg {
 .social-proof-card {
   position: absolute;
   bottom: 8px;
-  right: 0;
+  right: 22px;
   left: auto;
   background-color: #ffffff;
   border-radius: 20px;
@@ -1476,26 +1503,28 @@ a.service-card-item *,
   z-index: 2;
   margin: 14px;
   padding: 20px 20px 20px 20px;
-  background: rgba(11, 28, 62, 0.84);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.92) 0%, rgba(26, 68, 145, 0.88) 50%, rgba(12, 32, 72, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 12px 32px rgba(5, 14, 32, 0.4),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    0 12px 32px rgba(10, 28, 62, 0.35),
+    0 4px 14px rgba(20, 56, 119, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none !important;
 }
 .service-card-item:hover .service-card-content {
-  background: rgba(11, 28, 62, 0.94);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border-color: rgba(255, 255, 255, 0.38);
   box-shadow:
-    0 16px 40px rgba(5, 14, 32, 0.55),
-    inset 0 1px 1px rgba(255, 255, 255, 0.32);
-  transform: translateY(-2px);
+    0 18px 44px rgba(10, 28, 62, 0.55),
+    0 6px 18px rgba(30, 74, 181, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
 } /* Icon Badge inside Luminous Navy Card */
 .service-card-icon-badge {
   width: 36px;
@@ -3514,7 +3543,7 @@ body.dark-theme .why-card-content .why-card-desc {
   display: flex;
   gap: 48px;
   align-items: stretch;
-} /* Left Visual Unit (Metrics Panel + Image locked together as one cohesive group) */
+} /* Left Visual Unit (Accent Line + Image locked together as one cohesive group) */
 .about-visual-group {
   flex: 0 0 580px;
   max-width: 580px;
@@ -3524,7 +3553,9 @@ body.dark-theme .why-card-content .why-card-desc {
   align-items: stretch;
   position: relative;
   min-height: 0;
-} /* Compact Metrics Column on Left (Half overlapping image, spanning max height up to straight clip-path cut) */
+}
+
+/* Compact Metrics Column on Left */
 .about-stats-column {
   flex: 0 0 148px;
   width: 148px;
@@ -5115,9 +5146,34 @@ body.dark-theme .prefooter-team-img {
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  padding: clamp(36px, 3.8vw, 48px) clamp(28px, 3.8vw, 48px) clamp(36px, 3.8vw, 48px) clamp(16px, 2.2vw, 28px);
+  padding: clamp(36px, 3.8vw, 48px) clamp(28px, 3.8vw, 48px) clamp(36px, 3.8vw, 48px) clamp(32px, 3vw, 42px);
   position: relative;
   z-index: 2;
+}
+
+.prefooter-cta-content::before {
+  content: "";
+  position: absolute;
+  top: clamp(36px, 3.8vw, 48px);
+  bottom: clamp(36px, 3.8vw, 48px);
+  left: 4px;
+  width: 15px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.prefooter-simple-card:hover .prefooter-cta-content::before {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 
 /* Top-Right Overlapping Rosette Ribbon Seal Badge */
@@ -5308,6 +5364,9 @@ body.dark-theme .btn-simple-cta-whatsapp:hover {
     align-items: center;
     text-align: center;
     padding: 28px 28px 36px 28px;
+  }
+  .prefooter-cta-content::before {
+    display: none;
   }
   .prefooter-simple-heading {
     padding-right: 0;
@@ -6840,7 +6899,8 @@ body.dark-theme .trust-item svg {
     object-position: center 25%;
     border-radius: 26px;
   }
-  .sub-image-card {
+  .sub-image-card,
+  .hero-right-accent-line {
     display: none !important;
   }
   .experts-badge {
@@ -8583,19 +8643,20 @@ body.dark-theme .service-card-item * {
   text-decoration: none !important;
 }
 body.dark-theme .service-card-content {
-  background: rgba(10, 22, 48, 0.88);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(12, 28, 60, 0.92) 0%, rgba(18, 48, 105, 0.88) 50%, rgba(8, 20, 44, 0.96) 100%);
+  border-color: rgba(255, 255, 255, 0.14);
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.6),
-    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    inset 0 1px 1px rgba(255, 255, 255, 0.18);
   text-decoration: none !important;
 }
 body.dark-theme .service-card-item:hover .service-card-content {
-  background: rgba(10, 22, 48, 0.96);
-  border-color: rgba(96, 165, 250, 0.4);
+  background: linear-gradient(135deg, rgba(18, 48, 105, 0.96) 0%, rgba(30, 74, 181, 0.92) 50%, rgba(12, 28, 60, 0.98) 100%);
+  border-color: rgba(96, 165, 250, 0.45);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.75),
-    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    0 0 20px rgba(37, 99, 235, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 body.dark-theme .service-card-icon-badge {
   background: rgba(255, 255, 255, 0.12);
@@ -10462,8 +10523,8 @@ body.dark-theme .hub-core-body {
 }
 .faq-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(32px, 4vw, 56px);
+  grid-template-columns: 0.76fr 1.24fr;
+  gap: clamp(24px, 2.8vw, 36px);
   align-items: start;
   position: relative;
 }
@@ -10545,11 +10606,37 @@ body.dark-theme .hub-core-body {
   color: #ffffff !important;
 }
 
-/* --- Right Column: Modern Pill FAQ Cards --- */
+/* --- Right Column: Modern Pill FAQ Cards + Right Accent Line --- */
 .faq-accordion-col {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-right: 30px;
+}
+
+.faq-right-accent-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-accordion-col:hover .faq-right-accent-line {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 .faq-card {
   background: #f4f7fb;
@@ -10714,6 +10801,10 @@ body.dark-theme .faq-card-body {
   }
   .faq-accordion-col {
     width: 100%;
+    padding-right: 0;
+  }
+  .faq-right-accent-line {
+    display: none;
   }
   .faq-main-heading {
     font-size: var(--text-h2);
@@ -11217,6 +11308,31 @@ body.dark-theme .emergency-pillar-item:hover {
   justify-content: center;
   align-self: center;
   min-width: 0;
+  padding-left: 30px;
+}
+
+.cta-left-accent-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-showcase-left:hover .cta-left-accent-line {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 .cta-showcase-title {
   font-family: var(--font-heading);
@@ -11461,6 +11577,10 @@ body.dark-theme .cta-card-featured .cta-circle-check {
   .cta-showcase-left {
     text-align: center;
     align-items: center;
+    padding-left: 0;
+  }
+  .cta-left-accent-line {
+    display: none;
   }
   .cta-showcase-desc {
     max-width: 480px;
@@ -11923,6 +12043,41 @@ body.dark-theme .pill-dot-navy {
 .hero-copy-main {
   display: flex;
   flex-direction: column;
+}
+
+/* About Page Hero Left Vertical Accent Line */
+.about-hero-row .service-hero-copy-card {
+  padding: 42px 30px 36px 32px;
+}
+
+.about-hero-row .hero-copy-main {
+  position: relative;
+  padding-left: 28px;
+}
+
+.about-hero-row .hero-copy-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-hero-row .service-hero-copy-card:hover .hero-copy-main::before {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 } /* Consistent Homepage Headline Typography */
 .service-hero-copy-card .hero-headline {
   font-family: var(--font-family);
@@ -12835,6 +12990,10 @@ body.dark-theme .expertise-card {
     align-items: center;
     text-align: center;
     width: 100%;
+    padding-left: 0;
+  }
+  .about-hero-row .hero-copy-main::before {
+    display: none;
   }
   .service-hero-copy-card .hl-line {
     white-space: normal !important;
