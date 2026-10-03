@@ -153,25 +153,30 @@
       box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
     }
 
-    /* Card 2: Featured ApexFix Sapphire Navy Hero Card (Exact Website Color) */
+    /* Card 2: Featured ApexFix Sapphire Navy Hero Card (Matching Button Shade) */
     .mission-card-featured {
-      background: 
-        radial-gradient(120% 85% at 20% 0%, rgba(29, 78, 216, 0.35) 0%, transparent 70%),
-        linear-gradient(145deg, #143877 0%, #0f2b5c 50%, #081a38 100%);
-      border: 1.5px solid rgba(125, 175, 245, 0.35);
-      box-shadow: 0 18px 45px -8px rgba(15, 43, 92, 0.38);
+      background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 18px 45px -8px rgba(15, 43, 92, 0.45), 0 0 20px rgba(30, 74, 181, 0.25);
       color: #ffffff;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
     }
     .mission-card-featured:hover {
-      box-shadow: 0 26px 60px -8px rgba(15, 43, 92, 0.52);
-      border-color: rgba(147, 197, 253, 0.6);
+      background: linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%);
+      box-shadow: 0 26px 60px -8px rgba(15, 43, 92, 0.55), 0 0 28px rgba(37, 99, 235, 0.4);
+      border-color: rgba(255, 255, 255, 0.6);
+      transform: translateY(-4px);
     }
     body.dark-theme .mission-card-featured {
-      background: 
-        radial-gradient(120% 85% at 20% 0%, rgba(29, 78, 216, 0.25) 0%, transparent 70%),
-        linear-gradient(145deg, #102d62 0%, #0a1e45 50%, #061226 100%);
-      border-color: rgba(96, 165, 250, 0.35);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 4px 20px rgba(37, 99, 235, 0.35);
+    }
+    body.dark-theme .mission-card-featured:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+      border-color: rgba(147, 197, 253, 0.7);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.75), 0 0 32px rgba(59, 130, 246, 0.5);
+      transform: translateY(-4px);
     }
 
     /* Top Left Squarish Icon Box (Reference media_1790832483982.png) */
@@ -386,10 +391,10 @@
       color: #e2e8f0;
     }
 
-    /* Box 3: Solid Navy Accent Card (Bottom-Left) */
+    /* Box 3: Solid Navy Accent Card (Bottom-Left - Matching Button Shade) */
     .mosaic-navy-card {
-      background: linear-gradient(145deg, #143877 0%, #0c2452 100%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
       border-radius: 20px;
       padding: 18px 20px;
       color: #ffffff;
@@ -398,18 +403,24 @@
       justify-content: space-between;
       height: 154px;
       box-sizing: border-box;
-      box-shadow: 0 14px 34px rgba(15, 43, 92, 0.22);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      box-shadow: 0 14px 34px rgba(15, 43, 92, 0.35), 0 0 16px rgba(30, 74, 181, 0.2);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.35s ease, border-color 0.3s ease;
     }
     .mosaic-navy-card:hover {
+      background: linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%);
       transform: translateY(-3px);
-      box-shadow: 0 18px 40px rgba(15, 43, 92, 0.32);
-      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 18px 44px rgba(15, 43, 92, 0.45), 0 0 24px rgba(37, 99, 235, 0.35);
+      border-color: rgba(255, 255, 255, 0.55);
     }
     body.dark-theme .mosaic-navy-card {
-      background: linear-gradient(145deg, #0e2753 0%, #081734 100%);
-      border-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 20px rgba(37, 99, 235, 0.3);
+    }
+    body.dark-theme .mosaic-navy-card:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+      border-color: rgba(147, 197, 253, 0.65);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.65), 0 0 28px rgba(59, 130, 246, 0.45);
     }
     .mosaic-navy-top {
       display: flex;
