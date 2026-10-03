@@ -5996,7 +5996,7 @@ body.dark-theme .prefooter-cta-overlay {
   width: 100%;
   max-width: 100%;
   margin: 0 auto 34px auto;
-  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -8867,10 +8867,10 @@ body.dark-theme .footer-social-btn.btn-whatsapp:hover {
   border-color: #10b981;
 }
 body.dark-theme .footer-card-container {
-  background: linear-gradient(135deg, rgba(12, 28, 60, 0.96) 0%, rgba(18, 48, 105, 0.92) 50%, rgba(8, 20, 44, 0.98) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(18, 48, 105, 0.98) 0%, rgba(30, 74, 181, 0.94) 50%, rgba(12, 28, 60, 0.99) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.5);
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.7))
-    drop-shadow(0 0 1px rgba(96, 165, 250, 0.35));
+    drop-shadow(0 0 16px rgba(37, 99, 235, 0.3));
 }
 body.dark-theme .footer-card-container:hover {
   background: linear-gradient(135deg, rgba(18, 48, 105, 0.98) 0%, rgba(30, 74, 181, 0.94) 50%, rgba(12, 28, 60, 0.99) 100%);
@@ -12060,8 +12060,8 @@ body.dark-theme .hero-trust-sticker.sticker-top .sticker-desc {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(145deg, rgba(15, 43, 92, 0.94) 0%, rgba(10, 28, 64, 0.98) 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.38);
   border-radius: 20px;
   padding: 16px 20px 18px 20px;
   box-shadow: 0 20px 48px rgba(10, 24, 52, 0.42), 0 4px 14px rgba(0, 0, 0, 0.25);
@@ -12081,8 +12081,8 @@ body.dark-theme .hero-trust-sticker.sticker-top .sticker-desc {
 }
 
 body.dark-theme .hero-floating-service-card {
-  background: linear-gradient(145deg, rgba(16, 26, 46, 0.96) 0%, rgba(10, 16, 30, 0.98) 100%);
-  border-color: rgba(96, 165, 250, 0.28);
+  background: linear-gradient(135deg, rgba(18, 48, 105, 0.96) 0%, rgba(30, 74, 181, 0.92) 50%, rgba(12, 28, 60, 0.98) 100%);
+  border-color: rgba(96, 165, 250, 0.45);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
@@ -20358,3 +20358,74 @@ body.dark-theme .float-call-btn .float-btn-tooltip {
   }
 }
 
+
+/* ==========================================================================
+   SIGNATURE BORDER-DRAW HOVER (shared): straight 3px Sapphire #1e4ab5 lines
+   draw from top-left and bottom-right and meet in the middle (same as
+   Client Stories cards). Applied to light content cards on inner pages.
+   ========================================================================== */
+.blog-card,
+.service-why-card,
+.protocol-step-card,
+.compare-station-card,
+.mission-card-light {
+  position: relative;
+}
+.blog-card::before,
+.blog-card::after,
+.service-why-card::before,
+.service-why-card::after,
+.protocol-step-card::before,
+.protocol-step-card::after,
+.compare-station-card::before,
+.compare-station-card::after,
+.mission-card-light::before,
+.mission-card-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid #1e4ab5;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 6;
+  box-sizing: border-box;
+  transition: clip-path 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.blog-card::before,
+.service-why-card::before,
+.protocol-step-card::before,
+.compare-station-card::before,
+.mission-card-light::before {
+  clip-path: inset(0 100% 100% 0);
+}
+.blog-card::after,
+.service-why-card::after,
+.protocol-step-card::after,
+.compare-station-card::after,
+.mission-card-light::after {
+  clip-path: inset(100% 0 0 100%);
+}
+.blog-card:hover::before,
+.blog-card:hover::after,
+.service-why-card:hover::before,
+.service-why-card:hover::after,
+.protocol-step-card:hover::before,
+.protocol-step-card:hover::after,
+.compare-station-card:hover::before,
+.compare-station-card:hover::after,
+.mission-card-light:hover::before,
+.mission-card-light:hover::after {
+  clip-path: inset(0 0 0 0);
+}
+body.dark-theme .blog-card::before,
+body.dark-theme .blog-card::after,
+body.dark-theme .service-why-card::before,
+body.dark-theme .service-why-card::after,
+body.dark-theme .protocol-step-card::before,
+body.dark-theme .protocol-step-card::after,
+body.dark-theme .compare-station-card::before,
+body.dark-theme .compare-station-card::after,
+body.dark-theme .mission-card-light::before,
+body.dark-theme .mission-card-light::after {
+  border-color: #3b82f6;
+}
