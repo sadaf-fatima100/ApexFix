@@ -2923,18 +2923,25 @@ body.dark-theme .why-card-content .why-card-desc {
   box-shadow: 0 6px 18px rgba(6, 18, 40, 0.6);
 } /* Bottom CTA Banner (ApexFix High-Contrast Dispatch Callout) */
 .areas-cta-banner {
-  background: linear-gradient(135deg, #091a38 0%, #061124 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: 
+    radial-gradient(120% 85% at 20% 0%, rgba(30, 74, 181, 0.4) 0%, transparent 65%),
+    linear-gradient(145deg, #143877 0%, #1a4294 50%, #0f2b5c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 18px;
   padding: 22px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  box-shadow: 0 16px 36px rgba(9, 26, 56, 0.16);
+  box-shadow: 0 16px 36px rgba(15, 43, 92, 0.28), 0 0 20px rgba(30, 74, 181, 0.15);
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transition: all 0.35s ease;
+}
+.areas-cta-banner:hover {
+  box-shadow: 0 20px 44px rgba(15, 43, 92, 0.38), 0 0 28px rgba(37, 99, 235, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 .areas-cta-banner::before {
   content: "";
@@ -4457,25 +4464,25 @@ body.dark-theme .pin-sub {
   padding: 28px 36px;
   display: flex;
   flex-direction: column;
-  background: rgba(11, 28, 62, 0.92);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 26px;
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
   box-shadow:
-    0 20px 50px rgba(5, 14, 32, 0.45),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    0 20px 50px rgba(10, 28, 62, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .kitchen-content-bay:hover {
-  background: rgba(11, 28, 62, 0.96);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border-color: rgba(255, 255, 255, 0.38);
   box-shadow:
-    0 24px 60px rgba(5, 14, 32, 0.55),
-    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    0 24px 60px rgba(10, 28, 62, 0.55),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
 }
 body.dark-theme .kitchen-content-bay {
-  background: rgba(10, 22, 48, 0.92);
+  background: linear-gradient(135deg, rgba(12, 28, 60, 0.96) 0%, rgba(18, 48, 105, 0.92) 50%, rgba(8, 20, 44, 0.98) 100%);
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.65),
@@ -5982,25 +5989,25 @@ body.dark-theme .prefooter-cta-overlay {
   width: 100%;
   max-width: 100%;
   margin: 0 auto 34px auto;
-  background: rgba(11, 28, 62, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(16, 45, 96, 0.94) 0%, rgba(26, 68, 145, 0.90) 50%, rgba(12, 32, 72, 0.96) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   clip-path: url(#dubai-trust-cut);
-  filter: drop-shadow(0 25px 60px rgba(4, 12, 28, 0.5));
+  filter: drop-shadow(0 25px 60px rgba(10, 28, 62, 0.45));
   padding: 56px 65px 54px 65px;
   position: relative;
   transition:
-    filter 0.3s ease,
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
+    filter 0.35s ease,
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
   color: #ffffff;
 }
 .footer-card-container:hover {
-  background: rgba(11, 28, 62, 0.98);
-  border-color: rgba(255, 255, 255, 0.32);
-  filter: drop-shadow(0 30px 70px rgba(4, 12, 28, 0.65));
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  border-color: rgba(255, 255, 255, 0.38);
+  filter: drop-shadow(0 30px 70px rgba(10, 28, 62, 0.6)) drop-shadow(0 0 16px rgba(30, 74, 181, 0.25));
   transform: translateY(-2px);
 }
 .footer-card-grid {
@@ -8849,16 +8856,16 @@ body.dark-theme .footer-social-btn.btn-whatsapp:hover {
   border-color: #10b981;
 }
 body.dark-theme .footer-card-container {
-  background: rgba(10, 22, 48, 0.96);
+  background: linear-gradient(135deg, rgba(12, 28, 60, 0.96) 0%, rgba(18, 48, 105, 0.92) 50%, rgba(8, 20, 44, 0.98) 100%);
   border: 1px solid rgba(255, 255, 255, 0.16);
   filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.7))
-    drop-shadow(0 0 1px rgba(96, 165, 250, 0.3));
+    drop-shadow(0 0 1px rgba(96, 165, 250, 0.35));
 }
 body.dark-theme .footer-card-container:hover {
-  background: rgba(10, 22, 48, 0.99);
-  border-color: rgba(96, 165, 250, 0.45);
+  background: linear-gradient(135deg, rgba(18, 48, 105, 0.98) 0%, rgba(30, 74, 181, 0.94) 50%, rgba(12, 28, 60, 0.99) 100%);
+  border-color: rgba(96, 165, 250, 0.5);
   filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.85))
-    drop-shadow(0 0 2px rgba(96, 165, 250, 0.45));
+    drop-shadow(0 0 16px rgba(37, 99, 235, 0.3));
 }
 body.dark-theme .footer-col-title {
   color: #ffffff;
@@ -9745,6 +9752,20 @@ body.dark-theme .empty-cta-btn {
 }
 body.dark-theme .empty-cta-btn:hover {
   background: var(--btn-gradient-hover);
+}
+body.dark-theme .areas-cta-banner {
+  background:
+    radial-gradient(120% 85% at 20% 0%, rgba(37, 99, 235, 0.25) 0%, transparent 65%),
+    linear-gradient(150deg, #0e1e38 0%, #081224 100%);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+body.dark-theme .areas-cta-banner:hover {
+  background:
+    radial-gradient(120% 85% at 20% 0%, rgba(59, 130, 246, 0.38) 0%, transparent 65%),
+    linear-gradient(150deg, #12284c 0%, #0a1830 100%);
+  border-color: rgba(96, 165, 250, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 20px rgba(37, 99, 235, 0.25);
 }
 body.dark-theme .areas-cta-banner .btn-dispatch-call {
   background: #ffffff !important;
@@ -10952,14 +10973,14 @@ body.dark-theme .faq-card-body {
 } /* --- Left Urgent Callout Card with Forward Chevron Polygon --- */
 .emergency-call-card {
   text-decoration: none;
-  background-color: #0b1a36;
+  background-color: #102d60;
   background-image:
     radial-gradient(
       circle at 18% 50%,
-      rgba(29, 78, 216, 0.28) 0%,
+      rgba(30, 74, 181, 0.42) 0%,
       transparent 60%
     ),
-    linear-gradient(135deg, #07152b 0%, #0f2b5c 100%);
+    linear-gradient(135deg, #143877 0%, #1a4294 50%, #0f2b5c 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -10976,17 +10997,19 @@ body.dark-theme .faq-card-body {
     calc(100% - 18px) 100%,
     0 100%
   );
-  transition: background 0.35s ease;
+  box-shadow: 0 8px 24px rgba(15, 43, 92, 0.32);
+  transition: all 0.35s ease;
   cursor: pointer;
 }
 .emergency-call-card:hover {
   background-image:
     radial-gradient(
       circle at 22% 50%,
-      rgba(37, 99, 235, 0.38) 0%,
+      rgba(37, 99, 235, 0.5) 0%,
       transparent 65%
     ),
-    linear-gradient(135deg, #0a1e3f 0%, #153c7a 100%);
+    linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%);
+  box-shadow: 0 10px 28px rgba(30, 74, 181, 0.45);
 } /* Pulsing Radar Phone Icon Badge */
 .emergency-phone-badge {
   width: 46px;
@@ -11195,19 +11218,21 @@ body.dark-theme .emergency-call-card {
   background-image:
     radial-gradient(
       circle at 18% 50%,
-      rgba(29, 78, 216, 0.35) 0%,
+      rgba(37, 99, 235, 0.38) 0%,
       transparent 65%
     ),
-    linear-gradient(135deg, #09172e 0%, #060e1c 100%);
+    linear-gradient(135deg, #0e1e38 0%, #081224 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 body.dark-theme .emergency-call-card:hover {
   background-image:
     radial-gradient(
       circle at 22% 50%,
-      rgba(37, 99, 235, 0.45) 0%,
+      rgba(59, 130, 246, 0.48) 0%,
       transparent 70%
     ),
-    linear-gradient(135deg, #0c2040 0%, #08152b 100%);
+    linear-gradient(135deg, #12284c 0%, #0a1830 100%);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.3);
 }
 body.dark-theme .pillar-icon-box {
   background: rgba(255, 255, 255, 0.05);
@@ -12218,13 +12243,14 @@ body.dark-theme .service-hero-copy-card .hero-description {
   white-space: normal;
 }
 
-/* 4. CTA Button Group: Exact 18px Gap to Social Proof */
-.service-hero-copy-card .hero-cta-group {
+/* 4. CTA Button Group: Balanced 36px Gap to Social Proof (Equal Top/Bottom Rhythm) */
+.service-hero-copy-card .hero-cta-group,
+.portfolio-hero-row .hero-cta-group {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 36px;
   width: 100%;
 } /* Bottom Key Metrics Row */
 .hero-split-stats {
@@ -19110,23 +19136,55 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
 .wm-perf-media-wrap {
   position: relative;
   width: 100%;
-  border-radius: 26px;
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* Thick Vertical Brand Accent Line on the Left of Image (Matching Home Page About Us Section) */
+.wm-perf-left-accent-line {
+  flex: 0 0 15px;
+  width: 15px;
+  min-width: 15px;
+  margin-top: 24%;
+  align-self: stretch;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #1d4ed8 0%, #143877 32%, #0f2b5c 70%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow:
+    0 10px 26px rgba(15, 43, 92, 0.38),
+    0 4px 12px rgba(6, 18, 40, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.38);
+  position: relative;
+  z-index: 5;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wm-perf-media-wrap:hover .wm-perf-left-accent-line {
+  background: var(--btn-gradient-hover);
+  box-shadow:
+    0 14px 32px rgba(15, 43, 92, 0.48),
+    0 6px 16px rgba(37, 99, 235, 0.32),
+    inset 0 1px 1px rgba(255, 255, 255, 0.55);
 }
 
 .wm-perf-img-frame {
+  flex: 1;
+  min-width: 0;
   position: relative;
-  border-radius: 24px;
+  clip-path: url(#main-hero-cut);
+  -webkit-clip-path: url(#main-hero-cut);
+  filter: drop-shadow(0 20px 42px rgba(15, 43, 92, 0.16));
+  background: transparent;
   overflow: hidden;
-  box-shadow: 0 20px 48px -12px rgba(15, 43, 92, 0.16);
-  border: 1.5px solid rgba(15, 43, 92, 0.08);
-  background: #f1f3f9;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 body.dark-theme .wm-perf-img-frame {
-  background: #181924;
-  border: 1.5px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.6);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.5));
 }
 
 .wm-perf-photo {
@@ -19140,6 +19198,25 @@ body.dark-theme .wm-perf-img-frame {
 
 .wm-perf-media-wrap:hover .wm-perf-photo {
   transform: scale(1.025);
+}
+
+/* Responsive adjustment for wm-perf-img-frame & line */
+@media (max-width: 992px) {
+  .wm-perf-img-frame {
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+    border-radius: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .wm-perf-media-wrap {
+    gap: 10px;
+  }
+  .wm-perf-left-accent-line {
+    flex: 0 0 10px;
+    width: 10px;
+    min-width: 10px;
+  }
 }
 
 /* Top-Left Rosette / Ribbon Seal Badge */
