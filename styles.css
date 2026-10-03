@@ -2680,7 +2680,7 @@ body.dark-theme .why-card-content .why-card-desc {
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  background: #0f172a;
+  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
   color: #ffffff;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
@@ -2688,12 +2688,13 @@ body.dark-theme .why-card-content .why-card-desc {
   align-items: center;
   gap: 7px;
   white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   z-index: 3;
-  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
 }
 .hub-dispatch-pill:hover {
+  background: linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%);
   transform: translateX(-50%) translateY(-2px);
 }
 .hub-dispatch-pill::after {
@@ -2704,7 +2705,7 @@ body.dark-theme .why-card-content .why-card-desc {
   transform: translateX(-50%);
   border-width: 5px 5px 0 5px;
   border-style: solid;
-  border-color: #0f172a transparent transparent transparent;
+  border-color: #0f2b5c transparent transparent transparent;
 }
 .hub-badge-dot {
   width: 7px;
@@ -9715,8 +9716,21 @@ body.dark-theme .status-icon.icon-clock {
   color: #60a5fa;
 }
 body.dark-theme .areas-map-img {
-  filter: brightness(0) invert(40%) sepia(30%) saturate(600%) hue-rotate(185deg) brightness(80%);
-  opacity: 0.36;
+  content: url("assets/world-map-dark.png");
+  opacity: 0.95;
+  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.35));
+}
+body.dark-theme .hub-dispatch-pill {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.5), 0 0 14px rgba(37, 99, 235, 0.3);
+}
+body.dark-theme .hub-dispatch-pill:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.65);
+}
+body.dark-theme .hub-dispatch-pill::after {
+  border-color: #1e40af transparent transparent transparent;
 }
 body.dark-theme .route-origin-dot {
   fill: #60a5fa;
@@ -10091,16 +10105,17 @@ body.dark-theme .areas-cta-banner .btn-dispatch-call:hover svg {
 } /* Dark Theme Support */
 body.dark-theme .brand-filter-pill {
   background: #111a2e;
-  border-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
   color: #cbd5e1;
 }
 body.dark-theme .brand-filter-pill:hover {
   border-color: #60a5fa;
   color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25);
 }
 body.dark-theme .brand-filter-pill.active {
   background: var(--btn-gradient-primary);
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
   color: #ffffff;
   box-shadow: 0 8px 22px rgba(6, 18, 40, 0.55);
 }
@@ -10142,13 +10157,13 @@ body.dark-theme .brands-logos-inner {
 }
 body.dark-theme .brand-curved-card {
   background-color: #121b2d;
-  border-color: rgba(96, 165, 250, 0.28);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border: 1.5px solid #2563eb;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 12px rgba(37, 99, 235, 0.15);
 }
 body.dark-theme .brand-curved-card:hover {
   background-color: #18233a;
   border-color: #60a5fa;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65), 0 0 20px rgba(96, 165, 250, 0.35);
 }
 body.dark-theme .brand-sub-tag {
   color: #cbd5e1;
@@ -10158,7 +10173,7 @@ body.dark-theme .brand-curved-card:hover .brand-sub-tag {
 }
 body.dark-theme .brand-card-footer {
   background-color: #0d1424;
-  border-top-color: rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(37, 99, 235, 0.3);
   color: #94a3b8;
 }
 body.dark-theme .brand-card-footer svg {
@@ -10166,7 +10181,7 @@ body.dark-theme .brand-card-footer svg {
 }
 body.dark-theme .brand-curved-card:hover .brand-card-footer {
   background-color: #1a2232;
-  border-top-color: rgba(96, 165, 250, 0.3);
+  border-top-color: rgba(96, 165, 250, 0.45);
   color: #60a5fa;
 }
 body.dark-theme .brand-curved-card:hover .brand-card-footer svg {
@@ -12100,7 +12115,7 @@ body.dark-theme .hero-trust-sticker.sticker-top .sticker-desc {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%);
+  background: var(--btn-gradient-primary);
   border: 1.5px solid rgba(255, 255, 255, 0.38);
   border-radius: 20px;
   padding: 16px 20px 18px 20px;
@@ -12112,18 +12127,28 @@ body.dark-theme .hero-trust-sticker.sticker-top .sticker-desc {
   user-select: none;
   min-width: 175px;
   box-sizing: border-box;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.35s ease, border-color 0.3s ease;
 }
 
 .hero-floating-service-card:hover {
+  background: var(--btn-gradient-hover);
+  border-color: rgba(255, 255, 255, 0.55);
   transform: translateY(-4px);
-  box-shadow: 0 26px 56px rgba(10, 24, 52, 0.52), 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 26px 56px rgba(10, 24, 52, 0.55), 0 0 20px rgba(30, 74, 181, 0.4);
 }
 
 body.dark-theme .hero-floating-service-card {
-  background: linear-gradient(135deg, rgba(18, 48, 105, 0.96) 0%, rgba(30, 74, 181, 0.92) 50%, rgba(12, 28, 60, 0.98) 100%);
-  border-color: rgba(96, 165, 250, 0.45);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 4px 20px rgba(37, 99, 235, 0.35);
+}
+
+body.dark-theme .hero-floating-service-card:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  border-color: rgba(147, 197, 253, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.75), 0 0 28px rgba(59, 130, 246, 0.45);
 }
 
 .hf-card-caption {
