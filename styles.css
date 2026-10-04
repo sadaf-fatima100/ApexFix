@@ -14132,7 +14132,128 @@ body.dark-theme .expertise-card {
 }
 .hero-center-cta-group .btn-hero-primary svg {
   flex-shrink: 0;
-} /* Grounded Trust Shelf Dock (Both .hero-center-trust-dock and backward-compatible .hero-center-trust-row) */
+}
+
+/* Social Proof & Trust Verification Dock (Google Rating + 100% Guaranteed Badge) */
+.hero-center-social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 490px;
+  margin: 0 0 20px 0;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1.5px solid rgba(15, 43, 92, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 43, 92, 0.05);
+  box-sizing: border-box;
+}
+
+/* Left Google Badge */
+.hero-proof-google {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 0;
+}
+.proof-google-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.proof-google-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: left;
+}
+.proof-google-brand {
+  font-family: var(--font-family, inherit);
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.proof-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1;
+}
+.proof-rating-score {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+.proof-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5px;
+  color: #f59e0b;
+}
+.proof-verified-caption {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1;
+}
+
+/* Center Divider */
+.hero-proof-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(15, 43, 92, 0.12);
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
+/* Right Trust Badge */
+.hero-proof-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 0;
+}
+.proof-seal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.proof-trust-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: left;
+}
+.proof-trust-badge-title {
+  font-family: var(--font-family, inherit);
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.proof-trust-highlight {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e4ab5;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.proof-trust-caption {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Grounded Trust Shelf Dock (Both .hero-center-trust-dock and backward-compatible .hero-center-trust-row) */
 .hero-center-trust-dock,
 .hero-center-trust-row {
   margin-top: auto;
@@ -14291,6 +14412,35 @@ body.dark-theme .hero-center-cta-group .btn-hero-secondary:hover {
 body.dark-theme .hero-center-cta-group .btn-hero-secondary svg {
   color: #34d399 !important;
 }
+body.dark-theme .hero-center-social-proof {
+  background: #141c2c;
+  border-color: rgba(96, 165, 250, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+body.dark-theme .proof-google-brand {
+  color: #ffffff;
+}
+body.dark-theme .proof-rating-score {
+  color: #f1f5f9;
+}
+body.dark-theme .proof-verified-caption {
+  color: #94a3b8;
+}
+body.dark-theme .hero-proof-divider {
+  background: rgba(255, 255, 255, 0.12);
+}
+body.dark-theme .proof-trust-badge-title {
+  color: #ffffff;
+}
+body.dark-theme .proof-trust-highlight {
+  color: #60a5fa;
+}
+body.dark-theme .proof-trust-caption {
+  color: #94a3b8;
+}
+body.dark-theme .proof-seal-icon circle[fill="url(#sealBgGrad)"] {
+  fill: #182236;
+}
 body.dark-theme .hero-center-trust-dock,
 body.dark-theme .hero-center-trust-row {
   background: rgba(15, 23, 42, 0.65);
@@ -14353,6 +14503,27 @@ body.dark-theme .hero-flank-card {
   .hero-center-cta-group .btn-hero-secondary {
     width: 100%;
     justify-content: center;
+  }
+  .hero-center-social-proof {
+    padding: 10px 14px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 480px) {
+    .hero-center-social-proof {
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 14px;
+    }
+    .hero-proof-divider {
+      width: 100%;
+      height: 1px;
+      margin: 0;
+    }
+    .hero-proof-google,
+    .hero-proof-trust {
+      width: 100%;
+      justify-content: center;
+    }
   }
   .hero-center-trust-dock,
   .hero-center-trust-row {
