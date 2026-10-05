@@ -16140,21 +16140,24 @@ body.dark-theme .pf-stat-item {
   overflow: hidden;
   background: #ffffff !important;
   box-shadow: none !important;
-  border: 1.5px solid rgba(15, 43, 92, 0.12);
+  border: 2px solid var(--brand-accent, #1e4ab5);
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.3s ease;
 }
 .pf-collage-card:hover {
   transform: scale(1.03);
-  border-color: var(--brand-accent, #1e4ab5);
+  border-color: var(--brand-accent-hover, #2563eb);
   box-shadow: none !important;
   z-index: 4;
 }
 body.dark-theme .pf-collage-card {
   background: #181924 !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(96, 165, 250, 0.45) !important;
   box-shadow: none !important;
+}
+body.dark-theme .pf-collage-card:hover {
+  border-color: #60a5fa !important;
 }
 .pf-collage-img {
   width: 100%;
@@ -16205,7 +16208,7 @@ body.dark-theme .pf-collage-card {
   color: rgba(255, 255, 255, 0.9);
 } /* Text Banner Card Overlay ("VERIFIED REPAIR") */
 .pf-collage-card.highlight-card {
-  border: 2px solid var(--brand-accent, #0f2b5c);
+  border: 2px solid var(--brand-accent, #1e4ab5);
 }
 .pf-collage-text-banner {
   position: absolute;
