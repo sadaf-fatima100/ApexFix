@@ -16093,6 +16093,7 @@ body.dark-theme .pf-stat-item {
   border-radius: 28px;
   padding: 10px 0;
   box-sizing: border-box;
+  background: transparent !important;
 } /* Fade Masks on Top & Bottom Removed per user instruction for crisp image visibility */
 .pf-collage-fade-top,
 .pf-collage-fade-bottom {
@@ -16104,11 +16105,13 @@ body.dark-theme .pf-stat-item {
   gap: 16px;
   height: 100%;
   align-items: start;
+  background: transparent !important;
 }
 .pf-collage-col {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background: transparent !important;
 }
 .pf-collage-col.col-left {
   transform: translateY(-35px);
@@ -16121,17 +16124,23 @@ body.dark-theme .pf-stat-item {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  background: #1e293b;
-  box-shadow: 0 12px 30px rgba(15, 43, 92, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 1.5px solid rgba(15, 43, 92, 0.12);
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s ease;
+    border-color 0.3s ease;
 }
 .pf-collage-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 18px 40px rgba(15, 43, 92, 0.16);
+  border-color: var(--brand-accent, #1e4ab5);
+  box-shadow: none !important;
   z-index: 4;
+}
+body.dark-theme .pf-collage-card {
+  background: #181924 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
 }
 .pf-collage-img {
   width: 100%;
