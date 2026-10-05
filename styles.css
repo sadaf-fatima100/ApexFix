@@ -159,15 +159,23 @@ body.dark-theme .navbar.is-scrolled {
   align-items: center;
   justify-content: center;
 }
-.logo-icon-svg {
+.logo-icon-svg,
+.logo-icon-img {
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
   overflow: visible;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
 }
-.nav-logo:hover .logo-icon-svg {
-  transform: scale(1.06) rotate(3deg);
+.nav-logo:hover .logo-icon-svg,
+.nav-logo:hover .logo-icon-img,
+.footer-logo:hover .logo-icon-svg,
+.footer-logo:hover .logo-icon-img {
+  transform: scale(1.08) rotate(4deg);
+}
+body.dark-theme .logo-icon-img {
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.45)) brightness(1.15);
 }
 .logo-motion-path {
   stroke: var(--text-dark);
@@ -6703,7 +6711,8 @@ body.dark-theme .trust-item svg {
   .nav-logo {
     gap: 8px;
   }
-  .logo-icon-svg {
+  .logo-icon-svg,
+  .logo-icon-img {
     width: 40px;
     height: 40px;
   }
@@ -7979,7 +7988,8 @@ body.dark-theme .trust-item svg {
     border-radius: 16px;
     margin-bottom: 18px;
   }
-  .logo-icon-svg {
+  .logo-icon-svg,
+  .logo-icon-img {
     width: 34px;
     height: 34px;
   }
@@ -8380,7 +8390,8 @@ body.dark-theme .trust-item svg {
   .btn-schedule {
     display: none !important;
   }
-  .logo-icon-svg {
+  .logo-icon-svg,
+  .logo-icon-img {
     width: 28px;
     height: 28px;
   }
@@ -16177,6 +16188,9 @@ body.dark-theme .pf-collage-card:hover {
 }
 .pf-collage-card.card-lg {
   height: 250px;
+}
+.pf-collage-card.pf-card-bottom-left {
+  height: 195px;
 } /* Glassmorphism Tag Overlays on Images */
 .pf-collage-tag-overlay {
   position: absolute;
@@ -16330,6 +16344,9 @@ body.dark-theme .pf-proof-tag {
   }
   .pf-collage-card.card-sm {
     height: 95px;
+  }
+  .pf-collage-card.pf-card-bottom-left {
+    height: 140px;
   } /* Portfolio Grid 2-Columns on Tablet */
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -16394,8 +16411,9 @@ body.dark-theme .pf-proof-tag {
   .pf-collage-card.card-md {
     height: 115px;
   }
-  .pf-collage-card.card-sm {
-    height: 75px;
+  .pf-collage-card.card-sm,
+  .pf-collage-card.pf-card-bottom-left {
+    height: 75px !important;
   }
   /* Centered Responsive Pill Cloud Filter Bar on Mobile - Zero Cutoff, Zero Scrollbars */
   .portfolio-filter-bar {
@@ -16516,8 +16534,9 @@ body.dark-theme .pf-proof-tag {
   .pf-collage-card.card-md {
     height: 105px;
   }
-  .pf-collage-card.card-sm {
-    height: 70px;
+  .pf-collage-card.card-sm,
+  .pf-collage-card.pf-card-bottom-left {
+    height: 70px !important;
   }
   .portfolio-card {
     height: 390px;
@@ -16599,8 +16618,9 @@ body.dark-theme .pf-proof-tag {
   .pf-collage-card.card-md {
     height: 95px;
   }
-  .pf-collage-card.card-sm {
-    height: 65px;
+  .pf-collage-card.card-sm,
+  .pf-collage-card.pf-card-bottom-left {
+    height: 65px !important;
   }
   .pf-tag-badge {
     font-size: 9.5px;
@@ -16686,8 +16706,9 @@ body.dark-theme .pf-proof-tag {
   .pf-collage-card.card-md {
     height: 80px;
   }
-  .pf-collage-card.card-sm {
-    height: 55px;
+  .pf-collage-card.card-sm,
+  .pf-collage-card.pf-card-bottom-left {
+    height: 55px !important;
   }
   .pf-filter-btn {
     padding: 7px 12px;
@@ -16776,8 +16797,9 @@ body.dark-theme .pf-proof-tag {
   .pf-collage-card.card-md {
     height: 65px;
   }
-  .pf-collage-card.card-sm {
-    height: 45px;
+  .pf-collage-card.card-sm,
+  .pf-collage-card.pf-card-bottom-left {
+    height: 45px !important;
   }
   .pf-filter-btn {
     padding: 5px 9px;
