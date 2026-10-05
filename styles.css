@@ -16371,8 +16371,11 @@ body.dark-theme .pf-proof-tag {
     margin-bottom: 18px;
   }
   .portfolio-hero-row .service-hero-copy-card {
-    padding: 22px 16px 20px 16px;
+    padding: 22px 16px 24px 16px;
     border-radius: 20px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
   }
   .portfolio-hero-row .hero-headline {
     font-size: clamp(1.58rem, 6.5vw, 2rem);
@@ -16474,8 +16477,11 @@ body.dark-theme .pf-proof-tag {
 /* --- Standard Mobile Viewports (480px & Below) --- */
 @media (max-width: 480px) {
   .portfolio-hero-row .service-hero-copy-card {
-    padding: 18px 14px 18px 14px;
+    padding: 18px 14px 24px 14px;
     border-radius: 18px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
   }
   .portfolio-hero-row .hero-headline {
     font-size: clamp(1.2rem, 6.2vw, 1.55rem);
