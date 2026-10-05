@@ -16370,21 +16370,29 @@ body.dark-theme .pf-proof-tag {
     font-size: 11.5px;
   }
   .portfolio-hero-collage-wrap {
-    min-height: 350px;
-    height: 350px;
-    border-radius: 22px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
   }
   .pf-collage-col.col-left {
-    transform: translateY(-15px);
+    transform: none !important;
+  }
+  .pf-collage-col.col-right .pf-collage-card:last-child {
+    display: none !important;
   }
   .pf-collage-card.card-lg {
-    height: 185px;
+    height: 165px;
+  }
+  .col-right .pf-collage-card.card-lg {
+    height: 200px;
   }
   .pf-collage-card.card-md {
-    height: 125px;
+    height: 115px;
   }
   .pf-collage-card.card-sm {
-    height: 85px;
+    height: 75px;
   }
   /* Centered Responsive Pill Cloud Filter Bar on Mobile - Zero Cutoff, Zero Scrollbars */
   .portfolio-filter-bar {
@@ -16481,24 +16489,32 @@ body.dark-theme .pf-proof-tag {
     font-size: 28px;
   }
   .portfolio-hero-collage-wrap {
-    min-height: 300px;
-    height: 300px;
-    border-radius: 20px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
   }
   .portfolio-hero-collage-grid {
     gap: 10px;
   }
   .pf-collage-col.col-left {
-    transform: translateY(-10px);
+    transform: none !important;
+  }
+  .pf-collage-col.col-right .pf-collage-card:last-child {
+    display: none !important;
   }
   .pf-collage-card.card-lg {
-    height: 160px;
+    height: 150px;
+  }
+  .col-right .pf-collage-card.card-lg {
+    height: 185px;
   }
   .pf-collage-card.card-md {
-    height: 110px;
+    height: 105px;
   }
   .pf-collage-card.card-sm {
-    height: 75px;
+    height: 70px;
   }
   .portfolio-card {
     height: 390px;
@@ -16559,12 +16575,23 @@ body.dark-theme .pf-proof-tag {
     line-height: 1.3;
   }
   .portfolio-hero-collage-wrap {
-    min-height: 260px;
-    height: 260px;
-    border-radius: 18px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  .pf-collage-col.col-left {
+    transform: none !important;
+  }
+  .pf-collage-col.col-right .pf-collage-card:last-child {
+    display: none !important;
   }
   .pf-collage-card.card-lg {
     height: 140px;
+  }
+  .col-right .pf-collage-card.card-lg {
+    height: 175px;
   }
   .pf-collage-card.card-md {
     height: 95px;
@@ -16635,12 +16662,23 @@ body.dark-theme .pf-proof-tag {
     font-size: 10.5px;
   }
   .portfolio-hero-collage-wrap {
-    min-height: 220px;
-    height: 220px;
-    border-radius: 14px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  .pf-collage-col.col-left {
+    transform: none !important;
+  }
+  .pf-collage-col.col-right .pf-collage-card:last-child {
+    display: none !important;
   }
   .pf-collage-card.card-lg {
     height: 120px;
+  }
+  .col-right .pf-collage-card.card-lg {
+    height: 155px;
   }
   .pf-collage-card.card-md {
     height: 80px;
@@ -16714,12 +16752,23 @@ body.dark-theme .pf-proof-tag {
     font-size: 9.5px;
   }
   .portfolio-hero-collage-wrap {
-    min-height: 175px;
-    height: 175px;
-    border-radius: 10px;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  .pf-collage-col.col-left {
+    transform: none !important;
+  }
+  .pf-collage-col.col-right .pf-collage-card:last-child {
+    display: none !important;
   }
   .pf-collage-card.card-lg {
     height: 95px;
+  }
+  .col-right .pf-collage-card.card-lg {
+    height: 125px;
   }
   .pf-collage-card.card-md {
     height: 65px;
