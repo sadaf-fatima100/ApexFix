@@ -4724,24 +4724,26 @@ body.dark-theme .btn-kitchen-call:hover {
   color: #ffffff;
 }
 
-/* Warranty Seal Badge (Matching Brand Sky Blue & Navy Palette) */
+/* Warranty Seal Badge (Clean Trust Indicator without Button Box Boundary) */
 .kitchen-warranty-seal {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 7px 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1.5px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   margin-left: auto;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: opacity 0.2s ease;
 }
 .kitchen-warranty-seal:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(96, 165, 250, 0.45);
-  transform: translateY(-1px);
+  background: transparent;
+  border: none;
+  transform: none;
+  opacity: 0.9;
 }
 .warranty-seal-icon {
   display: flex;
@@ -15471,17 +15473,19 @@ body.dark-theme .service-issue-desc {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none !important;
 }
 .pf-filter-btn:hover {
   border-color: var(--brand-accent, #0f2b5c);
   color: var(--brand-accent, #0f2b5c);
   transform: translateY(-2px);
+  box-shadow: none !important;
 }
 .pf-filter-btn.active {
   background: var(--btn-gradient-primary);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 8px 22px -3px rgba(6, 18, 40, 0.45), 0 0 16px rgba(18, 48, 105, 0.3);
+  box-shadow: none !important;
 }
 .portfolio-grid {
   display: grid;
@@ -15721,11 +15725,13 @@ body.dark-theme .pf-filter-btn {
   background: #1e293b;
   border-color: rgba(255, 255, 255, 0.12);
   color: #e2e8f0;
+  box-shadow: none !important;
 }
 body.dark-theme .pf-filter-btn.active {
   background: var(--btn-gradient-primary);
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: none !important;
 }
 body.dark-theme .portfolio-card {
   background: #090e18;
@@ -16299,16 +16305,20 @@ body.dark-theme .pf-proof-tag {
   }
   .pf-collage-card.card-sm {
     height: 85px;
-  } /* Horizontal Touch-Scroll Filter Bar on Mobile */
+  }
+  /* Centered Responsive Pill Cloud Filter Bar on Mobile - Zero Cutoff, Zero Scrollbars */
   .portfolio-filter-bar {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 4px 2px 10px 2px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    margin: 20px 0 28px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: visible !important;
+    padding: 0;
+    margin: 18px auto 26px auto;
     gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .portfolio-filter-bar::-webkit-scrollbar {
     display: none;
@@ -16316,8 +16326,9 @@ body.dark-theme .pf-proof-tag {
   .pf-filter-btn {
     flex-shrink: 0;
     white-space: nowrap;
-    padding: 9px 18px;
-    font-size: 13px;
+    padding: 8px 16px;
+    font-size: 12.5px;
+    box-shadow: none !important;
   } /* Portfolio Grid 1-Column on Mobile */
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -16558,8 +16569,9 @@ body.dark-theme .pf-proof-tag {
     height: 55px;
   }
   .pf-filter-btn {
-    padding: 7px 14px;
+    padding: 7px 12px;
     font-size: 11.5px;
+    box-shadow: none !important;
   }
   .portfolio-card {
     height: 340px;
@@ -16636,8 +16648,9 @@ body.dark-theme .pf-proof-tag {
     height: 45px;
   }
   .pf-filter-btn {
-    padding: 5px 10px;
-    font-size: 10.5px;
+    padding: 5px 9px;
+    font-size: 10px;
+    box-shadow: none !important;
   }
   .portfolio-card {
     height: 300px;
