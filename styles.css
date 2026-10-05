@@ -14057,11 +14057,11 @@ body.dark-theme .expertise-card {
   align-items: stretch;
 } /* Center Content Column */
 .hero-center-column {
-  background: transparent;
-  border-radius: 0;
-  padding: 14px 18px 6px 18px;
-  border: none;
-  box-shadow: none;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 34px 28px 24px 28px;
+  border: 1.5px solid rgba(15, 43, 92, 0.12);
+  box-shadow: 0 18px 48px rgba(15, 43, 92, 0.07), 0 2px 8px rgba(15, 43, 92, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14156,12 +14156,12 @@ body.dark-theme .expertise-card {
   justify-content: space-between;
   width: 100%;
   max-width: 490px;
-  margin: 0 0 20px 0;
-  padding: 10px 18px;
-  background: #ffffff;
-  border: 1.5px solid rgba(15, 43, 92, 0.12);
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(15, 43, 92, 0.05);
+  margin: 0 0 18px 0;
+  padding: 4px 6px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
@@ -14409,9 +14409,9 @@ body.dark-theme .expertise-card {
   display: inline-block;
 } /* Dark Theme for Individual Service Hero */
 body.dark-theme .hero-center-column {
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  background: #121b2d;
+  border-color: rgba(96, 165, 250, 0.28);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
 }
 body.dark-theme .flank-stat-pill {
   background: var(--btn-gradient-primary);
@@ -14450,9 +14450,9 @@ body.dark-theme .hero-center-cta-group .btn-hero-secondary svg {
   color: #34d399 !important;
 }
 body.dark-theme .hero-center-social-proof {
-  background: #141c2c;
-  border-color: rgba(96, 165, 250, 0.25);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 body.dark-theme .proof-google-brand {
   color: #ffffff;
@@ -14506,7 +14506,7 @@ body.dark-theme .hero-flank-card {
   .hero-center-column {
     grid-column: 1 / -1;
     order: 1;
-    padding: 18px 16px 16px 16px;
+    padding: 38px 28px 30px 28px;
   }
   .hero-flank-card {
     min-height: 360px;
@@ -14527,7 +14527,7 @@ body.dark-theme .hero-flank-card {
   }
   .hero-center-column {
     grid-column: 1;
-    padding: 12px 4px 14px 4px;
+    padding: 28px 16px 24px 16px;
   }
   .hero-center-headline {
     font-size: clamp(2rem, 1.125rem + 4vw, 2.45rem);
