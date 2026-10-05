@@ -2067,27 +2067,39 @@ a.service-card-item *,
     padding: 18px 20px;
   }
   .services-dispatch-actions {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
   .btn-dispatch-phone,
   .btn-dispatch-whatsapp {
-    flex: 1;
+    flex: 0 1 auto;
+    width: auto;
+    min-height: 44px;
+    padding: 10px 20px;
     justify-content: center;
     text-align: center;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 520px) {
   .services-dispatch-actions {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     gap: 10px;
   }
   .btn-dispatch-phone,
   .btn-dispatch-whatsapp {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
+    box-sizing: border-box;
   }
 } /* ==========================================================================   Why Choose Us Section (Exact Design Replicated from media_1790252135064.png)   ========================================================================== */
 .why-choose-section {
@@ -4851,13 +4863,19 @@ body.dark-theme .btn-kitchen-call:hover {
   }
   .kitchen-action-row {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     gap: 10px;
   }
   .btn-kitchen-quote,
   .btn-kitchen-call {
     width: 100%;
+    max-width: 300px;
+    min-height: 46px;
     justify-content: center;
+    box-sizing: border-box;
   }
   .kitchen-warranty-seal {
     width: 100%;
@@ -5155,13 +5173,19 @@ body.dark-theme .prefooter-cta-section {
   }
   .cta-banner-bottom-row {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
     gap: 12px;
   }
   .btn-cta-banner-main,
   .btn-cta-banner-secondary {
     width: 100%;
+    max-width: 320px;
+    min-height: 44px;
     justify-content: center;
+    box-sizing: border-box;
   }
   .cta-banner-meta-note {
     text-align: center;
@@ -5508,13 +5532,19 @@ body.dark-theme .btn-simple-cta-whatsapp:hover {
   }
   .prefooter-simple-actions {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
     gap: 12px;
   }
   .btn-simple-cta-call,
   .btn-simple-cta-whatsapp {
     width: 100% !important;
+    max-width: 320px !important;
+    min-height: 48px !important;
     justify-content: center !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -5950,13 +5980,19 @@ body.dark-theme .prefooter-cta-overlay {
   }
   .prefooter-cta-btn-group {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     gap: 12px;
   }
   .btn-prefooter-primary,
   .btn-prefooter-call {
     width: 100%;
+    max-width: 300px;
+    min-height: 46px;
     justify-content: center;
+    box-sizing: border-box;
   }
 } /* ==========================================================================   Master Brand Footer (Inspired by reference media_1790231422435.png)   ApexFix Luxury Engineering & Floating Box Architecture   ========================================================================== */
 .site-footer-master {
@@ -7142,33 +7178,28 @@ body.dark-theme .trust-item svg {
     max-width: 100%;
     margin: 0;
     flex: 0 0 auto;
+    height: 420px;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .about-left-accent-line {
+    display: none !important;
   }
   .about-stats-column {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 128px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: auto;
-    max-height: none;
-    margin-right: 0;
-    align-self: auto;
-    z-index: 10;
-  }
-  .about-stat-card {
-    padding: 10px 8px;
-    border-radius: 12px;
+    display: none !important;
   }
   .about-rating-badge {
-    left: 10px;
+    display: none !important;
+  }
+  .about-status-badge {
+    top: 16px;
+    right: 16px;
   }
   .about-visual-stage {
     width: 100%;
     height: 100%;
     display: block;
+    position: relative;
   }
   .about-image-card {
     position: relative;
@@ -7176,11 +7207,8 @@ body.dark-theme .trust-item svg {
     width: 100%;
     height: 100%;
   }
-  .about-visual-group {
-    height: 420px;
-    overflow: hidden;
-  }
   .about-image-clip {
+    width: 100%;
     height: 100%;
     clip-path: none !important;
     -webkit-clip-path: none !important;
@@ -7188,10 +7216,11 @@ body.dark-theme .trust-item svg {
     overflow: hidden;
   }
   .about-img {
-    object-position: right 18%;
-  }
-  .about-rating-badge {
-    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
   }
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -7357,19 +7386,23 @@ body.dark-theme .trust-item svg {
   }
   .hero-cta-group {
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 380px;
+    max-width: 300px;
     margin: 0 auto 20px auto;
     gap: 10px;
   }
   .btn-hero-primary,
   .btn-hero-secondary {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
     text-align: center;
     white-space: normal;
     padding: 12px 18px;
     font-size: 14px;
+    box-sizing: border-box;
   } /* Hero Trust Google Rating + 3 Badges Box: Compact Balanced Horizontal Card */
   .hero-trust-proof-row {
     display: flex;
@@ -7656,15 +7689,25 @@ body.dark-theme .trust-item svg {
   .about-image-clip {
     height: 360px;
   }
+  .about-status-badge {
+    top: 14px;
+    right: 14px;
+  }
   .about-cta-group {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     gap: 10px;
   }
   .btn-about-primary,
   .btn-about-secondary {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
+    box-sizing: border-box;
   }
   .about-headline-br {
     display: none;
@@ -7746,10 +7789,19 @@ body.dark-theme .trust-item svg {
     flex-direction: column;
     border-radius: 18px;
   }
+  .emergency-call-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    clip-path: none !important;
+    border-radius: 18px 18px 0 0 !important;
+    box-sizing: border-box;
+  }
   .emergency-pillars-grid {
+    width: 100% !important;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 14px;
+    box-sizing: border-box;
   }
   .pillar-divider {
     display: none;
@@ -8301,7 +8353,10 @@ body.dark-theme .trust-item svg {
     border-radius: 12px;
   }
   .emergency-call-card {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 10px 8px;
+    box-sizing: border-box;
   }
   .emergency-number {
     font-size: 14px;
@@ -11399,16 +11454,22 @@ body.dark-theme .emergency-pillar-item:hover {
     border-radius: 18px;
   }
   .emergency-call-card {
-    clip-path: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    clip-path: none !important;
+    border-radius: 18px 18px 0 0 !important;
     padding: 18px 20px;
     justify-content: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
   }
   .emergency-pillars-grid {
+    width: 100% !important;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     padding: 20px 18px;
+    box-sizing: border-box;
   }
   .pillar-divider {
     display: none;
@@ -11423,9 +11484,13 @@ body.dark-theme .emergency-pillar-item:hover {
 }
 @media (max-width: 580px) {
   .emergency-call-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    clip-path: none !important;
     flex-direction: row;
     gap: 14px;
     padding: 16px 14px;
+    box-sizing: border-box;
   }
   .emergency-phone-badge {
     width: 44px;
@@ -13650,13 +13715,17 @@ body.dark-theme .expertise-card {
   } /* Stack Hero CTA Buttons to 100% Full-Width Pills */
   .service-hero-copy-card .hero-cta-group {
     flex-direction: column !important;
+    align-items: center !important;
     width: 100% !important;
+    max-width: 300px !important;
+    margin: 8px auto !important;
     gap: 12px !important;
-    margin: 8px 0 !important;
   }
   .service-hero-copy-card .btn-hero-primary,
   .service-hero-copy-card .btn-hero-secondary {
     width: 100% !important;
+    max-width: 300px !important;
+    min-height: 44px !important;
     justify-content: center !important;
     text-align: center !important;
     padding: 12px 18px !important;
@@ -14128,22 +14197,24 @@ body.dark-theme .expertise-card {
   justify-content: center;
   gap: 12px;
   margin-bottom: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 480px;
+  max-width: 440px;
 }
 .hero-center-cta-group .btn-hero-primary,
 .hero-center-cta-group .btn-hero-secondary {
-  flex: 1 1 0;
-  width: 50%;
-  min-width: 0;
-  padding: 12px 16px;
-  font-size: 13px;
+  flex: 0 1 auto;
+  width: auto;
+  min-width: 165px;
+  min-height: 44px;
+  padding: 12px 22px;
+  font-size: 13.5px;
   font-weight: 700;
   gap: 8px;
   justify-content: center;
   text-align: center;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 .hero-center-cta-group .btn-hero-secondary {
   background: #ffffff !important;
@@ -14553,12 +14624,19 @@ body.dark-theme .hero-flank-card {
   }
   .hero-center-cta-group {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     gap: 10px;
     margin-bottom: 18px;
   }
   .hero-center-cta-group .btn-hero-primary,
   .hero-center-cta-group .btn-hero-secondary {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
   }
   .hero-center-social-proof {
@@ -16164,13 +16242,17 @@ body.dark-theme .pf-proof-tag {
   } /* Stack CTA Buttons into 100% Full-Width Pills */
   .portfolio-hero-row .hero-cta-group {
     flex-direction: column !important;
+    align-items: center !important;
     width: 100% !important;
+    max-width: 300px !important;
+    margin: 8px auto !important;
     gap: 12px !important;
-    margin: 8px 0 !important;
   }
   .portfolio-hero-row .btn-hero-primary,
   .portfolio-hero-row .btn-hero-secondary {
     width: 100% !important;
+    max-width: 300px !important;
+    min-height: 44px !important;
     justify-content: center !important;
     text-align: center !important;
     padding: 12px 18px !important;
@@ -19749,12 +19831,16 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
   }
   .article-hero-btns-row {
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    align-items: stretch;
+    max-width: 300px;
+    gap: 10px;
   }
   .btn-hero-action-primary,
   .btn-hero-action-call {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
     box-sizing: border-box;
   }
@@ -19807,12 +19893,17 @@ body.dark-theme .areas-dispatch-live .status-pulse-dot {
   }
   .article-cta-actions {
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     gap: 10px;
   }
   .article-cta-call-btn,
   .article-cta-book-btn {
     width: 100%;
+    max-width: 300px;
+    min-height: 44px;
     justify-content: center;
     box-sizing: border-box;
   }
@@ -20575,12 +20666,13 @@ body.dark-theme .wm-feature-desc {
 .floating-contact-dock {
   position: fixed;
   bottom: 26px;
+  left: 26px;
   right: 26px;
   z-index: 9990;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-end;
-  gap: 16px;
   pointer-events: none;
 }
 
@@ -20797,9 +20889,7 @@ body.dark-theme .float-online-dot {
 /* --- Slide-Out Chatty Hover Label Pill --- */
 .float-btn-tooltip {
   position: absolute;
-  right: calc(100% + 14px);
   top: 50%;
-  transform: translateY(-50%) translateX(10px) scale(0.96);
   opacity: 0;
   visibility: hidden;
   background: rgba(15, 43, 92, 0.95);
@@ -20810,7 +20900,6 @@ body.dark-theme .float-online-dot {
   padding: 8px 14px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 2px;
   white-space: nowrap;
   box-shadow: 0 12px 28px rgba(6, 18, 40, 0.38);
@@ -20819,7 +20908,20 @@ body.dark-theme .float-online-dot {
   z-index: 4;
 }
 
+/* Left button tooltip (Phone Call) pops towards right */
+.float-call-btn .float-btn-tooltip {
+  left: calc(100% + 14px);
+  right: auto;
+  align-items: flex-start;
+  transform: translateY(-50%) translateX(-10px) scale(0.96);
+}
+
+/* Right button tooltip (WhatsApp) pops towards left */
 .float-whatsapp-btn .float-btn-tooltip {
+  right: calc(100% + 14px);
+  left: auto;
+  align-items: flex-end;
+  transform: translateY(-50%) translateX(10px) scale(0.96);
   background: rgba(6, 78, 59, 0.95);
   border-color: rgba(52, 211, 153, 0.28);
 }
@@ -20874,8 +20976,8 @@ body.dark-theme .float-call-btn .float-btn-tooltip {
 @media (max-width: 768px) {
   .floating-contact-dock {
     bottom: 18px;
+    left: 16px;
     right: 16px;
-    gap: 13px;
   }
   .float-contact-btn {
     width: 50px;
@@ -20893,8 +20995,8 @@ body.dark-theme .float-call-btn .float-btn-tooltip {
 @media (max-width: 360px) {
   .floating-contact-dock {
     bottom: 14px;
+    left: 12px;
     right: 12px;
-    gap: 10px;
   }
   .float-contact-btn {
     width: 46px;
