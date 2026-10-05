@@ -601,6 +601,21 @@
         width: 100%;
       }
     }
+    @media (max-width: 768px) {
+      .heritage-action-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+      }
+      .heritage-action-wrap .btn-hero-primary,
+      .heritage-action-wrap .btn-hero-secondary {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+    }
     @media (max-width: 576px) {
       .mosaic-img-box {
         height: 240px;
@@ -642,12 +657,16 @@
       }
       .heritage-action-wrap {
         flex-direction: column;
+        align-items: stretch;
         width: 100%;
+        gap: 10px;
       }
       .heritage-action-wrap .btn-hero-primary,
       .heritage-action-wrap .btn-hero-secondary {
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         justify-content: center;
+        box-sizing: border-box;
       }
     }
     @media (max-width: 360px) {
@@ -2831,7 +2850,7 @@
                 <img src="assets/avatar2.jpg" alt="Dubai Client Avatar" class="pf-avatar">
                 <img src="assets/avatar3.jpg" alt="Dubai Client Avatar" class="pf-avatar">
               </div>
-              <span class="pf-proof-tag">15,000+ Happy Clients Across Dubai</span>
+              <span class="pf-proof-tag">Trusted by 15,000+ Dubai Households</span>
             </div>
           </div>
 
