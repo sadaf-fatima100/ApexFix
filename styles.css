@@ -7549,6 +7549,20 @@ body.dark-theme .trust-item svg {
     line-height: 1.35 !important;
     border-radius: 8px !important;
   }
+  .nav-dropdown .dropdown-link-all {
+    padding: 11px 14px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    border-radius: 10px !important;
+    margin-bottom: 5px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .nav-dropdown .dropdown-divider {
+    height: 1px !important;
+    margin: 3px 2px 5px 2px !important;
+  }
   .nav-menu-cta-wrap {
     display: block;
     margin-top: 8px;
