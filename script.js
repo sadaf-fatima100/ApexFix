@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     servicesDropdownBtn.addEventListener('click', (e) => {
       if (window.innerWidth <= 1080) {
         e.preventDefault();
-        servicesDropdown.classList.toggle('open');
+        const isOpen = servicesDropdown.classList.toggle('open');
+        servicesDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
     });
   }
