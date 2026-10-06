@@ -56,15 +56,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile / Touch Services Dropdown Toggle
-  if (servicesDropdownBtn && servicesDropdown) {
-    servicesDropdownBtn.addEventListener('click', (e) => {
-      if (window.innerWidth <= 1080) {
-        e.preventDefault();
-        const isOpen = servicesDropdown.classList.toggle('open');
-        servicesDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  // Desktop Hover Stabilization & Mobile / Touch Services Dropdown Toggle
+  if (servicesDropdown) {
+    let dropdownHoverTimer = null;
+
+    // Desktop hover stabilization: keeps dropdown stay open when cursor moves to menu
+    servicesDropdown.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 1080) {
+        if (dropdownHoverTimer) {
+          clearTimeout(dropdownHoverTimer);
+          dropdownHoverTimer = null;
+        }
+        servicesDropdown.classList.add('hover-active');
+        if (servicesDropdownBtn) {
+          servicesDropdownBtn.setAttribute('aria-expanded', 'true');
+        }
       }
     });
+
+    servicesDropdown.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 1080) {
+        dropdownHoverTimer = setTimeout(() => {
+          servicesDropdown.classList.remove('hover-active');
+          if (servicesDropdownBtn) {
+            servicesDropdownBtn.setAttribute('aria-expanded', 'false');
+          }
+        }, 180); // 180ms buffer allows relaxed diagonal mouse movement
+      }
+    });
+
+    // Mobile / Touch click toggle
+    if (servicesDropdownBtn) {
+      servicesDropdownBtn.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1080) {
+          e.preventDefault();
+          const isOpen = servicesDropdown.classList.toggle('open');
+          servicesDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+      });
+    }
   }
 
   // Set default date to today

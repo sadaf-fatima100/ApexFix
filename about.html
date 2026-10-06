@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2.4">
+  <link rel="stylesheet" href="styles.css?v=2.5">
     <style>
     /* ============================================================
        ABOUT PAGE -- SCOPED STYLES -- PREMIUM OVERHAUL
@@ -1529,23 +1529,26 @@
 
     /* Responsive Breakdown */
     @media (max-width: 992px) {
+      .about-why-choose {
+        padding: clamp(38px, 4.2vw, 52px) 0;
+      }
       .why-choose-split {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 28px;
         align-items: start;
       }
       .why-choose-right-col {
         padding-top: 0;
       }
       .why-acc-media-stage {
-        min-height: 400px;
-        max-height: 400px;
-        height: 400px;
+        min-height: 340px;
+        max-height: 380px;
+        height: 360px;
       }
       .why-acc-media-card {
         clip-path: none !important;
         -webkit-clip-path: none !important;
-        border-radius: 26px;
+        border-radius: 24px;
       }
       .why-right-accent-line {
         display: none !important;
@@ -1554,23 +1557,44 @@
         max-width: 100%;
       }
     }
+    @media (max-width: 768px) {
+      .about-mission,
+      .about-heritage-section,
+      .about-process,
+      .about-why-choose,
+      .about-compare-section {
+        padding: clamp(26px, 3.8vw, 36px) 0;
+      }
+      .why-choose-split {
+        gap: 22px;
+      }
+      .why-acc-media-stage {
+        min-height: 250px;
+        max-height: 280px;
+        height: 260px;
+        border-radius: 20px;
+      }
+      .why-acc-media-card {
+        border-radius: 20px;
+      }
+    }
     @media (max-width: 576px) {
       .why-dual-cards-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 14px;
       }
       .why-feat-card {
-        padding: 20px 18px;
-        border-radius: 20px;
+        padding: 18px 16px;
+        border-radius: 18px;
       }
       .why-acc-media-stage {
-        min-height: 320px;
-        max-height: 320px;
-        height: 320px;
-        border-radius: 22px;
+        min-height: 220px;
+        max-height: 250px;
+        height: 230px;
+        border-radius: 18px;
       }
       .why-acc-media-card {
-        border-radius: 22px;
+        border-radius: 18px;
       }
       .why-media-brand-seal {
         bottom: 14px;
@@ -2529,6 +2553,22 @@
       .bento-card-trust { height: auto; min-height: 220px; }
     }
     @media (max-width: 480px) {
+      .about-mission,
+      .about-heritage-section,
+      .about-process,
+      .about-why-choose,
+      .about-compare-section {
+        padding: clamp(20px, 3.2vw, 26px) 0;
+      }
+      .why-choose-split { gap: 16px; }
+      .why-acc-media-stage {
+        min-height: 200px;
+        max-height: 230px;
+        height: 215px;
+        border-radius: 16px;
+      }
+      .why-acc-media-card { border-radius: 16px; }
+      .compare-header { margin: 0 auto 18px; }
       .btn-cta-green, .btn-cta-navy { justify-content: center; }
       .about-float-chip-top, .pillar-card { padding: 20px 16px; }
       .compare-card-pro, .compare-card-risk { padding: 22px 18px; }
