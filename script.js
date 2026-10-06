@@ -1,5 +1,5 @@
 /**
- * ApexFix Appliance Repair - Interactive UI Script
+ * Dubai Fix Appliances - Interactive UI Script
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Load saved theme preference
-  const savedTheme = localStorage.getItem('apexfix-theme');
+  const savedTheme = localStorage.getItem('dubaifix-theme') || localStorage.getItem('apexfix-theme');
   if (savedTheme === 'dark') {
     applyTheme(true);
   }
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isCurrentlyDark = document.body.classList.contains('dark-theme');
       const newDark = !isCurrentlyDark;
       applyTheme(newDark);
+      localStorage.setItem('dubaifix-theme', newDark ? 'dark' : 'light');
       localStorage.setItem('apexfix-theme', newDark ? 'dark' : 'light');
     });
   }

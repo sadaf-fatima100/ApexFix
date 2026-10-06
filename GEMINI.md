@@ -1,24 +1,29 @@
-# ApexFix Project Architecture & Design Rules
+# Dubai Fix Appliances Project Architecture & Design Rules
 
-This project follows strict engineering and visual standards. Every change must adhere to the following rules:
+This project follows strict engineering and visual standards for **Dubai Fix Appliances** (DubaiFixAppliances.com). Every change must adhere to the following rules:
 
 ## 1. Master Brand Footer Rule
 - **EVERY page on the website MUST use the identical Master Brand Footer (`<footer class="site-footer-master" id="contact">`) matching `index.html`.**
 - Do NOT use or create simplified 3-column generic footers (`footer-clean`).
 - The footer includes:
-  - `.footer-top-brand`: ApexFix SVG logo with gear/wrench, brand statement, circular social buttons (WhatsApp, Phone, Facebook, Instagram).
-  - `.footer-card-container`: 3-column elevated card with Quick Links (Column 1), Our Services with `book-trigger` modal links (Column 2), Contact Us with WhatsApp active pulse dot + direct phone + appointment button (Column 3).
-  - `.footer-bottom-bar`: Copyright & "Designed & Developed with ❤️ by Hywiz Technologies", plus legal links.
+  - `.footer-top-brand`: Dubai Fix Appliances logo, brand statement ("Dubai Fix Appliances offers certified same-day home appliance repair across Dubai..."), circular social buttons (WhatsApp, Phone, Facebook, Instagram).
+  - `.footer-card-container`: 3-column elevated card with Quick Links (Column 1), Our Services with `book-trigger` modal links (Column 2), Contact Us with Location (Al Quoz - Al Quoz Industrial Area 4 - Dubai), Email Support (info@dubaifixappliances.com), WhatsApp active pulse dot + direct phone + appointment button (Column 3).
+  - `.footer-bottom-bar`: Copyright &copy; 2026 Dubai Fix Appliances & "Designed & Developed with ❤️ by Hywiz Technologies", plus legal links.
   - On sub-pages like `services.html`, Quick Links must reference `index.html#section` (e.g. `index.html#home`, `index.html#about`).
 
 ## 2. Brand Identity & Theme Palette
+- Brand Name: **Dubai Fix Appliances**
+- Official Domain: **DubaiFixAppliances.com**
+- Official Email: **info@dubaifixappliances.com**
+- Central Operations Address: **Al Quoz - Al Quoz Industrial Area 4 - Dubai**
+- Target Service Areas: **Dubai only**
 - Primary Brand Accent: Vibrant Sapphire Royal `#1e4ab5` (`var(--brand-accent)`) with `#2563eb` on hover (`var(--brand-accent-hover)`)
 - Primary Action Gradient (Matching CTA Call Now button): `linear-gradient(135deg, #143877 0%, #1e4ab5 50%, #0f2b5c 100%)`
 - Primary Action Hover Gradient: `linear-gradient(135deg, #1e4ab5 0%, #2563eb 50%, #143877 100%)`
 - Secondary Call / Emergency: `#059669` / `#10b981`
 - Canvas Light: `#fbfbfe` / `#f3f4f8` with `#ffffff` card surfaces
 - Dark Theme (`body.dark-theme`): Canvas `#0c1017` / `#121217`, Cards `#181924`, Borders `rgba(255, 255, 255, 0.08)`
-- Theme Toggle: `#themeToggleBtn` storing in `localStorage.getItem('apexfix-theme')`
+- Theme Toggle: `#themeToggleBtn` storing in `localStorage.getItem('dubaifix-theme')` (with fallback to `apexfix-theme`)
 
 ## 3. UI Component Geometry & Full-Bleed Layout
 - Primary & Action Buttons: MUST use pill shape (`border-radius: var(--radius-pill);` or `9999px`) styled with the signature Call Now gradient.

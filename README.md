@@ -1,6 +1,6 @@
-# ApexFix - Premium Appliance Repair & Maintenance
+# Dubai Fix Appliances - Premium Appliance Repair & Maintenance
 
-ApexFix is a modern, high-conversion, responsive web application for luxury home appliance repair and maintenance services across Dubai and the UAE.
+Dubai Fix Appliances is a modern, high-conversion, responsive web application for luxury home appliance repair and maintenance services across Dubai.
 
 ## Features
 
@@ -31,4 +31,4 @@ ApexFix is a modern, high-conversion, responsive web application for luxury home
 
 ## License
 
-All rights reserved © ApexFix Appliance Repair.
+All rights reserved © Dubai Fix Appliances.
