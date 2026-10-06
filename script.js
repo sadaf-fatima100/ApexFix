@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const newDark = !isCurrentlyDark;
       applyTheme(newDark);
       localStorage.setItem('apexfix-theme', newDark ? 'dark' : 'light');
-      showToast(newDark ? 'Dark theme enabled' : 'Light theme enabled');
     });
   }
 
